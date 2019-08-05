@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Click and Drag (and drag and drag and&#8230;)</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2545/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2545</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2545#comment-4441</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sat, 22 Sep 2012 15:51:03 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2545#comment-4441</guid>
+		<description><![CDATA[nice,multi talented]]></description>
+		<content:encoded><![CDATA[<p>nice,multi talented</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: XOR06</title>
+		<link>http://thelegendofrandom.com/blog/archives/2545#comment-4366</link>
+		<dc:creator>XOR06</dc:creator>
+		<pubDate>Thu, 20 Sep 2012 07:33:27 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2545#comment-4366</guid>
+		<description><![CDATA[Looking forward to read the 574 pages :) cool ebook]]></description>
+		<content:encoded><![CDATA[<p>Looking forward to read the 574 pages <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  cool ebook</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

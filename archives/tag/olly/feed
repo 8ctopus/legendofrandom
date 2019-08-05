@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Olly</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/tag/olly/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>Tutorial #5: Our First (Sort Of) Crack</title>
+		<link>http://thelegendofrandom.com/blog/archives/332</link>
+		<comments>http://thelegendofrandom.com/blog/archives/332#comments</comments>
+		<pubDate>Fri, 08 Jun 2012 00:08:02 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[cracking]]></category>
+		<category><![CDATA[Olly]]></category>
+		<category><![CDATA[ollydbg]]></category>
+		<category><![CDATA[reverse engineering]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=332</guid>
+		<description><![CDATA[Introduction In this tutorial we will be finishing up some last minute Olly things as we review a crackme. Well,<a href="http://thelegendofrandom.com/blog/archives/332" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/332/feed</wfw:commentRss>
+		<slash:comments>40</slash:comments>
+		</item>
+		<item>
+		<title>The Reverse Engineers Toolkit</title>
+		<link>http://thelegendofrandom.com/blog/archives/175</link>
+		<comments>http://thelegendofrandom.com/blog/archives/175#comments</comments>
+		<pubDate>Thu, 31 May 2012 04:40:54 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Guide]]></category>
+		<category><![CDATA[Olly]]></category>
+		<category><![CDATA[ollydbg]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175</guid>
+		<description><![CDATA[&#160; I remember when I first got started in reverse engineering. Well, let&#8217;s be honest. It was cracking commercial software.<a href="http://thelegendofrandom.com/blog/archives/175" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/175/feed</wfw:commentRss>
+		<slash:comments>22</slash:comments>
+		</item>
+	</channel>
+</rss>

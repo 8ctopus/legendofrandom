@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Dealing with ASLR</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1990/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1990</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1990#comment-3677</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sat, 01 Sep 2012 17:00:34 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1990#comment-3677</guid>
+		<description><![CDATA[yes, there&#039;s that too.]]></description>
+		<content:encoded><![CDATA[<p>yes, there&#8217;s that too.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Saduff</title>
+		<link>http://thelegendofrandom.com/blog/archives/1990#comment-3669</link>
+		<dc:creator>Saduff</dc:creator>
+		<pubDate>Sat, 01 Sep 2012 13:14:06 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1990#comment-3669</guid>
+		<description><![CDATA[Or you can go into the Optional Header -&gt; DllCharacteristics and uncheck the actual ASLR flag &quot;DLL can move&quot;.]]></description>
+		<content:encoded><![CDATA[<p>Or you can go into the Optional Header -&gt; DllCharacteristics and uncheck the actual ASLR flag &#8220;DLL can move&#8221;.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

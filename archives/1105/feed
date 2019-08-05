@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom’s Tutorial #13: Cracking a Real Program</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1105/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1105</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Zlowbarf</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-84259</link>
+		<dc:creator>Zlowbarf</dc:creator>
+		<pubDate>Tue, 10 Sep 2013 11:25:39 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-84259</guid>
+		<description><![CDATA[R4ndom! You are god, sir!]]></description>
+		<content:encoded><![CDATA[<p>R4ndom! You are god, sir!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: hmonmachi</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-84183</link>
+		<dc:creator>hmonmachi</dc:creator>
+		<pubDate>Mon, 09 Sep 2013 11:18:38 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-84183</guid>
+		<description><![CDATA[Hi, when i try put the hardware breakpoint and then run it, it&#039;s don&#039;t continue run to 9AAB9E. but point to somewhere, any help,Thanks]]></description>
+		<content:encoded><![CDATA[<p>Hi, when i try put the hardware breakpoint and then run it, it&#8217;s don&#8217;t continue run to 9AAB9E. but point to somewhere, any help,Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Th3DEAD</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-77881</link>
+		<dc:creator>Th3DEAD</dc:creator>
+		<pubDate>Tue, 23 Jul 2013 21:02:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-77881</guid>
+		<description><![CDATA[Hello,
+
+I don&#039;t have DS: in 9AAB9E. So when i try to see data insight nothing appear. Any help ? thanks]]></description>
+		<content:encoded><![CDATA[<p>Hello,</p>
+<p>I don&#8217;t have DS: in 9AAB9E. So when i try to see data insight nothing appear. Any help ? thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mandz</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-44402</link>
+		<dc:creator>Mandz</dc:creator>
+		<pubDate>Sat, 27 Apr 2013 12:34:15 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-44402</guid>
+		<description><![CDATA[You&#039;re awesome, thanks!]]></description>
+		<content:encoded><![CDATA[<p>You&#8217;re awesome, thanks!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: the red</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-28992</link>
+		<dc:creator>the red</dc:creator>
+		<pubDate>Mon, 08 Apr 2013 23:38:25 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-28992</guid>
+		<description><![CDATA[http://www.ollydbg.de/]]></description>
+		<content:encoded><![CDATA[<p><a href="http://www.ollydbg.de/" rel="nofollow">http://www.ollydbg.de/</a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: mirza</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-26755</link>
+		<dc:creator>mirza</dc:creator>
+		<pubDate>Mon, 25 Mar 2013 18:54:06 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-26755</guid>
+		<description><![CDATA[what is the name of software wich used to crack]]></description>
+		<content:encoded><![CDATA[<p>what is the name of software wich used to crack</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Johnwayne</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-7425</link>
+		<dc:creator>Johnwayne</dc:creator>
+		<pubDate>Tue, 13 Nov 2012 13:12:55 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-7425</guid>
+		<description><![CDATA[Thanks for the nice tutes. Uses up to date tool, dissects up to date software in simple to understand language. Reading your tutes makes me feel happy. There are a lot of tutes on the net but they mainly use $0ft1CE which is becoming obsolete. Glad you use 011ydb9. Keep them coming!]]></description>
+		<content:encoded><![CDATA[<p>Thanks for the nice tutes. Uses up to date tool, dissects up to date software in simple to understand language. Reading your tutes makes me feel happy. There are a lot of tutes on the net but they mainly use $0ft1CE which is becoming obsolete. Glad you use 011ydb9. Keep them coming!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sandeep</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-5423</link>
+		<dc:creator>Sandeep</dc:creator>
+		<pubDate>Sat, 13 Oct 2012 11:34:23 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-5423</guid>
+		<description><![CDATA[very good tutorial dude...
+plz now I am trying to understand of AutoIT Compiler files,
+but i dont get much so can u help for this..specially AotoIT exe to script converter..]]></description>
+		<content:encoded><![CDATA[<p>very good tutorial dude&#8230;<br />
+plz now I am trying to understand of AutoIT Compiler files,<br />
+but i dont get much so can u help for this..specially AotoIT exe to script converter..</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Tom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-4715</link>
+		<dc:creator>Tom</dc:creator>
+		<pubDate>Sat, 29 Sep 2012 14:12:58 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-4715</guid>
+		<description><![CDATA[Great tutorial. The app appears to be reg&#039;d, however when I click &quot;Help&quot; I can still see the option to enter a registration key, even after noping the conditional jump and loading DL with a value of one.]]></description>
+		<content:encoded><![CDATA[<p>Great tutorial. The app appears to be reg&#8217;d, however when I click &#8220;Help&#8221; I can still see the option to enter a registration key, even after noping the conditional jump and loading DL with a value of one.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1105#comment-4238</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sun, 16 Sep 2012 16:54:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1105#comment-4238</guid>
+		<description><![CDATA[I used IDA for a long time, but I just prefer Olly. I like being able to step code as I&#039;m going over it (reliably). I like the option of adding and changing code on the fly. I like the plugins available in Olly. I think IDA is far harder to use. And when I was first starting out, it was what everyone used. 
+
+I agree that there are some things IDA can do that runs circles around Olly, and when I start my tutorial series on malware, you can believe that IDA will be used a lot more, but for what I have been doing up till now, you just can&#039;t beat Olly.]]></description>
+		<content:encoded><![CDATA[<p>I used IDA for a long time, but I just prefer Olly. I like being able to step code as I&#8217;m going over it (reliably). I like the option of adding and changing code on the fly. I like the plugins available in Olly. I think IDA is far harder to use. And when I was first starting out, it was what everyone used. </p>
+<p>I agree that there are some things IDA can do that runs circles around Olly, and when I start my tutorial series on malware, you can believe that IDA will be used a lot more, but for what I have been doing up till now, you just can&#8217;t beat Olly.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

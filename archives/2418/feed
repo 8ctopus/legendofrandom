@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom’s Tutorial #23: TLS Callbacks</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2418/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2418</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: johnnycannuk</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-80001</link>
+		<dc:creator>johnnycannuk</dc:creator>
+		<pubDate>Wed, 07 Aug 2013 17:11:03 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-80001</guid>
+		<description><![CDATA[Nice article..quite helpful. I have a weird one that I think might be a FAKE TLS callback:
+
+CFF says there&#039;s a call back and that the tables is located in the BSS section. But the offset actually puts the addressofCallbacks in the top of the .rdata section the value points to the sizeofZerofill segment, which when static is 0.
+
+Perhaps its dynamic or perhaps its meant to make me waste my time...weird]]></description>
+		<content:encoded><![CDATA[<p>Nice article..quite helpful. I have a weird one that I think might be a FAKE TLS callback:</p>
+<p>CFF says there&#8217;s a call back and that the tables is located in the BSS section. But the offset actually puts the addressofCallbacks in the top of the .rdata section the value points to the sizeofZerofill segment, which when static is 0.</p>
+<p>Perhaps its dynamic or perhaps its meant to make me waste my time&#8230;weird</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Walkfit Platinum Reviews</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-75947</link>
+		<dc:creator>Walkfit Platinum Reviews</dc:creator>
+		<pubDate>Mon, 08 Jul 2013 15:59:20 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-75947</guid>
+		<description><![CDATA[It can also be done manually on a chiropractic table. Woodworking clubs,
+furniture enthusiast groups, and other organizations can give or sell 
+you plans. Physical therapy generally involves stretching, strengthening and exercising the back in a safe and gentle manner.]]></description>
+		<content:encoded><![CDATA[<p>It can also be done manually on a chiropractic table. Woodworking clubs,<br />
+furniture enthusiast groups, and other organizations can give or sell<br />
+you plans. Physical therapy generally involves stretching, strengthening and exercising the back in a safe and gentle manner.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Dominique</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-75552</link>
+		<dc:creator>Dominique</dc:creator>
+		<pubDate>Fri, 05 Jul 2013 09:00:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-75552</guid>
+		<description><![CDATA[My brother suggested I might like this web site.
+He was once totally right. This put up actually made my day.
+
+You cann&#039;t imagine just how so much time I had spent for this info! Thanks!]]></description>
+		<content:encoded><![CDATA[<p>My brother suggested I might like this web site.<br />
+He was once totally right. This put up actually made my day.</p>
+<p>You cann&#8217;t imagine just how so much time I had spent for this info! Thanks!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Shoes Outlet Store</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-73709</link>
+		<dc:creator>Shoes Outlet Store</dc:creator>
+		<pubDate>Fri, 21 Jun 2013 09:24:26 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-73709</guid>
+		<description><![CDATA[Dude.. I am not considerably into looking through, but in some way I received to go through lots of content articles on your weblog. Its remarkable how exciting it is for me to check out you really often. -]]></description>
+		<content:encoded><![CDATA[<p>Dude.. I am not considerably into looking through, but in some way I received to go through lots of content articles on your weblog. Its remarkable how exciting it is for me to check out you really often. -</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: COX</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-23681</link>
+		<dc:creator>COX</dc:creator>
+		<pubDate>Fri, 08 Mar 2013 22:02:45 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-23681</guid>
+		<description><![CDATA[Hi,
+
+About one decade ago I was cracking dos programs.
+Since then I got in the automotive business and lost the contact with CPP, C# and co.
+
+Now, I was trying to reverse M a n i c T i m e for a colleague to get access to the pro features and I got lost in threads.
+
+I have just a small request. When time is at hand, please have a look at the app and let me know how hard do you find it to break it.
+
+I don&#039;t want the solution maybe just some pointers to what to learn, to do it on my own.
+
+Thank you for the excellent tutorials, I&#039;ve read a few.]]></description>
+		<content:encoded><![CDATA[<p>Hi,</p>
+<p>About one decade ago I was cracking dos programs.<br />
+Since then I got in the automotive business and lost the contact with CPP, C# and co.</p>
+<p>Now, I was trying to reverse M a n i c T i m e for a colleague to get access to the pro features and I got lost in threads.</p>
+<p>I have just a small request. When time is at hand, please have a look at the app and let me know how hard do you find it to break it.</p>
+<p>I don&#8217;t want the solution maybe just some pointers to what to learn, to do it on my own.</p>
+<p>Thank you for the excellent tutorials, I&#8217;ve read a few.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: D4ph1</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-16894</link>
+		<dc:creator>D4ph1</dc:creator>
+		<pubDate>Tue, 05 Feb 2013 22:53:04 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-16894</guid>
+		<description><![CDATA[R4ndom you made a small mistake. In the .data section of your exe the TLS begins at 0x47 and NOT 0x46 as you say in the tutorial!
+Cheers]]></description>
+		<content:encoded><![CDATA[<p>R4ndom you made a small mistake. In the .data section of your exe the TLS begins at 0&#215;47 and NOT 0&#215;46 as you say in the tutorial!<br />
+Cheers</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Jochen</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-13902</link>
+		<dc:creator>Jochen</dc:creator>
+		<pubDate>Sat, 26 Jan 2013 17:24:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-13902</guid>
+		<description><![CDATA[; Self-modifying TLS callbacks
+; This PE has only one TLS callback active at load time. 
+; However, the callback executes 0x10 times because it modifies TLS table before returning.
+; Copyleft (c) Omega Red 2007
+; fasm source
+
+; 32-bit executable
+format PE GUI
+entry start
+
+include &#039;win32a.inc&#039;
+include &#039;\macro\proc32.inc&#039;
+;------------------------------------------------
+section &#039;all&#039; code data readable writable executable
+
+start:
+    cinvoke     printf, buf, fmt, [count]
+    invoke      msgbox, 0, buf, t_main, 0
+    invoke      exit, 0
+;------------------------------------------------
+tls_callback0:
+    inc         dword [count]
+    cmp         dword [count], 0x10     ; callback executed 0x10 times?
+    jge         tls_end
+    
+    ; add another callback entry before returning
+    mov         eax, [count]
+    mov         dword [tls_callbacks+4*eax], tls_callback0
+    
+tls_end:
+    ret         0x0c
+;------------------------------------------------
+t_main          db  &#039;main&#039;,0
+buf             db  0x100   dup (0)
+fmt             db  &#039;tls count: %d&#039;,0
+count           dd  0
+;------------------------------------------------
+; TLS directory
+; !!! it&#039;s possible to change tls table WHILE IN TLS CALLBACK itself,
+; fex you have only 1 tls at first, but this tls adds some more -
+; those added will execute normally (table is not cached by loader)!
+align   0x10
+data 9  ; tls
+dd 0                ;Raw Data Start VA
+dd 0                ;Raw Data End VA
+dd tls_index        ;Address of Index
+dd tls_callbacks    ;Address of Callbacks
+dd 0                ;Size of Zero Fill
+dd 0                ;Reserved
+
+tls_index       dd  0
+tls_callbacks:      ; only one callback is present initially
+                dd  tls_callback0   ; callback proc
+                dd  0xff dup (0)    ; space reserved for more callback entries (but null at load time)
+                dd  0
+end data
+;------------------------------------------------
+
+
+;  invoke ExitProcess, 0
+
+
+
+
+
+data import
+
+library user,   &#039;user32.dll&#039;,\
+        kernel, &#039;kernel32.dll&#039;
+
+import  user,\
+        printf, &#039;wsprintfA&#039;,\
+        msgbox, &#039;MessageBoxA&#039;
+
+import  kernel,\
+        exit, &#039;ExitProcess&#039;
+end data
+;------------------------------------------------]]></description>
+		<content:encoded><![CDATA[<p>; Self-modifying TLS callbacks<br />
+; This PE has only one TLS callback active at load time.<br />
+; However, the callback executes 0&#215;10 times because it modifies TLS table before returning.<br />
+; Copyleft (c) Omega Red 2007<br />
+; fasm source</p>
+<p>; 32-bit executable<br />
+format PE GUI<br />
+entry start</p>
+<p>include &#8216;win32a.inc&#8217;<br />
+include &#8216;\macro\proc32.inc&#8217;<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+section &#8216;all&#8217; code data readable writable executable</p>
+<p>start:<br />
+    cinvoke     printf, buf, fmt, [count]<br />
+    invoke      msgbox, 0, buf, t_main, 0<br />
+    invoke      exit, 0<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+tls_callback0:<br />
+    inc         dword [count]<br />
+    cmp         dword [count], 0&#215;10     ; callback executed 0&#215;10 times?<br />
+    jge         tls_end</p>
+<p>    ; add another callback entry before returning<br />
+    mov         eax, [count]<br />
+    mov         dword [tls_callbacks+4*eax], tls_callback0</p>
+<p>tls_end:<br />
+    ret         0x0c<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+t_main          db  &#8216;main&#8217;,0<br />
+buf             db  0&#215;100   dup (0)<br />
+fmt             db  &#8216;tls count: %d&#8217;,0<br />
+count           dd  0<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+; TLS directory<br />
+; !!! it&#8217;s possible to change tls table WHILE IN TLS CALLBACK itself,<br />
+; fex you have only 1 tls at first, but this tls adds some more -<br />
+; those added will execute normally (table is not cached by loader)!<br />
+align   0&#215;10<br />
+data 9  ; tls<br />
+dd 0                ;Raw Data Start VA<br />
+dd 0                ;Raw Data End VA<br />
+dd tls_index        ;Address of Index<br />
+dd tls_callbacks    ;Address of Callbacks<br />
+dd 0                ;Size of Zero Fill<br />
+dd 0                ;Reserved</p>
+<p>tls_index       dd  0<br />
+tls_callbacks:      ; only one callback is present initially<br />
+                dd  tls_callback0   ; callback proc<br />
+                dd  0xff dup (0)    ; space reserved for more callback entries (but null at load time)<br />
+                dd  0<br />
+end data<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<p>;  invoke ExitProcess, 0</p>
+<p>data import</p>
+<p>library user,   &#8216;user32.dll&#8217;,\<br />
+        kernel, &#8216;kernel32.dll&#8217;</p>
+<p>import  user,\<br />
+        printf, &#8216;wsprintfA&#8217;,\<br />
+        msgbox, &#8216;MessageBoxA&#8217;</p>
+<p>import  kernel,\<br />
+        exit, &#8216;ExitProcess&#8217;<br />
+end data<br />
+;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: toTHOR2 (2T2)</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-6850</link>
+		<dc:creator>toTHOR2 (2T2)</dc:creator>
+		<pubDate>Sun, 04 Nov 2012 17:30:41 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-6850</guid>
+		<description><![CDATA[Thank You for this in-depth explanation of TLS Callbacks.
+As one would say &quot;I have seen the light.&quot;.
+The time and effort you devote to these Tutorials is really appreciated.  U B da Man!
+
+2T2]]></description>
+		<content:encoded><![CDATA[<p>Thank You for this in-depth explanation of TLS Callbacks.<br />
+As one would say &#8220;I have seen the light.&#8221;.<br />
+The time and effort you devote to these Tutorials is really appreciated.  U B da Man!</p>
+<p>2T2</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ator</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-5284</link>
+		<dc:creator>ator</dc:creator>
+		<pubDate>Thu, 11 Oct 2012 01:55:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-5284</guid>
+		<description><![CDATA[Bah... Got that backwards..
+
+
+409718 not 409781]]></description>
+		<content:encoded><![CDATA[<p>Bah&#8230; Got that backwards..</p>
+<p>409718 not 409781</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ator</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418#comment-5283</link>
+		<dc:creator>ator</dc:creator>
+		<pubDate>Thu, 11 Oct 2012 01:54:12 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418#comment-5283</guid>
+		<description><![CDATA[Address is not right.. Should be:
+
+409781 not 409718
+
+at least I think :-)]]></description>
+		<content:encoded><![CDATA[<p>Address is not right.. Should be:</p>
+<p>409781 not 409718</p>
+<p>at least I think <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

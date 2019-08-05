@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom&#8217;s Tutorial #22: Code Caves and PE Sections</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2390/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2390</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: tasikmalaya</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-76106</link>
+		<dc:creator>tasikmalaya</dc:creator>
+		<pubDate>Tue, 09 Jul 2013 18:00:29 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-76106</guid>
+		<description><![CDATA[the file used this method now always detected as virus by an antivirus, but loader or injector is still safe]]></description>
+		<content:encoded><![CDATA[<p>the file used this method now always detected as virus by an antivirus, but loader or injector is still safe</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kdma</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-5382</link>
+		<dc:creator>kdma</dc:creator>
+		<pubDate>Fri, 12 Oct 2012 12:38:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-5382</guid>
+		<description><![CDATA[great crackme with just one call its possibile to make it keygen itself]]></description>
+		<content:encoded><![CDATA[<p>great crackme with just one call its possibile to make it keygen itself</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4684</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Fri, 28 Sep 2012 22:09:12 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4684</guid>
+		<description><![CDATA[Because I forgot.]]></description>
+		<content:encoded><![CDATA[<p>Because I forgot.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Lee</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4677</link>
+		<dc:creator>Lee</dc:creator>
+		<pubDate>Fri, 28 Sep 2012 20:26:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4677</guid>
+		<description><![CDATA[Also, why &quot;xor eax, eax; push eax&quot; instead of &quot;push 0&quot;?]]></description>
+		<content:encoded><![CDATA[<p>Also, why &#8220;xor eax, eax; push eax&#8221; instead of &#8220;push 0&#8243;?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Lee</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4623</link>
+		<dc:creator>Lee</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 21:08:57 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4623</guid>
+		<description><![CDATA[Second code cave (keygenme.exe) quits if it detects a debugger, but it&#039;s easy enough to patch out:
+
+Address 004012B2: JE to JMP
+Or NOP the whole thing, etc.]]></description>
+		<content:encoded><![CDATA[<p>Second code cave (keygenme.exe) quits if it detects a debugger, but it&#8217;s easy enough to patch out:</p>
+<p>Address 004012B2: JE to JMP<br />
+Or NOP the whole thing, etc.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Hanan</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4508</link>
+		<dc:creator>Hanan</dc:creator>
+		<pubDate>Mon, 24 Sep 2012 07:02:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4508</guid>
+		<description><![CDATA[Seems that the second file Keygenme2.exe has antidebugging routines and doesn&#039;t work good at my win7. :(
+
+Good work.]]></description>
+		<content:encoded><![CDATA[<p>Seems that the second file Keygenme2.exe has antidebugging routines and doesn&#8217;t work good at my win7. <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' /> </p>
+<p>Good work.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4393</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Thu, 20 Sep 2012 23:59:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4393</guid>
+		<description><![CDATA[I agree with you that, when dealing with snippets, CodeSnippetCreater is far and away more feature rich, but in the context of adding code caves to Olly, I will choose MUltimate Assembler every time.]]></description>
+		<content:encoded><![CDATA[<p>I agree with you that, when dealing with snippets, CodeSnippetCreater is far and away more feature rich, but in the context of adding code caves to Olly, I will choose MUltimate Assembler every time.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ange</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4389</link>
+		<dc:creator>Ange</dc:creator>
+		<pubDate>Thu, 20 Sep 2012 21:34:40 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4389</guid>
+		<description><![CDATA[Multimate is awesome to keep useful snippets under the hood, but if you want to do some very serious ASM patching, try Iczelion&#039;s CodeSnippetCreator - it&#039;s just much more powerful!]]></description>
+		<content:encoded><![CDATA[<p>Multimate is awesome to keep useful snippets under the hood, but if you want to do some very serious ASM patching, try Iczelion&#8217;s CodeSnippetCreator &#8211; it&#8217;s just much more powerful!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: symeon</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390#comment-4383</link>
+		<dc:creator>symeon</dc:creator>
+		<pubDate>Thu, 20 Sep 2012 19:12:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390#comment-4383</guid>
+		<description><![CDATA[Wow, fantastic post, thanks for that!
+Cheers.]]></description>
+		<content:encoded><![CDATA[<p>Wow, fantastic post, thanks for that!<br />
+Cheers.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

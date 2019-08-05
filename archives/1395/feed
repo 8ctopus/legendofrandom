@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Double Whammy</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1395/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1395</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: kao</title>
+		<link>http://thelegendofrandom.com/blog/archives/1395#comment-1985</link>
+		<dc:creator>kao</dc:creator>
+		<pubDate>Mon, 30 Jul 2012 18:46:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1395#comment-1985</guid>
+		<description><![CDATA[We should know the names of our heros! Could you tell us which crackme/site was that? :)]]></description>
+		<content:encoded><![CDATA[<p>We should know the names of our heros! Could you tell us which crackme/site was that? <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: mayorofarta</title>
+		<link>http://thelegendofrandom.com/blog/archives/1395#comment-1687</link>
+		<dc:creator>mayorofarta</dc:creator>
+		<pubDate>Wed, 25 Jul 2012 00:02:09 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1395#comment-1687</guid>
+		<description><![CDATA[Shiet happen I guess. Get well soon (both stomach and PC)]]></description>
+		<content:encoded><![CDATA[<p>Shiet happen I guess. Get well soon (both stomach and PC)</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

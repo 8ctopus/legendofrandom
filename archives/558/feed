@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Modifiying Binaries: Adding a Splash Dialog</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/558/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/558</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Kingstaa</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-8036</link>
+		<dc:creator>Kingstaa</dc:creator>
+		<pubDate>Thu, 22 Nov 2012 13:38:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-8036</guid>
+		<description><![CDATA[Very good tutorial.  If you dont mind, i think the right title would be adding a message box to executable.  The splash screen basically means an image in the jpg, png, gif or any other format.  Keep up your good work.
+
+Regards,
+Kingstaa]]></description>
+		<content:encoded><![CDATA[<p>Very good tutorial.  If you dont mind, i think the right title would be adding a message box to executable.  The splash screen basically means an image in the jpg, png, gif or any other format.  Keep up your good work.</p>
+<p>Regards,<br />
+Kingstaa</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-5332</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Thu, 11 Oct 2012 18:05:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-5332</guid>
+		<description><![CDATA[What do you mean by that? The Entry Point?]]></description>
+		<content:encoded><![CDATA[<p>What do you mean by that? The Entry Point?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gdogg</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-5290</link>
+		<dc:creator>gdogg</dc:creator>
+		<pubDate>Thu, 11 Oct 2012 03:54:53 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-5290</guid>
+		<description><![CDATA[Another good one. Finally back here and going to go through all your tuts. It would be nice if you showed how to edit the entrance pointer in the hex dump (Does OllyDBG have a PE header decoding plugin?)]]></description>
+		<content:encoded><![CDATA[<p>Another good one. Finally back here and going to go through all your tuts. It would be nice if you showed how to edit the entrance pointer in the hex dump (Does OllyDBG have a PE header decoding plugin?)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Raingarden9</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-2876</link>
+		<dc:creator>Raingarden9</dc:creator>
+		<pubDate>Wed, 15 Aug 2012 20:35:11 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-2876</guid>
+		<description><![CDATA[Thanks R4ndom. That explains it all (yes, I know this is also written in the article, but I was a bit confused anyway).
+
+Keep on writing excellent articles.]]></description>
+		<content:encoded><![CDATA[<p>Thanks R4ndom. That explains it all (yes, I know this is also written in the article, but I was a bit confused anyway).</p>
+<p>Keep on writing excellent articles.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-2874</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 15 Aug 2012 19:51:50 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-2874</guid>
+		<description><![CDATA[ooooooohhhhhhhh. I get it now. The code section is still usually read only. This is why Olly makes you re-save the changes you&#039;ve made to a binary. It creates a new version of the file with your changes in it. If you tried to change one of these locations through code, it would not work.]]></description>
+		<content:encoded><![CDATA[<p>ooooooohhhhhhhh. I get it now. The code section is still usually read only. This is why Olly makes you re-save the changes you&#8217;ve made to a binary. It creates a new version of the file with your changes in it. If you tried to change one of these locations through code, it would not work.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Raingarden9</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-2870</link>
+		<dc:creator>Raingarden9</dc:creator>
+		<pubDate>Wed, 15 Aug 2012 19:18:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-2870</guid>
+		<description><![CDATA[Sorry for the lame wording.
+
+The point is that many articles states that .code section is read-only. But when your are using code cave you are actually writing new code into .code section. So my assumption was that this section is not (always) read-only.]]></description>
+		<content:encoded><![CDATA[<p>Sorry for the lame wording.</p>
+<p>The point is that many articles states that .code section is read-only. But when your are using code cave you are actually writing new code into .code section. So my assumption was that this section is not (always) read-only.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-2859</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 15 Aug 2012 16:03:36 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-2859</guid>
+		<description><![CDATA[I&#039;m sorry, I don&#039;t understand your question. What are &#039;tubes&#039;?]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m sorry, I don&#8217;t understand your question. What are &#8216;tubes&#8217;?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Raingarden9</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-2823</link>
+		<dc:creator>Raingarden9</dc:creator>
+		<pubDate>Tue, 14 Aug 2012 20:15:45 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-2823</guid>
+		<description><![CDATA[One can read all over the tubes that .code section is read-only. Obviously is not, else code cave wouldn&#039;t be possible. Right?]]></description>
+		<content:encoded><![CDATA[<p>One can read all over the tubes that .code section is read-only. Obviously is not, else code cave wouldn&#8217;t be possible. Right?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: aerokid240</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-1399</link>
+		<dc:creator>aerokid240</dc:creator>
+		<pubDate>Wed, 18 Jul 2012 16:34:23 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-1399</guid>
+		<description><![CDATA[Sorry, i was the anonymous poster that enquired about olly interpreting the bytes at 42551D incorrectly. Just wanted to note my email address incase you choose to respond to me there. I just found out about your blog today and find it very useful. Thanks for the tutorials.]]></description>
+		<content:encoded><![CDATA[<p>Sorry, i was the anonymous poster that enquired about olly interpreting the bytes at 42551D incorrectly. Just wanted to note my email address incase you choose to respond to me there. I just found out about your blog today and find it very useful. Thanks for the tutorials.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Anonymous</title>
+		<link>http://thelegendofrandom.com/blog/archives/558#comment-1398</link>
+		<dc:creator>Anonymous</dc:creator>
+		<pubDate>Wed, 18 Jul 2012 16:19:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558#comment-1398</guid>
+		<description><![CDATA[The bytes at the address 42551D - 42551E, That should translate to push 0 and olly is interpretting it incorrectly. How do you get olly to interpret the instructions as push 0?.]]></description>
+		<content:encoded><![CDATA[<p>The bytes at the address 42551D &#8211; 42551E, That should translate to push 0 and olly is interpretting it incorrectly. How do you get olly to interpret the instructions as push 0?.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

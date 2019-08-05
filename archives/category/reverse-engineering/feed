@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Reverse Engineering</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>Nice Beginning Article on Reversing Android</title>
+		<link>http://thelegendofrandom.com/blog/archives/2966</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2966#comments</comments>
+		<pubDate>Wed, 10 Oct 2012 15:21:54 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2966</guid>
+		<description><![CDATA[David Teitelbaum has released a very nice, all encompassing intro to reversing Android. It is very easy to follow as<a href="http://thelegendofrandom.com/blog/archives/2966" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2966/feed</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Tutorial #23: TLS Callbacks</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2418#comments</comments>
+		<pubDate>Thu, 27 Sep 2012 20:25:16 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418</guid>
+		<description><![CDATA[Unfortunately, our lives as reverse engineers is not always easy. If all it took to patch an app was a<a href="http://thelegendofrandom.com/blog/archives/2418" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2418/feed</wfw:commentRss>
+		<slash:comments>26</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Installing and Set Up</title>
+		<link>http://thelegendofrandom.com/blog/archives/2420</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2420#comments</comments>
+		<pubDate>Fri, 21 Sep 2012 21:09:01 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2420</guid>
+		<description><![CDATA[RadASM is a very good IDE (Integrated Development Environment: think Visual Studio) for developing in most programming languages, though assembly<a href="http://thelegendofrandom.com/blog/archives/2420" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2420/feed</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #22: Code Caves and PE Sections</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2390#comments</comments>
+		<pubDate>Thu, 20 Sep 2012 18:52:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390</guid>
+		<description><![CDATA[In this tutorial we will be talking about code caves as well as PE sections, and touching on the PE<a href="http://thelegendofrandom.com/blog/archives/2390" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2390/feed</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #21: Anti-Debugging Techniques</title>
+		<link>http://thelegendofrandom.com/blog/archives/2100</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2100#comments</comments>
+		<pubDate>Fri, 14 Sep 2012 16:16:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2100</guid>
+		<description><![CDATA[Nowadays, with the plethora of anti-anti-debugging plugins for Olly, you don&#8217;t need to know nearly as much as you used<a href="http://thelegendofrandom.com/blog/archives/2100" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2100/feed</wfw:commentRss>
+		<slash:comments>26</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #20B: Working With Visual Basic Binaries, Pt 2</title>
+		<link>http://thelegendofrandom.com/blog/archives/2044</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2044#comments</comments>
+		<pubDate>Fri, 07 Sep 2012 00:30:56 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2044</guid>
+		<description><![CDATA[This is part 2 of Working with Visual Basic Binaries. In this tutorial we will be using VB Decompiler which<a href="http://thelegendofrandom.com/blog/archives/2044" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2044/feed</wfw:commentRss>
+		<slash:comments>17</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #20A: Working With Visual Basic Binaries, Pt. 1</title>
+		<link>http://thelegendofrandom.com/blog/archives/1947</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1947#comments</comments>
+		<pubDate>Sun, 02 Sep 2012 23:53:45 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1947</guid>
+		<description><![CDATA[Introduction In this tutorial we will go over working with targets written in Visual Basic. Unfortunately, to become a well-rounded<a href="http://thelegendofrandom.com/blog/archives/1947" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1947/feed</wfw:commentRss>
+		<slash:comments>12</slash:comments>
+		</item>
+		<item>
+		<title>Dealing with ASLR</title>
+		<link>http://thelegendofrandom.com/blog/archives/1990</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1990#comments</comments>
+		<pubDate>Sat, 01 Sep 2012 02:24:18 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1990</guid>
+		<description><![CDATA[I know there has been some discussion in the forums regarding Address Space Layout Randomization (ASLR). For those that don&#8217;t<a href="http://thelegendofrandom.com/blog/archives/1990" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1990/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #19: Patchers</title>
+		<link>http://thelegendofrandom.com/blog/archives/1875</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1875#comments</comments>
+		<pubDate>Mon, 27 Aug 2012 18:57:43 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1875</guid>
+		<description><![CDATA[Introduction In this tutorial I will talk about patchers. A &#8216;patcher&#8217; is a program that, after finding the patches to<a href="http://thelegendofrandom.com/blog/archives/1875" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1875/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #18: Time Trials and Memory Breakpoints</title>
+		<link>http://thelegendofrandom.com/blog/archives/1603</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1603#comments</comments>
+		<pubDate>Wed, 22 Aug 2012 22:17:25 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1603</guid>
+		<description><![CDATA[Introduction Time trials are limitations on an application where you only get a certain amount of days or tries before<a href="http://thelegendofrandom.com/blog/archives/1603" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1603/feed</wfw:commentRss>
+		<slash:comments>12</slash:comments>
+		</item>
+	</channel>
+</rss>

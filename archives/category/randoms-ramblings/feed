@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Random&#8217;s Ramblings</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>The Year So Far (In Spam)</title>
+		<link>http://thelegendofrandom.com/blog/archives/2784</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2784#comments</comments>
+		<pubDate>Tue, 25 Sep 2012 18:02:48 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Random's Ramblings]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2784</guid>
+		<description><![CDATA[Securelist has released a report on spam usage for this year. apparently, overall spam has dropped 1.6% (yippee) to 70.2%.<a href="http://thelegendofrandom.com/blog/archives/2784" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2784/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Detailed View of the IAT</title>
+		<link>http://thelegendofrandom.com/blog/archives/2322</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2322#comments</comments>
+		<pubDate>Wed, 12 Sep 2012 23:01:26 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Random's Ramblings]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2322</guid>
+		<description><![CDATA[The IAT, or Important Address Table, is a collection of just that; important addresses. These can include the address of<a href="http://thelegendofrandom.com/blog/archives/2322" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2322/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Wait, Has Anyone Seen Internet Explorer? He Was Just Here&#8230;</title>
+		<link>http://thelegendofrandom.com/blog/archives/1999</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1999#comments</comments>
+		<pubDate>Sat, 01 Sep 2012 17:18:41 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Random's Ramblings]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1999</guid>
+		<description><![CDATA[I ran an interesting report on the Legend Of Random site, basically seeing what browser people are connecting to us<a href="http://thelegendofrandom.com/blog/archives/1999" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1999/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The Man, The Legend, Me</title>
+		<link>http://thelegendofrandom.com/blog/archives/1768</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1768#comments</comments>
+		<pubDate>Mon, 20 Aug 2012 17:48:40 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Random's Ramblings]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1768</guid>
+		<description><![CDATA[A lot of people have asked me about myself and how I got into reverse engineering.  Sometimes you spend so<a href="http://thelegendofrandom.com/blog/archives/1768" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1768/feed</wfw:commentRss>
+		<slash:comments>13</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Ramblings: Captcha alternatives (besides suicide)</title>
+		<link>http://thelegendofrandom.com/blog/archives/539</link>
+		<comments>http://thelegendofrandom.com/blog/archives/539#comments</comments>
+		<pubDate>Fri, 15 Jun 2012 22:53:39 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Random's Ramblings]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=539</guid>
+		<description><![CDATA[Is it me or are you starting to feel less human too? Captchas, or those annoying pictures at the bottom<a href="http://thelegendofrandom.com/blog/archives/539" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/539/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

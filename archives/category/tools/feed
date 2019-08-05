@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Tools</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/tools/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>New Debugger For Amd 64-bit Apps</title>
+		<link>http://thelegendofrandom.com/blog/archives/2936</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2936#comments</comments>
+		<pubDate>Wed, 03 Oct 2012 18:50:19 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2936</guid>
+		<description><![CDATA[Feryno over at the x86asm.net site has released a debugger for AMD 64-bit apps. Looks very promising, and it goes<a href="http://thelegendofrandom.com/blog/archives/2936" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2936/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Adding an Icon and Menu</title>
+		<link>http://thelegendofrandom.com/blog/archives/2592</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2592#comments</comments>
+		<pubDate>Thu, 27 Sep 2012 21:28:44 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2592</guid>
+		<description><![CDATA[Adding an Icon Let&#8217;s start by adding an icon. Load up our HelloWorld project from the last tutorial. Click on<a href="http://thelegendofrandom.com/blog/archives/2592" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2592/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Creating Our First Project</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2517#comments</comments>
+		<pubDate>Mon, 24 Sep 2012 17:11:44 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517</guid>
+		<description><![CDATA[We continue our tutorials on RadASM by creating a new project that creates a dialog box with two bitmaps and<a href="http://thelegendofrandom.com/blog/archives/2517" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2517/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Shellcode Converter Released by Levis</title>
+		<link>http://thelegendofrandom.com/blog/archives/2752</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2752#comments</comments>
+		<pubDate>Mon, 24 Sep 2012 16:06:46 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2752</guid>
+		<description><![CDATA[Levis (of the REPT team) has released a new shellcoder&#8217;s tool, ShellOp Converter. This tool allows you to enter shellcode,<a href="http://thelegendofrandom.com/blog/archives/2752" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2752/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>New Version of TLSCatch Olly Plugin Released</title>
+		<link>http://thelegendofrandom.com/blog/archives/2750</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2750#comments</comments>
+		<pubDate>Mon, 24 Sep 2012 16:03:42 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2750</guid>
+		<description><![CDATA[Just in time for my next tutorial on TLS callbacks, Waliedassar has been gracious enough to release a new version<a href="http://thelegendofrandom.com/blog/archives/2750" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2750/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Looking for That Perfect Cracking Assistant</title>
+		<link>http://thelegendofrandom.com/blog/archives/2613</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2613#comments</comments>
+		<pubDate>Sat, 22 Sep 2012 02:43:47 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2613</guid>
+		<description><![CDATA[As some of you know, in the forums I brought up what the ultimate cracking/reversing tool would look like. There<a href="http://thelegendofrandom.com/blog/archives/2613" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2613/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>A Very Cool Olly Plugin</title>
+		<link>http://thelegendofrandom.com/blog/archives/2470</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2470#comments</comments>
+		<pubDate>Tue, 18 Sep 2012 16:41:48 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2470</guid>
+		<description><![CDATA[Many of you have probably heard of Resource Hacker FX and 7+ Taskbar Tweaker from RaMMicHaeL (if you haven&#8217;t, check<a href="http://thelegendofrandom.com/blog/archives/2470" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2470/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>A Damn Fine Program&#8230;CmpDisasm</title>
+		<link>http://thelegendofrandom.com/blog/archives/2379</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2379#comments</comments>
+		<pubDate>Thu, 13 Sep 2012 23:54:52 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2379</guid>
+		<description><![CDATA[DonDD from the REPT forums has come out with a new tool that I have been looking for for a<a href="http://thelegendofrandom.com/blog/archives/2379" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2379/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>New Plugin for Olly 2.0</title>
+		<link>http://thelegendofrandom.com/blog/archives/2371</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2371#comments</comments>
+		<pubDate>Thu, 13 Sep 2012 23:41:27 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2371</guid>
+		<description><![CDATA[Zer0Flag, an official friend of the Legend of Random site, has released a new plugin for OllyDBG 2.0 called OllyCallstack.<a href="http://thelegendofrandom.com/blog/archives/2371" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2371/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Tutorial #7: More Crackmes</title>
+		<link>http://thelegendofrandom.com/blog/archives/223</link>
+		<comments>http://thelegendofrandom.com/blog/archives/223#comments</comments>
+		<pubDate>Fri, 15 Jun 2012 15:45:36 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[cracking]]></category>
+		<category><![CDATA[crackme]]></category>
+		<category><![CDATA[ollydbg]]></category>
+		<category><![CDATA[tutorial]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223</guid>
+		<description><![CDATA[Introduction Welcome to Part 7 of  of R4ndom&#8217;s tutorials on Reverse Engineering. This time, we will be cracking two crackmes;<a href="http://thelegendofrandom.com/blog/archives/223" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/223/feed</wfw:commentRss>
+		<slash:comments>14</slash:comments>
+		</item>
+	</channel>
+</rss>

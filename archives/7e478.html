@@ -1,0 +1,1854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/7?replytocom=70734 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:06:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>Tutorial #1 : What is Reverse Engineering &laquo;  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1" />
+<meta name="robots" content="follow, all" />
+
+<link rel="shortcut icon" href="../wp-content/themes/jarrah/favicon.ico" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="../feed" />
+<link rel="pingback" href="../xmlrpc.php" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/css/menu.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" href="wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random &raquo; Tutorial #1 : What is Reverse Engineering Comments Feed" href="7/feed" />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4511.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/ajax-quick-subscribe/ajax9d52.js?ver=3.5.1'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min9d52.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Hello world!' href='1.html' />
+<link rel='next' title='Tutorial #2 : Intro To Olly Debug' href='31.html' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='7.html' />
+<link rel='shortlink' href='../indexc4f7.html?p=7' />
+<meta name='robots' content='noindex,nofollow' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input type="text" value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput"/>
+    <input type="submit" class="submitbutton" value="" />
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                </ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="archives/7">Tutorial #1 : What is Reverse Engineering</a> </h2>
+          	<div class="postmeta">by <a href="archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on May.21, 2012, under <a href="archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0077e1;">What is reverse engineering?</span></h2>
+<p>Reverse engineering is the process of taking a compiled binary and attempting to recreate (or simply understand) the original way the program works. A programmer initially writes a program, usually in a high-level language such as C++ or Visual Basic (or God forbid, Delphi). Because the computer does not inherently speak these languages, the code that the programmer wrote is assembled into a more machine specific format, one to which a computer does speak. This code is called, originally enough, machine language. This code is not very human friendly,  and often times requires a great deal of brain power to figure out exactly what the programmer had in mind.</p>
+<p><span id="more-7"></span></p>
+<h2><span style="color: #0077e1;">What is reverse engineering used for?</span></h2>
+<p>Reverse engineering can be applied to many areas of computer science, but here are a couple of generic categories;</p>
+<ul>
+<li><strong>Making it possible to interface to legacy code (where you do not have the original code source).</strong></li>
+<li><strong>Breaking copy protection (ie. Impress your friends and save some $$).</strong></li>
+<li><strong>Studying virii and malware.</strong></li>
+<li><strong>Evaluating software quality and robustness.</strong></li>
+<li><strong>Adding functionality to existing software.</strong></li>
+</ul>
+<p>The first category is reverse engineering code to interface with existing binaries when the source code is not available. I will not be discussing this much, as it is boring.</p>
+<p>The second category (and the biggest) is breaking copy protection. This means disabling time trials, defeating registration, and basically everything else to get commercial software for free. This we will be discussing at great length.</p>
+<p>The third category is studying virus and malware code. Reverse engineering is required because not a lot of virus coders out there don&#8217;t send instructions on how they wrote the code, what it is supposed to accomplish, and how it will accomplish this (unless they are really dumb). This is a pretty exciting field, but requires a great deal of knowledge. We will not discuss this much until later on.</p>
+<p>The fourth category is evaluating software security and vulnerabilities. When creating large (think Windows Operating Systems), reverse engineering is used to make sure that the system does not contain any major vulnerabilities, security flaws, and frankly, to make it as hard as possible to allow crackers to crack the software.</p>
+<p>The final category is adding functionality to existing software. Personally, I think this is one of the most fun. Don&#8217;t like the graphics used in your web design software? Change them. Want to add a menu item to encrypt your documents in your favorite word processor? Add it. Want to annoy your co-workers to no end by adding derogatory message boxes to Windows calculator? Let&#8217;s do it. This we will be getting into later in the series.</p>
+<h2><span style="color: #0077e1;">What knowledge is required?</span></h2>
+<p>As you can probably guess, a great deal of knowledge is necessary to be an effective reverse engineer. Fortunately, a great deal of knowledge is not necessary to &#8216;begin&#8217; reverse engineering, and that&#8217;s where I hope to come in. That being said, to have fun with reversing and to get something out of these tutorials you should at least have a basic understanding of how program flow works (for example, you should know what a basic if&#8230;then statement does, what an array is, and have at least seen a hello world program). Secondly, becoming familiar with Assembly Language is highly suggested; You can get thru the tutorials without it, but at some point you will want to become a guru at ASM to really know what you are doing. In addition, a lot of your time will be devoted to learning how to use tools. These tools are invaluable to a reverse engineer, but also require learning each tool&#8217;s shortcuts, flaws and idiosyncrasies. Finally, reverse engineering requires a significant amount of experimentation; playing with different packers/protectors/encryption schemes, learning about programs originally written in different programming languages (even Delphi), deciphering anti-reverse engineering tricks&#8230;the list goes on and on. At the end of this tutorial I have added a &#8216;further reading&#8217; section with some suggested sources. If you really want to get good at reversing, I highly suggest you do some further reading.</p>
+<h2><span style="color: #0077e1;">What kinds of tools are used?</span></h2>
+<p>There are many different kinds of tools used in reversing. Many are specific to the types of protection that must be overcome to reverse a binary. There are also several that just make the reverser&#8217;s life easier. And then some are what I consider the &#8216;staple&#8217; items- the ones you use regularly. For the most part, the tools fit into a couple categories:</p>
+<h3>1. Disassemblers</h3>
+<p>Disassemblers attempt to take the machine language codes in the binary and display them in a friendlier format. They also extrapolate data such as function calls, passed variables and text strings.  This makes the executable look more like human-readable code as opposed to a bunch of numbers strung together. There are many disassemblers out there, some of them specializing in certain things (such as binaries written in Delphi). Mostly it comes down to the one your most comfortable with. I invariably find myself working with IDA (there is a free version available http://www.hex-rays.com/), as well as a couple of lesser known ones that help in specific cases.</p>
+<h3>2. Debuggers</h3>
+<p>Debuggers are the bread and butter for reverse engineers. They first analyze the binary, much like a disassembler  Debuggers then allow the reverser to step through the code, running one line at a time and investigating the results. This is invaluable to discover how a program works. Finally, some debuggers allow certain instructions in the code to be changed and then run again with these changes in place. Examples of debuggers are Windbg and Ollydbg. I almost solely use Ollydbg (http://www.ollydbg.de/), unless debugging kernel mode binaries, but we&#8217;ll get to that later.</p>
+<h3>3. Hex editors</h3>
+<p>Hex editors allow you to view the actual bytes in a binary, and change them. They also provide searching for specific bytes, saving sections of a binary to disk, and much more. There are many free hex editors out there, and most of them are fine. We won&#8217;t be using them a great deal in these tutorials, but sometimes they are invaluable.</p>
+<h3>4. PE and resource viewers/editors</h3>
+<p>Every binary designed to run on a windows machine (and Linux for that matter) has a very specific section of data at the beginning of it that tells the operating system how to set up and initialize the program. It tells the OS how much memory it will require, what support DLLs the program needs to borrow code from, information about dialog boxes and such. This is called the Portable Executable, and all programs designed to run on windows needs to have one.</p>
+<p>In the world of reverse engineering, this structure of bytes becomes very important, as it gives the reverser needed information about the binary. Eventually, you will want to (or need to) change this information, either to make the program do something different than what it was initially for, or to change the program BACK into something it originally was (like before a protector made the code really hard to understand). There are a plethora of PE viewers and editors out there. I use CFF Explorer (http://www.ntcore.com/exsuite.php) and LordPE (http://www.woodmann.com/collaborative/tools/index.php/LordPE), but you can feel free to use whichever you&#8217;re comfortable with.</p>
+<p>Most files also have resource sections. These include graphics, dialog items, menu items, icons and text strings. Sometimes you can have fun just by looking at (and altering <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />   ) the resource sections. I will show you an example at the end of this tutorial.</p>
+<h3>5. System Monitoring tools</h3>
+<p>When reversing programs, it is sometimes important (and when studying virii and malware, of the utmost importance) to see what changes an application makes to the system; are there registry keys created or queried? are there .ini files created? are separate processes created, perhaps to thwart reverse engineering of the application? Examples of system monitoring tools are <span style="color: #0077e1;"><a title="Process Monitor" href="http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx"><span style="color: #0077e1;">procmon</span></a> </span>,<span style="color: #0077e1;"> <a title="Regshot" href="http://sourceforge.net/projects/regshot/"><span style="color: #0077e1;">regshot</span></a> </span>, and process hacker. We will discuss these later in the tutorial.</p>
+<h3>6. Miscellaneous tools and information</h3>
+<p>There are tools we will pick up along the way, such as scripts, unpackers, packer identifiers etc. Also in this category is some sort of reference to the Windows API. This API is huge, and at times, complicated. It is extremely helpful in reverse engineering to know exactly what called functions are doing.</p>
+<h3>7. Beer.</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0077e1;">So Let&#8217;s Get On With It, Already!</span></h2>
+<p>Even though we are starting with very little knowledge, I did want to give you at least a little taste of reversing in this first tutorial. I have included a resource viewer/edit in this tutorial (see the Files folder) called<span style="color: #0077e1;"> <a title="XN Resource Editor" href="http://www.wilsonc.demon.co.uk/d10resourceeditor.htm"><span style="color: #0077e1;">XN Resource Editor</span></a> </span>. It is freeware. Basically, this program allows you to see the resource section in an exe file, as well as modify these resources. I have found that you can have an awful lot of fun with these- they allow you to change the menus, icons, graphics, dialogs, you name it, in programs. Let&#8217;s try one ourselves&#8230;</p>
+<p>First, run XN. Click on the load icon on top, and click over to <em>Windows\System32\ and load calc.exe</em> (you&#8217;re default windows location may vary.) You should see a bunch of folders available:</p>
+<p><a href="wp-content/uploads/2012/05/XN1.png"><img class="aligncenter size-medium wp-image-10" title="XN1" src="wp-content/uploads/2012/05/XN1-229x300.png" alt="" width="229" height="300" /></a> </p>
+<p>You can see that there are folders for Bitmaps (any graphics the program displays), Menu (the top menu items), Dialog (dialog boxes, along with text and buttons), String Table, IconGroup etc. You should feel free to mess around with these things. Just make sure to save it as a different file (you would hate to have to re-install windows just for the dumb calculator). In particular, try this:</p>
+<p>Click on the plus next to Menu. You will then see a folder with a number as a name. This is the ID that windows will use to access this resource in the program. Open this folder as well. You should now see an icon for &#8220;English (United States)&#8221; or something like this. If you click on this you will see a diagram of what the menu will look like (you can even click around- it works just like a real menu).</p>
+<p>&nbsp;</p>
+<p><a href="wp-content/uploads/2012/05/XN21.png"><img class="aligncenter size-full wp-image-12" title="XN2" src="wp-content/uploads/2012/05/XN21.png" alt="" width="680" height="350" /></a> </p>
+<p>Now, click on the menu option &#8220;Scientific&#8221;. The Caption field should change to &#8220;&amp;Scientific&#8221;. The ampersand is there to tell you what the &#8216;Hot-Key&#8217; is, in this case &#8216;S&#8217;. If instead we wanted the &#8216;e&#8217; to be the hot-key, it would look like this &#8220;Sci&amp;entific&#8221;. So already, don&#8217;t like the built in hot-key&#8217;s for calc? Just change them!! But let&#8217;s do something different.In the Caption field, replace the &amp;Scientific with &#8220;&amp;Nerd&#8221;. This will now change the menu option to &#8220;Nerd&#8221; and use the hot-key &#8216;N&#8217; (I looked through the other options in the menu to make user no other menu option used &#8216;N&#8217; as a hot-key).  You should do this for all of the menu entries. Now, go up to File (in XN Resource) and choose &#8220;Save As&#8230;&#8221; Save your new version of calc to a different name (and preferably a different location) and then run it.</p>
+<p>&nbsp;</p>
+<p><a href="wp-content/uploads/2012/05/XN3.png"><img class="aligncenter size-full wp-image-14" title="XN3" src="wp-content/uploads/2012/05/XN3.png" alt="" width="259" height="267" /></a> </p>
+<p>Of course, you don&#8217;t have to stop there. In order to drive my coworkers nuts, I changed all of the numbers in their calcs.</p>
+<p>&nbsp;</p>
+<p><a href="wp-content/uploads/2012/05/XN4.png"><img class="aligncenter size-full wp-image-15" title="XN4" src="wp-content/uploads/2012/05/XN4.png" alt="" width="261" height="263" /></a> </p>
+<p>As you can see, the sky&#8217;s the limit.</p>
+<p>&nbsp;</p>
+<p>Till next time&#8230;</p>
+<p>-R4ndom</p>
+<p>ps. Thanks go out to Lena151, for showing me the way, A.S.L., snaker, Qwerton and Jibz for showing me the secrets, and Olly , Yoda-mmi, uCF and Colin Wilson for giving me the tools.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #000099;">Further Reading</span></h2>
+<p>1. <strong>Assembly Language.</strong> <span style="color: #0077e1;"><a title="Amazon" href="http://www.amazon.com/Assembly-Language-x86-Processors-Edition/dp/013602212X/ref=sr_1_4?s=books&amp;amp;ie=UTF8&amp;amp;qid=1337355497&amp;amp;sr=1-4"><span style="color: #0077e1;"><em>Assembly Language For Intel Based Computers</em></span></a> </span> is the de-facto book on it . You can also check out some web sites that offer a tremendous amount of <span style="color: #0077e1;"><a title="downloads" href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/index.html"><span style="color: #0077e1;">downloads </span></a> </span>, <span style="color: #0077e1;"><a title="Instruction" href="http://assembly.co.nr/"><span style="color: #0077e1;">instruction</span></a> </span>, <span style="color: #0077e1;"><a title="Why Learn Assembly Language" href="http://www.codeproject.com/Articles/89460/Why-Learn-Assembly-Language"><span style="color: #0077e1;">sample code</span></a> </span> , and <span style="color: #0077e1;"><a title="ASM Community" href="http://www.asmcommunity.net/board/"><span style="color: #0077e1;">help</span></a> </span>. Another good resource is <em>&#8220;The Art of Assembly&#8221;</em>. I will be including this in one of the next tutorials, but you can also download it <span style="color: #0077e1;"><a title="Art of Assembly" href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/index.html"><span style="color: #0077e1;">here</span></a> .</span></p>
+<p>2. <strong>The PE file structure.</strong> One of the best resources is from Microsoft themselves: &#8220;<span style="color: #0077e1;"><a title="PE" href="http://msdn.microsoft.com/en-us/magazine/cc301805.aspx"><span style="color: #0077e1;">An in-depth look into the Win32 Portable Executable File Format</span></a> </span>&#8220;. Another good document (with lots of pretty pictures) is &#8220;<span style="color: #0077e1;"><a href="http://www.curlybrace.com/archive/PE File Structure.pdf"><span style="color: #0077e1;">PE File Structure</span></a> </span>&#8220;.   It is a downloadable PDF.</p>
+<p>3. <strong>Windows Operating System Internals.</strong> The de-facto book is &#8220;<span style="color: #0077e1;"><a title="Amazon" href="http://www.amazon.com/Windows-Internals-Book-Online-Cour/dp/1906795177/ref=sr_1_2?ie=UTF8&amp;amp;qid=1337355472&amp;amp;sr=8-2"><span style="color: #0077e1;">Microsoft Windows Internals</span></a> </span>&#8221; by Mark Russinovich. It&#8217;s about as exciting as women&#8217;s baseball, but it is THE resource.</p>
+<p>4. <strong>Cracking tutorials.</strong> www.Tuts4You.com is the place to be.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single"><a href="archives/tag/cracking" rel="tag">cracking</a> , <a href="archives/tag/reverse-engineering-2" rel="tag">reverse engineering</a> </span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">71 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment byuser comment-author-blammo even thread-even depth-1" id="li-comment-2">
+     <div id="comment-2">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/98f04724c182c3c5e8f3c4768daec757?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>blammo</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2" title="">May 23rd, 2012 on 4:16 pm</a>  </small>
+
+			<p>Wow, this is very helpful!  I&#8217;ve been struggling with this for YEARS, but this blog is the only one that has helped me solve my problem!  YOU ARE A GOD!  Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=2#respond' onclick='return addComment.moveForm("comment-2", "2", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-ludkiller odd alt thread-odd thread-alt depth-1" id="li-comment-5">
+     <div id="comment-5">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='ludkiller' src='wp-content/uploads/2012/06/ludkiller_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://darkl1ght.tk/' rel='external nofollow' class='url'>ludkiller</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-5" title="">May 24th, 2012 on 4:02 am</a>  </small>
+
+			<p>blammo , i totally agree ~~</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=5#respond' onclick='return addComment.moveForm("comment-5", "5", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-45">
+     <div id="comment-45">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/422c561e637c09aad363afc1e6648af3?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.aol.com/ec126841f5c22d378d6dcc0a02e67134860ebda9' rel='external nofollow' class='url'>here</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-45" title="">May 31st, 2012 on 8:59 am</a>  </small>
+
+			<p>How do you make a blog look this cool. Email me if you want and share your wisdom. Id be appreciative.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=45#respond' onclick='return addComment.moveForm("comment-45", "45", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-51">
+     <div id="comment-51">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-51" title="">May 31st, 2012 on 2:25 pm</a>  </small>
+
+			<p>I would need you email address first. You can give it to me thru the contact button at the top of this site.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=51#respond' onclick='return addComment.moveForm("comment-51", "51", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-58">
+     <div id="comment-58">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/5b899d74bd6cada03435ae80a24141a2?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Carina</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-58" title="">May 31st, 2012 on 7:33 pm</a>  </small>
+
+			<p>articles doesn&#8217;t necessarily need too much words to be good, and yours amazing.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=58#respond' onclick='return addComment.moveForm("comment-58", "58", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-60">
+     <div id="comment-60">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/7b1d97636c7aa5a0c808791b5bb58f1b?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Diana</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-60" title="">May 31st, 2012 on 11:35 pm</a>  </small>
+
+			<p>true that.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=60#respond' onclick='return addComment.moveForm("comment-60", "60", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-67">
+     <div id="comment-67">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/81c3d91faa579ed3cfce567210e177d3?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.kitsucesso.com/' rel='external nofollow' class='url'>Alísia</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-67" title="">June 1st, 2012 on 2:41 am</a>  </small>
+
+			<p>please keep the good and creative ideas coming guys.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=67#respond' onclick='return addComment.moveForm("comment-67", "67", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-70">
+     <div id="comment-70">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/830e0697289fecc173638b85c738fdf5?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Emanuela</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70" title="">June 1st, 2012 on 4:19 am</a>  </small>
+
+			<p>this is the first time i am hearing of this. thanks for the information.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=70#respond' onclick='return addComment.moveForm("comment-70", "70", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-73">
+     <div id="comment-73">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/5c286c17770bc6a765c9e75a215887e1?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Claudina</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-73" title="">June 1st, 2012 on 5:51 am</a>  </small>
+
+			<p>i&#8217;m sorry but i think you should improve the organization of the website.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=73#respond' onclick='return addComment.moveForm("comment-73", "73", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-86">
+     <div id="comment-86">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-86" title="">June 1st, 2012 on 2:50 pm</a>  </small>
+
+			<p>I would love to. Do you have any suggestions?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=86#respond' onclick='return addComment.moveForm("comment-86", "86", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-75">
+     <div id="comment-75">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/3bdc7e1af8bbdc0aae7ddcb08e68b70d?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Aline</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-75" title="">June 1st, 2012 on 8:50 am</a>  </small>
+
+			<p>i don&#8217;t know how you can write so well, your articles are excellent.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=75#respond' onclick='return addComment.moveForm("comment-75", "75", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-77">
+     <div id="comment-77">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/aad33a82cb43fa04b3b8c321e83b4556?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Aila</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-77" title="">June 1st, 2012 on 10:56 am</a>  </small>
+
+			<p>your posts are always so explicative, and i like it because i have a problem in understanding such things.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=77#respond' onclick='return addComment.moveForm("comment-77", "77", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-78">
+     <div id="comment-78">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/7a3fd18e23cdde73638122745734adf9?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Edelnide</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-78" title="">June 1st, 2012 on 11:20 am</a>  </small>
+
+			<p>i always like your posts because you have such a good way of expressing yourself, and this is a virtue in these days.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=78#respond' onclick='return addComment.moveForm("comment-78", "78", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-79">
+     <div id="comment-79">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/48f537f5df2d3b5b219d1f96d77f2011?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Elba</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-79" title="">June 1st, 2012 on 12:30 pm</a>  </small>
+
+			<p>i would like to read your newer posts, so i will bookmark you. hope to see your updates.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=79#respond' onclick='return addComment.moveForm("comment-79", "79", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-141">
+     <div id="comment-141">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>méthode pour gagenr en bourse</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-141" title="">June 4th, 2012 on 11:20 am</a>  </small>
+
+			<p>Je think cet is un de the most vital info pour moi. Et i sont satisfied studying votre article. But should remark sur some common things, le site taste est perfect, les articles sont truly excellent : D. Excellent job, acclame We&#8217;re a la liasse(le bande) de volontaires et opening a tout nouveau complote dans notre communaut�. Votre site provided nous avec valuable info work sur. Vous have performed a formidable process et notre whole neighborhood shall be thankful � vous.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=141#respond' onclick='return addComment.moveForm("comment-141", "141", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-153">
+     <div id="comment-153">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-153" title="">June 4th, 2012 on 3:53 pm</a>  </small>
+
+			<p>At least if you&#8217;re going to spam my site, do it in ENGLISH!!!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=153#respond' onclick='return addComment.moveForm("comment-153", "153", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-1659">
+     <div id="comment-1659">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/105e9e034a499b8fa0ecbae4727480ef?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Levitationist7</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1659" title="">July 24th, 2012 on 2:21 pm</a>  </small>
+
+			<p>Does the XN Resource Editor work on Vista? Or is there a similar program I can download that does run with vista? Thanks.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=1659#respond' onclick='return addComment.moveForm("comment-1659", "1659", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-1670">
+     <div id="comment-1670">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1670" title="">July 24th, 2012 on 6:40 pm</a>  </small>
+
+			<p>XN does work with vista. You can also try Resource Hacker. It&#8217;s on my tools page.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=1670#respond' onclick='return addComment.moveForm("comment-1670", "1670", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-3" id="li-comment-1676">
+     <div id="comment-1676">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/105e9e034a499b8fa0ecbae4727480ef?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Levitationist7</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1676" title="">July 24th, 2012 on 8:31 pm</a>  </small>
+
+			<p>Thanks, downloading it now. It just didn&#8217;t mention Vista.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=1676#respond' onclick='return addComment.moveForm("comment-1676", "1676", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2377">
+     <div id="comment-2377">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Hello</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2377" title="">August 6th, 2012 on 9:47 am</a>  </small>
+
+			<p>Hey XN Resource Editor gives a system error code 50 when I try to save the Calc.exe after changing to nerd. After researching it, this seems to be a common problem with XN Editor and was advised to use Resource Hacker or Resedit. I used both but they do not have the menu tab like XN does. Do you know where to find it on Res Hacker or Resedit? Thanks.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=2377#respond' onclick='return addComment.moveForm("comment-2377", "2377", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-2425">
+     <div id="comment-2425">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2425" title="">August 6th, 2012 on 6:29 pm</a>  </small>
+
+			<p>Try &#8220;Resource Tuner&#8221;<br />
+<a href="http://www.restuner.com/" rel="nofollow">http://www.restuner.com/</a> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=2425#respond' onclick='return addComment.moveForm("comment-2425", "2425", "respond", "7")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-3" id="li-comment-2476">
+     <div id="comment-2476">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Hello</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2476" title="">August 7th, 2012 on 1:24 pm</a>  </small>
+
+			<p>Thanks. Resource Tuner does not open calc.exe on my 64 bit os because it says 64 bit is not supported yet. I am pretty sure that this is why XN Resource editor gave me that error code 50. Because of the 64 bit os. Thanks anyway.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=2476#respond' onclick='return addComment.moveForm("comment-2476", "2476", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even depth-2" id="li-comment-10705">
+     <div id="comment-10705">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2c764f24f66962a417070ed104de06e5?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Sp1tfyr</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10705" title="">December 21st, 2012 on 1:57 am</a>  </small>
+
+			<p>Has anyone found a resource editor that doesn&#8217;t produce the error code 50? I&#8217;m on windows 7. I&#8217;ve downloaded CFF Explorer VIII and when I open up calc.exe, there isn&#8217;t a menu items. Is this an issue with permissions or could this be a windows 7 os issue?</p>
+<p>I would like to move to tutorial #2 but I&#8217;m concerned downloading ollydbg will produce a similar error.</p>
+<p>Any guidance would be appreciated.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=10705#respond' onclick='return addComment.moveForm("comment-10705", "10705", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-6928">
+     <div id="comment-6928">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e256aca538cfe9fd3cd6bc9e66e471d2?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>d1x0n</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-6928" title="">November 5th, 2012 on 10:44 pm</a>  </small>
+
+			<p>those series on reversing are huge, man. that stuff just RIPPED my college literature. your work is appreciated!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=6928#respond' onclick='return addComment.moveForm("comment-6928", "6928", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-9509">
+     <div id="comment-9509">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>J.D.</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-9509" title="">December 9th, 2012 on 4:33 am</a>  </small>
+
+			<p>I would highly recommend reading this article on reverse engineering before getting into these tutorials (don&#8217;t worry, it is written assuming you know nothing about Assembly):</p>
+<p><a href="http://www.ethicalhacker.net/content/view/152/2/" rel="nofollow">http://www.ethicalhacker.net/content/view/152/2/</a> </p>
+<p>Even though Random&#8217;s tutorials are very easy to follow, reading this article will greatly help you understand many things he tries to teach you such as the stack/plate analogy.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=9509#respond' onclick='return addComment.moveForm("comment-9509", "9509", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-11668">
+     <div id="comment-11668">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/093c0cac61b842e95ce37a8ed370ff22?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Porush</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-11668" title="">January 2nd, 2013 on 8:47 pm</a>  </small>
+
+			<p>For PE files, I&#8217;d recommend corkami&#8217;s guide to the PE file format, since that&#8217;s what I&#8217;m familiar with, and it helped me learn the basics of the PE file format pretty quick. It&#8217;s a really big picture, a tiny bit of explanation and some sample code. That and the actual PE file specification are my go to reference on the file format. Link to the guide here:</p>
+<p><a href="https://code.google.com/p/corkami/wiki/PE101" rel="nofollow">https://code.google.com/p/corkami/wiki/PE101</a> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=11668#respond' onclick='return addComment.moveForm("comment-11668", "11668", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-15523">
+     <div id="comment-15523">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/5c87762a280174ef07576ab70063d1f4?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://dodo1912.do.funpic.de/guestbook/index.php' rel='external nofollow' class='url'>abstract yellow and green canvas art 48"</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-15523" title="">February 2nd, 2013 on 2:42 am</a>  </small>
+
+			<p>When someone writes an post he/she keeps the thought of a user<br />
+in his/her mind that how a user can understand it. So that&#8217;s why this piece of writing is amazing. Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=15523#respond' onclick='return addComment.moveForm("comment-15523", "15523", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-22851">
+     <div id="comment-22851">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/d7b24fec51464c1c8a15edbb61f2b185?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://lab.kapit.fr/display/elasticsearch/Elastic+Search' rel='external nofollow' class='url'>lab.kapit.fr</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-22851" title="">March 4th, 2013 on 7:26 am</a>  </small>
+
+			<p>I absolutely love your blog and find almost all of your post&#8217;s to be exactly what I&#8217;m looking for.<br />
+Would you offer guest writers to write content<br />
+for yourself? I wouldn&#8217;t mind composing a post or elaborating on most of the subjects you write about here. Again, awesome web site!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=22851#respond' onclick='return addComment.moveForm("comment-22851", "22851", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-25969">
+     <div id="comment-25969">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/3b6e10afadfbf3384e2b7df5b225812a?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.you-ng.it/blog/1008-grillo-contro-la-tv-«i-talk-show-spazi-poco-igienici,-un-arma-contro-il-movimento-5-stelle».html' rel='external nofollow' class='url'>you-ng.it</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-25969" title="">March 20th, 2013 on 6:29 pm</a>  </small>
+
+			<p>I have been surfing on-line more than three hours lately, but I by<br />
+no means discovered any fascinating article like yours.<br />
+It is lovely price sufficient for me. Personally, if all web owners and bloggers made good content material as you did,<br />
+the internet might be a lot more useful than ever before.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=25969#respond' onclick='return addComment.moveForm("comment-25969", "25969", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-29843">
+     <div id="comment-29843">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/13314779aeb305249b77fbcc4b146e04?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://24x7.cl/desarrollo/' rel='external nofollow' class='url'>servidores linux</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-29843" title="">April 12th, 2013 on 9:56 pm</a>  </small>
+
+			<p>I&#8217;ll immediately seize your rss as I can&#8217;t find your email subscription link or newsletter service. Do you have any? Kindly permit me realize so that I may just subscribe. Thanks.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=29843#respond' onclick='return addComment.moveForm("comment-29843", "29843", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-29891">
+     <div id="comment-29891">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e7d7bbbc6086faec73aeb63268f3ee33?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Wanderer</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-29891" title="">April 13th, 2013 on 2:30 am</a>  </small>
+
+			<p>Why is there the phrase &#8220;fast payday loans&#8221; hidden everywhere in the text?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=29891#respond' onclick='return addComment.moveForm("comment-29891", "29891", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-34418">
+     <div id="comment-34418">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e81b3ed74dd0bad50120aa4a64b6b97e?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.tg.net.pl/blog/kosiba-lesiak.php/?id=1312' rel='external nofollow' class='url'>beginners workout chart</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-34418" title="">April 18th, 2013 on 9:16 pm</a>  </small>
+
+			<p>I absolutely love your blog and find nearly all of<br />
+your post&#8217;s to be just what I&#8217;m looking for.<br />
+Does one offer guest writers to write content for you?<br />
+I wouldn&#8217;t mind writing a post or elaborating on a few of the subjects you write related to here. Again, awesome web log!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=34418#respond' onclick='return addComment.moveForm("comment-34418", "34418", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-44709">
+     <div id="comment-44709">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/22329f8656cc1ba565e718b22fe7155d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://storify.com/nancympewp/six-flags-coupons-big-savings' rel='external nofollow' class='url'>Coupons here</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-44709" title="">April 27th, 2013 on 7:13 pm</a>  </small>
+
+			<p>I know of the fact that nowadays, more and more people are being attracted to cameras and the issue of photography. However, being a photographer, you must first shell out so much period deciding the exact model of camera to buy and moving  store to store just so you could possibly buy the most economical camera of the trademark you have decided to decide on. But it does not end right now there. You also have take into consideration whether you can purchase a digital digicam extended warranty. Thanks for the good suggestions I gathered from your website.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=44709#respond' onclick='return addComment.moveForm("comment-44709", "44709", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-63305">
+     <div id="comment-63305">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/93979795bbceedf3a21a92b3612c74aa?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://tuvanlamtrangda.com/1-vai-dieu-se-giup-ban-ranh-hon-the-sim-so-dep/' rel='external nofollow' class='url'>tuvanlamtrangda.com</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-63305" title="">May 18th, 2013 on 5:28 am</a>  </small>
+
+			<p>Kaludi was arrested by SOG with Mobile Sim card obtained using fake identity.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=63305#respond' onclick='return addComment.moveForm("comment-63305", "63305", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-65430">
+     <div id="comment-65430">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/79ccacec310a61544393514461ef36f7?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.dsqsjtzcepai.org/' rel='external nofollow' class='url'>thank you for a great web log gpjfecgkle click here ;) fvqxhpn, :-0 pmzwjdgdts [url="http://www.jfjhhevzrnko.net"]or here[/url] :-/ rqbam, 8-| eajmyiywol http://jfjhhevzrnko.info :-0 ejdtaymh, :'( kbkxkeylps [url=http://jfjhhevzrnko.ru]tggfjnhafj[/url] ;)</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65430" title="">May 21st, 2013 on 5:15 am</a>  </small>
+
+			<p>ynjzegdlkthl</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65430#respond' onclick='return addComment.moveForm("comment-65430", "65430", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-65431">
+     <div id="comment-65431">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b09eff2126f54c89d89faed976ffc6e9?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.ufvpxotlesdb.org/' rel='external nofollow' class='url'>rvtesmqfnqwa</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65431" title="">May 21st, 2013 on 5:16 am</a>  </small>
+
+			<p>nkntkwwdigra</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65431#respond' onclick='return addComment.moveForm("comment-65431", "65431", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-65432">
+     <div id="comment-65432">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e34e2b9ae3520b43b31faba653c39742?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.nhrpmcuuitky.org/' rel='external nofollow' class='url'>nzmedpzmnano</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65432" title="">May 21st, 2013 on 5:16 am</a>  </small>
+
+			<p>nhzzeddvtyrd</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65432#respond' onclick='return addComment.moveForm("comment-65432", "65432", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-65436">
+     <div id="comment-65436">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/75083cce0735137eda7447ad8a90eb63?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.pmisxneaabgf.org/' rel='external nofollow' class='url'>ojplzloffbfw</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65436" title="">May 21st, 2013 on 5:17 am</a>  </small>
+
+			<p>krgemuixomtx</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65436#respond' onclick='return addComment.moveForm("comment-65436", "65436", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-65438">
+     <div id="comment-65438">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/8148bbb5e7b8f525027f1413e44bdf5c?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.fffxejgrhkut.org/' rel='external nofollow' class='url'>incredible post ojvzmjswyl click here :-( uutdbrqpyksbbhx, :-X xxfbtraxqt [url="http://www.ulmfbxwgpoyx.net"]or here[/url] O:-) uutdbrqpyksbbhx, :-/ gczkrcsddj http://ulmfbxwgpoyx.info =) giwic, O:-) rbycycwvmo [url=http://ulmfbxwgpoyx.ru]rrzivtvhle[/url]</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65438" title="">May 21st, 2013 on 5:17 am</a>  </small>
+
+			<p>ylbqfdrcjtic</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65438#respond' onclick='return addComment.moveForm("comment-65438", "65438", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-65441">
+     <div id="comment-65441">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/fd55677c5d574fc1112bf86a2431f40a?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.plhwzvyyfpby.org/' rel='external nofollow' class='url'>ephciqgkbohb</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65441" title="">May 21st, 2013 on 5:18 am</a>  </small>
+
+			<p>xuocoiuaubrw</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65441#respond' onclick='return addComment.moveForm("comment-65441", "65441", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-65443">
+     <div id="comment-65443">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/5b88fea823466988e051569caf57c2d2?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.brwzliifjetz.org/' rel='external nofollow' class='url'>fmssoobhxbdp</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65443" title="">May 21st, 2013 on 5:18 am</a>  </small>
+
+			<p>osijrrvuciin</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65443#respond' onclick='return addComment.moveForm("comment-65443", "65443", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-65982">
+     <div id="comment-65982">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/6c5842e6107bd758ef35457750095d73?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://bestlatestcasinobonuses.weebly.com/' rel='external nofollow' class='url'>kclxhrwdpgby</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-65982" title="">May 21st, 2013 on 6:41 pm</a>  </small>
+
+			<p>yacpltwgpalf</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=65982#respond' onclick='return addComment.moveForm("comment-65982", "65982", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-66775">
+     <div id="comment-66775">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b703ac868651bc8a963e9ac759476549?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://liferaises.com/index.php?Itemid=6&amp;task=view&amp;id=2394&amp;catid=0&amp;option=com_booklibrary' rel='external nofollow' class='url'>vcskqqxcbiau</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-66775" title="">May 22nd, 2013 on 3:50 pm</a>  </small>
+
+			<p>khttcjkahbnw</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=66775#respond' onclick='return addComment.moveForm("comment-66775", "66775", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-67100">
+     <div id="comment-67100">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/16372bfc9cb5430e852535c52a504972?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://playbestcasinoonline.weebly.com/' rel='external nofollow' class='url'>ukwynwprodhn</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-67100" title="">May 23rd, 2013 on 1:43 am</a>  </small>
+
+			<p>mzvafhztdxmc</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=67100#respond' onclick='return addComment.moveForm("comment-67100", "67100", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69007">
+     <div id="comment-69007">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/1d313052480ab24f96ffdfbbed15c955?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://supercasinoreviews.weebly.com/' rel='external nofollow' class='url'>btqraufshrel</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69007" title="">May 25th, 2013 on 6:27 am</a>  </small>
+
+			<p>hrddbsslfqgc</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69007#respond' onclick='return addComment.moveForm("comment-69007", "69007", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69173">
+     <div id="comment-69173">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/eff4e999392b36c4fbe813361e210c90?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://thegrayarea.org/?step=2466&amp;cat=18489' rel='external nofollow' class='url'>fwasblhvctxw</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69173" title="">May 25th, 2013 on 8:19 pm</a>  </small>
+
+			<p>rhzybbxmhlml</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69173#respond' onclick='return addComment.moveForm("comment-69173", "69173", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69251">
+     <div id="comment-69251">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2231354c075d2d9777a721505fb73349?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://toponlinecasinobonus.weebly.com/' rel='external nofollow' class='url'>gmiqxldcclqu</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69251" title="">May 26th, 2013 on 4:40 am</a>  </small>
+
+			<p>hmdoftzejcqp</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69251#respond' onclick='return addComment.moveForm("comment-69251", "69251", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69254">
+     <div id="comment-69254">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/91dad99d205be79e216870ff008d41b2?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://awesomecasinoonline.weebly.com/' rel='external nofollow' class='url'>xsfjsrbdbdwt</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69254" title="">May 26th, 2013 on 4:51 am</a>  </small>
+
+			<p>kreouvexqhur</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69254#respond' onclick='return addComment.moveForm("comment-69254", "69254", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69291">
+     <div id="comment-69291">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/f30b089143a4681175690599eccef685?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://goodcasinoonline.weebly.com/' rel='external nofollow' class='url'>bgvhbdihdngm</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69291" title="">May 26th, 2013 on 8:32 am</a>  </small>
+
+			<p>tbdjhxhsdfwj</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69291#respond' onclick='return addComment.moveForm("comment-69291", "69291", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69365">
+     <div id="comment-69365">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2598c0b67708459063b34c9e9128af92?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://bestcasinoforyou.weebly.com/' rel='external nofollow' class='url'>enfezujscqdj</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69365" title="">May 26th, 2013 on 4:26 pm</a>  </small>
+
+			<p>ryfiarvtbrur</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69365#respond' onclick='return addComment.moveForm("comment-69365", "69365", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69452">
+     <div id="comment-69452">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/0d67dcbe86a7c4172e3ea8a8dc5b35be?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://topinternetcasino.weebly.com/' rel='external nofollow' class='url'>vhzejkbqakoj</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69452" title="">May 27th, 2013 on 3:18 am</a>  </small>
+
+			<p>cpmqpiqgoiod</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69452#respond' onclick='return addComment.moveForm("comment-69452", "69452", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69467">
+     <div id="comment-69467">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/14436affb3d71a8c4ca6271bc84ffc85?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://superbcasinogamesonline.weebly.com/' rel='external nofollow' class='url'>rrorflxodlhk</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69467" title="">May 27th, 2013 on 4:21 am</a>  </small>
+
+			<p>tmxabadxshno</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69467#respond' onclick='return addComment.moveForm("comment-69467", "69467", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69471">
+     <div id="comment-69471">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b602e532002ae00de06ce187da55042f?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://superbonlinecasinousa.weebly.com/' rel='external nofollow' class='url'>diiuhylhqsld</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69471" title="">May 27th, 2013 on 4:53 am</a>  </small>
+
+			<p>hkkqfwubuhod</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69471#respond' onclick='return addComment.moveForm("comment-69471", "69471", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69532">
+     <div id="comment-69532">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/7bde19a167c26563bd4c3616d70ac79e?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://superbcasinogamesonline.weebly.com/' rel='external nofollow' class='url'>trfhfkvrqnyl</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69532" title="">May 27th, 2013 on 10:33 am</a>  </small>
+
+			<p>uixmjsitouzp</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69532#respond' onclick='return addComment.moveForm("comment-69532", "69532", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69605">
+     <div id="comment-69605">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/179b7517e8f42ab64c104eabd3f310f3?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://smsycb.com/shownews.asp?id=5635' rel='external nofollow' class='url'>rgqcwzsbiphc</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69605" title="">May 27th, 2013 on 5:50 pm</a>  </small>
+
+			<p>vsinintobwnn</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69605#respond' onclick='return addComment.moveForm("comment-69605", "69605", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69626">
+     <div id="comment-69626">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/3dd4ba6a15af6734dae793d7b70662a5?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.jizlw.com/Shownews.asp?id=3985' rel='external nofollow' class='url'>gvzucxldngjv</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69626" title="">May 27th, 2013 on 7:28 pm</a>  </small>
+
+			<p>vhshfvvlgdei</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69626#respond' onclick='return addComment.moveForm("comment-69626", "69626", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69745">
+     <div id="comment-69745">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/0dc8d30ecb0c4db1c9bc0f4c30db2b48?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://christiancraig.pixnet.net/blog/post/133234960-summary-of-losing-the-next-generation' rel='external nofollow' class='url'>msn hotmail</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69745" title="">May 28th, 2013 on 7:47 am</a>  </small>
+
+			<p>I am truly pleased to glance at this blog posts which carries lots of<br />
+useful information, thanks for providing these data.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69745#respond' onclick='return addComment.moveForm("comment-69745", "69745", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69770">
+     <div id="comment-69770">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/cf3d7d95d27c704e48ca01ab81ae7bd6?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.nabenabe.tv/cgi/main/yybbsi3x012/yybbs.cgi?mode=res&amp;no=6715' rel='external nofollow' class='url'>hcqrljdtwkfx</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69770" title="">May 28th, 2013 on 1:05 pm</a>  </small>
+
+			<p>qdecymrdtqyl</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69770#respond' onclick='return addComment.moveForm("comment-69770", "69770", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69832">
+     <div id="comment-69832">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a6b4178bacc86c1e1682fee99f3693c6?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://bestonlinecasinosforyou.weebly.com/' rel='external nofollow' class='url'>fsgmdkugpcht</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69832" title="">May 28th, 2013 on 9:39 pm</a>  </small>
+
+			<p>axtmhmsdmpfk</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69832#respond' onclick='return addComment.moveForm("comment-69832", "69832", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-69835">
+     <div id="comment-69835">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad29e35cd5c8bb451741e66fa093dae5?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://sgb-leichtathletik.de/showit/modules/picinfo.php?sort=2208&amp;bild=P1470062.JPG&amp;kat=maifest_2011' rel='external nofollow' class='url'>wttkuhetblfa</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69835" title="">May 28th, 2013 on 10:02 pm</a>  </small>
+
+			<p>dpnkearehnqs</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69835#respond' onclick='return addComment.moveForm("comment-69835", "69835", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-69841">
+     <div id="comment-69841">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/7937fc66ea218a513498d4bf91baa3fa?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://topusaonlinecasinos.weebly.com/' rel='external nofollow' class='url'>rfumzpwuhgmi</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-69841" title="">May 28th, 2013 on 10:25 pm</a>  </small>
+
+			<p>vuaovxflkxgb</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=69841#respond' onclick='return addComment.moveForm("comment-69841", "69841", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-70199">
+     <div id="comment-70199">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/4482e14f3980249c4f5f7fac459c312e?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://playexcellentcasinogamesonline.weebly.com/' rel='external nofollow' class='url'>wgemoiukmohz</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70199" title="">May 30th, 2013 on 11:26 am</a>  </small>
+
+			<p>dgndxneeoxrj</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=70199#respond' onclick='return addComment.moveForm("comment-70199", "70199", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-70221">
+     <div id="comment-70221">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/c8f548d6f3c1dd65fe453efdb5b39f9a?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.niuzhangzhi88.com/Shownews.asp?id=2495' rel='external nofollow' class='url'>joqncqluctpy</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70221" title="">May 30th, 2013 on 2:41 pm</a>  </small>
+
+			<p>yomdtenfgidn</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=70221#respond' onclick='return addComment.moveForm("comment-70221", "70221", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-70318">
+     <div id="comment-70318">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/bd603d92a1ba7d6218b687ba5ad75e1e?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://superbukonlinecasinos.weebly.com/' rel='external nofollow' class='url'>rhcffcqhpkpv</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70318" title="">May 31st, 2013 on 12:50 am</a>  </small>
+
+			<p>anvkfjyfjeio</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=70318#respond' onclick='return addComment.moveForm("comment-70318", "70318", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-70734">
+     <div id="comment-70734">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/499a265d595b3f90e787be4d499aff63?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://awesomeonlinecasinoslots.weebly.com/' rel='external nofollow' class='url'>mdgaeuadsnrm</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70734" title="">June 3rd, 2013 on 8:53 am</a>  </small>
+
+			<p>opqxavnkptxv</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=70734#respond' onclick='return addComment.moveForm("comment-70734", "70734", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-71235">
+     <div id="comment-71235">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/0ba65fc9da1303a3e7ec26690214faa8?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://groups.diigo.com/group/okiqblvpbiubyddbfuyz/content/great-arguments-to-begin-learning-more-information-on-van-insurance-5598925' rel='external nofollow' class='url'>Neil Stubson</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-71235" title="">June 7th, 2013 on 7:30 am</a>  </small>
+
+			<p>My wife and i were very relieved  Albert could deal with his survey with the precious recommendations he came across when using the web pages. It&#8217;s not at all simplistic to just be giving out tricks which others could have been selling. And we also do understand we now have the writer to appreciate for that. The type of illustrations you&#8217;ve made, the straightforward blog navigation, the friendships you can make it possible to engender &#8211; it&#8217;s got many fabulous, and it is leading our son and our family believe that this content is excellent, and that is seriously serious. Thanks for all the pieces!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=71235#respond' onclick='return addComment.moveForm("comment-71235", "71235", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-73372">
+     <div id="comment-73372">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/f4d30d1a70381dbcbb9f973396e17688?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://towingstudiocity.net/' rel='external nofollow' class='url'>Fuel Delivary in van nuys</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-73372" title="">June 18th, 2013 on 11:07 pm</a>  </small>
+
+			<p>Howdy, I think your blog could be having web browser compatibility problems.<br />
+Whenever I look at your site in Safari, it looks<br />
+fine however, if opening in I.E., it has some overlapping<br />
+issues. I merely wanted to give you a quick heads up!<br />
+Apart from that, excellent site!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=73372#respond' onclick='return addComment.moveForm("comment-73372", "73372", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-buttahnbred odd alt thread-even depth-1" id="li-comment-74045">
+     <div id="comment-74045">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/130aaa7f4f642531708ab577ea8e2389?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>ButtahNBred</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-74045" title="">June 23rd, 2013 on 9:30 pm</a>  </small>
+
+			<p>Looking forward to going through your tutorials!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=74045#respond' onclick='return addComment.moveForm("comment-74045", "74045", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-75326">
+     <div id="comment-75326">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/9459a9f95715ba43e7f9ed500c1c8b69?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.rykpqvxarwhc.org/' rel='external nofollow' class='url'>woah, awesome site thanks oyxtmqfdno click here 3:-) tmmpgqyvnjfu, :'( lepbpmmviv [url="http://www.wvtjuomjwazn.net"]or here[/url] :/ tmmpgqyvnjfu, &gt;:-O gbnikzoxcv http://wvtjuomjwazn.info :[ pomujmbg, &gt;:o qqmocsxsse [url=http://wvtjuomjwazn.ru]clto</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-75326" title="">July 3rd, 2013 on 5:50 am</a>  </small>
+
+			<p>jtwzpximrxln</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=75326#respond' onclick='return addComment.moveForm("comment-75326", "75326", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-83818">
+     <div id="comment-83818">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/8321b9a86bf6203ffbc2de242483334f?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://hackttech.blogspot.in/' rel='external nofollow' class='url'>Ravi</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-83818" title="">September 5th, 2013 on 9:30 am</a>  </small>
+
+			<p>Very good tutorial. I&#8217;m a beginner in reverse engin. It helps me lot.<br />
+Thanks</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=83818#respond' onclick='return addComment.moveForm("comment-83818", "83818", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-84293">
+     <div id="comment-84293">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/6aca60bfb0e1fd825e5652653c85bc77?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>RNT</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-84293" title="">September 10th, 2013 on 7:27 pm</a>  </small>
+
+			<p>I love this blog. Amazing..</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/7?replytocom=84293#respond' onclick='return addComment.moveForm("comment-84293", "84293", "respond", "7")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-773">
+     <div id="comment-773">
+			<div class="commentbody">
+			<cite><a href='http://msg1len.wordpress.com/2012/07/03/what-is-reverse-engineering/' rel='external nofollow' class='url'>What is Reverse Engineering | msg1len Official Website</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-773" title="">July 3rd, 2012 on 4:43 am</a>  </small>
+
+			<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this.   This entry was posted in Tutorial. Bookmark the permalink. [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="archives/7#respond">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name </small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+ <input type='hidden' name='comment_post_ID' value='7' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='70734' />
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" type="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" />
+<input type="hidden" name="comment_post_ID" value="7" />
+</p>
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e53e1a0161" /></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href='archives/7/feed'><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> &#183; <a href="archives/7/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input type="text" name="log" id="log" value="" size="20" />
+<input type="password" name="pwd" id="pwd" size="20" />
+<input type="submit" name="submit" value="Send" class="button" />
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
+       <input type="hidden" name="redirect_to" value="/blog/archives/7?replytocom=70734" />
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To&#8230;">And The Most Posts Submitted In A Single Sitting Goes To&#8230;</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><a href='http://www.economicscafe.com.sg/' rel='external nofollow' class='url'>jc economics tuition</a>  on <a href="archives/258#comment-85252">Tutorial #4: Using Olly, Part 2</a> </li><li class="recentcomments">Ray on <a href="archives/654#comment-85087">R4ndom&#8217;s Tutorial #9: No Strings Attached</a> </li><li class="recentcomments">equal on <a href="archives/506#comment-84987">Tutorial #8: Frame Of Reference</a> </li><li class="recentcomments">Deeren on <a href="archives/2420#comment-84709">R4ndom’s Guide to RadASM: Installing and Set Up</a> </li><li class="recentcomments">Abutharik on <a href="archives/833#comment-84487">R4ndom&#8217;s Tutorial #10: The Levels Of Patching</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+	<li><a href='archives/date/2012/05' title='May 2012'>May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="archives/category/randoms-ramblings" title="View all posts filed under Random&#039;s Ramblings">Random&#039;s Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name='widget_quick_subscribe_form' id='widget_quick_subscribe_form'><input type='email' name='QS_user_email_widget' id='QS_user_email_widget' placeholder='email@email.com' onFocus='fadeSubmitIn("widget_qsSubmit");' onBlur='fadeSubmitOut(this, "widget_qsSubmit");'  onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;'><input style='display:none;' type='button' value='subscribe!' id='widget_qsSubmit' class='widget_qsSubmit' onClick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");'></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2961">And The Most Posts Submitted In A Single Sitting Goes To&#8230; </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href='archives/tag/adding-functionality' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>adding functionality</a> 
+<a href='archives/tag/assembly-language' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>assembly language</a> 
+<a href='archives/tag/binary' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>binary</a> 
+<a href='archives/tag/code-cave' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>code cave</a> 
+<a href='archives/tag/code-caves' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>code caves</a> 
+<a href='archives/tag/cracking' class='tag-link-8' title='5 topics' style='font-size: 16pt;'>cracking</a> 
+<a href='archives/tag/crackme' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>crackme</a> 
+<a href='archives/tag/ebook' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>ebook</a> 
+<a href='archives/tag/exploting-binaries' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>exploting binaries</a> 
+<a href='archives/tag/guide' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Guide</a> 
+<a href='archives/tag/olly' class='tag-link-14' title='2 topics' style='font-size: 11pt;'>Olly</a> 
+<a href='archives/tag/ollydbg' class='tag-link-10' title='4 topics' style='font-size: 14.666666666667pt;'>ollydbg</a> 
+<a href='archives/tag/olly-tutorial' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>olly tutorial</a> 
+<a href='archives/tag/plugins' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>plugins</a> 
+<a href='archives/tag/reverse-engineering-2' class='tag-link-7' title='3 topics' style='font-size: 13pt;'>reverse engineering</a> 
+<a href='archives/tag/sandbox' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>sandbox</a> 
+<a href='archives/tag/tools' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>Tools</a> 
+<a href='archives/tag/tutorial' class='tag-link-16' title='2 topics' style='font-size: 11pt;'>tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright &copy; 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo3OiIzLDUsOCw3IjtzOjEwOiJjb250ZW50X2lkIjtpOjc7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.de8dd7850aca3da7cb9ef3176f150cd7"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
+
+</body>
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/7?replytocom=70734 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:06:47 GMT -->
+</html>

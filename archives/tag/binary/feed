@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; binary</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/tag/binary/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>Modifiying Binaries: Adding a Splash Dialog</title>
+		<link>http://thelegendofrandom.com/blog/archives/558</link>
+		<comments>http://thelegendofrandom.com/blog/archives/558#comments</comments>
+		<pubDate>Fri, 15 Jun 2012 03:43:07 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[adding functionality]]></category>
+		<category><![CDATA[binary]]></category>
+		<category><![CDATA[code cave]]></category>
+		<category><![CDATA[code caves]]></category>
+		<category><![CDATA[exploting binaries]]></category>
+		<category><![CDATA[tutorial]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558</guid>
+		<description><![CDATA[Introduction In this tutorial I am going to show you how we can add a dialog box to the beginning<a href="http://thelegendofrandom.com/blog/archives/558" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/558/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+	</channel>
+</rss>

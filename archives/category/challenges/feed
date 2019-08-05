@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Challenges</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/challenges/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>What Are These Strange Posts?</title>
+		<link>http://thelegendofrandom.com/blog/archives/2975</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2975#comments</comments>
+		<pubDate>Fri, 12 Oct 2012 17:33:32 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2975</guid>
+		<description><![CDATA[Because I am getting numerous messages about what these strange looking posts are (ie. here), I will provide a little<a href="http://thelegendofrandom.com/blog/archives/2975" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2975/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Mission Control</title>
+		<link>http://thelegendofrandom.com/blog/archives/2948</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2948#comments</comments>
+		<pubDate>Mon, 08 Oct 2012 18:43:13 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2948</guid>
+		<description><![CDATA[KTFMKZVLJ ODMV PMNDRS YIV I LMOOLR OKZUDRS ODIG ODR LIVO TZO JKZ DIFR VZPPRRXRX ODR LIVO PMNDRS YIV VMWNLJ OK<a href="http://thelegendofrandom.com/blog/archives/2948" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2948/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Mission Control</title>
+		<link>http://thelegendofrandom.com/blog/archives/2895</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2895#comments</comments>
+		<pubDate>Mon, 01 Oct 2012 02:03:39 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2895</guid>
+		<description><![CDATA[DPOHS BUVMB UJPOT ZPVIB WFTPM WFEBT JNQMF DJQIF STUPQ UIJTN FBOTZ PVIBW FUIFT LJMTB OEUIF EFTJS FUPGJ HVSFU IJOHT PVUTU<a href="http://thelegendofrandom.com/blog/archives/2895" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2895/feed</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+		</item>
+		<item>
+		<title>New Weekly Challenge</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2813#comments</comments>
+		<pubDate>Wed, 26 Sep 2012 20:16:07 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813</guid>
+		<description><![CDATA[I have just posted this week&#8217;s challenge. It is a very simple patch, but unfortunately, you can&#8217;t patch it The<a href="http://thelegendofrandom.com/blog/archives/2813" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2813/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>This Week&#8217;s Challenge</title>
+		<link>http://thelegendofrandom.com/blog/archives/2441</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2441#comments</comments>
+		<pubDate>Mon, 17 Sep 2012 21:14:11 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2441</guid>
+		<description><![CDATA[Because of (good) suggestions in the forums, this week&#8217;s challenge will be a commercial product. The good news is that<a href="http://thelegendofrandom.com/blog/archives/2441" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2441/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>This Week&#8217;s Challenge</title>
+		<link>http://thelegendofrandom.com/blog/archives/2318</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2318#comments</comments>
+		<pubDate>Wed, 12 Sep 2012 19:55:57 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2318</guid>
+		<description><![CDATA[This week&#8217;s challenge is a little different. I am posting the crackme that I will be going over in depth<a href="http://thelegendofrandom.com/blog/archives/2318" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2318/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>New Challenge Has been Posted</title>
+		<link>http://thelegendofrandom.com/blog/archives/2096</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2096#comments</comments>
+		<pubDate>Wed, 05 Sep 2012 15:18:52 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2096</guid>
+		<description><![CDATA[This week&#8217;s challenge is being delivered by XOR06. Special thanks go out to him for creating this crackme. In order<a href="http://thelegendofrandom.com/blog/archives/2096" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2096/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>My Apologies</title>
+		<link>http://thelegendofrandom.com/blog/archives/2057</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2057#comments</comments>
+		<pubDate>Mon, 03 Sep 2012 16:19:30 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2057</guid>
+		<description><![CDATA[Because the challenges were supposed to be fun and a learning experience, I lost sight of this when I made<a href="http://thelegendofrandom.com/blog/archives/2057" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2057/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>We Have a Winner</title>
+		<link>http://thelegendofrandom.com/blog/archives/1986</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1986#comments</comments>
+		<pubDate>Sat, 01 Sep 2012 01:37:26 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1986</guid>
+		<description><![CDATA[It was a thrilling race to the finish in this weeks challenge (for both people who tried). Hawaii67, last weeks<a href="http://thelegendofrandom.com/blog/archives/1986" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1986/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>New Legend Of Random Challenge Is Up!</title>
+		<link>http://thelegendofrandom.com/blog/archives/1977</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1977#comments</comments>
+		<pubDate>Fri, 31 Aug 2012 15:59:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Challenges]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1977</guid>
+		<description><![CDATA[Crackme #3 is up. The first person to upload a working patcher for this crackme in the challenges forums is<a href="http://thelegendofrandom.com/blog/archives/1977" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1977/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

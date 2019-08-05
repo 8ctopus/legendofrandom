@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Shrinking C++ Executables «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="2231_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="2231_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » Shrinking C++ Executables Comments Feed" href="http://thelegendofrandom.com/blog/archives/2231/feed">
+<script type="text/javascript" src="2231_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2231_fichiers/ajax.js"></script>
+<script type="text/javascript" src="2231_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="We’re back up!" href="http://thelegendofrandom.com/blog/archives/2268">
+<link rel="next" title="Google Sued for Prostitution Results" href="http://thelegendofrandom.com/blog/archives/2288">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/2231">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=2231">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="2231_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="2231_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="2231_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="2231_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px; overflow: hidden;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/2231">Shrinking C++ Executables</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Sep.10, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts in Intermediate" rel="category tag">Intermediate</a> , <a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts in Modifying Binaries" rel="category tag">Modifying Binaries</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><p>Over the course of creating these
+ tutorials, I have been confronted with attempting to make the compiled 
+binaries small. Usually, after entering a three line program in C++, 
+Visual Studio will assume I would like every DLL, API and function ever 
+created by Microsoft to be included in my binary, and I end up having 
+something close to a 6 meg file. (Don’t even get me started on the fact 
+that you can open a new Word document, type one letter, and the file no 
+longer fits on a 32Gig USB key!)</p>
+<p>Because you don’t want the binary filled with a bunch of useless crap
+ to detract from the learning process, the binary should ONLY contain 
+the instructions you want used, and nothing else. You would think this 
+would be easy- perhaps a button somewhere that says “De-crapify” or 
+something, but this is Microsoft, so you actually have to do quite a bit
+ of experimenting in Visual Studio to get the binary size even close to 
+what it should actually be.</p>
+<p>Over the weekend I did some experimenting, attempting to get the 
+binary as small as possible and trying to figure out what all this crap 
+is that gets inserted into our binary, and this tutorial covers what I 
+learned. A lot of this info was performed by <a href="http://forum.tuts4you.com/topic/29934-reduce-your-c-executable-size/"><span style="text-decoration: underline; color: #0a77e1;">Zer0Flag</span></a> </p>,
+ so many thanks (and kudos) go out to him for his hard work. If you 
+would rather have the PDF of this tutorial, you can download it on the <span style="color: #0a77e1;"><a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline; color: #0a77e1;">tutorials</span></a> </span> page. Otherwise, read on…<p></p>
+<p><span id="more-2231"></span></p>
+<div style="margin-bottom: 8em;"><span style="display: none;">.</span></div>
+<p>First off, here is the source code. It simply opens a message box with a string in it, then closes the app:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/source.png"><img class="aligncenter size-full wp-image-2232" title="Source code" src="2231_fichiers/source.png" alt="" height="220" width="542"></a> </p><p></p>
+<p>Because this is basically two lines of code, you would guess that it should be like, oh, maybe 50 bytes? You guessed wrong:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/size1.png"><img class="aligncenter size-full wp-image-2233" title="Size1" src="2231_fichiers/size1.png" alt="" height="83" width="452"></a> </p><p></p>
+<p>Yes, try 30,000 bytes. For two lines of code? Oh, come on! Let’s see what’s going on in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/0.png"><img class="aligncenter size-full wp-image-2255" title="First loaded in Olly" src="2231_fichiers/0.png" alt="" height="535" width="377"></a> </p><p></p>
+<p>This is where Olly first breaks, at address 71B00220. After a little 
+digging, though, I found this is not the real EP. Looking in the PE 
+header, the real entry point is at107114A:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/119.png"><img class="aligncenter size-full wp-image-2256" title="Real entry point" src="2231_fichiers/119.png" alt="" height="403" width="634"></a> </p><p></p>
+<p>This jumps to our initialization code. Interestingly, after we 
+perform this code, the jump at 107114A will be dynamically changed to 
+point to CRTMain later on. But for now, this jumps to the code in the 
+picture above, starting at address 71B00220.</p>
+<p>This initialization code looks for command line arguments and loads 
+in DLLs for the application. At the end, we return to our original jump 
+that is now changed to point to WinMainCRTStartup:<a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/212.png"><img class="aligncenter size-full wp-image-2257" title="CRTStartup" src="2231_fichiers/212.png" alt="" height="151" width="371"></a> </p><p></p>
+<p>CRTStartup is used for loading the C RunTime libraries. The CRT provides the fundamental C++ runtime support, including:</p>
+<ul>
+<li>setup the C++ exception model</li>
+<li>making sure the constructor of&nbsp;global variables get called before entering main function</li>
+<li>parse command line arguments, and call the main function</li>
+<li>initialize the heap</li>
+<li>setup the atexit chain</li>
+</ul>
+<p>After the runtime is initialized,&nbsp; CRTStartup calls the __security_init_cookie function:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/510.png"><img class="aligncenter size-full wp-image-2259" title="security_cookie" src="2231_fichiers/510.png" alt="" height="84" width="689"></a> </p><p></p>
+<p>This function detects some buffer overruns that overwrite a 
+function’s return address, exception handler address, or certain types 
+of parameters. Causing a buffer overrun is a technique used by hackers 
+to exploit code that does not enforce buffer size restrictions.</p>
+<p>After this function checks the code for potential buffer overruns, we finally get to our actual code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/49.png"><img class="aligncenter size-full wp-image-2258" title="The real code" src="2231_fichiers/49.png" alt="" height="266" width="738"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Changing the Build</span></h2>
+<p>The first thing we should notice is that Visual Studio defaults to debug mode, so we should definitely change to Release:<br>
+<a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/310.png"><img class="aligncenter size-full wp-image-2234" title="Changing to Release" src="2231_fichiers/310.png" alt="" height="72" width="336"></a> </p><br>
+Now when we check the size, we see already a big difference:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/48.png"><img class="aligncenter size-full wp-image-2235" title="Size2" src="2231_fichiers/48.png" alt="" height="64" width="462"></a> </p><p></p>
+<p>Wow, that debug information was almost 75% of the binary’s size! 
+Loading this in CFF Explorer, we see that we lost the .textbss and 
+.idata sections, and the other sections have been reduced drastically.</p>
+<p>Debug version:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/69.png"><img class="aligncenter size-full wp-image-2260" title="Debug version sections" src="2231_fichiers/69.png" alt="" height="253" width="543"></a> </p><p></p>
+<p>Release version:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/76.png"><img class="aligncenter size-full wp-image-2261" title="Release version sections" src="2231_fichiers/76.png" alt="" height="201" width="541"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Removing the C Runtime</span></h2>
+<p>Of course, 8,000 bytes is already pretty good, but who wants to stop at “pretty good”?</p>
+<p>Next, we have to take a step backward in order to take a couple steps
+ forward. Right-clicking the main project’s name in the Project Explorer
+ and selecting Properties, we have the main properties window. Open the 
+C/C++ tree and select the “Code Generation” item. We want to change the 
+“Runtime Library” to “Multi-threaded (/MT)”. This will make the binary 
+load the C++ runtime files when the executable is loaded. The reason we 
+want to do this is so we can manually delete it later.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/59.png"><img class="aligncenter size-full wp-image-2236" title="Multithread DLLs" src="2231_fichiers/59.png" alt="" height="188" width="690"></a> </p><br>
+Changing this adds a significant amount back in, but will allow us to delete it (and more) later:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/68.png"><img class="aligncenter size-full wp-image-2237" title="Size3" src="2231_fichiers/68.png" alt="" height="82" width="456"></a> </p>One thing you will notice in OllyDBG is that our jump table has all but disappeared:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/84.png"><img class="aligncenter size-full wp-image-2262" title="No more jumpt table" src="2231_fichiers/84.png" alt="" height="128" width="442"></a> </p><p></p>
+<p>This is because our DLLs have been inserted into our binary, so they will be called directly.</p>
+<h2><span style="color: #0a77e1;">Ignore Default Libraries</span></h2>
+<p>Clicking on the “Input” label under the “Linker” tree, we can force 
+Visual Studio to ignore all the default libraries usually automatically 
+loaded.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/75.png"><img class="aligncenter size-full wp-image-2238" title="Default Libraries" src="2231_fichiers/75.png" alt="" height="124" width="609"></a> </p><p></p>
+<p>Changing this to “Yes” and trying to build the program gives us an error though:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/83.png"><img class="aligncenter  wp-image-2239" title="Error" src="2231_fichiers/83.png" alt="" height="108" width="745"></a> </p><br>
+To fix this we must change the entry point of our program. The reason 
+for this is that Visual Studio incorporates several function calls 
+before our program actually starts, namely the CRTStartup and 
+security_cookie calls. That means the entry point is set to these 
+functions instead of the true beginning of our app. Since we just told 
+Visual Studio to ignore these functions, if we don’t change the entry 
+point it is still pointing to these functions, that are now being 
+ignored. Clicking on the “Advanced” label under “Linker” we can change 
+this to our actual entry point, WinMain:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/103.png"><img class="aligncenter size-full wp-image-2240" title="xxx" src="2231_fichiers/103.png" alt="" height="106" width="675"></a> </p><p></p>
+<p><em>*** You may also need to change the “Buffer Security Check” 
+option to “No (/GS-)” under C/C++ in the Code Generation tab to make it 
+build properly. ***</em></p>
+<p>Now when we build it we get no errors and also a file size of 3,000 bytes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/118.png"><img class="aligncenter size-full wp-image-2241" title="Size4" src="2231_fichiers/118.png" alt="" height="59" width="466"></a> </p><p></p>
+<p>Now we’re talking! Loading this in Olly, we start to see some improvements:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/94.png"><img class="aligncenter size-full wp-image-2275" title="getting smaller" src="2231_fichiers/94.png" alt="" height="183" width="729"></a> </p><p></p>
+<p>The setup code has also shrunk:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1-0.png"><img class="aligncenter size-full wp-image-2276" title="Setup code shrinking" src="2231_fichiers/1-0.png" alt="" height="398" width="511"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Removing the Manifest</span></h2>
+<p>Next we want to ditch the manifest as it’s never used (at least not 
+in our case). Under Linker, click Manifest File and change “Generate 
+Manifest” to “No”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/122.png"><img class="aligncenter size-full wp-image-2242" title="Manifest" src="2231_fichiers/122.png" alt="" height="203" width="698"></a> </p><p></p>
+<p>Doing this only saves about 200 bytes, but hey, that’s something <img src="2231_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  Here we can see exactly what the manifest looks like (in CFF Explorer):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/104.png"><img class="aligncenter size-full wp-image-2277" title="The manifest" src="2231_fichiers/104.png" alt="" height="239" width="659"></a> </p><p></p>
+<p>The next thing we may notice is that our binary has four sections:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1110.png"><img class="aligncenter size-full wp-image-2278" title="The four sections" src="2231_fichiers/1110.png" alt="" height="178" width="543"></a> </p><p></p>
+<p>One that we could potentially lose is the .reloc section…</p>
+<h2><span style="color: #0a77e1;">Removing Randomized Base Addresses</span></h2>
+<p>We don’t need a relocations section if we never relocate code, so let’s turn random relocations off:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/133.png"><img class="aligncenter size-full wp-image-2243" title="Randomization" src="2231_fichiers/133.png" alt="" height="266" width="706"></a> </p><p></p>
+<p>Doing that and rebuilding automatically removes our .reloc section, shaving off another 1,000 bytes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/145.png"><img class="aligncenter size-full wp-image-2244" title="Size5" src="2231_fichiers/145.png" alt="" height="78" width="480"></a> </p>This also has the nice quality of loading our binary in at the usual address of 401000:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/123.png"><img class="aligncenter size-full wp-image-2279" title="Our comfy address" src="2231_fichiers/123.png" alt="" height="101" width="591"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Combining Sections</span></h2>
+<p>Next, we don’t necessarily need both sections, especially since the 
+second section only needs a couple dozen bytes but takes up 1,000. Here,
+ we can set the .rdata section to share the .text section by merging 
+them. Still in the Advanced tab, enter this for “Merge Sections”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/153.png"><img class="aligncenter size-full wp-image-2246" title="Merging sections" src="2231_fichiers/153.png" alt="" height="250" width="703"></a> </p><p></p>
+<p>Here is our original .rdata section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/134.png"><img class="aligncenter size-full wp-image-2280" title="Original rdata" src="2231_fichiers/134.png" alt="" height="309" width="452"></a> </p><p></p>
+<p>and after combining sections, we can see that this data was inserted into the beginning of our .text section in the binary:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/146.png"><img class="aligncenter size-full wp-image-2281" title="rdata now at beginning" src="2231_fichiers/146.png" alt="" height="350" width="582"></a> </p><p></p>
+<p>and that our entry point has been changed to 4010D0:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/154.png"><img class="aligncenter size-full wp-image-2282" title="New entry point" src="2231_fichiers/154.png" alt="" height="198" width="498"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Changing Optimizations</span></h2>
+<p>Lastly, we can change the optimizations that Visual Studio uses, 
+telling it to optimize for size over speed. Under C/C++, in the 
+Optimization tab, change these four settings:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/162.png"><img class="aligncenter size-full wp-image-2247" title="Optimizing for small binaries" src="2231_fichiers/162.png" alt="" height="160" width="685"></a> </p><p></p>
+<p>One last look at our file size and we see we’ve done quite a nice job:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/172.png"><img class="aligncenter size-full wp-image-2248" title="Size6" src="2231_fichiers/172.png" alt="" height="84" width="489"></a> </p><p></p>
+<p>And this is the complete disassembly in Olly (the RETN instruction is a little cut off at the bottom):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/163.png"><img class="aligncenter size-full wp-image-2283" title="Entire disassembly" src="2231_fichiers/163.png" alt="" height="908" width="632"></a> </p><p></p>
+<p>From 31,000 bytes to less than 1,000 (620 bytes to be exact). I guess
+ the real question we should be asking is “Why didn’t Microsoft just 
+start here and then add things as we need them?” I’m sure they’re crying
+ all the way to the bank.</p>
+<p>R4ndom</p>
+<p><iframe style="width: 0px; height: 0px; display: none;" src="2231_fichiers/getData.htm" height="240" width="320"></iframe></p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">15 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-3976">
+     <div id="comment-3976">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/b1385c0d10f41961ad4042754ecc3037.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://hase85.wordpress.com/" rel="external nofollow" class="url">hasaranga</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3976" title="">September 11th, 2012 on 3:16 am</a>  </small>
+
+			<p>we can’t use float numbers if we reomve c runtime!!! any solutions?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=3976#respond" onclick='return addComment.moveForm("comment-3976", "3976", "respond", "2231")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-3982">
+     <div id="comment-3982">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2231_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3982" title="">September 11th, 2012 on 4:37 am</a>  </small>
+
+			<p>Move to fixed point numbers. Other than that, you’re out of luck.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=3982#respond" onclick='return addComment.moveForm("comment-3982", "3982", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even depth-2" id="li-comment-4506">
+     <div id="comment-4506">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/a25f6bc0adc4753e987d67c0e5d9a0f5.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://waleedassar.blogspot.com/" rel="external nofollow" class="url">waliedassar</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4506" title="">September 24th, 2012 on 4:34 am</a>  </small>
+
+			<p>No, you can. If necessary, link to msvcrt.lib or the similar import libraries.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4506#respond" onclick='return addComment.moveForm("comment-4506", "4506", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3987">
+     <div id="comment-3987">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/768b7724aebd7bb31f280873663c1126.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gaius Baltar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3987" title="">September 11th, 2012 on 7:43 am</a>  </small>
+
+			<p>This is an exciting topic.<br>
+Thank you for doing and sharing that with us.<br>
+I am very interested about this too.<br>
+I totally agree with all what you said!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=3987#respond" onclick='return addComment.moveForm("comment-3987", "3987", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-3989">
+     <div id="comment-3989">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Sh</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3989" title="">September 11th, 2012 on 9:14 am</a>  </small>
+
+			<p>Funny how the author claims that “we don’t need relocation” 
+however in real world applications and in general idea I think this is a
+ wrong idea to think so.<br>
+Most Operating System mitigation tools (DEP, ASLR, etc) use relocation 
+in order to mitigate classical buffer overflow attacks that you’ve read 
+when you were a kid. The idea to lose them is wrong. The same goes to 
+killing the Exception Handler .<br>
+The author might think back that “this post is size oriented and thus we
+ take those measures and think that the programmer knew how to write 
+code”,  this is an incorrect assumption. </p>
+<p>If the author would suggest a different way to generate relocations 
+(for ex, compressed relocation which relocated the program on the fly ) 
+it would have been acceptable, just like many stubs around the 90s have 
+done.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=3989#respond" onclick='return addComment.moveForm("comment-3989", "3989", "respond", "2231")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-3991">
+     <div id="comment-3991">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/b5af1fe726a33c13450f5ca95e3ffb80.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://mudlord.info/" rel="external nofollow" class="url">mudlord</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3991" title="">September 11th, 2012 on 10:19 am</a>  </small>
+
+			<p>Not once did the author say these techniques are for realworld production code.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=3991#respond" onclick='return addComment.moveForm("comment-3991", "3991", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4019">
+     <div id="comment-4019">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>me</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4019" title="">September 11th, 2012 on 11:27 pm</a>  </small>
+
+			<p>Few things that are very wrong with this post that ignores history and flames Microsoft unfairly. </p>
+<p>1. The PE file format is based on the COFF file format. Microsoft did
+ not create the COFF file format, this was originally a Unix based 
+format. They just used it as a standard. </p>
+<p>2. Microsoft uses shared code (dlls) to reduce binary size when shipping applications. </p>
+<p>3. Stripping out all security measures so you can prove a binary can 
+be smaller is useless. I can hand build a PE with a optimized opcode set
+ by hand that will be really tiny (exploits and malware do this) but 
+will also require a lot of things we have developed over the course of 
+history to improve performance and security to go away. </p>
+<p>Really not sure why you are pressing on size anyways. Size is not 
+what matters over performance and security. When you can get a terabyte 
+of storage for almost nothing anymore and 64 bit systems becoming the 
+standard making an app run quick, effective, and safe is way more 
+important than making it fast to download and taking up less 
+disk/memory. If this is just an interesting experiment that is fine but 
+trying to criticize people in the process without consideration why 
+things are the way they are is ignorant at best. </p>
+<p>Things need to and can be improved but jumping on a Microsoft bashing
+ bandwagon doesn’t help anyone. Come out with constructive ideas to make
+ changes if you want to comment on problems.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4019#respond" onclick='return addComment.moveForm("comment-4019", "4019", "respond", "2231")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-4077">
+     <div id="comment-4077">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/b5af1fe726a33c13450f5ca95e3ffb80.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://mudlord.info/" rel="external nofollow" class="url">mudlord</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4077" title="">September 13th, 2012 on 3:13 am</a>  </small>
+
+			<p>You don’t get it.<br>
+Some applications REQUIRE such size contraints.</p>
+<p>Demoscene anyone?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4077#respond" onclick='return addComment.moveForm("comment-4077", "4077", "respond", "2231")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-3" id="li-comment-4078">
+     <div id="comment-4078">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>me</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4078" title="">September 13th, 2012 on 3:55 am</a>  </small>
+
+			<p>quote “From 31,000 bytes to less than 1,000 (620 bytes to be 
+exact). I guess the real question we should be asking is “Why didn’t 
+Microsoft just start here and then add things as we need them?” I’m sure
+ they’re crying all the way to the bank.”</p>
+<p>You don’t get it, I like experiments like this that can show a way to
+ get to this goal if needed or “REQUIRED”. The issue is criticizing 
+Microsoft for having default settings that improve performance and 
+security over a smaller image.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4078#respond" onclick='return addComment.moveForm("comment-4078", "4078", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4083">
+     <div id="comment-4083">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Modnar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4083" title="">September 13th, 2012 on 7:30 am</a>  </small>
+
+			<p>I hope the people who left bad comments regarding this tutorial 
+doesn’t get to you, because we would love to see more of your tutorials.
+ I will try this tutorial in due time, and I understand that we might 
+not use it IRL but people, or at least me, wants to know how things 
+work.</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4083#respond" onclick='return addComment.moveForm("comment-4083", "4083", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4102">
+     <div id="comment-4102">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/6b27e4e5a026b5e0c2cbc0fa8fd8042a.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tracer0tong</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4102" title="">September 13th, 2012 on 8:40 pm</a>  </small>
+
+			<p>Another good way to decrease size of your binary is using a WinAPI
+ calls only. And as you can see in MSDN, WinAPI supports huge amount of 
+possibilities to replace C++ std. libs. And your binary will have a 
+great portability, because in Windows we have variety of msvcr*.dll’s, 
+so with WinAPI you can avoid this “DLL Hell”</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4102#respond" onclick='return addComment.moveForm("comment-4102", "4102", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4103">
+     <div id="comment-4103">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/6b27e4e5a026b5e0c2cbc0fa8fd8042a.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tracer0tong</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4103" title="">September 13th, 2012 on 8:41 pm</a>  </small>
+
+			<p>BTW, thnx to author. Your place many known tricks in one article.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=4103#respond" onclick='return addComment.moveForm("comment-4103", "4103", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-73809">
+     <div id="comment-73809">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/058d5fd23f9bfef852c1732760816a74.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://iphonerepairkl.com/crackscreen.html" rel="external nofollow" class="url">Leandra</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-73809" title="">June 22nd, 2013 on 4:58 am</a>  </small>
+
+			<p>We stumbled over here different web page and thought I might check
+ things out. I like what I see so i am just following you. Look forward 
+to exploring your web page for a second time.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=73809#respond" onclick='return addComment.moveForm("comment-73809", "73809", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-75837">
+     <div id="comment-75837">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/85bd9389b8e3eca840c804b471fca069.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://wiredtreehosting.webnode.com/" rel="external nofollow" class="url">Wiredtree Review</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-75837" title="">July 7th, 2013 on 9:52 am</a>  </small>
+
+			<p>I’m gone to inform my little brother, that he should also go to 
+see this web site on regular basis to get updated from newest gossip.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=75837#respond" onclick='return addComment.moveForm("comment-75837", "75837", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-76083">
+     <div id="comment-76083">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2231_fichiers/4a6103b4d35583a6e751de28220c62fa.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://pamelageller.us/" rel="external nofollow" class="url">bridging loan</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-76083" title="">July 9th, 2013 on 2:50 pm</a>  </small>
+
+			<p>Ordinarily I don’t study post on sites, however wish to state that
+ this kind of write-up quite required myself to see and also accomplish 
+that! Your own way of writing continues to be surprised me. Appreciate 
+it, quite good content.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231?replytocom=76083#respond" onclick='return addComment.moveForm("comment-76083", "76083", "respond", "2231")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-4025">
+     <div id="comment-4025">
+			<div class="commentbody">
+			<cite><a href="http://thelegendofrandom.com/blog/archives/2301" rel="external nofollow" class="url">Shrinking IQs « The Legend Of Random</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4025" title="">September 12th, 2012 on 1:55 am</a>  </small>
+
+			<p>[...] on Sep.12, 2012, under Uncategorized  Boy, everyone seems to
+ have missed the point on my last tutorial regarding shrinking C++ 
+binary [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2231#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="2231" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="2231" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="93543e1d62" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/2231/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/2231/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/2231" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo3OiIyNCwzMiw1IjtzOjEwOiJjb250ZW50X2lkIjtpOjIyMzE7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.858b73b9d17fd948dbfed6dc6d77e167"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2231_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

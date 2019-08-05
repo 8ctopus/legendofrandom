@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Plugin for Olly 2.0</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2371/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2371</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2371#comment-4162</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sat, 15 Sep 2012 01:54:06 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2371#comment-4162</guid>
+		<description><![CDATA[I don&#039;t mean this in a bad way, but you should just download 7-zip or Winrar. They&#039;re both free, and half the stuff on this site (and most other sites) is .rar files.]]></description>
+		<content:encoded><![CDATA[<p>I don&#8217;t mean this in a bad way, but you should just download 7-zip or Winrar. They&#8217;re both free, and half the stuff on this site (and most other sites) is .rar files.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2371#comment-4160</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sat, 15 Sep 2012 01:40:34 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2371#comment-4160</guid>
+		<description><![CDATA[can you jst put it in a zip archive please?cant download rar,its a request]]></description>
+		<content:encoded><![CDATA[<p>can you jst put it in a zip archive please?cant download rar,its a request</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2371#comment-4159</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sat, 15 Sep 2012 01:38:26 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2371#comment-4159</guid>
+		<description><![CDATA[Thanks for sharing with us,,,nice again]]></description>
+		<content:encoded><![CDATA[<p>Thanks for sharing with us,,,nice again</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

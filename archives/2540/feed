@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New eBook released: Network Forensic tracking</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2540/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2540</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2540#comment-4442</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sat, 22 Sep 2012 15:54:49 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2540#comment-4442</guid>
+		<description><![CDATA[havent read yet,but lookin forward]]></description>
+		<content:encoded><![CDATA[<p>havent read yet,but lookin forward</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

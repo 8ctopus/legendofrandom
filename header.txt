@@ -1,0 +1,25 @@
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+          	<h1><a href="index.html">The Legend Of Random</a></h1>
+            <h3>Programming and Reverse Engineering</h3>
+        </div>
+    </div>
+    <!-- Header Ends -->
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+                <ul class="lavalamp" id="menu1">
+                    <li class="page_item "><a href="index.html">Home</a></li>
+                    <li class="page_item page-item-2"><a href="sample-page.html">Tutorials</a></li>
+                    <li class="page_item page-item-27 current_page_item"><a href="tools.html">Tools</a></li>
+                    <li class="page_item page-item-153"><a href="contact-2.html">Contact</a></li>
+                    <li class="page_item page-item-846"><a href="forum/">Forum</a></li> 
+                    <li class="page_item page-item-1790"><a href="challenges.html">Challenges</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main nav Ends -->

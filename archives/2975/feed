@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: What Are These Strange Posts?</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2975/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2975</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2975#comment-6415</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sat, 27 Oct 2012 05:44:43 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2975#comment-6415</guid>
+		<description><![CDATA[Brainbox fellas]]></description>
+		<content:encoded><![CDATA[<p>Brainbox fellas</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

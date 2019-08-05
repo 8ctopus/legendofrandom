@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Debugger For Amd 64-bit Apps</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2936/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2936</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: mario</title>
+		<link>http://thelegendofrandom.com/blog/archives/2936#comment-84248</link>
+		<dc:creator>mario</dc:creator>
+		<pubDate>Tue, 10 Sep 2013 09:32:04 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2936#comment-84248</guid>
+		<description><![CDATA[teu site  muito bom!]]></description>
+		<content:encoded><![CDATA[<p>teu site  muito bom!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Frank Chrzanowski</title>
+		<link>http://thelegendofrandom.com/blog/archives/2936#comment-71238</link>
+		<dc:creator>Frank Chrzanowski</dc:creator>
+		<pubDate>Fri, 07 Jun 2013 07:31:40 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2936#comment-71238</guid>
+		<description><![CDATA[I was really pleased to find this web page. I wanted to thanks for your time for this terrific read!! I absolutely enjoying each and every little bit of it and I have you bookmarked to have a look at new stuff you blog post.]]></description>
+		<content:encoded><![CDATA[<p>I was really pleased to find this web page. I wanted to thanks for your time for this terrific read!! I absolutely enjoying each and every little bit of it and I have you bookmarked to have a look at new stuff you blog post.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

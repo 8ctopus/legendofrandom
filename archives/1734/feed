@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Tutorial on Bypassing a Serial Check in Delphi by Xor06</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1734/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1734</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: zenta</title>
+		<link>http://thelegendofrandom.com/blog/archives/1734#comment-3258</link>
+		<dc:creator>zenta</dc:creator>
+		<pubDate>Wed, 22 Aug 2012 17:47:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1734#comment-3258</guid>
+		<description><![CDATA[tnxxxx]]></description>
+		<content:encoded><![CDATA[<p>tnxxxx</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

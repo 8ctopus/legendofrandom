@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: PE file key note</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1984/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1984</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Ange</title>
+		<link>http://thelegendofrandom.com/blog/archives/1984#comment-3723</link>
+		<dc:creator>Ange</dc:creator>
+		<pubDate>Mon, 03 Sep 2012 10:23:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1984#comment-3723</guid>
+		<description><![CDATA[thanks - it made my day :)
+
+I&#039;m glad to learn that my accent is funny ;)
+
+it wasn&#039;t a keynote, just a presentation.]]></description>
+		<content:encoded><![CDATA[<p>thanks &#8211; it made my day <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>I&#8217;m glad to learn that my accent is funny <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' /> </p>
+<p>it wasn&#8217;t a keynote, just a presentation.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

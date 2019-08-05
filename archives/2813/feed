@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Weekly Challenge</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2813/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2813</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4691</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sat, 29 Sep 2012 01:21:14 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4691</guid>
+		<description><![CDATA[That&#039;s the encryption algorithm. The goal was to create a code cave. Creating the code cave was the hard part :)]]></description>
+		<content:encoded><![CDATA[<p>That&#8217;s the encryption algorithm. The goal was to create a code cave. Creating the code cave was the hard part <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: robin</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4689</link>
+		<dc:creator>robin</dc:creator>
+		<pubDate>Sat, 29 Sep 2012 00:47:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4689</guid>
+		<description><![CDATA[for (int i = 9; i &gt;= 0; i--) {
+  szKey[i] = szUserName[i] ^ 0x9;
+}
+*szUserName = *szUserName ^ 0x9;
+*szKey = *szUserName;]]></description>
+		<content:encoded><![CDATA[<p>for (int i = 9; i &gt;= 0; i&#8211;) {<br />
+  szKey[i] = szUserName[i] ^ 0&#215;9;<br />
+}<br />
+*szUserName = *szUserName ^ 0&#215;9;<br />
+*szKey = *szUserName;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4608</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 14:53:20 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4608</guid>
+		<description><![CDATA[In the forum. There is a forum created for it now.]]></description>
+		<content:encoded><![CDATA[<p>In the forum. There is a forum created for it now.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4607</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 14:52:52 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4607</guid>
+		<description><![CDATA[So where&#039; your code cave?]]></description>
+		<content:encoded><![CDATA[<p>So where&#8217; your code cave?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: robin</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4606</link>
+		<dc:creator>robin</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 14:25:27 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4606</guid>
+		<description><![CDATA[wow~~~crack#4 is so easy!
+it&#039;s just encrypt password with username xor 0x9~~the password and username must equals ten length!]]></description>
+		<content:encoded><![CDATA[<p>wow~~~crack#4 is so easy!<br />
+it&#8217;s just encrypt password with username xor 0&#215;9~~the password and username must equals ten length!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gaurav</title>
+		<link>http://thelegendofrandom.com/blog/archives/2813#comment-4604</link>
+		<dc:creator>Gaurav</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 13:31:46 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2813#comment-4604</guid>
+		<description><![CDATA[Where to submit the Solution.??]]></description>
+		<content:encoded><![CDATA[<p>Where to submit the Solution.??</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

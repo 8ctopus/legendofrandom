@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: An Amazing Vulnerability Discovery Regarding Rar Files</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2932/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2932</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Larita</title>
+		<link>http://thelegendofrandom.com/blog/archives/2932#comment-6736</link>
+		<dc:creator>Larita</dc:creator>
+		<pubDate>Fri, 02 Nov 2012 17:59:33 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2932#comment-6736</guid>
+		<description><![CDATA[I can&#039;t wait for the future article :)]]></description>
+		<content:encoded><![CDATA[<p>I can&#8217;t wait for the future article <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: robin</title>
+		<link>http://thelegendofrandom.com/blog/archives/2932#comment-5485</link>
+		<dc:creator>robin</dc:creator>
+		<pubDate>Sun, 14 Oct 2012 09:50:41 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2932#comment-5485</guid>
+		<description><![CDATA[thx for share this article!]]></description>
+		<content:encoded><![CDATA[<p>thx for share this article!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/2932#comment-4933</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Thu, 04 Oct 2012 06:45:50 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2932#comment-4933</guid>
+		<description><![CDATA[Fascinating and frightening at the same time, the worst fear of rar users becomes a reality!]]></description>
+		<content:encoded><![CDATA[<p>Fascinating and frightening at the same time, the worst fear of rar users becomes a reality!</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

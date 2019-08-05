@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #19: Patchers «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1875_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1875_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #19: Patchers Comments Feed" href="http://thelegendofrandom.com/blog/archives/1875/feed">
+<script type="text/javascript" src="1875_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1875_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1875_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="2nd Challenge Winner" href="http://thelegendofrandom.com/blog/archives/1936">
+<link rel="next" title="Lulzsec gets Lulzsacked…" href="http://thelegendofrandom.com/blog/archives/1968">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1875">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1875">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1875_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1875_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1875_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1875_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>			
+               
+			   <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1875">R4ndom’s Tutorial #19: Patchers</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Aug.27, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial I will talk about patchers. A ‘patcher’ is a program
+ that, after finding the patches to an app that makes it do what you 
+want (bypass registration, show goodboy etc), a reverse engineer can use
+ to apply these patches to a fresh copy of the program. Usually patchers
+ are small programs that are sent with an un-modified program (for 
+example, one you download from the manufacturer’s site). After running 
+it, the patcher will apply the patches you wish to the un-modified 
+program, and then the program will be ‘pacthed’.</p>
+<p>For example, suppose you download a copy of The Most Awesome Program 
+In The World that has a time trial on it. After investigating this app, 
+you find the patch that, when applied, bypasses the time trial. Now I 
+can set this patch in a patcher, telling it exactly where the 
+instruction to be patched is, as well as what to change the instruction 
+to. I can now send out this patcher instead of the whole Most Awesome 
+Program In The World, telling others to simply download the app from the
+ manufacturer and then run the patcher. When the user runs the patcher, 
+the modifications that we set are applied and now this new app will be 
+patched.</p>
+<p>Another thing similar to a patcher is a ‘loader’, but I wil not be 
+going over loaders until we get in to unpacking binaries. Stay tuned for
+ that…</p>
+<p>In this tutorial I will be patching a crackme called “Saturday Night 
+Crackme.” Seeing as I didn’t want to get hung up on cracking the app, it
+ is a relatively easy target, though I find it really funny (even though
+ my family is about ready to kill me as it can get on your nerves). I 
+will also be using dUP2, a patcher made by Diablo2002, as well as CFF 
+Explorer. As always, you can download this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a> </p> page. You can also download CFF Explorer on the <span style="color: #0a77e1;"><a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline; color: #0a77e1;">tools</span></a> </span> page.<p></p>
+<p><span id="more-1875"></span></p>
+<div style="margin-bottom:8em;"><span style="display:none;">.</span></div>
+<h2><span style="color: #0a77e1;">Loading the App</span></h2>
+<p>When starting the target, we see a very colorful image for the target’s main screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/153.png"><img class="aligncenter size-full wp-image-1877" title="Starting the app" src="1875_fichiers/153.png" alt="" height="304" width="225"></a> </p><p></p>
+<p>If you have your sound turned up, you’ll also experience what is sure
+ to win a Grammy, the Saturday Night Crackme Theme Song (it’s not bad 
+until you’ve been playing with the crackme for about a week, then people
+ start getting hurt!)</p>
+<p>Entering a code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/218.png"><img class="aligncenter size-full wp-image-1878" title="Entering a password" src="1875_fichiers/218.png" alt="" height="304" width="225"></a> </p><p></p>
+<p>And clicking the Dance! button , we see the badboy:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/315.png"><img class="aligncenter size-full wp-image-1879" title="Badboy" src="1875_fichiers/315.png" alt="" height="304" width="225"></a> </p><p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Patching the App</span></h2>
+<p>Let’s load the target in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/410.png"><img class="aligncenter  wp-image-1880" title="OEP" src="1875_fichiers/410.png" alt="" height="319" width="699"></a> </p><p></p>
+<p>Searching for strings, we see where to go right away:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/59.png"><img class="aligncenter size-full wp-image-1881" title="Search for strings" src="1875_fichiers/59.png" alt="" height="237" width="546"></a> </p><p></p>
+<p>and jumping to the badboy, we see:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/68.png"><img class="aligncenter size-full wp-image-1882" title="Badboy called" src="1875_fichiers/68.png" alt="" height="230" width="693"></a> </p><p></p>
+<p>where the badboy is created. Scrolling up top see where the badboy creation is called from we see:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/76.png"><img class="aligncenter size-full wp-image-1883" title="Call the badboy" src="1875_fichiers/76.png" alt="" height="209" width="635"></a> </p><p></p>
+<p>Placing a BP here and running the target we break on this JNZ. Now 
+normally we would change the zero flag on this, then step through to see
+ if the badboy is called. We would then come back and patch every jump 
+to the badboy, changing it to NOT jump. But seeing as our goal is simply
+ to display a goodboy, let’s just change this JNZ instruction to jump to
+ the goodboy instead- that way we don’t have to actually enter anything,
+ which will default to an incorrect code, and will jump to the goodboy 
+automatically. We can see the address of the goodboy is 4016C3:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/86.png"><img class="aligncenter size-full wp-image-1884" title="Goodboy" src="1875_fichiers/86.png" alt="" height="183" width="689"></a> </p><p></p>
+<p>So change the JNZ to the bad boy to a JNZ to the goodboy:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/97.png"><img class="aligncenter size-full wp-image-1886" title="Patching the jump" src="1875_fichiers/97.png" alt="" height="320" width="662"></a> </p><p></p>
+<p>Applying the patch and running the target we see that no matter what we put into the code box (except the real code <img src="1875_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  ) will take us to the goodboy:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/105.png"><img class="aligncenter size-full wp-image-1887" title="Goodboy displayed" src="1875_fichiers/105.png" alt="" height="304" width="225"></a> </p><br>
+We will come back to the specifics of this patch after we learn about dUP2002…<p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Introducing dUP2</span></h2>
+<p>There are a couple patchers out there, but dUP2 is definitely the 
+de-facto patcher. There are basically two different ways to create a 
+patch; 1) Offset patch, and 2) Search and Replace patch. An offset patch
+ is when you know the exact offset into the file where the patch should 
+be made. This option is generally used when using Olly, finding the 
+patch manually, and knowing exactly where it is. To perform this patch, 
+you enter the offset (distance from beginning of file) of the patch, 
+along with the modifications, and dUP2 will create a runnable program 
+that will perform the patches you added.</p>
+<p>The second type, Search and Replace, is used if you know the 
+instructions you want to change, but don’t know exactly where in the 
+file they are, or, if the program is self modifying, the areas to patch 
+may change every time you run the target, so a specific offset is not 
+possible. Search and Replace works exactly that way- it searches for a 
+string of instructions, and when it finds them, it replaces them with 
+your modifications.</p>
+<p>dUP also allows patching to the registry (this would work against our
+ time trial target- you would just run the patch every 255 times and 
+voila- you have 255 more tries <img src="1875_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  ) We won’t be going over registry patches, but their covered in the dUP2 help files.</p>
+<p>You can also have dUP2 extract other files when it runs, perfect for 
+if you have created a replacement data file or key file. When you run 
+the patch, the installed .ini file will be replaced with your own.</p>
+<p>Laslty, dUP2 allows custom skins (the default is not a lot to look at
+ :S ). It just so happens that nwokiller in the Super Secret Elite 
+Cracking Squad has created a custom skin for this tutorial, so we will 
+be using that.</p>
+<p>Starting dUP, we are presented with the beginning screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/1110.png"><img class="aligncenter size-full wp-image-1895" title="Loading dup" src="1875_fichiers/1110.png" alt="" height="584" width="604"></a> </p><p></p>
+<p>Choosing “Project” -&gt; “New” brings up the new project screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/1210.png"><img class="aligncenter size-full wp-image-1896" title="New project screen" src="1875_fichiers/1210.png" alt="" height="549" width="490"></a> </p><p></p>
+<p>Here we can enter some attributes of our patcher.</p>
+<p>Patcher Caption: This is the text that will be in the title of the patcher window. I entered “Saturday Night Patcher”.<br>
+Application: This is the name of the target and wil be displayed at the top of the patcher. I entered “Saturday Night Crackme”.<br>
+Filename: This is the path to the target. I drilled down to our crackme.<br>
+URL: An optional URL. I entered “http://www.TheLegendOfRandom.com”.<br>
+Author: The super sleuth who created this. I put “R4ndom”.<br>
+Release Date: Obvious<br>
+Release Info: Here we could put notes such as instructions to copy a .ini file or what to do after applying the patch.<br>
+About Box Message: Obvious. I entered some Legend of Random crap.<br>
+Scroltext: A scrollable text bar that appears at the bottom of the patcher window.</p>
+<p>and finally, I leave the checkboxes as they are.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/1310.png"><img class="aligncenter size-full wp-image-1897" title="Creating the project" src="1875_fichiers/1310.png" alt="" height="549" width="490"></a> </p><p></p>
+<p>After clicking Save, we come back to the main screen but now it has some info in it:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/1410.png"><img class="aligncenter size-full wp-image-1898" title="Back to main screen" src="1875_fichiers/1410.png" alt="" height="584" width="604"></a> </p><p></p>
+<p>Usually at this point I’ll save the project. Double-clicking the line
+ of info ([Patch Info]) will bring up the project settings screen again 
+in case you entered something incorrectly.</p>
+<p>Now we want to add a patch. Right-click on the Saturday Night Patcher
+ line and select “Add” then “Offset Patch”. This adds a new line into 
+our project:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/154.png"><img class="aligncenter size-full wp-image-1899" title="Adding a patch to project" src="1875_fichiers/154.png" alt="" height="303" width="400"></a> </p><p></p>
+<p>and double-clicking on this new line brings up the main offset patch window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/163.png"><img class="aligncenter size-full wp-image-1900" title="Main patch window" src="1875_fichiers/163.png" alt="" height="664" width="576"></a> </p><p></p>
+<p>This screen is where we will enter all of the patch info. The first 
+box is for the target file. Click the “…” button and select the target.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/173.png"><img class="aligncenter size-full wp-image-1901" title="Select target" src="1875_fichiers/173.png" alt="" height="191" width="293"></a> </p><p></p>
+<p>The “Old Filesize”, “New Filesize” and “CRC32″ boxes are for when an 
+application uses CRC checking. Since our target does not use CRC, we can
+ leave these as they are.</p>
+<p><em>***CRC checking is a method used to prevent patches as well as 
+corrupted or ‘modified’ files (think malware). This method checks every 
+byte in an executable when the program first runs to make sure no bytes 
+have been changed from when it was initially released. It then uses a 
+simple algorithm to make a unique CRC ‘key’. If any bytes are changed, 
+this key will change. CRC stands for Cyclic Redundancy Check.***</em></p>
+<p>The ‘Patchmode’ group allows you to choose either an offset based on 
+the binary file, an offset based on Virtual Addresses or an RVA. In our 
+case, we will use the default.</p>
+<p>The ‘Compare Files’ is a handy tool that allows you to compare two 
+files, the original and the patched version, and create a patch based on
+ the differences between the two. Usually used to make a patch if you 
+have a patched file but you didn’t patch it, but I sometimes use this if
+ I deleted the project and need to remake a patcher <img src="1875_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  . We won’t be using this feature as we know what the patch should be.</p>
+<p>The main data area is the ‘Add and Edit’ group. Here, we enter each patches offset, original byte value, and new byte value.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Creating the Patcher</span></h2>
+<p>The first thing we need to do is write down the address, original 
+values, and new values for our patch. Reloading the target and going to 
+our patch code, we see that the address is 401554. We can also look in 
+the opcodes column and see that the original bytes are “0f85 7A010000″, 
+or in a more pretty fashion, “oF 85 7A 01 0 00″:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/182.png"><img class="aligncenter size-full wp-image-1904" title="Address and original bytes" src="1875_fichiers/182.png" alt="" height="206" width="588"></a> </p><p></p>
+<p>Now, enabling the patch in Olly, we can see the new bytes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/192.png"><img class="aligncenter size-full wp-image-1905" title="New byte values" src="1875_fichiers/192.png" alt="" height="185" width="529"></a> </p><p></p>
+<p>We can see that we really only changed one byte; 7A changed to 69 at 
+memory location 401556. So to patch this target, we simply need to 
+change the 7A, at address 401556, to a 69.<br>
+The next thing we need to do is find the offset into the binary of our 
+patch. Because the location of our patch in the binary (raw data on 
+disk) will be different than the address after the target is loaded into
+ memory, we must find the location in the actual binary file. We could 
+also use “Search and Replace” in this case and it would do the search 
+for us, but I usually like to find the patch in a hex editor in case 
+there happens to be more than one group of hex bytes that match our 
+search string. I will use CFF Explorer since we’ve used it in previous 
+tutorials, but you can use any hex editor you wish. Opening the file in 
+CFF, then clicking the “Hex Editor” option, we can see the raw hex data 
+of our binary:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/219.png"><img class="aligncenter size-full wp-image-1909" title="Loading in CFF" src="1875_fichiers/219.png" alt="" height="446" width="857"></a> </p><p></p>
+<p>Click on the magnifying glass to run a search. We then need to enter 
+the hex values we are looking for. I usually include at least a couple 
+of instructions in case there’s duplicate code somewhere else. In this 
+case I’ll enter the opcodes starting at the line before our patch at 
+address 401551, and including the full instruction at our patch at 
+address 401554:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/222.png"><img class="aligncenter size-full wp-image-1911" title="Finding the bytes" src="1875_fichiers/222.png" alt="" height="249" width="629"></a> </p><p></p>
+<p>and click the find button. CFF will then show us where these values are:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/231.png"><img class="aligncenter size-full wp-image-1912" title="The byte" src="1875_fichiers/231.png" alt="" height="304" width="630"></a> </p><p></p>
+<p>Here, we can see that the offset for the byte we need to change is at
+ offset 956 (6 bytes past offset 950). Now it’s back to dUP2.</p>
+<p>Let’s enter the data now. We put in 956 as the offset, 7A as the old value and 69 as the new value:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/241.png"><img class="aligncenter size-full wp-image-1913" title="Entering bytes" src="1875_fichiers/241.png" alt="" height="184" width="197"></a> </p><p></p>
+<p>After clicking the “Add” button, we see our patch in the list of patches:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/251.png"><img class="aligncenter size-full wp-image-1914" title="Adding patch to the list" src="1875_fichiers/251.png" alt="" height="160" width="406"></a> </p><p></p>
+<p>Clicking “Save” then adds our info to the main window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/261.png"><img class="aligncenter size-full wp-image-1915" title="Adding to the main window" src="1875_fichiers/261.png" alt="" height="297" width="420"></a> </p><p></p>
+<p>Now select “Project” -&gt; “Create Patch”. A file dialog will pop up.
+ Enter the name of the patcher and select “NO” on whether to run it now 
+or not. You will now have a patcher for the Saturday Night Crackme:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/271.png"><img class="aligncenter size-full wp-image-1916" title="Patcher created" src="1875_fichiers/271.png" alt="" height="156" width="211"></a> </p><p></p>
+<p>Running the patcher, we see the display screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/281.png"><img class="aligncenter size-full wp-image-1917" title="Running the patcher" src="1875_fichiers/281.png" alt="" height="313" width="397"></a> </p><p></p>
+<p>and clicking the “Patch” button:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/30.png"><img class="aligncenter size-full wp-image-1918" title="The patcher patching the app" src="1875_fichiers/30.png" alt="" height="313" width="397"></a> </p><p></p>
+<p>we can see that the patch was successful. It also created a backup of
+ the target. Running the target we see that it was successfully patched:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/316.png"><img class="aligncenter size-full wp-image-1919" title="Success" src="1875_fichiers/316.png" alt="" height="304" width="225"></a> </p><p></p>
+<p>You may now send out a patcher along with this crackme and anyone who
+ wishes may apply the crack and patch the target. Remember, the patcher 
+must be in the same folder as the target.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Using Search and Replace</span></h2>
+<p>If we instead wished to use the Search and Replace functionality, 
+instead of adding a new offset patch we would add a search and replace 
+patch. Right-click in the main list and select “Add” -&gt; “Search and 
+replace patch”. Double clicking on this line in the main display then 
+brings up the Search and Replace info screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/321.png"><img class="aligncenter size-full wp-image-1921" title="S and R main screen" src="1875_fichiers/321.png" alt="" height="518" width="632"></a> </p><p></p>
+<p>Select the target and click the “add” button:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/331.png"><img class="aligncenter size-full wp-image-1924" title="33" src="1875_fichiers/331.png" alt="" height="269" width="592"></a> </p><p></p>
+<p>Now, we will enter the same information we entered into CFF to find the hex bytes, changing the 7A to a 69:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/341.png"><img class="aligncenter size-full wp-image-1925" title="34" src="1875_fichiers/341.png" alt="" height="269" width="592"></a> </p><p></p>
+<p>You have the choice of replacing all the byte patterns in the target 
+or a specific number of them. This is why I went through the step of 
+finding the patch in a hex editor- I could be positive that there was 
+only one set of these specific instructions. In this case just select 
+“Patch All” and click Save. We now have our new Search and Replace patch
+ in the list:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/351.png"><img class="aligncenter size-full wp-image-1926" title="35" src="1875_fichiers/351.png" alt="" height="518" width="632"></a> </p><p></p>
+<p>Now click “Save” and create the patcher just like before. If you run 
+the crackme you will see that it has been patched as well, just like our
+ offset patch.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Putting Lipstick on the Pig</span></h2>
+<p>Because the normal skin on the patcher is quite plain, let’s add a 
+skin as well. Thanks go out to fellow SSECS team member nwokiller for 
+creating the skin.</p>
+<p>To add a skin, click on the “Settings” tab. Fill out the settings 
+screen, pointing the custom options to the skin files (contained in the 
+“SSECS cUP skin” zip file in the downloads of this tutorial):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/155.png"><img class="aligncenter size-full wp-image-1931" title="Skin options" src="1875_fichiers/155.png" alt="" height="584" width="604"></a> </p><p></p>
+<p>Now, when we create the patcher, we have an awesome looking program that screams excitement!!!</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/220.png"><img class="aligncenter size-full wp-image-1932" title="Finished patcher" src="1875_fichiers/220.png" alt="" height="420" width="660"></a> </p><p></p>
+<p>-Till next time.</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">3 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-3546">
+     <div id="comment-3546">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1875_fichiers/357a20e8c56e69d6f9734d23ef9517e8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>ciccio</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3546" title="">August 29th, 2012 on 1:56 pm</a>  </small>
+
+			<p>thanks</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1875?replytocom=3546#respond" onclick='return addComment.moveForm("comment-3546", "3546", "respond", "1875")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4719">
+     <div id="comment-4719">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1875_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4719" title="">September 29th, 2012 on 5:05 pm</a>  </small>
+
+			<p>Hello, i’m trying to extract the fugly mp3 for completing the 
+tutorial but i seem to do something wrong,i believe the mp3 is loaded at
+ 00401078 and its 36e9b bytes long so i tried to dump this section by 
+doing a binary copy of said bytes and save the result as a mp3 but 
+obviously it doesnt work can you enlighten me?:) thanks<br>
+also why did you make the tutorial not “advanced” ? its a pretty cool crackme such a waste to patch it <img src="1875_fichiers/icon_sad.gif" alt=":(" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1875?replytocom=4719#respond" onclick='return addComment.moveForm("comment-4719", "4719", "respond", "1875")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-74201">
+     <div id="comment-74201">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1875_fichiers/d219af79b45e5891507fda4c4c2139a0.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>dup2</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-74201" title="">June 25th, 2013 on 12:38 am</a>  </small>
+
+			<p>Hello, I was just wondering how to make a patch like this one below…</p>
+<p>“IDM v6.xx.release.5-patch” (find in google)</p>
+<p>What it does is search &amp; replace (SNR) but the thing about<br>
+this particular patch is…</p>
+<p>It offers to add a “First and last Name” to the the .exe<br>
+file in question leaving the product registered to any<br>
+individual.</p>
+<p>How can we add this “add name” feature in dup2…?</p>
+<p>Can anyone help…</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1875?replytocom=74201#respond" onclick='return addComment.moveForm("comment-74201", "74201", "respond", "1875")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1875#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1875" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1875" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="e60177fa7a" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1875/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1875/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1875" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MTg3NTtzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.18e56e3e0e3484d46d8fd9014dfcd892"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1875_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: The Year So Far (In Spam)</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2784/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2784</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/2784#comment-4571</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Wed, 26 Sep 2012 02:10:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2784#comment-4571</guid>
+		<description><![CDATA[Now that&#039;s a great idea, let&#039;s do it!!!]]></description>
+		<content:encoded><![CDATA[<p>Now that&#8217;s a great idea, let&#8217;s do it!!!</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

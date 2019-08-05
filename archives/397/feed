@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Tutorial #6: Our First (True) Crack</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/397/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/397</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: dydrax</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-24489</link>
+		<dc:creator>dydrax</dc:creator>
+		<pubDate>Wed, 13 Mar 2013 02:58:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-24489</guid>
+		<description><![CDATA[the author of crackme say not to patching,,
+the gentle way is get the key]]></description>
+		<content:encoded><![CDATA[<p>the author of crackme say not to patching,,<br />
+the gentle way is get the key</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: $okow</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-21976</link>
+		<dc:creator>$okow</dc:creator>
+		<pubDate>Wed, 27 Feb 2013 08:18:32 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-21976</guid>
+		<description><![CDATA[BTW the call is lstrcmpA and it returns FFFFFFFF to EAX if values are not equal.
+
+And i fished the code ^^ It&#039;s 553518 ;-)
+You can see it as a parameter to lstrcmpA]]></description>
+		<content:encoded><![CDATA[<p>BTW the call is lstrcmpA and it returns FFFFFFFF to EAX if values are not equal.</p>
+<p>And i fished the code ^^ It&#8217;s 553518 <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /><br />
+You can see it as a parameter to lstrcmpA</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: $okow</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-21975</link>
+		<dc:creator>$okow</dc:creator>
+		<pubDate>Wed, 27 Feb 2013 08:14:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-21975</guid>
+		<description><![CDATA[I solved it with a
+CMP AL,0FF 
+because the EAX register is xor&#039;ed in a previous call.]]></description>
+		<content:encoded><![CDATA[<p>I solved it with a<br />
+CMP AL,0FF<br />
+because the EAX register is xor&#8217;ed in a previous call.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: M4deM4n</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-9947</link>
+		<dc:creator>M4deM4n</dc:creator>
+		<pubDate>Fri, 14 Dec 2012 04:04:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-9947</guid>
+		<description><![CDATA[I traced through the application starting at 0040104F and watched the registers and dump closely.  I was able to determine that to generate the valid key, he was simply multiplying the sum of all the ascii values in the Username by 1337. so I fired up C# and wrote a solution:
+
+public string generateKey(string username)
+{
+    int len = username.Length;
+    int result = 0;
+
+    for(int i = 0; i &lt; len; i++)
+    {
+        result += username[i];
+    }
+
+    result *= 1337;
+    return result.ToString();
+}
+
+I returned a string so I could throw it right in a textbox. I&#039;m learning a lot from this site, thank you very much R4ndom! Note: This function doesn&#039;t account for the fact that the username requires at least 4 chars.]]></description>
+		<content:encoded><![CDATA[<p>I traced through the application starting at 0040104F and watched the registers and dump closely.  I was able to determine that to generate the valid key, he was simply multiplying the sum of all the ascii values in the Username by 1337. so I fired up C# and wrote a solution:</p>
+<p>public string generateKey(string username)<br />
+{<br />
+    int len = username.Length;<br />
+    int result = 0;</p>
+<p>    for(int i = 0; i &lt; len; i++)<br />
+    {<br />
+        result += username[i];<br />
+    }</p>
+<p>    result *= 1337;<br />
+    return result.ToString();<br />
+}</p>
+<p>I returned a string so I could throw it right in a textbox. I&#039;m learning a lot from this site, thank you very much R4ndom! Note: This function doesn&#039;t account for the fact that the username requires at least 4 chars.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: maxluvr1981</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-9586</link>
+		<dc:creator>maxluvr1981</dc:creator>
+		<pubDate>Mon, 10 Dec 2012 19:22:04 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-9586</guid>
+		<description><![CDATA[I just did a JMP SHORT to 004010ED to pass the JNZ and it worked ...]]></description>
+		<content:encoded><![CDATA[<p>I just did a JMP SHORT to 004010ED to pass the JNZ and it worked &#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mindvision</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-8155</link>
+		<dc:creator>Mindvision</dc:creator>
+		<pubDate>Sat, 24 Nov 2012 04:17:21 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-8155</guid>
+		<description><![CDATA[XOR is working :D]]></description>
+		<content:encoded><![CDATA[<p>XOR is working <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: bino1810</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-6447</link>
+		<dc:creator>bino1810</dc:creator>
+		<pubDate>Sun, 28 Oct 2012 08:46:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-6447</guid>
+		<description><![CDATA[Hello R4ndom, i&#039;m newbie in RCE, so this tutorial is very useful for me, thanks you for writing them.
+
+Here&#039;s my answer for the homework:
+
+TEST EAX,EAX ---&gt; XOR EAX,EAX
+
+Is this correct?]]></description>
+		<content:encoded><![CDATA[<p>Hello R4ndom, i&#8217;m newbie in RCE, so this tutorial is very useful for me, thanks you for writing them.</p>
+<p>Here&#8217;s my answer for the homework:</p>
+<p>TEST EAX,EAX &#8212;&gt; XOR EAX,EAX</p>
+<p>Is this correct?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Our First (True) Crack &#171; msg1len Official Website</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-779</link>
+		<dc:creator>Our First (True) Crack &#171; msg1len Official Website</dc:creator>
+		<pubDate>Tue, 03 Jul 2012 05:12:26 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-779</guid>
+		<description><![CDATA[[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-293</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Wed, 13 Jun 2012 12:32:03 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-293</guid>
+		<description><![CDATA[oh sorry i din&#039;t see the RSS feed Icon Extremely Sorry.
+I will get Feeds on the Go thanks :P Keep up the good work 
+(looks like I am becoming sloppy)]]></description>
+		<content:encoded><![CDATA[<p>oh sorry i din&#8217;t see the RSS feed Icon Extremely Sorry.<br />
+I will get Feeds on the Go thanks <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_razz.gif' alt=':P' class='wp-smiley' />  Keep up the good work<br />
+(looks like I am becoming sloppy)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/397#comment-292</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Wed, 13 Jun 2012 12:29:43 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=397#comment-292</guid>
+		<description><![CDATA[another awesome TUT , I am waiting for More advance one :D 
+Keep up the good work (do you have a mailing list or something) PS when you show Some Anti-Anti Techniques please inform me , well I will be checking this blog regularly so if I miss something :D Kindly get feeds or mailing list?]]></description>
+		<content:encoded><![CDATA[<p>another awesome TUT , I am waiting for More advance one <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /><br />
+Keep up the good work (do you have a mailing list or something) PS when you show Some Anti-Anti Techniques please inform me , well I will be checking this blog regularly so if I miss something <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' />  Kindly get feeds or mailing list?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Challenge Has been Posted</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2096/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2096</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2096#comment-3842</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 05 Sep 2012 23:56:11 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2096#comment-3842</guid>
+		<description><![CDATA[I have updated the blog. Sorry about that, XOR]]></description>
+		<content:encoded><![CDATA[<p>I have updated the blog. Sorry about that, XOR</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: XOR06</title>
+		<link>http://thelegendofrandom.com/blog/archives/2096#comment-3838</link>
+		<dc:creator>XOR06</dc:creator>
+		<pubDate>Wed, 05 Sep 2012 22:10:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2096#comment-3838</guid>
+		<description><![CDATA[it is not a patch me :) in the rules it says find the correct serial and that is also what the solution tut will do :)]]></description>
+		<content:encoded><![CDATA[<p>it is not a patch me <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  in the rules it says find the correct serial and that is also what the solution tut will do <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2096#comment-3837</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 05 Sep 2012 22:07:12 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2096#comment-3837</guid>
+		<description><![CDATA[I stand corrected. I changed it to Beginner. Sometimes (all the time) it&#039;s hard for me to figure out what level they should be. thanks for the input!]]></description>
+		<content:encoded><![CDATA[<p>I stand corrected. I changed it to Beginner. Sometimes (all the time) it&#8217;s hard for me to figure out what level they should be. thanks for the input!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: 5k1zk17</title>
+		<link>http://thelegendofrandom.com/blog/archives/2096#comment-3832</link>
+		<dc:creator>5k1zk17</dc:creator>
+		<pubDate>Wed, 05 Sep 2012 19:39:55 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2096#comment-3832</guid>
+		<description><![CDATA[Nice work.  I don&#039;t know if I&#039;d go as far as to say this is &quot;noob&quot; level - but easy nonetheless.  I&#039;d say it&#039;s more difficult than the tutorial crackmes...]]></description>
+		<content:encoded><![CDATA[<p>Nice work.  I don&#8217;t know if I&#8217;d go as far as to say this is &#8220;noob&#8221; level &#8211; but easy nonetheless.  I&#8217;d say it&#8217;s more difficult than the tutorial crackmes&#8230;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

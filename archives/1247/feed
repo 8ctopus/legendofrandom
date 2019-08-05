@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Ask and You Shall Receive: A New ASCII Plugin</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1247/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1247</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1247#comment-1130</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Fri, 13 Jul 2012 23:55:58 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1247#comment-1130</guid>
+		<description><![CDATA[You and me both, my friend.]]></description>
+		<content:encoded><![CDATA[<p>You and me both, my friend.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/1247#comment-1127</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Fri, 13 Jul 2012 22:38:42 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1247#comment-1127</guid>
+		<description><![CDATA[Thanks Toptool and R4ndom ! A real improvement, I&#039;m really starting to dig this site : )]]></description>
+		<content:encoded><![CDATA[<p>Thanks Toptool and R4ndom ! A real improvement, I&#8217;m really starting to dig this site : )</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

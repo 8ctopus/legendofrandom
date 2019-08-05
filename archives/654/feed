@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom&#8217;s Tutorial #9: No Strings Attached</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/654/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/654</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Ray</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-85087</link>
+		<dc:creator>Ray</dc:creator>
+		<pubDate>Mon, 16 Sep 2013 21:01:58 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-85087</guid>
+		<description><![CDATA[&quot;The Legend Of Random&quot; is awesome! Thank you for these excellent tutorials!  With your guidance I managed to hack one legit piece of software I paid to have on my office PC to be able to use it on my home laptop – no harm done – I am not publishing the patch online – and I was successful though I had covered tutorials just up to number 9 – isn’t that great :) - actually your tutorials are great, not me :) thank you for sharing your knowledge in such a friendly manner!]]></description>
+		<content:encoded><![CDATA[<p>&#8220;The Legend Of Random&#8221; is awesome! Thank you for these excellent tutorials!  With your guidance I managed to hack one legit piece of software I paid to have on my office PC to be able to use it on my home laptop – no harm done – I am not publishing the patch online – and I was successful though I had covered tutorials just up to number 9 – isn’t that great <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  &#8211; actually your tutorials are great, not me <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  thank you for sharing your knowledge in such a friendly manner!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: 眼鏡 オークリー</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-84222</link>
+		<dc:creator>眼鏡 オークリー</dc:creator>
+		<pubDate>Tue, 10 Sep 2013 00:59:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-84222</guid>
+		<description><![CDATA[サングラス オークリー]]></description>
+		<content:encoded><![CDATA[<p>サングラス オークリー</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Nillyhan</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-70532</link>
+		<dc:creator>Nillyhan</dc:creator>
+		<pubDate>Sat, 01 Jun 2013 16:36:42 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-70532</guid>
+		<description><![CDATA[Bro the pdf download file of it is corrupted....pls help.]]></description>
+		<content:encoded><![CDATA[<p>Bro the pdf download file of it is corrupted&#8230;.pls help.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: captainskybeard</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-69771</link>
+		<dc:creator>captainskybeard</dc:creator>
+		<pubDate>Tue, 28 May 2013 13:27:35 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-69771</guid>
+		<description><![CDATA[Well I tried it on another system and it works fine. I would definitely like to know what the heck was going on with the first one. It also prevented me from saving my patches, saying it could not find the code in the executable.]]></description>
+		<content:encoded><![CDATA[<p>Well I tried it on another system and it works fine. I would definitely like to know what the heck was going on with the first one. It also prevented me from saving my patches, saying it could not find the code in the executable.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: captainskybeard</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-69603</link>
+		<dc:creator>captainskybeard</dc:creator>
+		<pubDate>Mon, 27 May 2013 17:43:03 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-69603</guid>
+		<description><![CDATA[Something is going on here that I can&#039;t figure out. It hasn&#039;t happened for any other tutorial. I am not starting in the crackme6.exe code, I am starting in ntdll_1a instead. I can still &quot;go to&quot; the section at 401000, and set a breakpoint for it which it does hit (but I get a nasty warning when I set it). 
+
+When I a search for strings or search for intermodule calls I get totally different results than what was pictured. Any thoughts? Do you think security software on my PC is interfering?]]></description>
+		<content:encoded><![CDATA[<p>Something is going on here that I can&#8217;t figure out. It hasn&#8217;t happened for any other tutorial. I am not starting in the crackme6.exe code, I am starting in ntdll_1a instead. I can still &#8220;go to&#8221; the section at 401000, and set a breakpoint for it which it does hit (but I get a nasty warning when I set it). </p>
+<p>When I a search for strings or search for intermodule calls I get totally different results than what was pictured. Any thoughts? Do you think security software on my PC is interfering?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Adwiteeya Agrawal</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-49984</link>
+		<dc:creator>Adwiteeya Agrawal</dc:creator>
+		<pubDate>Thu, 02 May 2013 20:45:18 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-49984</guid>
+		<description><![CDATA[Great Tutes man!! Thanks a lot :)]]></description>
+		<content:encoded><![CDATA[<p>Great Tutes man!! Thanks a lot <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: infestor</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-15263</link>
+		<dc:creator>infestor</dc:creator>
+		<pubDate>Fri, 01 Feb 2013 00:34:16 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-15263</guid>
+		<description><![CDATA[looks like the EAX shows the function result as a size in bytes
+each letter/sign in a textfield is a byte so 
+EAX shows how long is our password]]></description>
+		<content:encoded><![CDATA[<p>looks like the EAX shows the function result as a size in bytes<br />
+each letter/sign in a textfield is a byte so<br />
+EAX shows how long is our password</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: maxluvr1981</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-9701</link>
+		<dc:creator>maxluvr1981</dc:creator>
+		<pubDate>Wed, 12 Dec 2012 18:46:09 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-9701</guid>
+		<description><![CDATA[I have done it whola!!! w/extra credit :)]]></description>
+		<content:encoded><![CDATA[<p>I have done it whola!!! w/extra credit <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Roadi</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-3334</link>
+		<dc:creator>Roadi</dc:creator>
+		<pubDate>Fri, 24 Aug 2012 04:31:25 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-3334</guid>
+		<description><![CDATA[&quot;Extra Credit:  Patch the crackme so that your password can be any length.&quot;
+
+Since the two &#039;ACCESS DENIED&#039; SetWindowTextA&#039;s will be overwritten by the one of &#039;ACCESS GRANTED&#039;, length should be of no concern, considering they all point to the same window handle.
+
+That, or I have misassumed the underworkings of the said API (though, nonetheless, the patch at 0040 129F does &#039;work&#039;).
+
+-Roadi]]></description>
+		<content:encoded><![CDATA[<p>&#8220;Extra Credit:  Patch the crackme so that your password can be any length.&#8221;</p>
+<p>Since the two &#8216;ACCESS DENIED&#8217; SetWindowTextA&#8217;s will be overwritten by the one of &#8216;ACCESS GRANTED&#8217;, length should be of no concern, considering they all point to the same window handle.</p>
+<p>That, or I have misassumed the underworkings of the said API (though, nonetheless, the patch at 0040 129F does &#8216;work&#8217;).</p>
+<p>-Roadi</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/654#comment-2884</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 15 Aug 2012 22:58:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=654#comment-2884</guid>
+		<description><![CDATA[Because Olly is unable to know ahead of time what data will be in these memory locations, they are not displayed. When you run the app and pause right before them, Olly is able to reliably figure out (or at least assume) what data will be in them, so they can then be displayed correctly.
+
+If you keep the disassembly on those lines of code and step through the program, you will see them change a lot. This is because various values are stored in these memory locations, and Olly is guessing what they are.]]></description>
+		<content:encoded><![CDATA[<p>Because Olly is unable to know ahead of time what data will be in these memory locations, they are not displayed. When you run the app and pause right before them, Olly is able to reliably figure out (or at least assume) what data will be in them, so they can then be displayed correctly.</p>
+<p>If you keep the disassembly on those lines of code and step through the program, you will see them change a lot. This is because various values are stored in these memory locations, and Olly is guessing what they are.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

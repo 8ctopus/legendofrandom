@@ -1,0 +1,1623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #21: Anti-Debugging Techniques «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="2100_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="2100_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #21: Anti-Debugging Techniques Comments Feed" href="http://thelegendofrandom.com/blog/archives/2100/feed">
+<script type="text/javascript" src="2100_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2100_fichiers/ajax.js"></script>
+<script type="text/javascript" src="2100_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="A Damn Fine Program…CmpDisasm" href="http://thelegendofrandom.com/blog/archives/2379">
+<link rel="next" title="This Week’s Challenge" href="http://thelegendofrandom.com/blog/archives/2441">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/2100">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=2100">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="2100_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="2100_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="2100_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="2100_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                               <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/2100">R4ndom’s Tutorial #21: Anti-Debugging Techniques</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Sep.14, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><p>Nowadays, with the plethora of 
+anti-anti-debugging plugins for Olly, you don’t need to know nearly as 
+much as you used to about anti-debugging techniques. But the problem is,
+ without understanding how they work, when we are confronted with a new 
+technique we find that we have no idea how to overcome it. Additionally,
+ learning about anti-debugging techniques helps us understand low-level 
+protections, and is a good introduction to packers.</p>
+<p>Anti-debugging is a rather large field, and impossible to cover in 
+one tutorial. I do hope to shed some light on the most used techniques, 
+as well as direct you to getting additional information on some of the 
+more obscure. I have uploaded several documents to the texts section of 
+the <a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tools</span></span></a> </p>
+ page, as well as descriptions of these at the end of this tutorial, 
+which will have a lot more detail on these and other techniques.<p></p>
+<p>In this tutorial, we will be going over a crackme from hell that I 
+wrote specifically for this tutorial. It shows several methods of 
+anti-debugging. It is a very challenging crackme, and as such, this 
+tutorial will be somewhat long and detailed. We will be comparing the 
+source code (in assembly) along side the compiled code in Olly, so dust 
+off that ASM book. As always, you can download all of the accompanying 
+files from the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a> </p> page.<p></p>
+<p>In order to make this tutorial a little less painful, I have included
+ a picture of the entire source code, a picture of the entire 
+disassembly (in Olly) with comments, and the assembly project for RadASM
+ with source code, all available in the download of this tut. This way 
+you can refer to the source and disassembly while you progress. I have 
+also included an Olly UDD file with the disassembly fully commented. If 
+you wish to see the crackme fully commented in Olly, just copy this file
+ into the UDD folder in Olly, open it in a text editor, and change the 
+file path at the top to match the path to the crackme.</p>
+<p>My suggestion, if you would like to get the most from this tutorial, 
+is to use a clean version of Olly with only my .ini file, meaning no 
+plugins. Many of these techniques will still work with plugins, but this
+ way you can see how they work without any intervention. It will also 
+teach you about what a lot of the options in the various anti-debugging 
+plugins are for. I will personally be using a clean install of Olly to 
+show each technique.</p>
+<h2><span id="more-2100"></span></h2>
+<div style="margin-bottom:8em;"><span style="display:none;">.</span></div>
+<h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>Anti-debugging techniques are methods used to fool debuggers, making 
+the reverse engineers job harder, attempting to make the job so hard 
+they won’t want to spend the necessary time cracking the target. Some of
+ them work on static disassemblers (like IDA Pro) and others on 
+debuggers like Olly or SoftICE. Debuggers can be split into two types, 
+linear sweep and recursive traversal, and some anti-debugging techniques
+ target those specific types. Others work on all debuggers as they 
+exploit flaws in the mechanics of debugging in general.</p>
+<p>One of the most obvious anti-debug techniques is code obfuscation. 
+This simply means making the code as difficult to read as possible, 
+making the reverser’s job much tougher. This includes methods such as 
+spaghetti code (jumping all over the place), encrypting strings,making 
+method call names meaningless (for interpreted code like VB and .NET), 
+and code flow obfuscation where the flow of code does not follow in a 
+linear direction.</p>
+<p>Another type of technique is self-modifying code and polymorphism. We
+ were gently introduced to this technique in an earlier tutorial, though
+ these methods can become extremely complicated. This technique is used 
+heavily in some of the more robust viruses and malware out there. 
+Self-modifying code is a technique where the actual opcodes of the 
+binary are changed dynamically (at run-time), making it impossible to 
+see what the code does without stepping through it. Polymorphism is the 
+technique of changing binary code, while still maintaining the same 
+functionality, each time the binary is copied.</p>
+<p>Still other techniques have to do with the way the operating system 
+handles debugging. These include calls to Windows API functions that 
+tells us if the target is being debugged, checking for breakpoints 
+dynamically in the code, removing hardware breakpoints, and using known 
+bugs in debuggers to attempt to crash the debugger.</p>
+<p>We will be discussing several of these techniques, though rest 
+assured, there are always methods out there far more complicated than we
+ will see here.</p>
+<h2><span style="color: #0a77e1;">Introducing Our Crackme</span></h2>
+<p>Go ahead and run AntiCrackme1.exe outside of a debugger to see how it
+ acts when not being debugged. Besides the anti-debugging code, it is 
+just a simple window, asking for a serial:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/114.png"><img class="aligncenter  wp-image-2184" title="Running the crackme" src="2100_fichiers/114.png" alt="" height="430" width="525"></a> </p><p></p>
+<p>It displays a goodboy or badboy depending on the serial entered:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/28.png"><img class="aligncenter size-full wp-image-2185" title="The badboy" src="2100_fichiers/28.png" alt="" height="297" width="509"></a> </p><p></p>
+<p>Loading the target in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/37.png"><img class="aligncenter size-full wp-image-2190" title="Loading it in Olly" src="2100_fichiers/37.png" alt="" height="490" width="590"></a> </p><p></p>
+<p>and looking around a little, you can immediately tell that there is something different about this binary:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/47.png"><img class="aligncenter size-full wp-image-2191" title="Weird looking parts" src="2100_fichiers/47.png" alt="" height="524" width="579"></a> </p><p></p>
+<p>Running the crackme in Olly gives us this wonderful message:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/57.png"><img class="aligncenter size-full wp-image-2192" title="Debugger found message" src="2100_fichiers/57.png" alt="" height="154" width="258"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">The Beginning</span></h2>
+<p>Looking at the beginning of the crackme we can see that it starts 
+with the traditional way of setting up a dialog box as the main window. 
+If you place a breakpoint at address 40100C and then single step, as 
+soon as you step over the call at address 401020 to DialogBoxParamA, you
+ will notice that the entire application is contained in this call. This
+ is because all of the code is run from callbacks based on the events of
+ this dialog box (reminds you of Visual Basic,right?):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/66.png"><img class="aligncenter size-full wp-image-2193" title="The beginning" src="2100_fichiers/66.png" alt="" height="140" width="703"></a> </p><p></p>
+<p>In Windows, if a dialog is used as the main window, there will be a 
+main callback that is first called, usually named “DlgProc”. To find the
+ address of this main callback, we look at the variables passed to 
+DialogBoxParamA, and we see, in the picure above, the “DlgProc” contains
+ a value of 40102B. This is our main DlgProc callback address.</p>
+<p>Looking at the source code, we can see that this is a pretty straight forward affair:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/115.png"><img class="aligncenter size-full wp-image-2194" title="The beginning source code" src="2100_fichiers/115.png" alt="" height="189" width="711"></a> </p><p></p>
+<p>So what we want to do is place a BP at this DlgProc address and run 
+the target, letting Windows run through till the callback gets called, 
+and then pausing here. Place a BP at address 40102B (the address we saw 
+above) and run Olly. We will break at the beginning of DlgProc:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/29.png"><img class="aligncenter size-full wp-image-2195" title="Beginning of DlgProc" src="2100_fichiers/29.png" alt="" height="127" width="628"></a> </p><p></p>
+<p>We can see that, first, we compare a passed in argument with 110h, 
+which is the ID for the Windows message WM_INITDIALOG, or the dialog 
+initializing code. If you are a little hazy on Windows messages, please 
+go back and re-read my <a href="http://thelegendofrandom.com/blog/archives/957"><span style="text-decoration: underline; color: #0a77e1;">tutorial</span></a> </p> on Windows messages.<p></p>
+<p>In this section there is a call to GetDlgItem and SetFocus. These 
+just make the serial edit box have focus when the window is first 
+loaded, so that if we start typing, the text will display in the serial 
+box. Looking at the source code, we can see how we accomplished this:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/38.png"><img class="aligncenter size-full wp-image-2196" title="InitDialog" src="2100_fichiers/38.png" alt="" height="180" width="684"></a> </p><p></p>
+<p>One thing you may have noticed in the source is the call to 
+CheckDebug. This call appears at address 40104A in the disassembly. 
+Following this call (single-step into) we jump to the CheckDebug 
+routine:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/116.png"><img class="aligncenter size-full wp-image-2199" title="CheckDebug in disassembly" src="2100_fichiers/116.png" alt="" height="135" width="686"></a> </p><p></p>
+<p>and following the call, we get to the CheckDebug method which includes a call to IsDebuggerPresent:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/39.png"><img class="aligncenter size-full wp-image-2203" title="Checkdebug function" src="2100_fichiers/39.png" alt="" height="229" width="752"></a> </p><p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">IsDebuggerPresent</span></h2>
+<p>One of the oldest (and most used) techniques is the IsDebuggerPresent
+ API call, probably because it is extremely easy to use. When a binary 
+is being debugged, Windows sets a flag in the PEB, or Process 
+Environment Block representing this fact. The PEB is a section of code 
+reserved with every process running on the system, setup and initialized
+ by the Windows loader. The PEB contains information that the process 
+needs, such as info on loaded modules, the number of processors in the 
+system, and most importantly, a flag depicting whether the current 
+process is being debugged or not.</p>
+<p>A simple query to this API returns a TRUE if the current application 
+is being debugged, and FALSE otherwise. Seeing as this is one of the 
+most used techniques, it’s also the first one used in the crackme:</p>
+<p><em>*** We could also forgo calling the IsDebuggerPresent API 
+directly, thereby removing it from the list of intermodular calls, by 
+doing something like this:</em></p>
+<p><em><span style="color: #ff9900;">MOV EAX, FS:[00000018]</span></em></p>
+<p>MOV EAX, [EAX + 0X30]</p>
+<p>CMP BYTE PTR [EAX + 2]</p>
+<p>JNE IsBeingDebugged</p>
+<p><em>which will load the value of the debug flag directly from the PEB, accessed through the FS register. ***</em></p>
+<p>As we can see in the disassembly, we call IsDebuggerPresent, and if 
+it returns true we jump to the call at address 4010BC, which displays 
+the ‘Found debugger’ message:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/58.png"><img class="aligncenter size-full wp-image-2206" title="Calling debug badboy" src="2100_fichiers/58.png" alt="" height="51" width="632"></a> </p><p></p>
+<p>Overcoming the IsDebuggerPresent call is pretty easy in Olly as there
+ are many plugins that do just this. The one I use is the OllyAdvanced 
+plugin. Clicking on this (in a version of Olly that has this plugin) 
+brings up the main settings screen. Clicking the “Anti-Anti-debug” tab, 
+we can see where we tell OllyAdvanced to always return FALSE on a call 
+to IsDebuggerPresent:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/67.png"><img class="aligncenter size-full wp-image-2207" title="OllyAdvanced settings" src="2100_fichiers/67.png" alt="" height="577" width="277"></a> </p><p></p>
+<p>In the mean time, as we are using a ‘clean’ install of Olly, we will 
+disable this manually by patching the check for the return result of 
+IsDebuggerPresent at address 4010B9. Simple right-click on this 
+instructions and select “Binary”-&gt;”Fill with NOPs”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/74.png"><img class="aligncenter size-full wp-image-2208" title="NOPping out IsDebuggerPresent" src="2100_fichiers/74.png" alt="" height="101" width="622"></a> </p><p></p>
+<p>My suggestion would be to save this new version of the patched file 
+so we don’t have to re-apply the patch every time we re-start the 
+target. Go ahead and do that and call it Anti-crackme2.exe:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/82.png"><img class="aligncenter size-full wp-image-2209" title="Saving the first patch" src="2100_fichiers/82.png" alt="" height="664" width="609"></a> </p><p></p>
+<p>Now load this new binary in Olly and let’s continue. Set a breakpoint
+ at address 401080. This is in the main callback, DlgProc, but after the
+ INITDIALOG message code. Putting our BP here will save us having to 
+press F9 many times when the target is first loading as the callback 
+will be called with every Windows message that comes through, even if we
+ don’t do anything about them. The only message we care about right now 
+is the WM_COMMAND message for when our “Check it” button is pressed, and
+ our BP is set right at the beginning of this:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/931.png"><img class="aligncenter size-full wp-image-2310" title="WM_COMMAND" src="2100_fichiers/931.png" alt="" height="413" width="882"></a> </p><p></p>
+<p>When you first pressed F9, the main screen will appear, asking for a 
+serial. Just enter any serial and click the “Check it” button. Olly will
+ then pause at our breakpoint:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/214.png"><img class="aligncenter size-full wp-image-2311" title="Call to CheckTiming" src="2100_fichiers/214.png" alt="" height="144" width="563"></a> </p><p></p>
+<p>When we press the “Check it” button, a WM_COMMAND message is sent 
+through the DlgProc callback. The first thing we do is make sure the ID 
+matches our button’s ID, and since there’s only one button, it will. 
+Next we save the handle to the window in a global variable so we can 
+access it in other functions. We also reset the badboy flag back to zero
+ (a flag used later to tell us whether the badboy should be shown or 
+not), and then we call the CheckTiming method.</p>
+<h2><span style="color: #0a77e1;">GetTickCount and RDTSC</span></h2>
+<p>When single stepping an executable, obviously the code does not run 
+anywhere near as fast as if we were running the app in ‘real-time’. We 
+can take advantage of this fact and measure how long a particular 
+section of code takes to run. If it takes longer than a certain amount 
+of time, we can assume that the code is being single-stepped.</p>
+<p>There are several ways of doing this; we could call GetTickCount 
+before a section of code, which returns the amount of time the OS has 
+been running, then call it again after the section of code and compare 
+the two. If this delta is too large, we can assume that the code is 
+being stepped.</p>
+<p>Another technique is to use the rdtsc assembly instruction, letting 
+the processor itself handle getting the time. Rdtsc stands for Real-Time
+ Stamp Counter, and is a supported instruction&nbsp; on Intel chips. 
+When called, EAX___ is returned containing the current amount of time 
+the OS has been running. Again, comparing this value before and after a 
+code section allows us to see how long it took to run that code.</p>
+<p>In the included crackme, we can see the use of rdtsc, though one 
+thing needs to be pointed out; RadASM (the IDE I use) does not allow you
+ to enter the rdtsc instruction directly, so we must insert the opcodes 
+manually. The opcodes for this instruction are 0F 31, and in the source 
+code you can see that I just enter them like I would raw bytes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/102.png"><img class="aligncenter size-full wp-image-2212" title="CheckTiming source" src="2100_fichiers/102.png" alt="" height="328" width="745"></a> </p><p></p>
+<p>So, single stepping into the call at address 40108F to the 
+CheckTiming routine, we see that first we run the RDTSC instruction 
+which loads EAX with the current system time:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/117.png"><img class="aligncenter size-full wp-image-2214" title="First RDTSC call" src="2100_fichiers/117.png" alt="" height="318" width="711"></a> </p><p></p>
+<p>Stepping down until just past the next RDTSC instruction (to address 
+4010CB),we see that, after subtracting the first time from the second, 
+the time between them was quite a bit bigger than our allotted 2000h:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/121.png"><img class="aligncenter size-full wp-image-2215" title="The second RDTSC" src="2100_fichiers/121.png" alt="" height="96" width="708"></a> </p><p></p>
+<p>In this case, E0557554 ticks occurred between the two. Yours will be 
+different, depending on how long you waited between the two RDTSC 
+instructions, but it will be longer than 2000h if you single step. (You 
+may wonder how I came up with 2000h- I did this through empirical 
+testing. I can’t guarantee that this is the best value, but it worked on
+ all the systems I tested it on.)</p>
+<p>There are two ways of combating this anti-debugging technique- you 
+can NOP it out or you can simply ignore it but not single-step through 
+this function. Either way works, but for simplicity, we will just ignore
+ it and remember to not single step through this code. In order to get 
+by it this first time, I just reset the zero flag at the JA instruction 
+at address 4010D0 to bypass the target displaying the “Debug” badboy. 
+Also, make sure that the earliest you set a breakpoint from now on is at
+ address 401094 (the instruction right after the CheckTiming call), this
+ way the call into the CheckTiming routine will run in real-time, 
+bypassing this check altogether.</p>
+<p>After the timing check, the code then calls the GetDlgItemTextA 
+function call, which get’s a pointer to the entered serial, which we 
+will use shortly when comparing the serials:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/132.png"><img class="aligncenter size-full wp-image-2217" title="Return from CheckTiming" src="2100_fichiers/132.png" alt="" height="145" width="696"></a> </p><p></p>
+<p>and upon returning (to address 401094) we then immediately call into our Opaque Predicate section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/144.png"><img class="aligncenter size-full wp-image-2219" title="Call to Opaque Predicate" src="2100_fichiers/144.png" alt="" height="108" width="584"></a> </p><p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Opaque Predicates</span></h2>
+<p>Opaque Predicates are false branches, where the branch appears to be 
+conditional, but is not. For example, if( 1==1) is an unconditional 
+jump, but because of the way decompilers like Olly work, the fact that 
+this is not really a conditional is not known.</p>
+<p>In a normal conditional jump, there are two ways the code can go, and
+ because of this the decompiler must disassemble the code for both 
+conditions. In an opaque predicate, we make the disassembler think that 
+there are two ways the code can go, even though there is really only one
+ way it will go. The technique is to set up one of these unconditional 
+jumps, and insert junk code into the code path that will never be 
+called, and real code in the path that will always be called. This will 
+force Olly to disassemble both paths, even though one of them is 
+complete gibberish.</p>
+<p>In our example, we see that the number ’2′ is compared with the 
+number ’3′, which will obviously always be false. Well, obvious to us 
+anyway. Olly is not quite as smart, and because of this, he cannot tell 
+that we will never jump to the junk1 code, so he attempts to disassemble
+ this code along with the PredicateOK code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/152.png"><img class="aligncenter size-full wp-image-2220" title="Opaque source" src="2100_fichiers/152.png" alt="" height="300" width="780"></a> </p><p></p>
+<p>You can see that, in the path that will never be run (the junk1 
+section), I have simply inserted junk opcodes. I have no idea what these
+ opcodes mean, and frankly don’t care, as this will never be run. Olly, 
+unfortunately, will attempt to disassemble these opcodes and will come 
+up with some crazy code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/161.png"><img class="aligncenter size-full wp-image-2223" title="Opaque predicate disassembly" src="2100_fichiers/161.png" alt="" height="121" width="655"></a> </p><p></p>
+<p>The nice thing about opaque predicates is it makes the code appear 
+much more complicated than it really is, making a reverse engineer spend
+ a lot more time understanding the code. In a real application, we could
+ even put real-looking code in the junk, sending the would-be reverser 
+on a wild goose chase. For example, we could put a function that looks 
+like it is comparing the entered serial with a (wrong) hard-coded 
+serial, and then calling a goodboy or badboy depending on the results. 
+Since this will never be run, we can put anything in here, but it will 
+take quite a bit of digging for a reverser to figure out it’s a decoy.</p>
+<h2><span style="color: #0a77e1;">Spaghetti Code</span></h2>
+<p>The next call in our WM_COMMAND code calls the spaghetti function, the main function in our crackme:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/171.png"><img class="aligncenter size-full wp-image-2224" title="Call to spaghetti code" src="2100_fichiers/171.png" alt="" height="94" width="609"></a> </p><p></p>
+<p>Spaghetti code is a way to break up a normal, linear, line-by-line 
+execution to a more frenetic, non-linear flow. For example, given the 
+following function (in pseudo-code):</p>
+<p><span style="color: #ff9900;">Get serial from user;</span></p>
+<p><span style="color: #ff9900;">Check serial;</span></p>
+<p><span style="color: #ff9900;">if( serial != hardcoded_serial)</span></p>
+<p><span style="color: #ff9900;">Show badboy;</span></p>
+<p><span style="color: #ff9900;">else</span></p>
+<p><span style="color: #ff9900;">show goodboy;</span></p>
+<p>we can change the flow to be more like this:</p>
+<p><span style="color: #ff9900;">Jump to Spaghetti1</span></p>
+<p><span style="color: #ff9900;">Spaghetti6:</span></p>
+<p><span style="color: #ff9900;">Show goodboy</span></p>
+<p><span style="color: #ff9900;">Jump to End</span></p>
+<p><span style="color: #ff9900;">Spaghetti3:</span></p>
+<p><span style="color: #ff9900;">if( serial != hardcoded_serial)</span></p>
+<p><span style="color: #ff9900;">jump to Spaghetti5</span></p>
+<p><span style="color: #ff9900;">else</span></p>
+<p><span style="color: #ff9900;">Jump to Spaghetti6</span></p>
+<p><span style="color: #ff9900;">Spaghetti1:</span></p>
+<p><span style="color: #ff9900;">Get serial from user;</span></p>
+<p><span style="color: #ff9900;">Jump to Spaghetti2</span></p>
+<p><span style="color: #ff9900;">End:</span></p>
+<p><span style="color: #ff9900;">Exit;</span></p>
+<p><span style="color: #ff9900;">Spaghetti2:</span></p>
+<p><span style="color: #ff9900;">Check serial</span></p>
+<p><span style="color: #ff9900;">Jump to Spaghetti3</span></p>
+<p><span style="color: #ff9900;">Spaghetti5:</span></p>
+<p><span style="color: #ff9900;">Show badboy</span></p>
+<p><span style="color: #ff9900;">Jump to End</span></p>
+<p>As you can see, this is far harder to follow.</p>
+<p>One of the initial things to notice in this code is that Olly has 
+disassembled some of it incorrectly. In this picture, the red arrows 
+show as data and the blue arrows are incorrect disassembly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/610.png"><img class="aligncenter size-full wp-image-2341" title="Incorrect disassembly" src="2100_fichiers/610.png" alt="" height="363" width="545"></a> </p><p></p>
+<p>Going to the source code, we can see why Olly has gotten confused:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/611.png"><img class="aligncenter size-full wp-image-2342" title="Incorrect decompile source" src="2100_fichiers/611.png" alt="" height="521" width="637"></a> </p><p></p>
+<p>We can see that something similar to an opaque predicate has been 
+used- it is a jump followed by a return. What is Olly to make of this? 
+Well, he resorts to displaying everything until the next return as data.
+ We have to tell Olly that it is in fact instruction opcodes and not 
+data. The way to do this is to highlight all of the incorrectly 
+decompiled code, right-click and choose “Analysis”-&gt;”During next 
+analysis, treat selection as”-&gt;”Commands”:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/77.png"><img class="aligncenter  wp-image-2344" title="Tell Olly to re-analyze" src="2100_fichiers/77.png" alt="" height="553" width="750"></a> </p><p></p>
+<p>Now Olly will re-analyze this section, assuming that these lines are 
+instructions and not data. Now Olly shows the correct disassembly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/85.png"><img class="aligncenter size-full wp-image-2343" title="Decompiled correctly" src="2100_fichiers/85.png" alt="" height="186" width="629"></a> </p><p></p>
+<p>That will help as we go through the code!</p>
+<h2><span style="color: #0a77e1;">The Table Interpretation Method</span></h2>
+<p>In addition to mixing up the flow of the code, this crackme also 
+utilizes a technique called table Interpretation (there are actually 
+additonal techniques to this, but I am just showing the most basic way).
+ This further obfuscates the code in that it’s a lot harder to figure 
+out where the execution will jump to next. It works by loading several 
+addresses into an array. These addresses are entry points into sections 
+of code. We then enter a loop that loads each address and calls each one
+ in order. These code sections are usually compiled out of order, making
+ it harder to follow the execution.</p>
+<p>The ‘normal’ way we would call each section would be something like this:</p>
+<p><span style="color: #ff9900;">call code1</span></p>
+<p><span style="color: #ff9900;">call code2</span></p>
+<p><span style="color: #ff9900;">call code3</span></p>
+<p>But in the crackme, the way we call each section is more like this (in psuedo-code):</p>
+<p><span style="color: #ff9900;">array = [ 0, address of code 3, address of code 2, address of code 1];</span></p>
+<p><span style="color: #ff9900;">for(&nbsp; i = 3;&nbsp; i&nbsp; &gt; 0;&nbsp; i–)</span></p>
+<p><span style="color: #ff9900;">{</span></p>
+<p><span style="color: #ff9900;">call array[i];</span></p>
+<p><span style="color: #ff9900;">}</span></p>
+<p>This adds a level of obfuscation in that we are calling each section indirectly.</p>
+<p>Here we can see the loop that loads each address and calls them, one after another:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/120.png"><img class="aligncenter size-full wp-image-2296" title="the spaghetti loop" src="2100_fichiers/120.png" alt="" height="413" width="715"></a> </p><p></p>
+<p>and here’s the actual array that holds the addresses:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/213.png"><img class="aligncenter size-full wp-image-2297" title="The addresses to jumo to" src="2100_fichiers/213.png" alt="" height="142" width="585"></a> </p><p></p>
+<p>Another benefit to this is that it inserts data (the array of 
+addresses) into the middle of code, making it harder for the 
+disassembler to disassemble the code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/312.png"><img class="aligncenter size-full wp-image-2315" title="The array as instructions" src="2100_fichiers/312.png" alt="" height="165" width="543"></a> </p><p></p>
+<p>The calls start with the last address and work their way down, so our
+ calls will happen in this order; code1, code2, code3. As we can see, 
+these code sections have been compiled in reverse order, making it more 
+difficult to follow code execution:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/311.png"><img class="aligncenter size-full wp-image-2299" title="The spaghetti routine" src="2100_fichiers/311.png" alt="" height="1056" width="500"></a> </p><p></p>
+<p>Also, junk code has been inserted into the beginning of each code section to lower readability .</p>
+<h2><span style="color: #0a77e1;">Checking Against Pre-Existing Strings</span></h2>
+<p>In each code section, a part of the actual pertinent code is run. In 
+the first section (code1) we check the first two characters entered 
+against the first two characters of our hard-coded serial. There is a 
+further obfuscation performed here, though. In order to not have a 
+hardcoded serial (which can be pretty easily detected in Olly), this 
+crackme checks the characters entered against characters from strings 
+that have nothing to do with the serial. For example, the first entered 
+character is compared to the fifth character of DebuggerText:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/124.png"><img class="aligncenter size-full wp-image-2304" title="Comparing the first character" src="2100_fichiers/124.png" alt="" height="286" width="688"></a> </p><p></p>
+<p>and here is the letter it compares it to:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/125.png"><img class="aligncenter size-full wp-image-2333" title="First character check" src="2100_fichiers/125.png" alt="" height="210" width="561"></a> </p><p></p>
+<p>So we can see that the first character of the entered serial is 
+compared with ‘s’. Right below this check in the source code, we check 
+the second character of the entered serial with this same ‘s’. So we 
+know the first two characters of the serial should be ‘ss’.</p>
+<p>The next compare section checks the 3rd and 4th characters entered with characters from GoodboyText and BadboyText:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/215.png"><img class="aligncenter size-full wp-image-2334" title="Third character check" src="2100_fichiers/215.png" alt="" height="318" width="728"></a> </p><p></p>
+<p>and here’s the strings:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/313.png"><img class="aligncenter size-full wp-image-2335" title="Third character strings" src="2100_fichiers/313.png" alt="" height="232" width="539"></a> </p><p></p>
+<p>So we know the third character of the entered text should be ‘e’ and 
+the fourth should be ‘c’. Finally we check the fifth and last 
+characters:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/412.png"><img class="aligncenter size-full wp-image-2339" title="Fifth character compare" src="2100_fichiers/412.png" alt="" height="322" width="729"></a> </p><p></p>
+<p>to the appropriate strings:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/512.png"><img class="aligncenter size-full wp-image-2340" title="Fifth character string" src="2100_fichiers/512.png" alt="" height="141" width="388"></a> </p><p></p>
+<p>and we see that the entire serial is ‘ssecs!’.</p>
+<h2><span style="color: #0a77e1;">Searching for breakpoints</span></h2>
+<p>After the spaghetti code, the crackme does not return control to the 
+main WM_COMMAND section, instead it stays in this call, as a way to 
+further obfuscate the code. Right after Spaghetti is done, we jump to 
+the Continue label, as we can see here in the source code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/128.png"><img class="aligncenter size-full wp-image-2359" title="Spaghetti code is done" src="2100_fichiers/128.png" alt="" height="222" width="480"></a> </p><p></p>
+<p>At the beginning of Continue, we immediately call the BreakpointCheck
+ code. After this, we fall through to checking if the badboy flag was 
+set, and if it wasn’t, we fall through to the self-modifying code 
+section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/217.png"><img class="aligncenter size-full wp-image-2360" title="Call to breakpoint check" src="2100_fichiers/217.png" alt="" height="329" width="484"></a> </p><p></p>
+<p>Following is the BreakpointCheck routine. The purpose of this code is
+ to search the entire contents of our application (in memory), looking 
+for a breakpoint. If we find one, we know we’re being debugged and we 
+show the debugging message:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/315.png"><img class="aligncenter size-full wp-image-2361" title="The breakpoint check routine" src="2100_fichiers/315.png" alt="" height="347" width="700"></a> </p><p></p>
+<p>As we will see at the end of this tutorial (in the cheksums section),
+ we will go into more detail of this process. But in the meantime, we 
+need to know when setting a breakpoint, the memory contents of the first
+ byte of the instruction where we place the breakpoint is replaced by 
+the constant CCh. This is the opcode for an interrupt, and Olly is 
+registered to trap this specific breakpoint. This way, as the program is
+ executing in memory, when an interrupt occurs execution is given to 
+Olly by the operating system, and Olly will pause the execution of the 
+executable here, giving us control of the target.</p>
+<p><em>*** Please see the checksums section at the end for a more detailed explanation of breakpoints and interrupts. **</em></p>
+<p>This routine searches our code looking for the tell-tale sign of a 
+breakpoint. If we encounter a CCh anywhere in this code, we break and 
+display the badboy. The beginning address of our program is defined by 
+“start”, the label placed at the top of our source code. To find the 
+length of our code, we subtract the address of the beginning of from the
+ address of the end, which gives us the length. Next we search every 
+byte, comparing each with the constant CCh. If CCh is not found, we 
+simply return from the procedure.</p>
+<p>Here’s what the breakpoint check looks like in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/414.png"><img class="aligncenter size-full wp-image-2362" title="The breakpoint check disassembly" src="2100_fichiers/414.png" alt="" height="149" width="605"></a> </p><p></p>
+<p>In order to overcome this anti-debugging technique, we simply need to
+ NOP out the call to it. After a little searching, we find the call at 
+address 4011F9:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/514.png"><img class="aligncenter size-full wp-image-2363" title="Finding the breakpoint check call" src="2100_fichiers/514.png" alt="" height="100" width="592"></a> </p><p></p>
+<p>Highlighting this instruction, right-click and select 
+“Modify”-&gt;”Fill with NOPs”. This replaces the instruction with NOP 
+opcodes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/613.png"><img class="aligncenter size-full wp-image-2364" title="No more breakpoint check" src="2100_fichiers/613.png" alt="" height="134" width="520"></a> </p><p></p>
+<p>Now we have no more breakpoint check. At this point, I would again 
+save the binary (Anti-crackme3.exe) so we don’t have to remember to 
+apply the patch every time we run the target.</p>
+<h2><span style="color: #0a77e1;">Self-Modifying Code</span></h2>
+<p>The final anti-debugging technique used in this crackme is 
+self-modifying code. This is a technique whereby the opcodes in the 
+binary get changed at run-time into a different set of opcodes. In the 
+case of this crackme, it changes a bunch of random data into a call to 
+show the goodboy. There are plenty of reasons this technique is used: 
+the function call encrypted in this section will not show up in the 
+intermodular calls, the random data can trick disassemblers into 
+thinking its code, and after the opcodes get decrypted, you must tell 
+Olly to re-analyze these bytes as opcodes instead of data.</p>
+<p>There are many more facets of self-modifying code than I have 
+displayed here, some of them next to impossible to work with (but not 
+completely impossible…why? cause that’s impossible…)</p>
+<p>If you look in the middle of the spaghetti code in Olly, you will 
+notice this random data looks somewhat out of place in the middle of 
+code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/127.png"><img class="aligncenter size-full wp-image-2347" title="Data in code sections" src="2100_fichiers/127.png" alt="" height="238" width="520"></a> </p><p></p>
+<p><em>*** Because this really is raw data (for now), if we tell Olly to
+ re-analyze this as commands, it will be complete gibberish. ***</em></p>
+<p>Here is the source code for this section. Notice that it defines data
+ in the middle of the code section, and our compiler is more than happy 
+to insert the data amongst the code. Also, I have added comments under 
+the code as to what these bytes will represent once they’ve been 
+decrypted:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/216.png"><img class="aligncenter size-full wp-image-2348" title="The encrypted data" src="2100_fichiers/216.png" alt="" height="428" width="711"></a> </p><p></p>
+<p>In the case of this crackme, the original instructions were simply 
+XORed with a certain key in order to get the raw data. Because they were
+ XORed, XORing the encrypted data with the same key will decrypt them 
+back to their original.</p>
+<p><em>*** Many commercial software titles would do far more than XOR 
+this code to decrypt it, but you’d be surprised how many use simple 
+algorithms. ***</em></p>
+<p>Now, let’s take a look at the code that does the decrypting:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/314.png"><img class="aligncenter size-full wp-image-2349" title="Self-modifying routine" src="2100_fichiers/314.png" alt="" height="232" width="626"></a> </p><p></p>
+<p>Here, we load the address of the beginning of our encrypted data and 
+load ECX with 7 which is the number of times we will loop through this 
+code. The reason it’s seven is that we will XOR 4 bytes at a time, 
+XORing the 4 bytes with “AX!$”. 7 times 4 equals 28, so we will XOR 28 
+bytes. You may notice that the call to MessageBox and ExitProcess are 
+only 26 bytes, so I added two NOPs at the end so we didn’t start 
+decrypting the next section of code.</p>
+<p>Next we do the actual XORing of the bytes, cycling through all of our
+ data. If you place a breakpoint at address 40120B (the beginning of the
+ decryption routine) and hit F9, each time you run the app you will see a
+ section of code, starting at address 401160, change into decrypted 
+code. Of course, Olly doesn’t know that these changed bytes are 
+instructions, so it tries to disassemble after each pass of the loop. 
+After seven times through the loop, you will see the decrypted bytes in 
+their entirety (keep in mind that you will only see this if you enter 
+the correct serial):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/413.png"><img class="aligncenter size-full wp-image-2351" title="Decrypted code" src="2100_fichiers/413.png" alt="" height="241" width="487"></a> </p><p></p>
+<p>Let’s tell Olly that this is code and not data. Select all the 
+modified lines, right-click and choose “Analysis”-&gt;”During next 
+analysis, treat selection as”-&gt;”Commands” and we will see the 
+decrypted code as it’s meant to be seen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/513.png"><img class="aligncenter size-full wp-image-2352" title="New decrypted code" src="2100_fichiers/513.png" alt="" height="136" width="595"></a> </p><p></p>
+<p>We can now see what’s going on!</p>
+<p><em>*** By the way, if you wish to experiment with self-modifying 
+code on your own, there are a couple of additonal things you need to 
+know. At the end of this tutorial, I have included a section on changing
+ PE file section characteristics, so read this before attempting this 
+technique on your own. ***</em></p>
+<p>After decrypting the code, there is one more little surprise we have to deal with…</p>
+<h2><span style="color: #0a77e1;">Return Obfuscation</span></h2>
+<p>You can see in the source code that the crackme does not just simply 
+jump to the decrypted code here, but performs some strange computations.
+ This is a simple anti-debugging technique that just makes reverse 
+engineering the code a little harder:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/612.png"><img class="aligncenter size-full wp-image-2353" title="Return obfuscation" src="2100_fichiers/612.png" alt="" height="164" width="672"></a> </p><p></p>
+<p>A simple version of return obfuscation is something like this:</p>
+<p><span style="color: #ff9900;"><strong>push offset code_to_call</strong></span></p>
+<p><span style="color: #ff9900;"><strong>ret</strong></span></p>
+<p>What it does is changes a jump into a return. This code is equivalent to:</p>
+<p><span style="color: #ff9900;"><strong>jump code_to_call</strong></span></p>
+<p>but has the benefit of being a little more complicated in the code, 
+not to mention making Olly’s job harder. Where this technique really 
+shines is in static disassembly, using something like IDA Pro. Because 
+there is a return instead of a jump, it’s a lot harder for IDA, as well 
+as the reverser, to figure out which call this return goes to.</p>
+<p>The reason why these two snippets do the same thing is that when the 
+CPU performs a return, it pulls the return address from the top of the 
+stack and jumps to this address. This is the way return works. Well, if 
+you want to jump somewhere, you can push the return address yourself and
+ then perform a return, which does the same thing as a jump.</p>
+<p>In the crackme, something similar to this is done, but with a twist. 
+The code pushes the address of the code we want to jump to (the 
+beginning of the new decrypted code) but adding a constant value of 
+754841h to it. It then loads this value into eax, and subtracts the 
+constant from it again. Finally, it copies the correct value onto the 
+top of the stack and performs a return , telling the processor to pull 
+this value off the stack and jump to it. Here’s what it looks like in 
+the disassembly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/78.png"><img class="aligncenter size-full wp-image-2354" title="Return obfuscation disassembly" src="2100_fichiers/78.png" alt="" height="73" width="388"></a> </p><p></p>
+<p>Granted, this is still a pretty easy version of this technique, but it gives you the idea for when you hit a tougher example.</p>
+<h2><span style="color: #0a77e1;">Techniques Not in the Crackme</span></h2>
+<p>Here I will go over a couple of additional techniques that were not in the crackme, but that you should be familiar with.</p>
+<p><strong><span style="color: #0a77e1;">Manually Loading Imports:</span></strong></p>
+<p>This technique is used quite often, especially in malware. It 
+involves manually loading the imports that the binary needs, as opposed 
+to having Windows load them for you. Imports are files like user32.dll 
+and kernel32.dll, and the methods these files make available to our 
+application. GetDlgItemText, MessageBox, and strCmp are examples of 
+these imported functions.</p>
+<p>The reason for loading these manually is it removes the benefit that 
+reversers can get by seeing the imports and where they are. For example,
+ one of the first things we do, especially if there are no strings in 
+the target, is to do a search for all intermodular calls. We then look 
+for any suspicious calls that we know are usually associated with 
+protections, and zero in on these. If the target loads imports manually,
+ all you will see in this window are two processes, GetProcAddress and 
+LoadLibrary. This is a sure-fire way of determining if this target loads
+ imports manually.</p>
+<p><em>*** There are additional techniques that can be used to even get 
+rid of the GetProcAddress and LoadLibrary calls, making the intermodular
+ calls window show no function calls. ***</em></p>
+<p>The way an executable does this is it loads in the various DLLs 
+itself, using LoadLibrary, then manually loads in the calls that it will
+ use, saving pointers to these calls internally. When the target needs 
+to call an import, such as MessageBox (with our badboy message), instead
+ of Olly showing something like this in the disassembly:</p>
+<p><strong><span style="color: #ff9900;">call user32.MessageBox</span></strong></p>
+<p>it will show something like this:</p>
+<p><strong><span style="color: #ff9900;">call [eax]</span></strong></p>
+<p>Obviously, the second method is much harder to follow, as we have no 
+idea what function is being called. Also, having no starting points to 
+follow that target’s flow makes it much harder to reverse engineer.</p>
+<p>The only way to combat this technique is to step the code from the 
+beginning and try to figure out what each call is for. We can then 
+manually label these calls in Olly, as a beginning to understanding, and
+ ultimately cracking the target.</p>
+<p><strong><span style="color: #0a77e1;">Alternatives to IsDebuggerPresent:</span></strong></p>
+<p>There are other ways of asking Windows if the current process is 
+being debugged besides IsDebuggerPresent. One way is with the 
+NtQuerySystemInformation or ZwQuerySystemInformation calls. The latter 
+is an undocumented internal call that Windows uses directly, though both
+ achieve the same result. The call definitions look like this:</p>
+<p><strong><span style="color: #ff9900;">ZwQuerySystemInformation( SystemKernelDebuggerInformation,</span></strong></p>
+<p><strong><span style="color: #ff9900;"> (PVOID) &amp;DebuggerInfo, sizeof( DebuggerInfo ), &amp;ulReturnedLength );</span></strong></p>
+<p>Just keep in mind that if you run across either of these functions, 
+it is attempting to figure out whether the app is being run in a 
+debugger. Most anti-anti-debugging plugins will thwart this, as we see 
+in OllyAdvanced:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/181.png"><img class="aligncenter size-full wp-image-2227" title="ZwQuery in OllyAdvanced" src="2100_fichiers/181.png" alt="" height="577" width="277"></a> </p><p></p>
+<p><span style="color: #0a77e1;"><strong>The Trap Flag:</strong></span></p>
+<p>This technique is nice in that it detects any debugger, no matter how
+ ‘smart’ it is. This involves setting the trap flag in the current 
+process and check whether an exception is raised. If an exception is not
+ raised, you can assume that the debugger has ‘swallowed’ the exception 
+to help us, and that the program is being single-stepped. Here is an 
+example, using a combination of psuedo-code and assembly:</p>
+<p><span style="color: #ff9900;">BOOL ExceptionFlagged = FASLE;</span></p>
+<p><span style="color: #ff9900;">Try</span></p>
+<p><span style="color: #ff9900;">{</span></p>
+<p><span style="color: #ff9900;">pushfd</span></p>
+<p><span style="color: #00ff00;">// Set the trap flag</span></p>
+<p><span style="color: #ff6600;">or dword ptr [esp], 0×100</span></p>
+<p><span style="color: #ff6600;">popfd</span></p>
+<p><span style="color: #ff6600;">nop</span></p>
+<p><span style="color: #ff9900;">}</span></p>
+<p><span style="color: #ff9900;">exception handler:</span></p>
+<p><span style="color: #ff9900;">{</span></p>
+<p><span style="color: #ff9900;">ExceptionFlagged = TRUE;</span></p>
+<p><span style="color: #ff9900;">}</span></p>
+<p><span style="color: #ff9900;">if( ExceptionFlagged == FALSE )</span></p>
+<p><span style="color: #ff9900;">print “A debugger has been found”;</span></p>
+<p>When reversing code that looks like this, the pushad and popad 
+instructions should jump out at you as you don’t normally see these 
+instructions (unless we’re dealing with packed code, but that comes 
+later). Obviously, the fix to this is NOPping out the if( 
+ExceptionFlagged == FALSE ) check.</p>
+<p><strong><span style="color: #0a77e1;">Checksums:</span></strong></p>
+<p>I had initially included a checksum routine in this crackme, as they 
+are used heavily in the real world, but I wanted to minimize the 
+complexity of the code. Checksums, or CRC Checks as they are more often 
+called, are a method of checking for breakpoints and patches to the 
+code. The basic idea is that, at some point in the application, we add 
+up the byte values of all the opcodes in the binary and check this sum 
+with a hard-coded value. This hard-coded value is obtained when the 
+binary is completed, but before being published.</p>
+<p>When we patch a binary, we obviously change one or more of these 
+opcodes, so when we add in the opcodes for the patched instructions, the
+ end value will not be the same. Therefore we can tell dynamically if 
+the file has changed, and do what we wish once we know this (usually 
+quit the app). This dissuades patches to the binary.</p>
+<p>The way this technique detects breakpoints is in the way a debugger 
+sets them. When you place a breakpoint on an instruction, the debugger 
+replaces the opcode for this instruction with an interrupt opcode, 
+namely 0xCC, and stores the original opcode internally. This allows the 
+debugger to trap this interrupt, pausing the application and allowing us
+ to step through the code. As we saw above, we can scan memory looking 
+for this exact value of CCh (as we did in the breakpoint check routine 
+in our crackme), but, as this instruction’s opcode was changed by the 
+debugger, our checksum will also not match.</p>
+<p>Let’s look at an example. Here is the disassembly of a simple call with opcodes:</p>
+<p><strong><span style="color: #ff9900;">75 34 JNZ 4010A0</span></strong></p>
+<p>Here, the 75h is the opcode for JNZ and the 34h is an offset from 
+this instruction to jump to, meaning we will jump 34h bytes forward in 
+the code from this instruction if the result is not zero. If we place a 
+breakpoint on this JNZ instruction, even though Olly still shows the 
+correct opcodes, in memory our instruction would really look like this:</p>
+<p><strong><span style="color: #ff9900;">CC 34 JNZ 4010A0</span></strong></p>
+<p>75h, the opcode for the JNZ instruction, has been replaced with CCh. 
+This way, when the operating system hits a CCh opcode, it performs an 
+interrupt, and Olly has been coded to trap this interrupt so that we 
+regain control when the breakpoint is hit. When this happens, Olly 
+copies the original value (75h) back into this address, replacing the 
+CCh code with the real opcode.</p>
+<p>Now, if we add the first two values in the above instructions we get 
+75h + 34h = A9h, which is our hard-coded checksum code. If we ran the 
+checksum again after the breakpoint is set, we see that we get the value
+ CCh + 34h = 100h, which does not equal the value it’s supposed to, 
+namely A9. therefore, we now know that a breakpoint (or patch) has been 
+set in this code, therefore the code is running in a debugger.</p>
+<h2><span style="color: #0a77e1;">Conclusion</span></h2>
+<p>Anti-debugging is a very large field, and even though I’ve covered a 
+number of them here, there are still far more out there, with new ones 
+being developed all the time. If you wish to learn more, here is a list 
+of some more in-depth coverage of these techniques, all available on the
+ <a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tools</span></span></a> </p> page of the LegendOfRandom site:<p></p>
+<p><strong><span style="color: #ff9900;">Anti-Debugging- A Developer’s Perspective</span></strong> by Tyler Shields</p>
+<p>Nice overview with descriptions of each type. Also talks about PEB and TEB types of techniques.</p>
+<p><span style="color: #ff9900;"><strong>Anti Reverse Engineering Guide</strong></span></p>
+<p>A .chm file (Windows help file) with three contributors supplying 
+three takes on anti-debug techniques. Two are by Josh Jackson and one by
+ Nicolas Falliere. The one by Falliere (the last) is the most detailed.</p>
+<p><strong><span style="color: #ff9900;">General Method of Program Code Obfuscation</span></strong> by Gregory Wroblewski</p>
+<p>A long, very detailed analysis of code obfuscation techniques. 
+Includes a lot of the math behind obfuscation analysis along with test 
+programs to test the various techniques.</p>
+<p><strong><span style="color: #ff9900;">OllyDbg Detection Tricks</span></strong> by Pumqara</p>
+<p>A tutorial on some specific methods of detecting OllyDBG. Includes source files to investigate.</p>
+<p><strong><span style="color: #ff9900;">Ultimate Anti Debugging Reference</span></strong> by Peter Ferrie</p>
+<p>Peter Ferrie basically wrote the book on anti-debugging techniques. 
+He has been doing research for a long time, and has come out with many 
+cutting-edge techniques. this is his opus devoted to anti-debugging. It 
+contains every anti-debugging technique I’ve ever seen. If you’re only 
+going to have one resource, this is the one.</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+<p>Addendum: Changing PE Section Attributes</p>
+<p>One thing not mentioned earlier in the self-modifying code section 
+was that in order to modify a binary’s code dynamically, the 
+characteristics of the .text section must be changed to allow writing to
+ them.</p>
+<p>The .text section (where the runnable code is generally kept) is 
+almost always set as read-only. Since we are modifying this code, we 
+must add the write attribute to this section. If this is not done, when a
+ disassembler hits the instruction that changes data in the binary, you 
+will get an exception and the program will crash.</p>
+<p>In order to change the characteristics, I use CFF Explorer. First, 
+compile your program to create the exe file (using RadASM, WinASM etc.) 
+Then open the exe in CFF Explorer and click on the “Section Headers” tab
+ in the directory tree:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/86.png"><img class="aligncenter  wp-image-2357" title="Loaded in CFF Explorer" src="2100_fichiers/86.png" alt="" height="210" width="808"></a> </p><p></p>
+<p>When you load your version, the characteristics value will be set to 
+40000020. Double-click this field and change it to C0000040 as I’ve 
+done. Select “File”-&gt;”Save” and save the altered exe. Now when you 
+run the application, the characteristics are set to “Execute as code”, 
+“Readable” and “Writable”, allowing the binary to modify itself.</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">26 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-4148">
+     <div id="comment-4148">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/768b7724aebd7bb31f280873663c1126.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gaius Baltar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4148" title="">September 14th, 2012 on 9:59 pm</a>  </small>
+
+			<p>Random,<br>
+Your code is awesome!<br>
+You’re a genius to me!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4148#respond" onclick='return addComment.moveForm("comment-4148", "4148", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4152">
+     <div id="comment-4152">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2100_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4152" title="">September 14th, 2012 on 11:00 pm</a>  </small>
+
+			<p>You are too kind. But from now on, can you add “evil” before any references to “genius”?</p>
+<p>BWAHAHAHAHAHAHAHAHAHAHA…….</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4152#respond" onclick='return addComment.moveForm("comment-4152", "4152", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4164">
+     <div id="comment-4164">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/256c67fdcec6acc5a78bb1af00a8ea21.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>awesome</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4164" title="">September 15th, 2012 on 2:01 am</a>  </small>
+
+			<p>I jst like al ur tutorial man.very neat and nicely explained keep it up hope ur site lives a million years</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4164#respond" onclick='return addComment.moveForm("comment-4164", "4164", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4175">
+     <div id="comment-4175">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/f4f4c0128ea5e55284bd7722bdf69f9b.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Ugo4brain</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4175" title="">September 15th, 2012 on 7:24 am</a>  </small>
+
+			<p>R4ndom is simply the best in writing tutorials.<br>
+U truly are a “super duper evil genius”.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4175#respond" onclick='return addComment.moveForm("comment-4175", "4175", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4195">
+     <div id="comment-4195">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/d5336d69ae0d217a290061546069991b.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gustavo</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4195" title="">September 15th, 2012 on 7:05 pm</a>  </small>
+
+			<p>RDTSC = *ReaD* Time Stamp Counter, not “Real”</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4195#respond" onclick='return addComment.moveForm("comment-4195", "4195", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4208">
+     <div id="comment-4208">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Pooper</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4208" title="">September 16th, 2012 on 6:33 am</a>  </small>
+
+			<p>I just felt awesome after completing your tutorial.<br>
+Thank you for this.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4208#respond" onclick='return addComment.moveForm("comment-4208", "4208", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4244">
+     <div id="comment-4244">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/a7ba4b194f4bde781d03ba4d01a5525c.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://none/" rel="external nofollow" class="url">archeoleo</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4244" title="">September 16th, 2012 on 7:22 pm</a>  </small>
+
+			<p>What is the editor you’re using for assembly?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4244#respond" onclick='return addComment.moveForm("comment-4244", "4244", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4257">
+     <div id="comment-4257">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2100_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4257" title="">September 17th, 2012 on 12:04 am</a>  </small>
+
+			<p>RadASM. I plan on writing a tutorial on using it shortly.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4257#respond" onclick='return addComment.moveForm("comment-4257", "4257", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-low-keysy even thread-even depth-1" id="li-comment-4325">
+     <div id="comment-4325">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/1b3b6d96436b70e01ead2f77e3893be3.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>低，Keysy的</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4325" title="">September 19th, 2012 on 2:09 am</a>  </small>
+
+			<p>Thank R4ndom so good tutorial.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4325#respond" onclick='return addComment.moveForm("comment-4325", "4325", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-xor06 odd alt thread-odd thread-alt depth-1" id="li-comment-4332">
+     <div id="comment-4332">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/b21ef19536c518b62b68e786e890eb15.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>XOR06</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4332" title="">September 19th, 2012 on 7:44 am</a>  </small>
+
+			<p>As an info almost All boardland Delphi programs has Return Obfuscation as it is a standard setting for the compiler.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4332#respond" onclick='return addComment.moveForm("comment-4332", "4332", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4344">
+     <div id="comment-4344">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2100_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4344" title="">September 19th, 2012 on 2:57 pm</a>  </small>
+
+			<p>I did not know that. Thanks XOR06.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4344#respond" onclick='return addComment.moveForm("comment-4344", "4344", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4396">
+     <div id="comment-4396">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/1e0a1022bf1e937229864bde798c80ee.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>K0ng0</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4396" title="">September 21st, 2012 on 4:20 am</a>  </small>
+
+			<p>Pure awesomeness!! Keep posting ill keep reading and bookmarking. N I agree.. Pure genius!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4396#respond" onclick='return addComment.moveForm("comment-4396", "4396", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4505">
+     <div id="comment-4505">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/0db8b5adf852461fd8593549bd46949e.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.aerocivic.com/" rel="external nofollow" class="url">CB</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4505" title="">September 24th, 2012 on 1:47 am</a>  </small>
+
+			<p>so… if you dont have a legitimate serial and username some encrypted code would never be decryptable?</p>
+<p>“After seven times through the loop, you will see the decrypted bytes
+ in their entirety (keep in mind that you will only see this if you 
+enter the correct serial)”</p>
+<p>CB</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=4505#respond" onclick='return addComment.moveForm("comment-4505", "4505", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-5042">
+     <div id="comment-5042">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5042" title="">October 6th, 2012 on 6:18 pm</a>  </small>
+
+			<p>One question about the .text section and modifying it to write instead of read only,<br>
+how come that in olly i am able to modify code while the program is 
+running without having to change said attribute?does olly set those 
+without having the user notice?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5042#respond" onclick='return addComment.moveForm("comment-5042", "5042", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-tarequl-crack even thread-odd thread-alt depth-1" id="li-comment-5367">
+     <div id="comment-5367">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="tarequl.crack" src="2100_fichiers/tarequl.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tarequl.crack</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5367" title="">October 12th, 2012 on 6:13 am</a>  </small>
+
+			<p>Random could your please give the source code in text form. Thank you</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5367#respond" onclick='return addComment.moveForm("comment-5367", "5367", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-5391">
+     <div id="comment-5391">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2100_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5391" title="">October 12th, 2012 on 4:38 pm</a>  </small>
+
+			<p>Of course. I have added to the download. Please re-download it 
+from the tutorials page and the zip will have the text file in it.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5391#respond" onclick='return addComment.moveForm("comment-5391", "5391", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-tarequl-crack even depth-3" id="li-comment-5409">
+     <div id="comment-5409">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="tarequl.crack" src="2100_fichiers/tarequl.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tarequl.crack</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5409" title="">October 13th, 2012 on 2:39 am</a>  </small>
+
+			<p>Thank you R4ndom. But i could not compile the exe. As it says there is no windows.lib. Could you please guide me?</p>
+<p>Thanking you</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5409#respond" onclick='return addComment.moveForm("comment-5409", "5409", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-4" id="li-comment-5410">
+     <div id="comment-5410">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2100_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5410" title="">October 13th, 2012 on 3:05 am</a>  </small>
+
+			<p>That is an assembly file. You must run it through RadASM with the 
+entire project to make an exe file. There was an exe file included in 
+the download if that’s all you want.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5410#respond" onclick='return addComment.moveForm("comment-5410", "5410", "respond", "2100")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-tarequl-crack even depth-5" id="li-comment-5415">
+     <div id="comment-5415">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="tarequl.crack" src="2100_fichiers/tarequl.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tarequl.crack</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5415" title="">October 13th, 2012 on 4:51 am</a>  </small>
+
+			<p>Thank your R4ndom for your reply. Could you please give the full project? I am a newbie, So error is there.<br>
+Thanking you.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=5415#respond" onclick='return addComment.moveForm("comment-5415", "5415", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-6265">
+     <div id="comment-6265">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-6265" title="">October 24th, 2012 on 5:12 pm</a>  </small>
+
+			<p>Wouldnt the manual antidebug function that check 0xcc bytes give false positives?Every CC byte would trigger it</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=6265#respond" onclick='return addComment.moveForm("comment-6265", "6265", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-8931">
+     <div id="comment-8931">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>REAP</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8931" title="">December 5th, 2012 on 12:16 am</a>  </small>
+
+			<p>R4ndom</p>
+<p>Your tutorials are one of the best series that I have read.</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=8931#respond" onclick='return addComment.moveForm("comment-8931", "8931", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-23514">
+     <div id="comment-23514">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/ec764076ea221a7c2153bf2089652c60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.weeklyvolcano.com/community/people/CoralXJBK/" rel="external nofollow" class="url">how to write a cold call cover letter</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-23514" title="">March 8th, 2013 on 12:34 am</a>  </small>
+
+			<p>Excellent post. I used to be checking constantly this weblog and 
+I’m inspired! Very helpful information specially the final phase <img src="2100_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  I care for such info much. I was seeking this particular information for a long time. Thank you and good luck.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=23514#respond" onclick='return addComment.moveForm("comment-23514", "23514", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-brickpsv even thread-odd thread-alt depth-1" id="li-comment-30066">
+     <div id="comment-30066">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/a141214c2b77bf3a619b72c125f0500f.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Brickpsv</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-30066" title="">April 14th, 2013 on 2:25 am</a>  </small>
+
+			<p>when i open a software by Olly ,software auto run althought i not click run in olly and i can’t see code of software </p>
+<p>i want ask what is this software use anti-debugging ?</p>
+<p>sorry for my bad english</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=30066#respond" onclick='return addComment.moveForm("comment-30066", "30066", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-60233">
+     <div id="comment-60233">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/57049d828f2c361b4543f7ccf7b7eb5c.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.funnymacau.com/forum.php?mod=viewthread&amp;tid=71283" rel="external nofollow" class="url">The sturdy Fila shoes are made of artificial leather-spun5</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-60233" title="">May 14th, 2013 on 10:10 pm</a>  </small>
+
+			<p>Cool Site , guys! Great Infos aswell. I bookmarked your site</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=60233#respond" onclick='return addComment.moveForm("comment-60233", "60233", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-62841">
+     <div id="comment-62841">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/53110912c4ea2364513b5bfc7577ee4d.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://easymoneyinternetnow.com/develop-and-implement-s-m-a-r-t-goals-2/" rel="external nofollow" class="url">best sales training dvd</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-62841" title="">May 17th, 2013 on 5:26 pm</a>  </small>
+
+			<p>I’m really impressed with your writing skills and also with the 
+layout on your weblog. Is this a paid theme or did you modify it 
+yourself? Either way keep up the excellent quality writing, it’s rare to
+ see a nice blog like this one<br>
+nowadays.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=62841#respond" onclick='return addComment.moveForm("comment-62841", "62841", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-85744">
+     <div id="comment-85744">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2100_fichiers/f67c4af3d584fce9e782039fc2ea4d73.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://gaspricestoday.co.uk/" rel="external nofollow" class="url">business electricity rates</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-85744" title="">September 22nd, 2013 on 8:55 am</a>  </small>
+
+			<p>Truly no matter if someone doesn’t understand after that its up to other viewers that they will help, so here it happens.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100?replytocom=85744#respond" onclick='return addComment.moveForm("comment-85744", "85744", "respond", "2100")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-5679">
+     <div id="comment-5679">
+			<div class="commentbody">
+			<cite><a href="http://chemaguerra.com/?p=354" rel="external nofollow" class="url">Code fortification | Chema Guerra</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5679" title="">October 17th, 2012 on 3:48 am</a>  </small>
+
+			<p>[...] Anti-Debugging Techniques [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2100#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="2100" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="2100" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="61b23b5353" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/2100/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/2100/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/2100" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MjEwMDtzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.19eef183e1213ec8da0ea80db1b63ad7"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2100_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Tutorials</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/tutorials/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>DLL Injection – A Splash Bitmap</title>
+		<link>http://thelegendofrandom.com/blog/archives/1785</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1785#comments</comments>
+		<pubDate>Tue, 02 Oct 2012 20:04:45 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1785</guid>
+		<description><![CDATA[There are a couple ways of injecting a splash screen into a binary. Unfortunately, none of them easy. The way<a href="http://thelegendofrandom.com/blog/archives/1785" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1785/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Adding an Icon and Menu</title>
+		<link>http://thelegendofrandom.com/blog/archives/2592</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2592#comments</comments>
+		<pubDate>Thu, 27 Sep 2012 21:28:44 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2592</guid>
+		<description><![CDATA[Adding an Icon Let&#8217;s start by adding an icon. Load up our HelloWorld project from the last tutorial. Click on<a href="http://thelegendofrandom.com/blog/archives/2592" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2592/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Tutorial #23: TLS Callbacks</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2418#comments</comments>
+		<pubDate>Thu, 27 Sep 2012 20:25:16 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418</guid>
+		<description><![CDATA[Unfortunately, our lives as reverse engineers is not always easy. If all it took to patch an app was a<a href="http://thelegendofrandom.com/blog/archives/2418" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2418/feed</wfw:commentRss>
+		<slash:comments>26</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Creating Our First Project</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2517#comments</comments>
+		<pubDate>Mon, 24 Sep 2012 17:11:44 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517</guid>
+		<description><![CDATA[We continue our tutorials on RadASM by creating a new project that creates a dialog box with two bitmaps and<a href="http://thelegendofrandom.com/blog/archives/2517" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2517/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Guide to RadASM: Installing and Set Up</title>
+		<link>http://thelegendofrandom.com/blog/archives/2420</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2420#comments</comments>
+		<pubDate>Fri, 21 Sep 2012 21:09:01 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2420</guid>
+		<description><![CDATA[RadASM is a very good IDE (Integrated Development Environment: think Visual Studio) for developing in most programming languages, though assembly<a href="http://thelegendofrandom.com/blog/archives/2420" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2420/feed</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #22: Code Caves and PE Sections</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2390#comments</comments>
+		<pubDate>Thu, 20 Sep 2012 18:52:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390</guid>
+		<description><![CDATA[In this tutorial we will be talking about code caves as well as PE sections, and touching on the PE<a href="http://thelegendofrandom.com/blog/archives/2390" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2390/feed</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #21: Anti-Debugging Techniques</title>
+		<link>http://thelegendofrandom.com/blog/archives/2100</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2100#comments</comments>
+		<pubDate>Fri, 14 Sep 2012 16:16:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2100</guid>
+		<description><![CDATA[Nowadays, with the plethora of anti-anti-debugging plugins for Olly, you don&#8217;t need to know nearly as much as you used<a href="http://thelegendofrandom.com/blog/archives/2100" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2100/feed</wfw:commentRss>
+		<slash:comments>26</slash:comments>
+		</item>
+		<item>
+		<title>Detailed View of the IAT</title>
+		<link>http://thelegendofrandom.com/blog/archives/2322</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2322#comments</comments>
+		<pubDate>Wed, 12 Sep 2012 23:01:26 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Random's Ramblings]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2322</guid>
+		<description><![CDATA[The IAT, or Important Address Table, is a collection of just that; important addresses. These can include the address of<a href="http://thelegendofrandom.com/blog/archives/2322" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2322/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Shrinking C++ Executables</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2231#comments</comments>
+		<pubDate>Mon, 10 Sep 2012 23:40:32 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231</guid>
+		<description><![CDATA[Over the course of creating these tutorials, I have been confronted with attempting to make the compiled binaries small. Usually,<a href="http://thelegendofrandom.com/blog/archives/2231" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2231/feed</wfw:commentRss>
+		<slash:comments>16</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #20B: Working With Visual Basic Binaries, Pt 2</title>
+		<link>http://thelegendofrandom.com/blog/archives/2044</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2044#comments</comments>
+		<pubDate>Fri, 07 Sep 2012 00:30:56 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Beginner]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2044</guid>
+		<description><![CDATA[This is part 2 of Working with Visual Basic Binaries. In this tutorial we will be using VB Decompiler which<a href="http://thelegendofrandom.com/blog/archives/2044" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2044/feed</wfw:commentRss>
+		<slash:comments>17</slash:comments>
+		</item>
+	</channel>
+</rss>

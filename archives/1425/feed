@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom&#8217;s Tutorial #16C: Bruteforcing</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1425/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1425</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: pornpinoy</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-80688</link>
+		<dc:creator>pornpinoy</dc:creator>
+		<pubDate>Tue, 13 Aug 2013 09:08:22 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-80688</guid>
+		<description><![CDATA[im a little bit confused where are this valued derived?
+varA == 0x9CC5B4B9
+varB == 0xD1EB13FB
+varC == 0x837D424E]]></description>
+		<content:encoded><![CDATA[<p>im a little bit confused where are this valued derived?<br />
+varA == 0x9CC5B4B9<br />
+varB == 0xD1EB13FB<br />
+varC == 0x837D424E</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: infestor</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-18115</link>
+		<dc:creator>infestor</dc:creator>
+		<pubDate>Sat, 09 Feb 2013 16:17:57 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-18115</guid>
+		<description><![CDATA[i added the &quot;register&quot; keyword before integers in the cpp code putting them on proc&#039;s memory and it ran 15.6% faster]]></description>
+		<content:encoded><![CDATA[<p>i added the &#8220;register&#8221; keyword before integers in the cpp code putting them on proc&#8217;s memory and it ran 15.6% faster</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: snake</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-8366</link>
+		<dc:creator>snake</dc:creator>
+		<pubDate>Mon, 26 Nov 2012 22:12:03 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-8366</guid>
+		<description><![CDATA[Thank you so much for these tutorials. I&#039;m learning a lot. I think it should say:
+&quot;Address 401407 started as EB 3F 90 90 and became 52 8B 55 0C after XORing with ‘a’&quot; instead of B9 B4 C5 9C. Otherwise we don&#039;t get the famous push dx;)]]></description>
+		<content:encoded><![CDATA[<p>Thank you so much for these tutorials. I&#8217;m learning a lot. I think it should say:<br />
+&#8220;Address 401407 started as EB 3F 90 90 and became 52 8B 55 0C after XORing with ‘a’&#8221; instead of B9 B4 C5 9C. Otherwise we don&#8217;t get the famous push dx;)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kdma</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-4323</link>
+		<dc:creator>kdma</dc:creator>
+		<pubDate>Tue, 18 Sep 2012 23:34:23 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-4323</guid>
+		<description><![CDATA[Its fine just wanted to know if i had missed some hints by the author :) best tutorial i&#039;ve read so far]]></description>
+		<content:encoded><![CDATA[<p>Its fine just wanted to know if i had missed some hints by the author <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  best tutorial i&#8217;ve read so far</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-4317</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Tue, 18 Sep 2012 19:33:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-4317</guid>
+		<description><![CDATA[It was in the initial posting of this crackme. the tutorials had already gotten so long I didn&#039;t feel like going into it. Sorry.]]></description>
+		<content:encoded><![CDATA[<p>It was in the initial posting of this crackme. the tutorials had already gotten so long I didn&#8217;t feel like going into it. Sorry.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kdma</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-4313</link>
+		<dc:creator>kdma</dc:creator>
+		<pubDate>Tue, 18 Sep 2012 17:14:40 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-4313</guid>
+		<description><![CDATA[Did i miss something about the author providing the first two digits?or he sent them to you?]]></description>
+		<content:encoded><![CDATA[<p>Did i miss something about the author providing the first two digits?or he sent them to you?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-3267</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 22 Aug 2012 20:54:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-3267</guid>
+		<description><![CDATA[http://thelegendofrandom.com/blog/sample-page]]></description>
+		<content:encoded><![CDATA[<p><a href="http://thelegendofrandom.com/blog/sample-page" rel="nofollow">http://thelegendofrandom.com/blog/sample-page</a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: zenta</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-3257</link>
+		<dc:creator>zenta</dc:creator>
+		<pubDate>Wed, 22 Aug 2012 17:47:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-3257</guid>
+		<description><![CDATA[need pdf dwnlad link plz upload]]></description>
+		<content:encoded><![CDATA[<p>need pdf dwnlad link plz upload</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: DellDell</title>
+		<link>http://thelegendofrandom.com/blog/archives/1425#comment-3132</link>
+		<dc:creator>DellDell</dc:creator>
+		<pubDate>Mon, 20 Aug 2012 19:26:36 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1425#comment-3132</guid>
+		<description><![CDATA[R4ndom
+you make look very easy thanks
+Excellent tutorial]]></description>
+		<content:encoded><![CDATA[<p>R4ndom<br />
+you make look very easy thanks<br />
+Excellent tutorial</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

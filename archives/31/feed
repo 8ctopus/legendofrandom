@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Tutorial #2 : Intro To Olly Debug</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/31/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/31</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Brk Dncr</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-83904</link>
+		<dc:creator>Brk Dncr</dc:creator>
+		<pubDate>Fri, 06 Sep 2013 09:12:51 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-83904</guid>
+		<description><![CDATA[Thanks for knowladges, Perfect]]></description>
+		<content:encoded><![CDATA[<p>Thanks for knowladges, Perfect</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: windclose</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-81836</link>
+		<dc:creator>windclose</dc:creator>
+		<pubDate>Tue, 20 Aug 2013 14:47:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-81836</guid>
+		<description><![CDATA[Thanx very much,wonderful job]]></description>
+		<content:encoded><![CDATA[<p>Thanx very much,wonderful job</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: dsl400</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-80395</link>
+		<dc:creator>dsl400</dc:creator>
+		<pubDate>Sat, 10 Aug 2013 18:42:00 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-80395</guid>
+		<description><![CDATA[I felt that this needs to be explained
+[quote]
+3. (K)all Stack
+
+(Gee, I wonder why beginners have a hard time remembering these icons…)[/quote]
+
+in russian K = C and C = S 
+the pour man could not think of &quot;call stack&quot; as &quot;sall stack&quot;
+so the mistake is understandable]]></description>
+		<content:encoded><![CDATA[<p>I felt that this needs to be explained<br />
+[quote]<br />
+3. (K)all Stack</p>
+<p>(Gee, I wonder why beginners have a hard time remembering these icons…)[/quote]</p>
+<p>in russian K = C and C = S<br />
+the pour man could not think of &#8220;call stack&#8221; as &#8220;sall stack&#8221;<br />
+so the mistake is understandable</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: dsl400</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-80394</link>
+		<dc:creator>dsl400</dc:creator>
+		<pubDate>Sat, 10 Aug 2013 18:36:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-80394</guid>
+		<description><![CDATA[Nice startup!]]></description>
+		<content:encoded><![CDATA[<p>Nice startup!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Rusty Shackleford</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-74090</link>
+		<dc:creator>Rusty Shackleford</dc:creator>
+		<pubDate>Mon, 24 Jun 2013 06:30:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-74090</guid>
+		<description><![CDATA[@Tarek 
+This is a tutorial for olly debugger, not assembly language.]]></description>
+		<content:encoded><![CDATA[<p>@Tarek<br />
+This is a tutorial for olly debugger, not assembly language.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo Nygaard</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-71253</link>
+		<dc:creator>Gustavo Nygaard</dc:creator>
+		<pubDate>Fri, 07 Jun 2013 07:33:06 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-71253</guid>
+		<description><![CDATA[It’s actually a great and useful piece of information. I am glad that you just shared this useful information with us. Please stay us informed like this. Thank you for sharing.]]></description>
+		<content:encoded><![CDATA[<p>It’s actually a great and useful piece of information. I am glad that you just shared this useful information with us. Please stay us informed like this. Thank you for sharing.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Tarek Ibrahem</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-22258</link>
+		<dc:creator>Tarek Ibrahem</dc:creator>
+		<pubDate>Thu, 28 Feb 2013 18:11:43 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-22258</guid>
+		<description><![CDATA[Good work man , but i want to know what is MOV , JMP , JP , JNP , SUB , etc ...
+I will be happy if you tell me , Thanks]]></description>
+		<content:encoded><![CDATA[<p>Good work man , but i want to know what is MOV , JMP , JP , JNP , SUB , etc &#8230;<br />
+I will be happy if you tell me , Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Haryanwi</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-5513</link>
+		<dc:creator>Haryanwi</dc:creator>
+		<pubDate>Sun, 14 Oct 2012 17:11:16 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-5513</guid>
+		<description><![CDATA[Nice Blog Really Great tutorials.i need really this type help.]]></description>
+		<content:encoded><![CDATA[<p>Nice Blog Really Great tutorials.i need really this type help.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-3108</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Mon, 20 Aug 2012 15:07:39 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-3108</guid>
+		<description><![CDATA[What site is that?]]></description>
+		<content:encoded><![CDATA[<p>What site is that?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: don</title>
+		<link>http://thelegendofrandom.com/blog/archives/31#comment-3104</link>
+		<dc:creator>don</dc:creator>
+		<pubDate>Mon, 20 Aug 2012 13:51:18 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31#comment-3104</guid>
+		<description><![CDATA[10x]]></description>
+		<content:encoded><![CDATA[<p>10x</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

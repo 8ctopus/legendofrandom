@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Winner of the tutorial #13 challenge</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1234/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1234</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/1234#comment-1010</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Wed, 11 Jul 2012 23:25:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1234#comment-1010</guid>
+		<description><![CDATA[Awesome! I&#039;m certain the iPhome is more useful than the iPhone so I&#039;m very happy : )  thanks R4ndom.]]></description>
+		<content:encoded><![CDATA[<p>Awesome! I&#8217;m certain the iPhome is more useful than the iPhone so I&#8217;m very happy : )  thanks R4ndom.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

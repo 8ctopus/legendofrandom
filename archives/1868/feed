@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: The Next Crackme Challenge</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1868/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1868</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1868#comment-3366</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Fri, 24 Aug 2012 15:23:55 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1868#comment-3366</guid>
+		<description><![CDATA[It was a very good idea :)]]></description>
+		<content:encoded><![CDATA[<p>It was a very good idea <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gaius Baltar</title>
+		<link>http://thelegendofrandom.com/blog/archives/1868#comment-3343</link>
+		<dc:creator>Gaius Baltar</dc:creator>
+		<pubDate>Fri, 24 Aug 2012 07:26:20 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1868#comment-3343</guid>
+		<description><![CDATA[This is exciting Random !
+This is a lot of fun for us so .... thanks man]]></description>
+		<content:encoded><![CDATA[<p>This is exciting Random !<br />
+This is a lot of fun for us so &#8230;. thanks man</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

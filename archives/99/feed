@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Cracking in a Sandbox</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/99/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/99</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: The Reverse Engineers Toolkit &#171; The Legend Of Random</title>
+		<link>http://thelegendofrandom.com/blog/archives/99#comment-56</link>
+		<dc:creator>The Reverse Engineers Toolkit &#171; The Legend Of Random</dc:creator>
+		<pubDate>Thu, 31 May 2012 17:37:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=99#comment-56</guid>
+		<description><![CDATA[[...] can read my blog on using Sandboxie in cracking, but to re-iterate, it&#8217;s a lifesaver with finding apps to [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] can read my blog on using Sandboxie in cracking, but to re-iterate, it&#8217;s a lifesaver with finding apps to [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Random</title>
+		<link>http://thelegendofrandom.com/blog/archives/99#comment-30</link>
+		<dc:creator>Random</dc:creator>
+		<pubDate>Tue, 29 May 2012 19:56:44 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=99#comment-30</guid>
+		<description><![CDATA[Isn&#039;t that more of a zip/rar extractor?]]></description>
+		<content:encoded><![CDATA[<p>Isn&#8217;t that more of a zip/rar extractor?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: k5h</title>
+		<link>http://thelegendofrandom.com/blog/archives/99#comment-28</link>
+		<dc:creator>k5h</dc:creator>
+		<pubDate>Tue, 29 May 2012 14:47:58 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=99#comment-28</guid>
+		<description><![CDATA[uni-extract works fine as an alternative]]></description>
+		<content:encoded><![CDATA[<p>uni-extract works fine as an alternative</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

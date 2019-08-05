@@ -1,0 +1,22 @@
+#ModPagespeed unplugged
+
+Header set Cache-Control "max-age=2620000, public"
+
+# One month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+    Header set Cache-Control "max-age=2608000, public"
+</filesMatch>
+
+<filesMatch ".html">
+    Header set Cache-Control "max-age=2625001, public"
+</filesMatch>
+
+<filesMatch ".txt">
+    Header set Cache-Control "max-age=2623000, public"
+</filesMatch>
+
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://octopuslabs.io/blog/
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]

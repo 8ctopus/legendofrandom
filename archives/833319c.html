@@ -1,0 +1,1195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/833?replytocom=844 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:05:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>R4ndom&#8217;s Tutorial #10: The Levels Of Patching &laquo;  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1" />
+<meta name="robots" content="follow, all" />
+
+<link rel="shortcut icon" href="../wp-content/themes/jarrah/favicon.ico" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="../feed" />
+<link rel="pingback" href="../xmlrpc.php" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/css/menu.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" href="wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random &raquo; R4ndom&#8217;s Tutorial #10: The Levels Of Patching Comments Feed" href="833/feed" />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4511.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/ajax-quick-subscribe/ajax9d52.js?ver=3.5.1'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min9d52.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='R4ndom&#8217;s Tutorial #9: Solution' href='859.html' />
+<link rel='next' title='Win a free iPud!!!!!!!!' href='881.html' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='833.html' />
+<link rel='shortlink' href='../index6fdb.html?p=833' />
+<meta name='robots' content='noindex,nofollow' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input type="text" value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput"/>
+    <input type="submit" class="submitbutton" value="" />
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                </ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="archives/833">R4ndom&#8217;s Tutorial #10: The Levels Of Patching</a> </h2>
+          	<div class="postmeta">by <a href="archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jun.29, 2012, under <a href="archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial we will be discussing the different levels to patching a binary. This tutorial is a little on the long and detailed side, but we will be covering a lot of ground, some of which is not that easy. I wanted to give you an example of deep analysis on a binary, and what it entails. You may not understand a great deal of it, but it will give you a good overall view of reverse engineering. This way, in future tutorials, you will have a frame of reference. We will be studying the same crackme as last tutorial, Crackme6 by &#8220;TDC&#8221;, included in the download.</p>
+<p>You can download the files and PDF version of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a>  page.</p>
+<p>Overall, it&#8217;s not a tough crackme as we saw in the last tut, but we will be doing some advanced analysis on it, preparing for future tutorials. So sit back, grab a coffee/cigarette/candy bar/hypodermic needle, whatever gets you going, and let&#8217;s get started&#8230;</p>
+<p><span id="more-833"></span></p>
+<h2><span style="color: #0a77e1;">Levels Of Cracking</span></h2>
+<p>There is a sort of an unwritten rule of reverse engineering (and especially cracking) about the different levels of patching a binary. There are basically four levels of patching a binary (and I&#8217;m sure at least half of every reverse engineer out there will argue with me on that number <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />  ) Of course, because everything sounds better as an acronym, I have come up with one for all four levels. So, without further ado, here is your guide to the levels of patching, and what they mean:</p>
+<p><span style="font-size: 16px; color: #ff6600;"><strong>Level 1 &#8211; LAME</strong></span></p>
+<p>The LAME method, or <strong><em>Localized Assembly Manipulation and Enhancing</em></strong> method, is what we have gone over so far. It means find the first place in the code that you can find the magic compare/jump decision and either NOP it out or force it to jump. This method has worked magically for us so far. Of course, we have been working on simple crackmes (half of which I coded specifically for the tutorial). Unfortunately, most apps out there aren&#8217;t quite this easy. There are many things that can go wrong with the LAME method, including:</p>
+<p>1. Many, many apps do more than one check for if the program is registered, always from different parts of the app, so just because you patch one does not mean there won&#8217;t be several more (I think 19 separate checks is the most I&#8217;ve seen). And sometimes these other checks aren&#8217;t done until some other event happens, so you will find yourself going back to the same app searching for alternative checks to patch.</p>
+<p>2. Many programs also do many special tricks to avoid the compare/jump combo being obvious. Whether it&#8217;s performed in a DLL, performed in another thread, modified polymorphically, there are many ways around making this obvious.</p>
+<p>3. Sometimes you end up patching an awful lot of code. Maybe you patch 7 checks for if we&#8217;re registered, NOPping out other checks and so forth. This can get confusing and, let&#8217;s face it, it&#8217;s not very elegant.</p>
+<p>4. You don&#8217;t learn a heck of a lot only using this method, and if you&#8217;re reading these tutorials, it&#8217;s probably because you&#8217;re interested in the topic and want to learn.</p>
+<p>All that being said, sometimes the most elegant solution, which is often also the simplest, is a single patch on the compare/jump combo, so don&#8217;t take me the wrong way and think you should never use it. In fact, of the many programs I have reverse engineered, I would guess 25-40% were solved using a simple patch like this. So it can be a powerful method <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' /> </p>
+<p><span style="font-size: 16px; color: #ff6600;"><strong>Level 2 &#8211; NOOB</strong></span></p>
+<p>This method, the <em><strong>Not Only Obvious Breakpoints</strong></em> method usually involves going one step deeper than the LAME method. It generally involves stepping into the call right before the compare/jump combo to see what is causing the compare/jump combo to come out the way it does. The benefit of this technique is that you have a lot more chance of catching other parts of the code that will call this same routine to check for registration, so patching in one place can really patch in several- every location that the binary calls the check registration routine. Of course this method also has some shortcomings, some of which are:</p>
+<p>1. Sometimes this routine is used for more than just a registration check. For example, it may be a generic function that compares two strings, returning true or false whether they match. In the case of our serial matching, this is the place to patch, but what happens if this same method is then called with two different strings and we&#8217;ve patched it to always return true (or false, as the case may be)?</p>
+<p>2. This method requires more time and experimentation to determine what the best options are for returning the correct values. This takes time and skill.</p>
+<p>This is the first method we will use in this tutorial.</p>
+<p><span style="font-size: 16px;"><strong><span style="color: #ff6600;">Level 3 &#8211; SKILLED</span><br />
+</strong></span></p>
+<p>The SKILLED method, or <em><strong>Some Knowledge In Lower Level Engineered Data</strong></em>, is similar to the <strong>NOOB</strong> method except it means you actually go through the routine and completely reverse engineer it to see exactly what&#8217;s happening. This gives many benefits such as understanding any tricks being used (like storing variables in memory for later retrieval), offering many more places to patch that are easier and less intrusive, and giving an insight into how the program works. It also gives you as a reverse engineer a lot of knowledge that can be used in the future, not to mention your assembly language skills.</p>
+<p>The main shortcomings of this method are that it&#8217;s more difficult and takes more time. My suggestion to you is to try this method on at least a couple programs, because nothing will make you a better reverse engineer than spending time digging through code, the stack, registers and memory, trying to get a feel for what the author was trying to do. This is the method we will be using in the last part of this tutorial.</p>
+<p><span style="font-size: 16px; color: #ff6600;"><strong>Level 4 &#8211; SK1LL$</strong></span></p>
+<p>Thought of as the holy grail of cracking, <span style="font-size: 14px;"><em><strong>Serial Keygenning In Low-level Languages, Stupid</strong></em></span> means that you not only have gone through and figured out exactly how the registration process is performed, but you are also able to re-create it. This allows a new user to type in whatever username they want, and the keygenner&#8217;s code will spit out a proper serial that will work with this binary. The general way a keygen is made is to try to use the programs own code against it, meaning copying the code the author used to decrypt serials and use it to encrypt them. This code is usually put in some sort of wrapper program made specifically to accept ripped code (it provides the GUI and such.)</p>
+<p>The ultimate in skill$ is if the code cannot be ripped from the app and must be custom coded to provide a viable serial. This means you must completely understand how the app decrypts the serial and compares it to what you have entered. You then must code your own program that performs this same routine, only in reverse, many times written in assembly language.</p>
+<p>Obviously, the major shortcomings with this method are the sk1ll$ involved.</p>
+<p>So, in light of our new understanding of the levels in reverse engineering&#8230;</p>
+<h2><span style="color: #0a77e1;">Looking At The App In Level 2</span></h2>
+<p>Let&#8217;s re-start the app and run it again. Set the breakpoint on GetDlgItemTextA (see last tut), enter a password (I entered &#8220;12121212&#8243;) and click &#8220;Check&#8221; so Olly breaks at our GetDlgItemTextA:</p>
+<p><a href="wp-content/uploads/2012/06/255.png"><img class="aligncenter size-full wp-image-693" title="At BP" src="wp-content/uploads/2012/06/255.png" alt="" width="739" height="100" /></a> </p>
+<p>Now let&#8217;s get some info on GetDlgItemTextA:</p>
+<p><a href="wp-content/uploads/2012/06/265.png"><img class="aligncenter size-full wp-image-694" title="GetDlgItemTextA Help" src="wp-content/uploads/2012/06/265.png" alt="" width="647" height="744" /></a> </p>
+<p>Here&#8217;s the important parts for us: One of the arguments is a pointer to a buffer where the password will be stored (lpString), and the return value in EAX is the string&#8217;s length:</p>
+<p><a href="wp-content/uploads/2012/06/276.png"><img class="aligncenter size-full wp-image-695" title="Detail" src="wp-content/uploads/2012/06/276.png" alt="" width="610" height="93" /></a> </p>
+<p>The pointer to the string buffer, as you can see above at address 40125a, is 40205D (Olly puts a comment of &#8216;Buffer=&#8217; because he can guess the arguments). That means that this function will copy our dialog text into a buffer starting at 40205D, and will return the length of this string in EAX. So, in our case, the password entered, &#8220;12121212&#8243; will be retrieved and returned with the length of the password in EAX, in this case 8. Now, if you look at the next two lines you&#8217;ll notice that this value is compared to 0x0B (11 decimal) and the program will jump if EAX is less than this amount. This really means that if the length of our password (EAX) is less than 0x0B (11 digits) then jump. You&#8217;ll notice that if we don&#8217;t jump, we will fall through to the bad boy, so in effect, this means our password must be less than 11 digits:</p>
+<p><a href="wp-content/uploads/2012/06/285.png"><img class="aligncenter size-full wp-image-696" title="Compare and jump" src="wp-content/uploads/2012/06/285.png" alt="" width="599" height="96" /></a> </p>
+<p>See!! We have learned something already- our password must be at most 11 digits <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Now since our password was less than 11 digits we will go ahead and take the jump. (If you happened to put in a password longer than 11 digits, restart the app and put a new one in less than 11 digits, then step to where we are here.)</p>
+<p><a href="wp-content/uploads/2012/06/294.png"><img class="aligncenter size-full wp-image-697" title="Test and jump" src="wp-content/uploads/2012/06/294.png" alt="" width="678" height="111" /></a> </p>
+<p>Next you will notice that EAX, which still contains the length of our password, is tested if it&#8217;s zero, and if it&#8217;s not, it jumps past the second bad boy. So now we know that the first bad boy is for situations where our password is longer than 11 digits, and the second bad boy is if it&#8217;s zero digits.</p>
+<p>Now notice that, after we take the jump, the next two lines, starting at address 401282, PUSH EAX (the password length), and the address 40305D (the buffer that our password was stored in) on to the stack. Looking at the stack we can see this in action:</p>
+<p><a href="wp-content/uploads/2012/06/303.png"><img class="aligncenter size-full wp-image-698" title="The stack" src="wp-content/uploads/2012/06/303.png" alt="" width="326" height="72" /></a> </p>
+<p>Notice first (at address 18FAB0) the length (8) was pushed and then at address 18FAAC the address 40305D was pushed, which Olly has helpfully shown you is &#8220;12121212&#8243;, or our password. Now we know that our password is stored in memory at address 40305D. This will be important later <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Later, Olly will refer to these two values as ARG.1 and ARG.2, as they are arguments passed to this function. Now after these two values are pushed, we will call the main registration routine (we know this because it&#8217;s the call right before the all important compare/jump combo, so it&#8217;s outcome will determine whether we jump to the good boy or bad boy), at address 401298.</p>
+<p><a href="wp-content/uploads/2012/06/313.png"><img class="aligncenter size-full wp-image-699" title="Or and jump" src="wp-content/uploads/2012/06/313.png" alt="" width="722" height="96" /></a> </p>
+<p>Keep Olly paused at the CALL line but notice after the call, EAX is OR&#8217;d with itself (will set the zero flag depending on whether EAX is zero or not) at address 40129D and will jump over the good message if EAX is not zero. This means that the registration routine called at address 401298 will, at some point, put a value into EAX and RETN this value, which will then be checked if it is zero or not, and if it is not, we will show the bad boy message. So we must make sure that in this call, EAX equals 0 when it returns! If we can accomplish this, it would be the only patch that would be needed (as well as the password being between 0 and 11 digits restriction, but that&#8217;s an easy patch). Let&#8217;s go ahead and step into the registration routine at address 401298 and get an overview:</p>
+<p><a href="wp-content/uploads/2012/06/323.png"><img class="aligncenter size-full wp-image-700" title="Beginning of check routine" src="wp-content/uploads/2012/06/323.png" alt="" width="700" height="447" /></a> </p>
+<p>Wow, that&#8217;s a lot to take in, especially as you&#8217;re probably only half way through your assembly book <img src='wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> . But it is not impossible. The technique I usually use is to go to the end of the routine, knowing that EAX must equal zero when it returns, and see what will accomplish this and what will keep this from happening, and work my way backward. Scroll down till you see the RETN of the function:</p>
+<p><a href="wp-content/uploads/2012/06/332.png"><img class="aligncenter size-full wp-image-701" title="EAX equals 1" src="wp-content/uploads/2012/06/332.png" alt="" width="454" height="192" /></a> </p>
+<p>Here, we can see that we definitely want to avoid the instruction at 401510 as it sets EAX to 1 right before returning. You can also see that there is a red arrow pointing to this line, so that jump will want to be avoided as well. Now if we look up a little we can see where EAX is set to zero, and the way through the end of this routine to return it as such:</p>
+<p><a href="wp-content/uploads/2012/06/342.png"><img class="aligncenter size-full wp-image-702" title="Investigating" src="wp-content/uploads/2012/06/342.png" alt="" width="467" height="146" /></a> </p>
+<p>If we get to line 4014FB, EAX will be set to zero (XOR&#8217;d with itself), the JMP instruction will jump over the bad instruction at 401510, and the routine will return with EAX equal to zero <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Now let&#8217;s follow the first jump we saw up (the jump that came to the MOV EAX, 1 bad instruction at address 401510) and see where it is coming from:</p>
+<p><a href="wp-content/uploads/2012/06/352.png"><img class="aligncenter size-full wp-image-703" title="The long jump" src="wp-content/uploads/2012/06/352.png" alt="" width="306" height="460" /></a> </p>
+<p>40147C is our bad jump. We want to avoid this jump or we are definitely getting the bad message. OK, we now have some general knowledge of this routine, and for a level 2 crack we would stop here and patch to make sure EAX always returns a zero. How would you do that? Well, I am going to leave that up to you (it will be at the end for homework <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> ) Though rest assured that I will give you the answers&#8230; But do understand that patching at this level is already better than our initial patch as 1) we only need one patch and 2) if this routine were to be called from anywhere else in the program, we would still get the good message <img src='wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> .</p>
+<p>Now, take a break and think about how you would patch this. Remember, EAX must return as zero. The reason I am letting you attempt this is because there are many, many NOOB patches to accomplish this, and I want you to start thinking like a reverse engineer! If you need a hint, look in the homework section at the end. And if you can solve it, you are a true NOOB!!!</p>
+<p>When you are done, and ready to move on to even more detailed analysis, read on&#8230;</p>
+<h2><span style="color: #0a77e1;">Stepping It Up To Level 3</span></h2>
+<p>I understand that you are still a beginner, but I wanted to give a taste of what patching on a deeper level looks like. If you don&#8217;t feel prepared for this, or get completely lost, don&#8217;t fret. This is just to give you an idea. We will be going back over everything in this section in future tutorials. You may ask yourself, what is the purpose of going deeper into this code if, everywhere in the app that calls this routine, it will be patched? Well, for starters, what if there are varying degrees of registration, for example &#8220;Private&#8221;, &#8220;Corporate&#8221;, &#8220;Enterprise&#8221;&#8230; This routine may make this decision based on logic inside this routine. Another reason you may want to investigate further is to eventually make a keygen for it. You would need to understand this code to do that. Now, let&#8217;s start on patching on a SKILLED level and go back up to the beginning of this routine and examine it:</p>
+<p><a href="wp-content/uploads/2012/06/361.png"><img class="aligncenter size-full wp-image-705" title="36" src="wp-content/uploads/2012/06/361.png" alt="" width="588" height="137" /></a> </p>
+<p>First, there is some typical pushing of registers and creating some space on the stack for some local variables. The values in ECX and EDX are pushed on to the stack so we may use these registers without overwriting what was in them (they will be popped off the stack at the end of the routine to return them to normal). We then get to address 40142A, which moves the local argument on the stack (which is the address of our password) into EAX. If you look at the regsters window you&#8217;ll see that EAX holds the address 40305D, which is the address of our password. Next comes a menacing looking line:</p>
+<p><strong>XOR DWORD PTR DS:[ECX+EAX], 1234567</strong></p>
+<p>what this line means is add ECX (which is zero) to the address of the beginning of our password (which is stored at 40305D &#8211; remember that address?), then take the DWORD (4 bytes) at this location and XOR it with the hex value 1234567. Since ECX is zero, adding this to the address of our password doesn&#8217;t do anything to that address, so we are dealing with the address starting with the first digit of our password. In simpler language, what this line means is &#8220;get the first 4 bytes of the password and XOR it with 1234567, storing this new value back into the same memory address which is the beginning of our password.&#8221;</p>
+<p>We can watch this happen; first, making sure we are still paused on this line of code at address 40142D, look right above the dump window and it will tell you what address ECX+EAX is (40305D) as well as what values are there (32313231) which in ASCII is &#8220;2121&#8243; (remember the endians <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> ):</p>
+<p><a href="wp-content/uploads/2012/06/371.png"><img class="aligncenter size-full wp-image-706" title="37" src="wp-content/uploads/2012/06/371.png" alt="" width="192" height="93" /></a> </p>
+<p>Now highlight the first line that says &#8220;DS:[0040305D]=32313231&#8243;, right-click and select &#8220;Follow in dump&#8221; so we can see the actual memory where our password is currently stored:</p>
+<p><a href="wp-content/uploads/2012/06/381.png"><img class="aligncenter size-full wp-image-707" title="Follow address in Dump" src="wp-content/uploads/2012/06/381.png" alt="" width="307" height="160" /></a> </p>
+<p>Now the dump window is showing memory, starting at address 40305D. Here, the first 8 bytes is our password. Now remember, the line of code we are on is going to take the first 4 bytes at this address (31,32,31,32) and XOR them with 0&#215;1234567, storing the result back into this memory location:</p>
+<p><a href="wp-content/uploads/2012/06/391.png"><img class="aligncenter size-full wp-image-708" title="39" src="wp-content/uploads/2012/06/391.png" alt="" width="474" height="169" /></a> </p>
+<p>Go ahead and hit step over once and you will see the first 4 bytes of our password changed, XOR&#8217;d with 0&#215;1234567.</p>
+<p><a href="wp-content/uploads/2012/06/402.png"><img class="aligncenter size-full wp-image-709" title="40" src="wp-content/uploads/2012/06/402.png" alt="" width="476" height="143" /></a> </p>
+<p>Now, let&#8217;s continue down the code to the next line:</p>
+<p><a href="wp-content/uploads/2012/06/413.png"><img class="aligncenter size-full wp-image-710" title="41" src="wp-content/uploads/2012/06/413.png" alt="" width="604" height="104" /></a> </p>
+<p>This line, <strong>AND BYTE PTR DS:[ECX+EAX]</strong>, 0E, is another menacing looking line. We know what ECX + EAX is address 40305D, which is the address of our former password. Now we&#8217;re going to AND 0x0E with the BYTE at this address and store the result back into this address. This means that the first digit of our former password that is stored at 40305D is going to be ANDed with oE and stored back in that first position. Looking at that helper area above the dump helps point this out:</p>
+<p><a href="wp-content/uploads/2012/06/421.png"><img class="aligncenter size-full wp-image-711" title="42" src="wp-content/uploads/2012/06/421.png" alt="" width="194" height="133" /></a> </p>
+<p>It is telling us that the address that will be affected is 40305D, and the value at that address (currently) is 56. Now go ahead and step once and you will see that first digit change again:</p>
+<p><a href="wp-content/uploads/2012/06/433.png"><img class="aligncenter size-full wp-image-712" title="43" src="wp-content/uploads/2012/06/433.png" alt="" width="458" height="102" /></a> </p>
+<p>So now we know that ox56 ANDed with 0x0E is 0&#215;06 <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  Now let&#8217;s continue trudging through this code:</p>
+<p><a href="wp-content/uploads/2012/06/452.png"><img class="aligncenter size-full wp-image-713" title="45" src="wp-content/uploads/2012/06/452.png" alt="" width="529" height="108" /></a> </p>
+<p>ECX is increased by 4 (to point at the next set of 4 bytes) and compared to 8. This means that this loop will run two times- the first time ECX will equal 4, the second time 8, then we will jump out of it. This means that we are dealing with 8 bytes of code total. So the second time through the loop, we will affect the second set of 4 bytes, ANDing them with 1234567. As you step it, keep an eye on the second set of 4 bytes:</p>
+<p><a href="wp-content/uploads/2012/06/461.png"><img class="aligncenter size-full wp-image-714" title="46" src="wp-content/uploads/2012/06/461.png" alt="" width="466" height="87" /></a> </p>
+<p>and they will change as well. That fifth byte will also change again as it&#8217;s ANDed with 0x0E. After this loop, we hit the next instruction at address 401440 that just resets ECX to zero:</p>
+<p><a href="wp-content/uploads/2012/06/47.png"><img class="aligncenter size-full wp-image-725" title="47" src="wp-content/uploads/2012/06/47.png" alt="" width="465" height="114" /></a> </p>
+<p>Now let&#8217;s look at the next set of instructions:</p>
+<p><a href="wp-content/uploads/2012/06/48.png"><img class="aligncenter size-full wp-image-726" title="48" src="wp-content/uploads/2012/06/48.png" alt="" width="464" height="88" /></a> </p>
+<p>First we move the first (new) byte of our (former) password into DL (since ECX is zero again, we know we are dealing with the first digit again, or where EAX is pointing). If you look at the registers window, you&#8217;ll see that first byte (0&#215;06) in the EDX register:</p>
+<p><a href="wp-content/uploads/2012/06/49.png"><img class="aligncenter size-full wp-image-728" title="49" src="wp-content/uploads/2012/06/49.png" alt="" width="161" height="93" /></a> We then add this digit in DL with whatever is at EAX + 8, or the eighth byte after the beginning of EAX, and store it back into the eighth position:</p>
+<p><a href="wp-content/uploads/2012/06/50.png"><img class="aligncenter size-full wp-image-729" title="50" src="wp-content/uploads/2012/06/50.png" alt="" width="444" height="91" /></a> </p>
+<p>Here, we ca see that that byte has changed:</p>
+<p><a href="wp-content/uploads/2012/06/511.png"><img class="aligncenter size-full wp-image-730" title="51" src="wp-content/uploads/2012/06/511.png" alt="" width="485" height="94" /></a> </p>
+<p>This has added the first byte in this buffer (6) with the 8th byte in the buffer (zero) and given us 6. If our password was longer than 8 digits, this would have added the first byte in our buffer to the next digit of our password, but since our password is only 8 digits, this memory is set to zero. Next we increase ECX by one (thereby moving to the next byte) and compare it to the length of the password. This just basically figures out if we&#8217;ve reached the end. If we haven&#8217;t, we then jump to the beginning of this loop and do it again. This basically means we will cycle through all the digits of the password, adding the value of each digit and storing this value in the 8th memory position. Now we realize why the password can only be 11 digits; there&#8217;s only space to hold 11 characters plus the terminating zero.</p>
+<p><a href="wp-content/uploads/2012/06/521.png"><img class="aligncenter size-full wp-image-731" title="52" src="wp-content/uploads/2012/06/521.png" alt="" width="466" height="108" /></a> </p>
+<p>As you step through this loop, you can watch the memory change:</p>
+<p><a href="wp-content/uploads/2012/06/531.png"><img class="aligncenter size-full wp-image-732" title="53" src="wp-content/uploads/2012/06/531.png" alt="" width="351" height="133" /></a> </p>
+<p>After this loop is done, we once again set ECX to zero and enter a similar loop to the first one, this time XORing each set of 4 bytes with 0x89ABCDE.</p>
+<p><a href="wp-content/uploads/2012/06/561.png"><img class="aligncenter size-full wp-image-2973" title="56" src="wp-content/uploads/2012/06/561.png" alt="" width="460" height="321" /></a> <br />
+It also then adds up all the bytes and keeps this total in the ninth byte. This process will be implemented until ARG.2 equals zero. ARG.2 is the length of our password (remember it was the second item pushed on to the stack right before calling this function?) So, this set of instructions will be run 8 times, once for each digit of our password. And after stepping through this code, you will see the final result::</p>
+<p><a href="wp-content/uploads/2012/06/119.png"><img class="aligncenter size-full wp-image-874" title="New total" src="wp-content/uploads/2012/06/119.png" alt="" width="381" height="105" /></a> <br />
+<a href="wp-content/uploads/2012/06/58.png"><img class="aligncenter size-full wp-image-740" title="58" src="wp-content/uploads/2012/06/58.png" alt="" width="483" height="108" /></a> </p>
+<p>It is vitally important that you run this and watch it all happen as it will make it a lot clearer. Take time understanding each line, what it&#8217;s going to do and where it&#8217;s going to store the result. You will find that it is not as difficult as it sounds:) And don&#8217;t forget that we are making our way to that first jump at address 40147C. Here, in summation, is what we have done:</p>
+<ol>
+<li>We XORed each set of 4 bytes of our password with the hex value 12345678 and stored them back over top of our password.</li>
+<li>The first digit was ANDed with 0x0E, as well as the 5th byte.</li>
+<li>We then added up the values of all of these bytes and stored this value in the 8th byte.</li>
+<li>Then, we XORed each set of 4 bytes of this buffer with 0x9ABCDEF, and stored the result back into this buffer.</li>
+<li>Again, we added up the values of all of the buffer memory contents and stored this into the 9th memory location.</li>
+</ol>
+<p>We have performed most of the magic of the protection scheme on this crackme (*phew*). Now we will load these two values (the summation of the buffer memory contents), one at EAX+8 and one at EAX+9 into DL and DH, making EDX in our example equal to 842C. We then compare these values with the value 42DE:</p>
+<p><a href="wp-content/uploads/2012/06/611.png"><img class="aligncenter size-full wp-image-743" title="61" src="wp-content/uploads/2012/06/611.png" alt="" width="443" height="100" /></a> </p>
+<p>Why 42DE? Well, this is probably a hard coded password. If you think about it, if you had a specific password, ran it through this whole operation of XOR-ing and AND-ing, it will come up with this magic number of 42DE. In our case, seeing as EDX equals 842C:</p>
+<p><a href="wp-content/uploads/2012/06/621.png"><img class="aligncenter size-full wp-image-744" title="62" src="wp-content/uploads/2012/06/621.png" alt="" width="97" height="45" /></a> </p>
+<p>We have not entered this magic password so we will take this jump which will lead us to the bad code:</p>
+<p><a href="wp-content/uploads/2012/06/631.png"><img class="aligncenter size-full wp-image-745" title="63" src="wp-content/uploads/2012/06/631.png" alt="" width="407" height="296" /></a> </p>
+<p>Unless, of course, we help Olly out a little:</p>
+<p><a href="wp-content/uploads/2012/06/641.png"><img class="aligncenter size-full wp-image-746" title="64" src="wp-content/uploads/2012/06/641.png" alt="" width="47" height="44" /></a> </p>
+<p>And instead fall through so EAX will not be set to one and this function immediately stopped. Next we load ECX with 9 so that we may access the 9th digit of our buffer, move the contents of this ninth memory location into DL (0x2C in this case), XOR it with itself (making it equal zero), lower ECX by one to go to the previous location, and do this nine times:</p>
+<p><a href="wp-content/uploads/2012/06/65.png"><img class="aligncenter size-full wp-image-747" title="65" src="wp-content/uploads/2012/06/65.png" alt="" width="478" height="93" /></a> </p>
+<p>You may wonder, as this doesn&#8217;t actually change anything in the buffer, what the point of this function is? Well, that makes two of us. Seeing as all it&#8217;s doing is zeroing out DL over and over, this almost seems like a decoy (or a mistake <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> ) in the code. All in all, if this code runs or does not run, it makes no difference, so it is dead code. We now enter short group of code that basically compares EAX with 30AC:</p>
+<p><a href="wp-content/uploads/2012/06/66.png"><img class="aligncenter size-full wp-image-748" title="66" src="wp-content/uploads/2012/06/66.png" alt="" width="486" height="107" /></a> </p>
+<p>First, it load ECX with the summation we did earlier (0x2C in the 9th memory location and 0&#215;84 in the 8th memory location), XORs it with 0xEEEE and compares it with 30AC. And since ECX is not equal to 30AC, we will jump:</p>
+<p><a href="wp-content/uploads/2012/06/67.png"><img class="aligncenter size-full wp-image-749" title="67" src="wp-content/uploads/2012/06/67.png" alt="" width="106" height="58" /></a> </p>
+<p>To where ECX is set to one again:</p>
+<p><a href="wp-content/uploads/2012/06/68.png"><img class="aligncenter size-full wp-image-750" title="68" src="wp-content/uploads/2012/06/68.png" alt="" width="415" height="420" /></a> </p>
+<p>This is basically a second check of the password. The reason for this is probably that a reverse engineer with not a lot of experience (or just enough to get him/herself in trouble) would immediately patch the first JNZ when our converted password was compared with 0x42DE above. They may not have taken the time to go through the rest of the code, thinking this patch is all it takes. Unfortunately, this patch is obviously not enough as the app now takes the computed value of our password, performs some more manipulation on it, and jumps if it does not match this new value. A lot of times this method is used as a technique to discover if someone is trying to patch the app: if we get through the first JNZ with our password checking out without patching anything, we should get through the second as well. If we don&#8217;t, we know someone has patched the first check, so we know someone has altered the code. Many times this second jump will go to some completely different section of code, something that looks incredibly complicated but doesn&#8217;t actually do anything, and then eventually terminate. This is an attempt to send the reverse engineer on a wild-goose-chase and make it harder to overcome the protection. We don&#8217;t want that, so set the zero flag so we keep going and we hit the next two lines:</p>
+<p><a href="wp-content/uploads/2012/06/69.png"><img class="aligncenter size-full wp-image-751" title="69" src="wp-content/uploads/2012/06/69.png" alt="" width="511" height="80" /></a> </p>
+<p>This loads the first and second memory location&#8217;s contents of our password buffer into CL and CH, which in our example makes ECX equal to CB08. It adds 3592 (hex) to this value and compares it with E59A. If it does not equal this value, we jump:</p>
+<p><a href="wp-content/uploads/2012/06/711.png"><img class="aligncenter size-full wp-image-753" title="71" src="wp-content/uploads/2012/06/711.png" alt="" width="391" height="362" /> </a> </p>
+<p>This is doing the same thing as above; performing another check to make sure we got here legitimately. Obviously, we don&#8217;t want to take this jump either, so we help Olly by changing the zero flag again. We then go through yet another check, this one from memory location 4014A3 to 4014AD. We skip this JNZ as well, setting the zero flag, and we end up here:</p>
+<p><a href="wp-content/uploads/2012/06/721.png"><img class="aligncenter size-full wp-image-754" title="72" src="wp-content/uploads/2012/06/721.png" alt="" width="393" height="353" /></a> </p>
+<p>The first line, <strong>CMP DWORD PTR DS:[EAX], 7A81B008</strong>, does another check. After all of the manipulation done on this password, eventually the first 4 bytes will equal 7A81B008. If it does not, we will jump to our bad code:</p>
+<p><a href="wp-content/uploads/2012/06/731.png"><img class="aligncenter size-full wp-image-755" title="73" src="wp-content/uploads/2012/06/731.png" alt="" width="398" height="287" /></a> </p>
+<p>So helping Olly with the zero bit, we then enter another collection of checks (why not?), first performing some manipulation on the next set of bytes and comparing them with 388DBF02, and comparing various memory contents with hard coded numbers. This is obviously overkill on the checks, but I think the author thought the more checks, the more protected this crackme would be <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Bypassing all of these jumps we finally get to what we want, the JMP instructi0n at address 4014FB:</p>
+<p><a href="wp-content/uploads/2012/06/741.png"><img class="aligncenter size-full wp-image-756" title="74" src="wp-content/uploads/2012/06/741.png" alt="" width="410" height="210" /></a> </p>
+<p>If we then step through the return, we will end up in familiar territory, but this time with a difference:</p>
+<p><a href="wp-content/uploads/2012/06/75.png"><img class="aligncenter size-full wp-image-757" title="75" src="wp-content/uploads/2012/06/75.png" alt="" width="788" height="127" /></a> </p>
+<p>Notice that this time we fall through to the good boy message <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . This is because we kept the app from setting EAX equal to 1.</p>
+<p>Now, you may think, &#8220;great, we&#8217;ve traded a single patch in our level 2 for 9 patches (all of the JNZ zero flag resets) in this new deeper analysis&#8221;, but this is not true. Not only do we understand how this works (and have gained a lot of experience for future reversing challenges) but we can now make very solid patches that we KNOW will work no matter what. Not to mention that it would not be very hard to find the REAL password for this app, bypassing any need to patch anything! This is true reverse engineering, and it only comes with A LOT of practice. And the harder the app is to crack, the more you can expect needing to get this detailed in the code.</p>
+<p>Again, don&#8217;t worry if you got lost; this was more to give an overview of the methods used. We will be going over this stuff again. in the mean time, here&#8217;s some&#8230;</p>
+<h2><span style="color: #0a77e1;">Homework</span></h2>
+<p>As stated earlier in the tutorial, see if you can come up with a way to patch this app using the NOOB technique. This means finding a way to step into the call that performs all of the manipulation on the password, and find a way to bypass all of it. You don&#8217;t need to understand all of the manipulations being done on the password, just find a way to make the app skip it and still come out to the good boy.</p>
+<p>If you need a hint, click <span style="color: #0a77e1;"><a title="Hint for tutorial #10" href="http://thelegendofrandom.com/files/tuts/hints/hint10.html"><span style="text-decoration: underline; color: #0a77e1;">here.</span></a> </span></p>
+<p>Super Insane Extra Credit: Can you find the hard coded password?</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">30 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-716">
+     <div id="comment-716">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/6e6e31f4130a75619e8abaa9a28fd56d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://tpodt.net16.net/' rel='external nofollow' class='url'>Mr. eXoDia</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-716" title="">June 30th, 2012 on 1:44 pm</a>  </small>
+
+			<p>Hello,</p>
+<p>Password for CrackMe6 is [HIDDEN BY R4NDOM], you are doing another crackme though <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>Greetz</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=716#respond' onclick='return addComment.moveForm("comment-716", "716", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-771">
+     <div id="comment-771">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-771" title="">July 2nd, 2012 on 10:51 pm</a>  </small>
+
+			<p>and eXoDia, you cheated!!!! This was supposed to be for beginners! You now do not win the iPud*, my friend.</p>
+<p>*Which is not real</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=771#respond' onclick='return addComment.moveForm("comment-771", "771", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-752">
+     <div id="comment-752">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/140038f170eb1973d9c1145e68ff8ee8?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>think.pink</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-752" title="">July 2nd, 2012 on 10:33 am</a>  </small>
+
+			<p>Congratz!!! Very nice tutorial!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=752#respond' onclick='return addComment.moveForm("comment-752", "752", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-844">
+     <div id="comment-844">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a9e6b7917730a8b95ee1e07f4a537a76?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>razor8</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-844" title="">July 4th, 2012 on 6:19 pm</a>  </small>
+
+			<p>i got the first 8 digits of the pw, but im having a hard time with the last 2 checksum bytes</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=844#respond' onclick='return addComment.moveForm("comment-844", "844", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-858">
+     <div id="comment-858">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a9e6b7917730a8b95ee1e07f4a537a76?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://singularity.us.to/' rel='external nofollow' class='url'>razor8</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-858" title="">July 5th, 2012 on 11:14 am</a>  </small>
+
+			<p>ah now i see why Mr. eXoDia &#8220;cheated&#8221;&#8230; he was lucky&#8230; i found it after i had the general solution =(<br />
+Here is the solution&#8230; but you should try it by yourself first! <a href="http://www.thelegendofrandom.com/forum/viewtopic.php?f=2&amp;t=15" rel="nofollow">http://www.thelegendofrandom.com/forum/viewtopic.php?f=2&#038;t=15</a> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=858#respond' onclick='return addComment.moveForm("comment-858", "858", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-914">
+     <div id="comment-914">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>noob1</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-914" title="">July 7th, 2012 on 8:25 pm</a>  </small>
+
+			<p>Finally got it.<br />
+Here it is 1 I 8 _ _ F _ _ _ _ (should publish here?)</p>
+<p>Assembly book you recommended no help, a geek book. Had to use easy assembly language book in library. Ipud, please.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=914#respond' onclick='return addComment.moveForm("comment-914", "914", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1386">
+     <div id="comment-1386">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ef89806af31279d09417a080b5ae095d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Fl0h</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1386" title="">July 18th, 2012 on 12:34 pm</a>  </small>
+
+			<p>I haven&#8217;t got these arrows that show us that there&#8217;s a jump to this address.<br />
+For example:<br />
+When I&#8217;m in the main registration routine at the point where EAX is set to 1 (00401510 MOV EAX,1) there&#8217;s no arrow pointing to this line.<br />
+Only when i scroll up to the actual Jump (0040147C JNZ Crackme6.00401510) the arrow appears.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1386#respond' onclick='return addComment.moveForm("comment-1386", "1386", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-2" id="li-comment-1387">
+     <div id="comment-1387">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ef89806af31279d09417a080b5ae095d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Fl0h</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1387" title="">July 18th, 2012 on 12:42 pm</a>  </small>
+
+			<p>Oh and the password and it&#8217;s length aren&#8217;t called Arg1 or Arg2. The password for example is called DWORD PTR [EBP+8]</p>
+<p>I&#8217;m using your version of Olly.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1387#respond' onclick='return addComment.moveForm("comment-1387", "1387", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-3" id="li-comment-1402">
+     <div id="comment-1402">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>mayorofarta</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1402" title="">July 18th, 2012 on 5:06 pm</a>  </small>
+
+			<p>If you use Lena&#8217;s configuration file it&#8217;ll be changed to Arg.1 and Arg.2 You&#8217;ll be able to see the arrow as well.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1402#respond' onclick='return addComment.moveForm("comment-1402", "1402", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-4" id="li-comment-1407">
+     <div id="comment-1407">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ef89806af31279d09417a080b5ae095d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Fl0h</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1407" title="">July 18th, 2012 on 6:04 pm</a>  </small>
+
+			<p>Thanks, but I think i already have Lena&#8217;s configuration file, because i just replaced my whole Olly folder with the one included in the download for Tutorial #3 (cause nowhere else is an ini file included) and it still doesn&#8217;t work.<br />
+Do I have to do some changes in Olly as well?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1407#respond' onclick='return addComment.moveForm("comment-1407", "1407", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-5" id="li-comment-1410">
+     <div id="comment-1410">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>mayorofarta</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1410" title="">July 18th, 2012 on 8:08 pm</a>  </small>
+
+			<p>Try replacing the configuration file individually. Download it from lena&#8217;s site. My version is 10.8 KB. I had the same issue and solved by just doing this.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1410#respond' onclick='return addComment.moveForm("comment-1410", "1410", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-6" id="li-comment-1420">
+     <div id="comment-1420">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1420" title="">July 19th, 2012 on 2:54 am</a>  </small>
+
+			<p>Go into Olly settings (&#8220;Alt + O&#8221;). Click on the Analysis 1 tab. Select &#8220;Show ARGs and LOCALs in procedures&#8221;. That should do it.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1420#respond' onclick='return addComment.moveForm("comment-1420", "1420", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-7" id="li-comment-53440">
+     <div id="comment-53440">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b03cb21ad7a2272abca046bde77f9f77?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Raider</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-53440" title="">May 7th, 2013 on 12:30 pm</a>  </small>
+
+			<p>Thanks, fixed it for me <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=53440#respond' onclick='return addComment.moveForm("comment-53440", "53440", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-1421">
+     <div id="comment-1421">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1421" title="">July 19th, 2012 on 2:56 am</a>  </small>
+
+			<p>These settings are in Olly&#8217;s options dialog. Click the CPU tab and you can choose how you want jumps to show up.</p>
+<p>In the future you should post in the forum as well. Your questions will be answered faster.</p>
+<p>Hope this helps.</p>
+<p>R4ndom</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1421#respond' onclick='return addComment.moveForm("comment-1421", "1421", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-3" id="li-comment-1429">
+     <div id="comment-1429">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ef89806af31279d09417a080b5ae095d?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Fl0h</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1429" title="">July 19th, 2012 on 8:10 am</a>  </small>
+
+			<p>Thanks guys, it works now <img src='wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=1429#respond' onclick='return addComment.moveForm("comment-1429", "1429", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-3362">
+     <div id="comment-3362">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e6c90565eed74f14af4df4010f84d5c6?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Roadi</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3362" title="">August 24th, 2012 on 3:04 pm</a>  </small>
+
+			<p>&#8220;&#8221;"<br />
+01. We XORed each set of 4 bytes of our password with the hex value 12345678 and stored them back over top of our password.</p>
+<p>02. The first digit was ANDed with 0x0E, as well as the 5th byte.</p>
+<p>03. We then added up the values of all of these bytes and stored this value in the _8th_ byte.</p>
+<p>04. Then, we XORed each set of 4 bytes of this buffer with 0x9ABCDEF, and stored the result back into this buffer.</p>
+<p>05. Again, we added up the values of all of the buffer memory contents and stored this into the _9th_ memory location.<br />
+&#8220;&#8221;"</p>
+<p>Points 03. and 05. have an error that may confuse some. Instead of using the correct ordinal value, the offset has been used.<br />
+    03.&#8211;: &#8220;8th&#8221; while meaning offset 08, ordinal 09 (9th);<br />
+    05.&#8211;: &#8220;9th&#8221; while meaning offset 09, ordinal 10 (10th);</p>
+<p>That, or I have spent too many hours awake.</p>
+<p>-Roadi</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=3362#respond' onclick='return addComment.moveForm("comment-3362", "3362", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-3365">
+     <div id="comment-3365">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3365" title="">August 24th, 2012 on 3:23 pm</a>  </small>
+
+			<p>That is a very good point, one I missed unfortunately&#8230;</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=3365#respond' onclick='return addComment.moveForm("comment-3365", "3365", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4752">
+     <div id="comment-4752">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a0ec930a4325df1ce064dacc538dcdb6?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>gromic</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-4752" title="">September 30th, 2012 on 6:27 pm</a>  </small>
+
+			<p>I always read solutions about &#8220;changing&#8221; the value in EAX (40129D). Why not &#8220;just&#8221; change the Jump statement from JNZ to JZ (40129F)?! </p>
+<p>This solution kinda changes the view at the problem and reverses the logic of the original programmer!<br />
+If I assume that I will never get the registration code right (i mean this is the goal of a registration code, right?!) I always end up with the Zeroflag being zero at 40129D. (of course still assumeing the password being smaller then 11 and bigger then 0 ). </p>
+<p>So if i change the jump statement to JZ I will always take the jump to the &#8220;good boy&#8221; (or I am reaaaly lucky and guess the registration code right&#8230;wouldn&#8217;t count on that though). With this solution I also only have to patch the crackme at one location (the jump statement) and done&#8230; I also don&#8217;t change the length of the machine instructions (75 gets 74). </p>
+<p>Of course I get the point if we walk through the registration call routine we learn how it actually works&#8230; and learn more&#8230;</p>
+<p>I am pretty new to this stuff so sorry if my solution is too noobish&#8230;I know it&#8217;s LAME or NOOB level <img src='wp-includes/images/smilies/icon_surprised.gif' alt=':o' class='wp-smiley' /> ) &#8230;but it was the solution I got before I actually read thorough your tutorial walkthrough so I thought I share it&#8230;</p>
+<p>Anyways&#8230; Random, I also want to say THANK YOU very much for these great tutorials and all the effort you have put into them! I really appreciate your hard work! I already have learned tons from them so THANKS!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=4752#respond' onclick='return addComment.moveForm("comment-4752", "4752", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4761">
+     <div id="comment-4761">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-4761" title="">September 30th, 2012 on 9:56 pm</a>  </small>
+
+			<p>You have a very good point. There are always many (infinite?) ways to patch an app. Your way works perfectly well, as well as mine. A lot of times, when writing a tutorial, you don&#8217;t use the most &#8216;elegant&#8217; solution as you must teach certain things. The more you crack, the more you will realize there are ALWAYS other ways to patch an app, many quite elegant, more so than you even imagined. This is the sign of a good cracker, so you are already a step in the right direction!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=4761#respond' onclick='return addComment.moveForm("comment-4761", "4761", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-5365">
+     <div id="comment-5365">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>gdogg</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-5365" title="">October 12th, 2012 on 5:35 am</a>  </small>
+
+			<p>At this part:<br />
+And since EAX is not equal to 30AC, we will jump:<br />
+To where EAX is set to one again:</p>
+<p>In both cases you mean ECX.</p>
+<p>Also this picture:<br />
+<a href="wp-content/uploads/2012/06/56.png" rel="nofollow">wp-content/uploads/2012/06/56.png</a> </p>
+<p>You mean the jump we DON&#8217;T want to take.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=5365#respond' onclick='return addComment.moveForm("comment-5365", "5365", "respond", "833")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-5392">
+     <div id="comment-5392">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-5392" title="">October 12th, 2012 on 4:45 pm</a>  </small>
+
+			<p>Fixed, fixed and fixed. Thank you for the watchful eye.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=5392#respond' onclick='return addComment.moveForm("comment-5392", "5392", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-6669">
+     <div id="comment-6669">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/251f80d97761940e4614d7e50df1a222?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Babee</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-6669" title="">November 1st, 2012 on 1:56 pm</a>  </small>
+
+			<p>Super Insane Extra Credit: [spoiler] Password hardcoded in .data section [/spoiler]</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=6669#respond' onclick='return addComment.moveForm("comment-6669", "6669", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-10122">
+     <div id="comment-10122">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/6172746e64038ab4c0cd317de2083c3f?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Smurfx</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10122" title="">December 14th, 2012 on 9:28 pm</a>  </small>
+
+			<p>Hi R4ndom,</p>
+<p>First of all thanks for yours awesome tutorials.<br />
+I&#8217; ve just start to study this now, I&#8217;m kind of lost in this tutorial, how to really change the code to jump all the check instructions. What I did it was change 2 lines of the original code.</p>
+<p>0040143E                JNZ SHORT Crackme6.0040142D<br />
+00401440               XOR ECX,ECX</p>
+<p>I changed for:<br />
+0040143E      XOR EAX,EAX<br />
+00401440      JMP 00401515</p>
+<p>Now my code is always jumping to end of the function. But I would like to know if is this correct? Or anybody could help me out with this.</p>
+<p>Thanks guys.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=10122#respond' onclick='return addComment.moveForm("comment-10122", "10122", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10402">
+     <div id="comment-10402">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>jeeva</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10402" title="">December 17th, 2012 on 8:20 pm</a>  </small>
+
+			<p>Hi Random,</p>
+<p>Ur tutorials are very much awesome&#8230; I like these tutorials&#8230; Pls help me to make keygens after cracking softwares&#8230;&#8230;&#8230;&#8230;</p>
+<p>Thanks in Advance&#8230;&#8230;&#8230;..</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=10402#respond' onclick='return addComment.moveForm("comment-10402", "10402", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-12683">
+     <div id="comment-12683">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/d5ba50b3828f156aa9610e5abb14096e?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://n/A' rel='external nofollow' class='url'>Alex Krycek</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-12683" title="">January 15th, 2013 on 9:20 pm</a>  </small>
+
+			<p>Hey R4ndom,</p>
+<p>This is definitely one of the best series I&#8217;ve read on the subject. I&#8217;m learning so much with this incremental approach.</p>
+<p>Fuck though, I just spent hours trying to reverse-engineer the algorithm to see if I can generate the password. Unfortunately, it took me that long to realize that you can&#8217;t actually reverse an AND operation (because bit information is lost).</p>
+<p>I suppose that, since you can reverse an XOR operation with another XOR operation, you will be able to recreate most of the password (everything except password[0], password[4] and the final two characters that are used to store the &#8220;checksums&#8221;). Still, you&#8217;ll have an enormous amount of possible passes to try. It&#8217;s not the full range of all possible characters (62 ** 10 in total), but I really don&#8217;t feel like coding something like that.</p>
+<p>Thanks again though!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=12683#respond' onclick='return addComment.moveForm("comment-12683", "12683", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-19949">
+     <div id="comment-19949">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>enman</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-19949" title="">February 17th, 2013 on 8:32 pm</a>  </small>
+
+			<p>Hi R4ndom,</p>
+<p>great tutorial!</p>
+<p>I used a pen and a paper to solve this crackme and I found 510 working keys <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=19949#respond' onclick='return addComment.moveForm("comment-19949", "19949", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-70700">
+     <div id="comment-70700">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/72b6bac52e162d250fc2cf0183b4f10a?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Panta</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-70700" title="">June 2nd, 2013 on 11:10 pm</a>  </small>
+
+			<p>Here&#8217;s a full solution for all possible keys (I hope): <a href="http://pastebin.com/wpguHZVp" rel="nofollow">http://pastebin.com/wpguHZVp</a> </p>
+<p>It&#8217;s no code but simply a thorough analysis of what the exe does.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=70700#respond' onclick='return addComment.moveForm("comment-70700", "70700", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-71231">
+     <div id="comment-71231">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ebe2dfb92724a28af28bf84017cf58b7?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://rachelhfpb8.onsugar.com/Wonderful-Cheap-Van-Insurance-UK-Recommendations-Aid-Everyone-Get-Better-Look-23655464' rel='external nofollow' class='url'>Jacelyn Balitas</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-71231" title="">June 7th, 2013 on 7:30 am</a>  </small>
+
+			<p>It&#8217;s a shame you don&#8217;t have a donate button! I&#8217;d definitely donate to this excellent blog! I guess for now i&#8217;ll settle for bookmarking and adding your RSS feed to my Google account. I look forward to fresh updates and will talk about this site with my Facebook group. Chat soon!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=71231#respond' onclick='return addComment.moveForm("comment-71231", "71231", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-80066">
+     <div id="comment-80066">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/d27923c3f6c5b79e15adcbcf584d5775?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>pornpinoy</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-80066" title="">August 8th, 2013 on 7:38 am</a>  </small>
+
+			<p>Does the solution of the password is reversing the assembly cmp dx, 42de by setting the value dx = 42de and reversing the structure of the assembly code,like dl=42 and dh=de and so on. I&#8217;m a beginner on this that&#8217;s y i ask. Thanks random.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=80066#respond' onclick='return addComment.moveForm("comment-80066", "80066", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-84487">
+     <div id="comment-84487">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2f30d49a96c465e0aa50f60f17dac0b3?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Abutharik</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-84487" title="">September 12th, 2013 on 2:14 pm</a>  </small>
+
+			<p>R4ndom, I&#8217;m struck at initial stage of the 3rd level. With GetDlgItemTextA password was stored at.0040305D. When I check the register EAX it doesn&#8217;t show me that it holds .0040305d, instead it has the number .0040300F(ASCII access granted). I&#8217;ve entered the same serial (12121212) as yours for further check. I&#8217;m unable to move forward now. Please help me.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/833?replytocom=84487#respond' onclick='return addComment.moveForm("comment-84487", "84487", "respond", "833")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-783">
+     <div id="comment-783">
+			<div class="commentbody">
+			<cite><a href='http://msg1len.wordpress.com/2012/07/03/the-levels-of-patching/' rel='external nofollow' class='url'>The Levels Of Patching &laquo; msg1len Official Website</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-783" title="">July 3rd, 2012 on 5:21 am</a>  </small>
+
+			<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="archives/833#respond">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name </small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+ <input type='hidden' name='comment_post_ID' value='833' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='844' />
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" type="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" />
+<input type="hidden" name="comment_post_ID" value="833" />
+</p>
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bfe9745ec4" /></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href='archives/833/feed'><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> &#183; <a href="archives/833/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input type="text" name="log" id="log" value="" size="20" />
+<input type="password" name="pwd" id="pwd" size="20" />
+<input type="submit" name="submit" value="Send" class="button" />
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
+       <input type="hidden" name="redirect_to" value="/blog/archives/833?replytocom=844" />
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To&#8230;">And The Most Posts Submitted In A Single Sitting Goes To&#8230;</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><a href='http://www.economicscafe.com.sg/' rel='external nofollow' class='url'>jc economics tuition</a>  on <a href="archives/258#comment-85252">Tutorial #4: Using Olly, Part 2</a> </li><li class="recentcomments">Ray on <a href="archives/654#comment-85087">R4ndom&#8217;s Tutorial #9: No Strings Attached</a> </li><li class="recentcomments">equal on <a href="archives/506#comment-84987">Tutorial #8: Frame Of Reference</a> </li><li class="recentcomments">Deeren on <a href="archives/2420#comment-84709">R4ndom’s Guide to RadASM: Installing and Set Up</a> </li><li class="recentcomments">Abutharik on <a href="archives/833#comment-84487">R4ndom&#8217;s Tutorial #10: The Levels Of Patching</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+	<li><a href='archives/date/2012/05' title='May 2012'>May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="archives/category/randoms-ramblings" title="View all posts filed under Random&#039;s Ramblings">Random&#039;s Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name='widget_quick_subscribe_form' id='widget_quick_subscribe_form'><input type='email' name='QS_user_email_widget' id='QS_user_email_widget' placeholder='email@email.com' onFocus='fadeSubmitIn("widget_qsSubmit");' onBlur='fadeSubmitOut(this, "widget_qsSubmit");'  onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;'><input style='display:none;' type='button' value='subscribe!' id='widget_qsSubmit' class='widget_qsSubmit' onClick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");'></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2961">And The Most Posts Submitted In A Single Sitting Goes To&#8230; </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href='archives/tag/adding-functionality' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>adding functionality</a> 
+<a href='archives/tag/assembly-language' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>assembly language</a> 
+<a href='archives/tag/binary' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>binary</a> 
+<a href='archives/tag/code-cave' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>code cave</a> 
+<a href='archives/tag/code-caves' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>code caves</a> 
+<a href='archives/tag/cracking' class='tag-link-8' title='5 topics' style='font-size: 16pt;'>cracking</a> 
+<a href='archives/tag/crackme' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>crackme</a> 
+<a href='archives/tag/ebook' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>ebook</a> 
+<a href='archives/tag/exploting-binaries' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>exploting binaries</a> 
+<a href='archives/tag/guide' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Guide</a> 
+<a href='archives/tag/olly' class='tag-link-14' title='2 topics' style='font-size: 11pt;'>Olly</a> 
+<a href='archives/tag/ollydbg' class='tag-link-10' title='4 topics' style='font-size: 14.666666666667pt;'>ollydbg</a> 
+<a href='archives/tag/olly-tutorial' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>olly tutorial</a> 
+<a href='archives/tag/plugins' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>plugins</a> 
+<a href='archives/tag/reverse-engineering-2' class='tag-link-7' title='3 topics' style='font-size: 13pt;'>reverse engineering</a> 
+<a href='archives/tag/sandbox' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>sandbox</a> 
+<a href='archives/tag/tools' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>Tools</a> 
+<a href='archives/tag/tutorial' class='tag-link-16' title='2 topics' style='font-size: 11pt;'>tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright &copy; 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6ODMzO3M6NjoiYXV0aG9yIjtzOjY6IlJhbmRvbSI7fQ==.f42ae471d32ef32ef4356112826a4399"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
+
+</body>
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/833?replytocom=844 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:05:12 GMT -->
+</html>

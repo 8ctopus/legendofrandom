@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Shrinking C++ Executables</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2231/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2231</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: bridging loan</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-76083</link>
+		<dc:creator>bridging loan</dc:creator>
+		<pubDate>Tue, 09 Jul 2013 14:50:35 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-76083</guid>
+		<description><![CDATA[Ordinarily I don&#039;t study post on sites, however wish to state that this kind of write-up quite required myself to see and also accomplish that! Your own way of writing continues to be surprised me. Appreciate it, quite good content.]]></description>
+		<content:encoded><![CDATA[<p>Ordinarily I don&#8217;t study post on sites, however wish to state that this kind of write-up quite required myself to see and also accomplish that! Your own way of writing continues to be surprised me. Appreciate it, quite good content.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Wiredtree Review</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-75837</link>
+		<dc:creator>Wiredtree Review</dc:creator>
+		<pubDate>Sun, 07 Jul 2013 09:52:20 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-75837</guid>
+		<description><![CDATA[I&#039;m gone to inform my little brother, that he should also go to see this web site on regular basis to get updated from newest gossip.]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m gone to inform my little brother, that he should also go to see this web site on regular basis to get updated from newest gossip.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Leandra</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-73809</link>
+		<dc:creator>Leandra</dc:creator>
+		<pubDate>Sat, 22 Jun 2013 04:58:31 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-73809</guid>
+		<description><![CDATA[We stumbled over here different web page and thought I might check things out. I like what I see so i am just following you. Look forward to exploring your web page for a second time.]]></description>
+		<content:encoded><![CDATA[<p>We stumbled over here different web page and thought I might check things out. I like what I see so i am just following you. Look forward to exploring your web page for a second time.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: waliedassar</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4506</link>
+		<dc:creator>waliedassar</dc:creator>
+		<pubDate>Mon, 24 Sep 2012 04:34:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4506</guid>
+		<description><![CDATA[No, you can. If necessary, link to msvcrt.lib or the similar import libraries.]]></description>
+		<content:encoded><![CDATA[<p>No, you can. If necessary, link to msvcrt.lib or the similar import libraries.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: tracer0tong</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4103</link>
+		<dc:creator>tracer0tong</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 20:41:34 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4103</guid>
+		<description><![CDATA[BTW, thnx to author. Your place many known tricks in one article.]]></description>
+		<content:encoded><![CDATA[<p>BTW, thnx to author. Your place many known tricks in one article.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: tracer0tong</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4102</link>
+		<dc:creator>tracer0tong</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 20:40:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4102</guid>
+		<description><![CDATA[Another good way to decrease size of your binary is using a WinAPI calls only. And as you can see in MSDN, WinAPI supports huge amount of possibilities to replace C++ std. libs. And your binary will have a great portability, because in Windows we have variety of msvcr*.dll&#039;s, so with WinAPI you can avoid this &quot;DLL Hell&quot;]]></description>
+		<content:encoded><![CDATA[<p>Another good way to decrease size of your binary is using a WinAPI calls only. And as you can see in MSDN, WinAPI supports huge amount of possibilities to replace C++ std. libs. And your binary will have a great portability, because in Windows we have variety of msvcr*.dll&#8217;s, so with WinAPI you can avoid this &#8220;DLL Hell&#8221;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Modnar</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4083</link>
+		<dc:creator>Modnar</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 07:30:34 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4083</guid>
+		<description><![CDATA[I hope the people who left bad comments regarding this tutorial doesn&#039;t get to you, because we would love to see more of your tutorials. I will try this tutorial in due time, and I understand that we might not use it IRL but people, or at least me, wants to know how things work.
+
+Thanks!]]></description>
+		<content:encoded><![CDATA[<p>I hope the people who left bad comments regarding this tutorial doesn&#8217;t get to you, because we would love to see more of your tutorials. I will try this tutorial in due time, and I understand that we might not use it IRL but people, or at least me, wants to know how things work.</p>
+<p>Thanks!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: me</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4078</link>
+		<dc:creator>me</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 03:55:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4078</guid>
+		<description><![CDATA[quote &quot;From 31,000 bytes to less than 1,000 (620 bytes to be exact). I guess the real question we should be asking is “Why didn’t Microsoft just start here and then add things as we need them?” I’m sure they’re crying all the way to the bank.&quot;
+
+You don&#039;t get it, I like experiments like this that can show a way to get to this goal if needed or &quot;REQUIRED&quot;. The issue is criticizing Microsoft for having default settings that improve performance and security over a smaller image.]]></description>
+		<content:encoded><![CDATA[<p>quote &#8220;From 31,000 bytes to less than 1,000 (620 bytes to be exact). I guess the real question we should be asking is “Why didn’t Microsoft just start here and then add things as we need them?” I’m sure they’re crying all the way to the bank.&#8221;</p>
+<p>You don&#8217;t get it, I like experiments like this that can show a way to get to this goal if needed or &#8220;REQUIRED&#8221;. The issue is criticizing Microsoft for having default settings that improve performance and security over a smaller image.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: mudlord</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4077</link>
+		<dc:creator>mudlord</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 03:13:57 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4077</guid>
+		<description><![CDATA[You don&#039;t get it.
+Some applications REQUIRE such size contraints.
+
+Demoscene anyone?]]></description>
+		<content:encoded><![CDATA[<p>You don&#8217;t get it.<br />
+Some applications REQUIRE such size contraints.</p>
+<p>Demoscene anyone?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Shrinking IQs &#171; The Legend Of Random</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231#comment-4025</link>
+		<dc:creator>Shrinking IQs &#171; The Legend Of Random</dc:creator>
+		<pubDate>Wed, 12 Sep 2012 01:55:46 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231#comment-4025</guid>
+		<description><![CDATA[[...] on Sep.12, 2012, under Uncategorized  Boy, everyone seems to have missed the point on my last tutorial regarding shrinking C++ binary [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] on Sep.12, 2012, under Uncategorized  Boy, everyone seems to have missed the point on my last tutorial regarding shrinking C++ binary [...]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

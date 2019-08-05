@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; olly tutorial</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>Tutorial #2 : Intro To Olly Debug</title>
+		<link>http://thelegendofrandom.com/blog/archives/31</link>
+		<comments>http://thelegendofrandom.com/blog/archives/31#comments</comments>
+		<pubDate>Wed, 23 May 2012 03:00:34 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[cracking]]></category>
+		<category><![CDATA[olly tutorial]]></category>
+		<category><![CDATA[reverse engineering]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=31</guid>
+		<description><![CDATA[What is Olly Debugger? From the author, Oleh Yuschuk, &#8220;OllyDbg is a 32-bit assembler level analysing debugger for Microsoft® Windows®.<a href="http://thelegendofrandom.com/blog/archives/31" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/31/feed</wfw:commentRss>
+		<slash:comments>19</slash:comments>
+		</item>
+	</channel>
+</rss>

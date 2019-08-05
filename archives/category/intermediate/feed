@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Legend Of Random &#187; Intermediate</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/category/intermediate/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 17 Oct 2012 17:14:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+		<item>
+		<title>DLL Injection – A Splash Bitmap</title>
+		<link>http://thelegendofrandom.com/blog/archives/1785</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1785#comments</comments>
+		<pubDate>Tue, 02 Oct 2012 20:04:45 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1785</guid>
+		<description><![CDATA[There are a couple ways of injecting a splash screen into a binary. Unfortunately, none of them easy. The way<a href="http://thelegendofrandom.com/blog/archives/1785" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1785/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom’s Tutorial #23: TLS Callbacks</title>
+		<link>http://thelegendofrandom.com/blog/archives/2418</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2418#comments</comments>
+		<pubDate>Thu, 27 Sep 2012 20:25:16 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2418</guid>
+		<description><![CDATA[Unfortunately, our lives as reverse engineers is not always easy. If all it took to patch an app was a<a href="http://thelegendofrandom.com/blog/archives/2418" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2418/feed</wfw:commentRss>
+		<slash:comments>26</slash:comments>
+		</item>
+		<item>
+		<title>R4ndom&#8217;s Tutorial #22: Code Caves and PE Sections</title>
+		<link>http://thelegendofrandom.com/blog/archives/2390</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2390#comments</comments>
+		<pubDate>Thu, 20 Sep 2012 18:52:21 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2390</guid>
+		<description><![CDATA[In this tutorial we will be talking about code caves as well as PE sections, and touching on the PE<a href="http://thelegendofrandom.com/blog/archives/2390" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2390/feed</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+		<item>
+		<title>Shrinking C++ Executables</title>
+		<link>http://thelegendofrandom.com/blog/archives/2231</link>
+		<comments>http://thelegendofrandom.com/blog/archives/2231#comments</comments>
+		<pubDate>Mon, 10 Sep 2012 23:40:32 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2231</guid>
+		<description><![CDATA[Over the course of creating these tutorials, I have been confronted with attempting to make the compiled binaries small. Usually,<a href="http://thelegendofrandom.com/blog/archives/2231" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/2231/feed</wfw:commentRss>
+		<slash:comments>16</slash:comments>
+		</item>
+		<item>
+		<title>DLL Injection &#8211; A Simple Message Box</title>
+		<link>http://thelegendofrandom.com/blog/archives/1656</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1656#comments</comments>
+		<pubDate>Mon, 13 Aug 2012 17:52:14 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1656</guid>
+		<description><![CDATA[Requirements In this tutorial, we will go over adding a message box using DLL injection. This is meant to be<a href="http://thelegendofrandom.com/blog/archives/1656" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1656/feed</wfw:commentRss>
+		<slash:comments>10</slash:comments>
+		</item>
+		<item>
+		<title>Modifying Binaries: The Never Ending Program</title>
+		<link>http://thelegendofrandom.com/blog/archives/1347</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1347#comments</comments>
+		<pubDate>Wed, 01 Aug 2012 17:19:35 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1347</guid>
+		<description><![CDATA[Introduction As an extension of my last modifying binaries tutorial on making programs non-closeable, I decided to take it one<a href="http://thelegendofrandom.com/blog/archives/1347" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1347/feed</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+		</item>
+		<item>
+		<title>Modifying Binaries: Making a Window Non-Closeable</title>
+		<link>http://thelegendofrandom.com/blog/archives/1172</link>
+		<comments>http://thelegendofrandom.com/blog/archives/1172#comments</comments>
+		<pubDate>Tue, 10 Jul 2012 17:35:57 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1172</guid>
+		<description><![CDATA[Introduction In this tutorial I will discuss various ways of making a window non-closeable. This can come in handy in<a href="http://thelegendofrandom.com/blog/archives/1172" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/1172/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Modifying Binaries: Adding a Menu Item</title>
+		<link>http://thelegendofrandom.com/blog/archives/759</link>
+		<comments>http://thelegendofrandom.com/blog/archives/759#comments</comments>
+		<pubDate>Thu, 21 Jun 2012 22:15:22 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759</guid>
+		<description><![CDATA[Introduction In this tutorial we are going to be adding a menu item to a binary. There are many uses<a href="http://thelegendofrandom.com/blog/archives/759" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/759/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Modifiying Binaries: Adding a Splash Dialog</title>
+		<link>http://thelegendofrandom.com/blog/archives/558</link>
+		<comments>http://thelegendofrandom.com/blog/archives/558#comments</comments>
+		<pubDate>Fri, 15 Jun 2012 03:43:07 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Modifying Binaries]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[adding functionality]]></category>
+		<category><![CDATA[binary]]></category>
+		<category><![CDATA[code cave]]></category>
+		<category><![CDATA[code caves]]></category>
+		<category><![CDATA[exploting binaries]]></category>
+		<category><![CDATA[tutorial]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=558</guid>
+		<description><![CDATA[Introduction In this tutorial I am going to show you how we can add a dialog box to the beginning<a href="http://thelegendofrandom.com/blog/archives/558" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/558/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+		<item>
+		<title>Quick Guide To Some Important Ollydbg Plugins</title>
+		<link>http://thelegendofrandom.com/blog/archives/63</link>
+		<comments>http://thelegendofrandom.com/blog/archives/63#comments</comments>
+		<pubDate>Sat, 26 May 2012 17:02:30 +0000</pubDate>
+		<dc:creator>R4ndom</dc:creator>
+				<category><![CDATA[Intermediate]]></category>
+		<category><![CDATA[Reverse Engineering]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[ollydbg]]></category>
+		<category><![CDATA[plugins]]></category>
+
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=63</guid>
+		<description><![CDATA[I have compiled a list of what I consider to be the most important Olly plugins for reverse engineering. Every<a href="http://thelegendofrandom.com/blog/archives/63" class="searchmore">Read the Rest...</a><div class="clr"></div>]]></description>
+		<wfw:commentRss>http://thelegendofrandom.com/blog/archives/63/feed</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Hello world!</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: DR.RE</title>
+		<link>http://thelegendofrandom.com/blog/archives/1#comment-527</link>
+		<dc:creator>DR.RE</dc:creator>
+		<pubDate>Sun, 24 Jun 2012 16:44:45 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1#comment-527</guid>
+		<description><![CDATA[excellent site  definitely bookmarked;)]]></description>
+		<content:encoded><![CDATA[<p>excellent site  definitely bookmarked;)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: aus</title>
+		<link>http://thelegendofrandom.com/blog/archives/1#comment-173</link>
+		<dc:creator>aus</dc:creator>
+		<pubDate>Tue, 05 Jun 2012 15:41:20 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1#comment-173</guid>
+		<description><![CDATA[Great work. Consider yourself bookmarked.]]></description>
+		<content:encoded><![CDATA[<p>Great work. Consider yourself bookmarked.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Random</title>
+		<link>http://thelegendofrandom.com/blog/archives/1#comment-17</link>
+		<dc:creator>Random</dc:creator>
+		<pubDate>Mon, 28 May 2012 01:17:42 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1#comment-17</guid>
+		<description><![CDATA[Yes, but dealing mostly with new tutorials/tools/articles. A lot of the stuff out there is quite old and is no longer kept up.]]></description>
+		<content:encoded><![CDATA[<p>Yes, but dealing mostly with new tutorials/tools/articles. A lot of the stuff out there is quite old and is no longer kept up.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: The Dude</title>
+		<link>http://thelegendofrandom.com/blog/archives/1#comment-16</link>
+		<dc:creator>The Dude</dc:creator>
+		<pubDate>Sun, 27 May 2012 23:38:18 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1#comment-16</guid>
+		<description><![CDATA[What, like openrce.org?]]></description>
+		<content:encoded><![CDATA[<p>What, like openrce.org?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/1#comment-3</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Thu, 24 May 2012 03:59:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1#comment-3</guid>
+		<description><![CDATA[Awesome , Tutorial , i am looking forward for more ......]]></description>
+		<content:encoded><![CDATA[<p>Awesome , Tutorial , i am looking forward for more &#8230;&#8230;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

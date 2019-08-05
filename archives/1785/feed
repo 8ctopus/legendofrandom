@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: DLL Injection – A Splash Bitmap</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1785/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1785</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: tarequl.crack</title>
+		<link>http://thelegendofrandom.com/blog/archives/1785#comment-8239</link>
+		<dc:creator>tarequl.crack</dc:creator>
+		<pubDate>Sun, 25 Nov 2012 04:56:40 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1785#comment-8239</guid>
+		<description><![CDATA[How can we use picture other than .bmp]]></description>
+		<content:encoded><![CDATA[<p>How can we use picture other than .bmp</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/1785#comment-5534</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sun, 14 Oct 2012 22:39:36 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1785#comment-5534</guid>
+		<description><![CDATA[Pranks on co-workers, of course.]]></description>
+		<content:encoded><![CDATA[<p>Pranks on co-workers, of course.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: qreck</title>
+		<link>http://thelegendofrandom.com/blog/archives/1785#comment-5529</link>
+		<dc:creator>qreck</dc:creator>
+		<pubDate>Sun, 14 Oct 2012 21:24:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1785#comment-5529</guid>
+		<description><![CDATA[What is the purpose of injecting a bmp splash screen. Is their something nor sinister to leverage with this hack?]]></description>
+		<content:encoded><![CDATA[<p>What is the purpose of injecting a bmp splash screen. Is their something nor sinister to leverage with this hack?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

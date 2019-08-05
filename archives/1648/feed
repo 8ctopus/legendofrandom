@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: A site on Malware Analysis</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1648/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1648</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Australian</title>
+		<link>http://thelegendofrandom.com/blog/archives/1648#comment-5371</link>
+		<dc:creator>Australian</dc:creator>
+		<pubDate>Fri, 12 Oct 2012 09:24:23 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1648#comment-5371</guid>
+		<description><![CDATA[As always high way of posting. Great wishes from a Juniper specialist. Good materials. Very creative portal. Best regards. Serve us new intel in the coming months.]]></description>
+		<content:encoded><![CDATA[<p>As always high way of posting. Great wishes from a Juniper specialist. Good materials. Very creative portal. Best regards. Serve us new intel in the coming months.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

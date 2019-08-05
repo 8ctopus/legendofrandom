@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/223?replytocom=43725 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:15:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>Tutorial #7: More Crackmes &laquo;  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1" />
+<meta name="robots" content="follow, all" />
+
+<link rel="shortcut icon" href="../wp-content/themes/jarrah/favicon.ico" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="../feed" />
+<link rel="pingback" href="../xmlrpc.php" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/css/menu.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" href="wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random &raquo; Tutorial #7: More Crackmes Comments Feed" href="223/feed" />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4511.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/ajax-quick-subscribe/ajax9d52.js?ver=3.5.1'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min9d52.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Modifiying Binaries: Adding a Splash Dialog' href='558' />
+<link rel='next' title='R4ndom&#8217;s Ramblings: Captcha alternatives (besides suicide)' href='539.html' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='223.html' />
+<link rel='shortlink' href='../indexd027.html?p=223' />
+<meta name='robots' content='noindex,nofollow' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input type="text" value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput"/>
+    <input type="submit" class="submitbutton" value="" />
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                </ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="archives/223">Tutorial #7: More Crackmes</a> </h2>
+          	<div class="postmeta">by <a href="archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jun.15, 2012, under <a href="archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="archives/category/tools" title="View all posts in Tools" rel="category tag">Tools</a> , <a href="archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>Welcome to Part 7 of  of R4ndom&#8217;s tutorials on Reverse Engineering. This time, we will be cracking two crackmes; one to re-iterate last tutorial&#8217;s concepts, and one that we are going to have a little fun with <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  In the download of this tutorial, you will find these two crackmes as well as the program &#8220;Resource Hacker&#8221; that we will be using on the second crackme. You can also download this <span style="color: #0a77e1;"><a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline; color: #0a77e1;">tool</span></a> </span> on the tools page.</p>
+<p>You can download the files and PDF version of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a>  page.</p>
+<p><span id="more-223"></span></p>
+<h2><span style="color: #0a77e1;">Investigating the binary</span></h2>
+<p>Let&#8217;s jump right in. Load up canyou.exe (make sure the canyou.dll file is in the same place) into Olly:</p>
+<p><a href="wp-content/uploads/2012/06/110.png"><img class="aligncenter size-medium wp-image-447" title="Main Olly" src="wp-content/uploads/2012/06/110-300x229.png" alt="Main Olly" width="300" height="229" /></a> </p>
+<p>As I have said before, one of the most important things you can do before getting started is running the app and studying it. It gives you a plethora of information; is there a time trial? Are certain features disabled? Are there a certain amount of times it can be run? Is there a registry screen that you can enter a registration code?</p>
+<p>These are all really important things to know, and as you get better in reverse engineering, you will gain more and more experience as to what you should be looking for (how long did it take to validate the code? Is it forcing you to a web site?&#8230;)</p>
+<p>When we run the app we get:</p>
+<p><a href="wp-content/uploads/2012/06/82.png"><img class="aligncenter size-full wp-image-455" title="Run the App" src="wp-content/uploads/2012/06/82.png" alt="Run the App" width="364" height="227" /></a> </p>
+<p>and after entering some data we get:</p>
+<p><a href="wp-content/uploads/2012/06/92.png"><img class="aligncenter size-full wp-image-456" title="Denied" src="wp-content/uploads/2012/06/92.png" alt="Denied" width="362" height="224" /></a> </p>
+<p>You should know the drill by now. Click back in Olly and let&#8217;s seewhat strings we can find:</p>
+<p><a href="wp-content/uploads/2012/06/210.png"><img class="aligncenter size-full wp-image-448" title="Search for Strings" src="wp-content/uploads/2012/06/210.png" alt="Search for Strings" width="446" height="514" /></a> </p>
+<p>and we see what ASCII this crackme has to offer:</p>
+<p><a href="wp-content/uploads/2012/06/32.png"><img class="aligncenter size-full wp-image-449" title="Strings" src="wp-content/uploads/2012/06/32.png" alt="Strings" width="661" height="231" /></a> </p>
+<p>Well, we obviously see a  couple of important ones here. The first thing we notice is that something MUST be entered into each field:</p>
+<p><a href="wp-content/uploads/2012/06/42.png"><img class="aligncenter size-full wp-image-450" title="No empty fields" src="wp-content/uploads/2012/06/42.png" alt="No empty fields" width="276" height="36" /></a> </p>
+<p>and then we see the really important stuff:</p>
+<p><a href="wp-content/uploads/2012/06/53.png"><img class="aligncenter size-full wp-image-451" title="Goodboy/Badboy" src="wp-content/uploads/2012/06/53.png" alt="Goodboy/Badboy" width="301" height="35" /></a> </p>
+<p>Lets double-click on one and see where we go:</p>
+<p><a href="wp-content/uploads/2012/06/62.png"><img class="aligncenter size-full wp-image-452" title="Code" src="wp-content/uploads/2012/06/62.png" alt="Code" width="742" height="283" /></a> </p>
+<p>This should start looking familiar: we have a bad boy, followed by a good boy, with a very obvious jump right before the bad boy, presumably jumping to the good boy. Also, I want you to notice that before the jump is a call to the Windows API <em>lstrcmpi</em>. If we right-click on that and choose &#8220;Help on symbolic name&#8221; we see:</p>
+<p><a href="wp-content/uploads/2012/06/72.png"><img class="aligncenter size-full wp-image-454" title="lstrcmp" src="wp-content/uploads/2012/06/72.png" alt="lstrcmp" width="574" height="563" /></a> </p>
+<p>As you can see, lstrcmp compares two strings. This function is Very Important in reverse engineering and you will see it over and over. It is used in many registration/password schemes to compare the string that the user entered against a string that the app either has hard-coded in or has created. If the string compare comes back zero, the user has entered the correct info, meaning the strings are the same. If it comes back non-zero, the strings don&#8217;t match. In the case of this crackme, our entered serial is probably checked against an internal or dynamically created string, and if EAX returns a zero, they are the same, otherwise they are not. Right know, Olly doesn&#8217;t know what these strings are going to be as we haven&#8217;t started the app and entered anything yet, but once we get going, Olly will replace the String1 = &#8221;&#8221; and String2 = &#8221;&#8221; lines with real strings. If we set a BP on the jump and then run the app, entering a serial (in this case &#8220;12121212121212121212&#8243;), Olly will show us the strings that will be compared:</p>
+<p><a href="wp-content/uploads/2012/06/102.png"><img class="aligncenter size-full wp-image-457" title="OR EAX" src="wp-content/uploads/2012/06/102.png" alt="Denied" width="744" height="105" /></a> </p>
+<p>If you look at the lines above our jump instruction you can see that our password was compared with the value &#8220;314216448336430&#8243;, whatever that is. On return, EAX will contain a zero if they were identical and anything else if they weren&#8217;t. Obviously, in this case, they are not going to match. The <strong>OR EAX, EAX</strong> is just a fancy way of finding out if EAX was zero or not, and if it is zero, the <strong>&#8220;JE SHORT canyou.0040129E&#8221;</strong> jumps to the good boy. I wanted to point this string compare routine out to you because in future tutorials, we will need to find out how this 15 digit number was created, and searching for <em>lstrcmp</em> can lead us to it&#8217;s creation.</p>
+<p>But in the mean time, let&#8217;s do what we know. Set a BP on the JE instruction at line 401270 and re-start the app. Enter a username and serial and Olly will break on our BP:</p>
+<p><a href="wp-content/uploads/2012/06/112.png"><img class="aligncenter size-full wp-image-458" title="Breakpoint hit" src="wp-content/uploads/2012/06/112.png" alt="Breakpoint hit" width="747" height="140" /></a> </p>
+<p>We notice by the grey arrow that Olly is not going to jump to the good boy and instead plans on falling through to the bad boy so let&#8217;s help him with that:</p>
+<p><a href="wp-content/uploads/2012/06/121.png"><img class="aligncenter size-full wp-image-459" title="Zero flag" src="wp-content/uploads/2012/06/121.png" alt="Zero flag" width="74" height="58" /></a> and now Olly has it right:</p>
+<p><a href="wp-content/uploads/2012/06/132.png"><img class="aligncenter size-full wp-image-460" title="Make the jump" src="wp-content/uploads/2012/06/132.png" alt="Make the jump" width="748" height="209" /></a> </p>
+<p>Let&#8217;s run the app to make sure:</p>
+<p><a href="wp-content/uploads/2012/06/142.png"><img class="aligncenter size-full wp-image-461" title="Good boy" src="wp-content/uploads/2012/06/142.png" alt="Good boy" width="364" height="228" /></a> </p>
+<p>Now lets&#8230;</p>
+<h2><span style="color: #0a77e1;">Patch The App</span></h2>
+<p>This time we do not want to NOP out the jump as that would make the program show the bad boy every time. Instead, we want to GUARANTEE that it jumps every time, that way it jumps to our good boy message. So go to the the line our BP is on (you can open the &#8220;Breakpoint Window&#8221; and double-click on the BP if you&#8217;re lost) and let&#8217;s change the instruction. Make sure you click on the JE instruction and then hit the space bar:</p>
+<p><a href="wp-content/uploads/2012/06/151.png"><img class="aligncenter size-full wp-image-462" title="Assembly Window" src="wp-content/uploads/2012/06/151.png" alt="Assembly Window" width="742" height="213" /></a> </p>
+<p>Again, notice that the highlighted instruction has been entered into our edit box. Now, let&#8217;s change this JE (Jump on Equal) to a JMP (always jump, no matter what):</p>
+<p><a href="wp-content/uploads/2012/06/163.png"><img class="aligncenter size-full wp-image-463" title="Always jump" src="wp-content/uploads/2012/06/163.png" alt="Always jump" width="329" height="112" /></a> </p>
+<p>Click the Assemble button, and then the cancel button and you will see our change has been put in the code:</p>
+<p><a href="wp-content/uploads/2012/06/172.png"><img class="aligncenter size-full wp-image-464" title="Instruction changed" src="wp-content/uploads/2012/06/172.png" alt="Instruction changed" width="385" height="55" /></a> </p>
+<p>No, let&#8217;s run the app and make sure it works:</p>
+<p><a href="wp-content/uploads/2012/06/182.png"><img class="aligncenter size-full wp-image-465" title="App patched" src="wp-content/uploads/2012/06/182.png" alt="App patched" width="364" height="228" /></a> </p>
+<p>Now let&#8217;s save this patch to disk. Remember, if you re-start the app you will have to re-enable the patch (Patch Window, highlight the patch and hit space bar), but since our app is still running, we can just click over to Olly, right click the disassembly window and choose &#8220;Copy to executable&#8221; -&gt; &#8220;All modifications&#8221;:</p>
+<p><a href="wp-content/uploads/2012/06/192.png"><img class="aligncenter size-full wp-image-466" title="Copy to executable" src="wp-content/uploads/2012/06/192.png" alt="Copy to executable" width="387" height="420" /></a> </p>
+<p>Choose &#8220;Save all&#8221; and our new memory process window will open (with our patch at the top of it):</p>
+<p><a href="wp-content/uploads/2012/06/203.png"><img class="aligncenter size-full wp-image-467" title="New memory window" src="wp-content/uploads/2012/06/203.png" alt="New memory window" width="813" height="469" /></a> </p>
+<p>Now, let&#8217;s save it to disk&#8230;right click in this new window and click &#8220;Save File&#8221;. Save it as canyou_patched (or anything you want), load this new patched file back in to Olly  and run it. You actually don&#8217;t need to load it into Olly anymore if you don&#8217;t want as the patch has been saved to disk- you can just run it from wherever the crackme is. Just make sure you run the patched version <img src='wp-includes/images/smilies/icon_razz.gif' alt=':P' class='wp-smiley' /> . Now, no matter what name and serial you put in, you will get the good boy screen <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Another Crackme</span></h2>
+<p>Let&#8217;s now load up the second program, Crackme8.exe and run it in Olly:</p>
+<p><a href="wp-content/uploads/2012/06/213.png"><img class="aligncenter size-full wp-image-513" title="Main Crackme" src="wp-content/uploads/2012/06/213.png" alt="Main Crackme" width="356" height="120" /></a> </p>
+<p>Well, that certainly makes a point :0 Ummmm. After I enter my name and serial, which button do I press? Well, let me try one:</p>
+<p><a href="wp-content/uploads/2012/06/223.png"><img class="aligncenter size-full wp-image-514" title="Entered Text" src="wp-content/uploads/2012/06/223.png" alt="Entered Text" width="356" height="120" /></a> </p>
+<p>Now, Done usually means exit, so I&#8217;ll try the other one. And&#8230;&#8230;&#8230;&#8230;, it quits the app. Obviously I should have clicked Done (?). Regardless, let&#8217;s take this opportunity to modify this program and have some fun with it. Let&#8217;s change the buttons to a more meaningful &#8220;Check&#8221; and &#8220;Done&#8221;, or anything else you prefer <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' /> .</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Using Resource Hacker</span></h2>
+<p>If you haven&#8217;t already, go ahead and install Resource Hacker. When you first run it, it looks like this:</p>
+<p><a href="wp-content/uploads/2012/06/233.png"><img class="aligncenter size-full wp-image-515" title="Resource Hacker" src="wp-content/uploads/2012/06/233.png" alt="Resource Hacker" width="605" height="370" /></a> </p>
+<p>Go ahead and load the Crackme8 file into Resource Hacker and you should notice a folder called Dialog with a plus sign next to it. Open up the plus and click the plus next to the next folder (103) and you should see something like this:</p>
+<p><a href="wp-content/uploads/2012/06/243.png"><img class="aligncenter size-full wp-image-516" title="Opening pluses" src="wp-content/uploads/2012/06/243.png" alt="Opening pluses" width="611" height="377" /></a> </p>
+<p>Now click on the 1033 and it will populate the right pane with data about this dialog, as well as open a reference dialog showing what it looks like:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/06/253.png"><img class="aligncenter  wp-image-517" title="Reference Dialog" src="wp-content/uploads/2012/06/253.png" alt="Reference Dialog" width="727" height="477" /></a> </p>
+<p>At the top of the right pane you can see some generic data about the window such as the font, the caption, the styles etc:</p>
+<p><a href="wp-content/uploads/2012/06/263.png"><img class="aligncenter size-full wp-image-518" title="Top of data window" src="wp-content/uploads/2012/06/263.png" alt="Top of data window" width="473" height="84" /></a> </p>
+<p>and underneath this you can see details about all of the elements in this dialog, including the &#8220;Name&#8221; and &#8220;Serial&#8221; labels and the two buttons. Let&#8217;s change this dialog to our own liking, shall we? First change the two button names to &#8220;Check&#8221; and &#8220;Exit&#8221;:</p>
+<p><a href="wp-content/uploads/2012/06/274.png"><img class="aligncenter size-full wp-image-521" title="Change buttons" src="wp-content/uploads/2012/06/274.png" alt="Change buttons" width="288" height="75" /></a> Now, let&#8217;s change the caption at the top:</p>
+<p><a href="wp-content/uploads/2012/06/283.png"><img class="aligncenter size-full wp-image-522" title="Change Caption" src="wp-content/uploads/2012/06/283.png" alt="Change Caption" width="341" height="117" /></a> </p>
+<p>Now click the &#8220;Compile&#8221; button at the top and you will see our dialog update:</p>
+<p><a href="wp-content/uploads/2012/06/292.png"><img class="aligncenter size-full wp-image-524" title="Updated Dialog" src="wp-content/uploads/2012/06/292.png" alt="Updated Dialog" width="362" height="148" /></a> </p>
+<p>Well, that&#8217;s better. Let&#8217;s just save it (&#8220;File&#8221; -&gt; &#8220;Save&#8221;) and load this new crackme into Olly (the original crackme was saved by Resource Hacker as Crackme8_original), and run it:</p>
+<p><a href="wp-content/uploads/2012/06/301.png"><img class="aligncenter size-full wp-image-525" title="New dialog" src="wp-content/uploads/2012/06/301.png" alt="New dialog" width="511" height="225" /></a> </p>
+<p>Ah, that&#8217;s better. Now we can officially start&#8230;</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Cracking The Program</span></h2>
+<p>You should know the drill by now. Let&#8217;s search for text strings:</p>
+<p><a href="wp-content/uploads/2012/06/312.png"><img class="aligncenter size-full wp-image-526" title="Search for Text" src="wp-content/uploads/2012/06/312.png" alt="Search for Text" width="789" height="215" /></a> </p>
+<p>There are two things we learn; 1) the serial must be a number between 1 and a gazillion and 2) we know where the good boy and bad boy messages are being generated. Lets go to the good boy message:</p>
+<p><a href="wp-content/uploads/2012/06/322.png"><img class="aligncenter size-full wp-image-527" title="Familliar territory" src="wp-content/uploads/2012/06/322.png" alt="Familliar territory" width="883" height="521" /></a> </p>
+<p>and we double-click into familiar territory. We see the good boy routine beginning at 401131, and the bad boy starting at 40113D. We also see the jump (<strong>JE SHORT Crackme8.0040113D</strong>) at address 401131 and the compare (<strong>TEST EAX, EAX</strong>) at address 40112A. Let&#8217;s set our BP at address 40112F and run the app. Enter a name and serial and click &#8220;Check&#8221;. Olly will then break at our breakpoint:</p>
+<p><a href="wp-content/uploads/2012/06/331.png"><img class="aligncenter size-full wp-image-528" title="Olly paused" src="wp-content/uploads/2012/06/331.png" alt="Olly paused" width="826" height="216" /></a> </p>
+<p>We can see that, unaltered, Olly is going to jump past our good boy and straight to the bad boy. You know the routine&#8230;clear the zero flag and run the app:</p>
+<p><a href="wp-content/uploads/2012/06/341.png"><img class="aligncenter size-full wp-image-529" title="Success" src="wp-content/uploads/2012/06/341.png" alt="Success" width="381" height="262" /></a> </p>
+<p>And success. Now let&#8217;s quickly create a patch: Re-start the app, go to the breakpoint (through the breakpoint window), click once on the JE instruction and hit the space bar and NOP out the jump so that we always fall through to the good boy:</p>
+<p><a href="wp-content/uploads/2012/06/351.png"><img class="aligncenter size-full wp-image-530" title="NOPped" src="wp-content/uploads/2012/06/351.png" alt="NOPped" width="538" height="180" /></a> </p>
+<p>Hit &#8220;Assemble&#8221; then &#8220;Cancel. Right click and choose &#8220;Save to executable&#8221; -&gt; &#8220;All modifications&#8221; and choose &#8220;copy all&#8221;. Right click in the new window and select &#8220;Save file&#8221; and save it. You now have a patched and resource-altered crackme that will take any serial number you put in and display the good boy message <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Food For Thought</span></h2>
+<p>I wanted to just mention that Resource Hacker is a fun and very useful little program. It allows you to not only change many things in a file (strings, icons, labels, buttons, captions) but it also let&#8217;s you change many things in Windows itself (the START button, context menus, the computer&#8217;s &#8216;About&#8217; dialog etc.) In fact, Resource Hacker is what I used to change all of the icons in my version of Olly!</p>
+<p>&nbsp;</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single"><a href="archives/tag/cracking" rel="tag">cracking</a> , <a href="archives/tag/crackme" rel="tag">crackme</a> , <a href="archives/tag/ollydbg" rel="tag">ollydbg</a> , <a href="archives/tag/tutorial" rel="tag">tutorial</a> </span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">13 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-360">
+     <div id="comment-360">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/522305c5e3e115d033741933bc2f40ad?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>shane</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-360" title="">June 16th, 2012 on 6:44 am</a>  </small>
+
+			<p>Thanks again bro <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=360#respond' onclick='return addComment.moveForm("comment-360", "360", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-397">
+     <div id="comment-397">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-397" title="">June 18th, 2012 on 5:00 pm</a>  </small>
+
+			<p>I&#8217;d really be interested in seeing a tutorial on unpacking, keep up the great work.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=397#respond' onclick='return addComment.moveForm("comment-397", "397", "respond", "223")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-399">
+     <div id="comment-399">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-399" title="">June 18th, 2012 on 5:06 pm</a>  </small>
+
+			<p>Oh, they&#8217;re coming. Trying to go in a linear fashion for complete noobies. Will get there rho.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=399#respond' onclick='return addComment.moveForm("comment-399", "399", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-2366">
+     <div id="comment-2366">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Electric_Sheep</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2366" title="">August 6th, 2012 on 2:15 am</a>  </small>
+
+			<p>I&#8217;ve been really enjoying these tutorials. I went through 3- 7 today already, and I&#8217;ll probably do 8 and 9 as well&#8230;<br />
+One issue:<br />
+Avg detects crackme8 as the virus Win32/Heri . Is it a false positive, or is it possible that the crackme creator is malicious. Thank R4ndom!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=2366#respond' onclick='return addComment.moveForm("comment-2366", "2366", "respond", "223")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-2369">
+     <div id="comment-2369">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-2369" title="">August 6th, 2012 on 4:13 am</a>  </small>
+
+			<p>Because of the nature of some of the apps and crackmes in this series&#8217; nature, false positives show up from time to time. The best way to see if it&#8217;s a false positive is to go to <a href="http://www.virustotal.com/" rel="nofollow">http://www.virustotal.com</a>  and upload the file. It will scan the file using 42 different virus scanners. If you only get 3 or four hits, you know it&#8217;s nothing. More than 7- I would stay away from.</p>
+<p>If you downloaded the files from me, you do not need to worry about them- all of mine were scanned with VirusTotal before I even did the tutorials.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=2369#respond' onclick='return addComment.moveForm("comment-2369", "2369", "respond", "223")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-3" id="li-comment-75169">
+     <div id="comment-75169">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/e23c12ed62feb3de49027a1ce25a7e21?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Pascal</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-75169" title="">July 1st, 2013 on 5:39 pm</a>  </small>
+
+			<p>I get 21/47 on virustotal.com for canyou.dll . I guess it&#8217;s safe anyways because you wouldn&#8217;t post a virus (wouldn&#8217;t you?)?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=75169#respond' onclick='return addComment.moveForm("comment-75169", "75169", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-3876">
+     <div id="comment-3876">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/1243c83881c5eef44b63337b7f4ad214?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>doccc</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3876" title="">September 6th, 2012 on 9:00 pm</a>  </small>
+
+			<p>Great piece of work and knowledge, big thanks for that. You write so clear and straightforward, keep going.</p>
+<p>Unfortunately canyou.dll treated as trojan &#8211; 10 / 41 at virustotal.com</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=3876#respond' onclick='return addComment.moveForm("comment-3876", "3876", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4151">
+     <div id="comment-4151">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>kdma</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-4151" title="">September 14th, 2012 on 10:37 pm</a>  </small>
+
+			<p>I dont understand the serial check routine after the serial you entered goes into &#8220;keygenning&#8221; routine you arrive at one point where the real check is done:</p>
+<p>XOR [ARG.2],1337C0DE<br />
+SUB [ARG.2],BADC0DE5<br />
+MOV EAX,[LOCAL.1]<br />
+NOT [ARG.2]<br />
+XOR EAX,[ARG.2]<br />
+NEG EAX<br />
+SBB EAX,EAX<br />
+INC EAX</p>
+<p>I dont understand the &#8220;check&#8221; that is going on here,the C flag get set here but i am missing the whole picture,any clue?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=4151#respond' onclick='return addComment.moveForm("comment-4151", "4151", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-9616">
+     <div id="comment-9616">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>maxluvr1981</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-9616" title="">December 11th, 2012 on 9:48 am</a>  </small>
+
+			<p>Thank you.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=9616#respond' onclick='return addComment.moveForm("comment-9616", "9616", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-10058">
+     <div id="comment-10058">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/015ad53909bd78e2f79bc6c3cf46dc12?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>gadour</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10058" title="">December 14th, 2012 on 3:36 pm</a>  </small>
+
+			<p>First of all thank you very much for this really great website I wonder with all politeness is how you can find the serial for crackme8 because I can not find a serial because it consists of an intelligent and thank you in advance</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=10058#respond' onclick='return addComment.moveForm("comment-10058", "10058", "respond", "223")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-2" id="li-comment-10272">
+     <div id="comment-10272">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/015ad53909bd78e2f79bc6c3cf46dc12?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>gadour</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10272" title="">December 16th, 2012 on 1:47 pm</a>  </small>
+
+			<p>First of all thank you very much for this site really great, I wonder with all the politeness is how you can find the serial number for crackme8 because I can not find this series because it is composed of a series intelligent and thank you in advance</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=10272#respond' onclick='return addComment.moveForm("comment-10272", "10272", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14772">
+     <div id="comment-14772">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/7d15d694a2262c5d6afbca8dc911bb73?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>lex</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-14772" title="">January 30th, 2013 on 1:31 am</a>  </small>
+
+			<p>I spent a great deal of time skimming through reverse engineering tuts and i have to say hands down these are the most detailed and easy to follow series i ever read, i actually prefer your tuts over any videos i found,Let me ask you this.. do you believe you can crack any software ? can you say that with the educational information you provide focused and determined readers will posses the power to conquer any software ?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=14772#respond' onclick='return addComment.moveForm("comment-14772", "14772", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-43725">
+     <div id="comment-43725">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a38d8d3223fc2e86f10b4296a0e0fb04?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>damian</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-43725" title="">April 26th, 2013 on 10:34 pm</a>  </small>
+
+			<p>Hi i have a problem when i write the nop command  , so when i click f9 to run program  come some error at the program is broken can you help me why it coming out somthing to me</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/223?replytocom=43725#respond' onclick='return addComment.moveForm("comment-43725", "43725", "respond", "223")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-785">
+     <div id="comment-785">
+			<div class="commentbody">
+			<cite><a href='http://msg1len.wordpress.com/2012/07/03/more-crackmes/' rel='external nofollow' class='url'>More Crackmes &laquo; msg1len Official Website</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-785" title="">July 3rd, 2012 on 5:23 am</a>  </small>
+
+			<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="archives/223#respond">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name </small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+ <input type='hidden' name='comment_post_ID' value='223' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='43725' />
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" type="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" />
+<input type="hidden" name="comment_post_ID" value="223" />
+</p>
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4fb0245c2e" /></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href='archives/223/feed'><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> &#183; <a href="archives/223/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input type="text" name="log" id="log" value="" size="20" />
+<input type="password" name="pwd" id="pwd" size="20" />
+<input type="submit" name="submit" value="Send" class="button" />
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
+       <input type="hidden" name="redirect_to" value="/blog/archives/223?replytocom=43725" />
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To&#8230;">And The Most Posts Submitted In A Single Sitting Goes To&#8230;</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><a href='http://www.economicscafe.com.sg/' rel='external nofollow' class='url'>jc economics tuition</a>  on <a href="archives/258#comment-85252">Tutorial #4: Using Olly, Part 2</a> </li><li class="recentcomments">Ray on <a href="archives/654#comment-85087">R4ndom&#8217;s Tutorial #9: No Strings Attached</a> </li><li class="recentcomments">equal on <a href="archives/506#comment-84987">Tutorial #8: Frame Of Reference</a> </li><li class="recentcomments">Deeren on <a href="archives/2420#comment-84709">R4ndom’s Guide to RadASM: Installing and Set Up</a> </li><li class="recentcomments">Abutharik on <a href="archives/833#comment-84487">R4ndom&#8217;s Tutorial #10: The Levels Of Patching</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+	<li><a href='archives/date/2012/05' title='May 2012'>May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="archives/category/randoms-ramblings" title="View all posts filed under Random&#039;s Ramblings">Random&#039;s Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name='widget_quick_subscribe_form' id='widget_quick_subscribe_form'><input type='email' name='QS_user_email_widget' id='QS_user_email_widget' placeholder='email@email.com' onFocus='fadeSubmitIn("widget_qsSubmit");' onBlur='fadeSubmitOut(this, "widget_qsSubmit");'  onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;'><input style='display:none;' type='button' value='subscribe!' id='widget_qsSubmit' class='widget_qsSubmit' onClick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");'></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2961">And The Most Posts Submitted In A Single Sitting Goes To&#8230; </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href='archives/tag/adding-functionality' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>adding functionality</a> 
+<a href='archives/tag/assembly-language' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>assembly language</a> 
+<a href='archives/tag/binary' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>binary</a> 
+<a href='archives/tag/code-cave' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>code cave</a> 
+<a href='archives/tag/code-caves' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>code caves</a> 
+<a href='archives/tag/cracking' class='tag-link-8' title='5 topics' style='font-size: 16pt;'>cracking</a> 
+<a href='archives/tag/crackme' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>crackme</a> 
+<a href='archives/tag/ebook' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>ebook</a> 
+<a href='archives/tag/exploting-binaries' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>exploting binaries</a> 
+<a href='archives/tag/guide' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Guide</a> 
+<a href='archives/tag/olly' class='tag-link-14' title='2 topics' style='font-size: 11pt;'>Olly</a> 
+<a href='archives/tag/ollydbg' class='tag-link-10' title='4 topics' style='font-size: 14.666666666667pt;'>ollydbg</a> 
+<a href='archives/tag/olly-tutorial' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>olly tutorial</a> 
+<a href='archives/tag/plugins' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>plugins</a> 
+<a href='archives/tag/reverse-engineering-2' class='tag-link-7' title='3 topics' style='font-size: 13pt;'>reverse engineering</a> 
+<a href='archives/tag/sandbox' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>sandbox</a> 
+<a href='archives/tag/tools' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>Tools</a> 
+<a href='archives/tag/tutorial' class='tag-link-16' title='2 topics' style='font-size: 11pt;'>tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright &copy; 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czoxNjoiMyw0LDUsOCwxNywxMCwxNiI7czoxMDoiY29udGVudF9pZCI7aToyMjM7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.a0cb09ea24893d68db815f5255590d37"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
+
+</body>
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/223?replytocom=43725 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:15:17 GMT -->
+</html>

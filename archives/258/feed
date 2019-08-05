@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Tutorial #4: Using Olly, Part 2</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/258/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/258</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: jc economics tuition</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-85252</link>
+		<dc:creator>jc economics tuition</dc:creator>
+		<pubDate>Wed, 18 Sep 2013 02:04:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-85252</guid>
+		<description><![CDATA[Hello just wanted to give you a brief heads up and let you know a few of the images aren&#039;t loading properly.
+I&#039;m not sure why but I think its a linking issue.
+I&#039;ve tried it in two different internet browsers and both 
+show the same outcome.]]></description>
+		<content:encoded><![CDATA[<p>Hello just wanted to give you a brief heads up and let you know a few of the images aren&#8217;t loading properly.<br />
+I&#8217;m not sure why but I think its a linking issue.<br />
+I&#8217;ve tried it in two different internet browsers and both<br />
+show the same outcome.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: snakep</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-78446</link>
+		<dc:creator>snakep</dc:creator>
+		<pubDate>Fri, 26 Jul 2013 10:34:36 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-78446</guid>
+		<description><![CDATA[Couldn&#039;t find the post on this... please tell me the URL so I can get the blue labels]]></description>
+		<content:encoded><![CDATA[<p>Couldn&#8217;t find the post on this&#8230; please tell me the URL so I can get the blue labels</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Dan</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-78399</link>
+		<dc:creator>Dan</dc:creator>
+		<pubDate>Fri, 26 Jul 2013 05:48:09 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-78399</guid>
+		<description><![CDATA[Great tutorial, but two quick questions. 
+In olly yours shows LOCAL.X and ARG.X, etc. where x is a number. But mine just show, for example something like: DWORD PTR [EBP-30]
+Is this because i&#039;m using Windows 7 64bit? 
+
+And lastly you recommended the art of assembly am I correct for myself learning assembly which your strongly yelling at us to do :)
+I saw that you had that on your website, but are you asking us to read all 12 hundred pages or what not of the actual book? What chapters do you strongly recommend I read to understand assembly language?
+
+Thanks
+-Dam]]></description>
+		<content:encoded><![CDATA[<p>Great tutorial, but two quick questions.<br />
+In olly yours shows LOCAL.X and ARG.X, etc. where x is a number. But mine just show, for example something like: DWORD PTR [EBP-30]<br />
+Is this because i&#8217;m using Windows 7 64bit? </p>
+<p>And lastly you recommended the art of assembly am I correct for myself learning assembly which your strongly yelling at us to do <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /><br />
+I saw that you had that on your website, but are you asking us to read all 12 hundred pages or what not of the actual book? What chapters do you strongly recommend I read to understand assembly language?</p>
+<p>Thanks<br />
+-Dam</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: 30-52-44-33-52</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-74348</link>
+		<dc:creator>30-52-44-33-52</dc:creator>
+		<pubDate>Wed, 26 Jun 2013 02:21:19 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-74348</guid>
+		<description><![CDATA[Helpful tip for anyone who is stuck getting the help files to work in Windows 7(R).  
+
+1. Select the API file in Ollydbg.  I&#039;m using the version found in Tutorial 2.  
+2. Download a supplementary file found on Microsoft&#039;s website.  Google WinHelp32.hlp.
+3. If the two step above doesn&#039;t solve the problem then you&#039;ll have to make sure the file is unblocked.  Go to each help file&#039;s properties window.  Click the &quot;unblock&quot; button and the problem should be fixed. 
+
+Looking forward to doing this tutorial tomorrow!]]></description>
+		<content:encoded><![CDATA[<p>Helpful tip for anyone who is stuck getting the help files to work in Windows 7(R).  </p>
+<p>1. Select the API file in Ollydbg.  I&#8217;m using the version found in Tutorial 2.<br />
+2. Download a supplementary file found on Microsoft&#8217;s website.  Google WinHelp32.hlp.<br />
+3. If the two step above doesn&#8217;t solve the problem then you&#8217;ll have to make sure the file is unblocked.  Go to each help file&#8217;s properties window.  Click the &#8220;unblock&#8221; button and the problem should be fixed. </p>
+<p>Looking forward to doing this tutorial tomorrow!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Khaled</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-66231</link>
+		<dc:creator>Khaled</dc:creator>
+		<pubDate>Wed, 22 May 2013 01:02:56 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-66231</guid>
+		<description><![CDATA[I&#039;m really enjoying your tutorials, thank u very much for the hard work, keep up.]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m really enjoying your tutorials, thank u very much for the hard work, keep up.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sleep3r</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-24608</link>
+		<dc:creator>Sleep3r</dc:creator>
+		<pubDate>Wed, 13 Mar 2013 19:02:21 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-24608</guid>
+		<description><![CDATA[OOPPPSSS!!! I&#039;ve found it, just behind the Dissasembly zone there&#039;s the information:
+
+Dest=Tutorial3.004012D6 - jumps to KERNEL32.GetModuleHandleA]]></description>
+		<content:encoded><![CDATA[<p>OOPPPSSS!!! I&#8217;ve found it, just behind the Dissasembly zone there&#8217;s the information:</p>
+<p>Dest=Tutorial3.004012D6 &#8211; jumps to KERNEL32.GetModuleHandleA</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sleep3r</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-24604</link>
+		<dc:creator>Sleep3r</dc:creator>
+		<pubDate>Wed, 13 Mar 2013 18:57:02 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-24604</guid>
+		<description><![CDATA[The Assemble dialog shows the name of the function and the name of the DLL instead the memory address.]]></description>
+		<content:encoded><![CDATA[<p>The Assemble dialog shows the name of the function and the name of the DLL instead the memory address.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sleep3r</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-24603</link>
+		<dc:creator>Sleep3r</dc:creator>
+		<pubDate>Wed, 13 Mar 2013 18:55:40 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-24603</guid>
+		<description><![CDATA[I&#039;m using OllyDbg 2.0 and when I press Space I get 
+    00401002     CALL 
+instead of
+    CALL 004012D6
+
+Anybody knows why?
+
+Thanks in advance.]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m using OllyDbg 2.0 and when I press Space I get<br />
+    00401002     CALL<br />
+instead of<br />
+    CALL 004012D6</p>
+<p>Anybody knows why?</p>
+<p>Thanks in advance.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sleep3r</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-24595</link>
+		<dc:creator>Sleep3r</dc:creator>
+		<pubDate>Wed, 13 Mar 2013 18:03:28 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-24595</guid>
+		<description><![CDATA[If you&#039;ve OllyDbg 2.0 you can set the help for the API under Options -&gt; Directories -&gt; Location of API help file.
+
+Thank you R4ndom for these amazing tutorials!]]></description>
+		<content:encoded><![CDATA[<p>If you&#8217;ve OllyDbg 2.0 you can set the help for the API under Options -&gt; Directories -&gt; Location of API help file.</p>
+<p>Thank you R4ndom for these amazing tutorials!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: neophyte</title>
+		<link>http://thelegendofrandom.com/blog/archives/258#comment-20726</link>
+		<dc:creator>neophyte</dc:creator>
+		<pubDate>Thu, 21 Feb 2013 06:36:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=258#comment-20726</guid>
+		<description><![CDATA[thanks for this great tut. keep up the good work.]]></description>
+		<content:encoded><![CDATA[<p>thanks for this great tut. keep up the good work.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

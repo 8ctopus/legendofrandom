@@ -1,0 +1,1367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #23: TLS Callbacks «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="2418_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="2418_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #23: TLS Callbacks Comments Feed" href="http://thelegendofrandom.com/blog/archives/2418/feed">
+<script type="text/javascript" src="2418_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2418_fichiers/ajax.js"></script>
+<script type="text/javascript" src="2418_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="And The ‘Obvious’ Award Goes To…" href="http://thelegendofrandom.com/blog/archives/2818">
+<link rel="next" title="R4ndom’s Guide to RadASM: Adding an Icon and Menu" href="http://thelegendofrandom.com/blog/archives/2592">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/2418">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=2418">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="2418_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="2418_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="2418_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="2418_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/2418">R4ndom’s Tutorial #23: TLS Callbacks</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Sep.27, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts in Intermediate" rel="category tag">Intermediate</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><p>Unfortunately, our lives as 
+reverse engineers is not always easy. If all it took to patch an app was
+ a deleted resource or a quick patch, a lot more people would do it. 
+Sometimes we must get a little ‘low-level’, wallow around in the 
+operating system files, single-step an exception handler, or reverse 
+engineer an unknown packer. To have a well-rounded skill set as a 
+cracker, we must know a lot about a lot (or at least where to look about
+ a lot) and it can get pretty technical.</p>
+<p>This tutorial is about one of those technical areas: TLS callbacks. 
+It is not easy, nor is it simple, but it can ruin an otherwise nice day 
+of a reverse engineer that doesn’t at least understand the basics of 
+what they are, when they are used, and how to overcome them.</p>
+<p>As in all tutorials on my site, the required files are included in the download of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a> </p>
+ page. We will be looking at three binaries, all&nbsp; included. We will
+ also be using an Olly plugin called TLSCatch by Walliedassar, also 
+included. Lastly, we will be using CFF Explorer, available on the <a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline; color: #0a77e1;">tools</span></a>  page.<p></p>
+<p><span id="more-2418"></span></p>
+<p>So get focused and let’s tackle the subject of TLS Callbacks…</p>
+<h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>TLS stands for Thread Local Storage. As you probably know, threads 
+are execution entities that run inside of a process. Programs make use 
+of threads when they wish to accomplish multiples actions concurrently, 
+even though sometimes ‘concurrently’ is just an illusion. For example, 
+let’s say you want to print a document. You press the ‘print’ button and
+ the program formats the document and sends it to the printer. This 
+activity would be run in a separate thread. The reason for this is we do
+ not want to stop down the entire application until the document is done
+ printing. We want it to start the print process and then immediately 
+return to us, perhaps to do some work while it’s printing.</p>
+<p>If you have multiple processors, each thread can run on a separate 
+processor. This can speed up applications as multiple processors can be 
+doing work at the same time. Concurrency can also benefit from a single 
+processor system. Take for example out print scenario above. Once the 
+application sends the document off to the printer, the application will 
+sit around, waiting for the printing activity to finish. This is A LOT 
+of time, especially for a processor. During this waiting time, we can be
+ doing other things. Threads allow a processor to split up activities, 
+and while waiting for a response from one, can be working on another.</p>
+<p>When these multiple threads are created, they usually share the same 
+memory. For example, if we have an address book application and we 
+decide to print a contact, the print thread will begin and have access 
+to the main contact data. If, right after we start the print thread, we 
+want to start another thread that begins showing the contact data on the
+ screen (after all, the print dialog covered some of it), this new 
+thread also has access to the contact data.</p>
+<p>Threads access this pooled memory by calling the same addresses. In 
+other words, thread A calls address 1000 to get the first contact, and 
+thread B calls 1000 and gets the same data. The two addresses are the 
+same. But what happens when we want a thread to have it’s own data? 
+Perhaps we want the printing thread to have a variable for if the 
+printing was successful or not. All threads do not need to have this 
+variable. Therefore, this thread needs a ‘local’ variable, one that only
+ that specific thread has access to. This becomes really important when a
+ single thread needs access to a large class or union. We do not want 
+every thread started to have access to such a large chunk of memory.</p>
+<p>Windows provides a way that a thread can have it’s own ‘local 
+storage’. This storage is similar to a stack, but is only accessible to a
+ specific thread. There is a certain chunk of memory that will be 
+reserved for this thread, and variables can be stored in it. This way, 
+only this one thread has access.</p>
+<p>We can also set up the threads so that they all have a local copy of a
+ variable, but they all access it through the same address. For example,
+ we could have a count variable in every thread, and every thread 
+accesses it through memory location 1000. But they are all different. 
+Even though they are all the same address, Windows separates each 
+thread’s storage, so that location 1000 to thread A will not be the same
+ variable (in memory) as thread B.</p>
+<p>This TLS storage area can be used for other, often malicious, 
+activities. Code can be put into this TLS section and can be run. The 
+interesting thing about this is that the TLS code will run BEFORE the 
+main entry point of the binary is run. When the Windows loader first 
+loads the binary into memory, right after it loads in the DLLs needed, 
+it checks a location in the PE header to see if there is a TLS section 
+set up, and if there is, it looks for a callback address. If one is 
+provided, this address is called, and the code in this section is run. 
+After this runs, the loader then hands control over to the main 
+application.</p>
+<p>What all this boils down to is that when you load a binary into a 
+debugger, often times we have the debugger set to stop at the module’s 
+main entry point. Once our debugger has stopped here, out TLS code has 
+already been run. This code can do many things including checking for a 
+debugger, infecting a system, or formatting a hard drive. And an unwary 
+(or unskilled) reverse engineer will load this binary into Olly, and 
+before you know it, your system is infected (or worse).</p>
+<p>You may see this behavior empirically when you load a binary into 
+Olly and the program immediately terminates, without ever touching any 
+code in the actual main module. If this ever happens, your first thought
+ should always be “check for a TLS section”.</p>
+<p>Now let’s look at an actual example…</p>
+<h2><span style="color: #0a77e1;">Investigating the Binary</span></h2>
+<p>First load the binary200.exe into CFF Explorer. Clicking on Data 
+Directories we can immediately see that there is a TLS section 
+specified:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/175.png"><img class="aligncenter  wp-image-2761" title="TLS in CFF" src="2418_fichiers/175.png" alt="" height="214" width="585"></a> </p><p></p>
+<p><em>Note: Very few targets will ever have a TLS section specified 
+unless they are using it as an anti-debug mechanism as most program 
+never use TLS. The exception is Delphi programs which use them for 
+internal reasons.<br>
+</em></p>
+<p>There are two properties here. The first is TLS Directory RVA. This 
+is a relative virtual address that points to the directory for the TLS. 
+The directory contains various attributes of the TLS structure including
+ its’ starting and ending address and its’ characteristics. Next is the 
+TLS Directory Size, which in this case (and most cases) is 0×18 bytes.</p>
+<p>Another thing you should notice is that the TLS itself is located in 
+the .data section. This does not always have to be the case, and this 
+will be important shortly.</p>
+<p>Fortunately, CFF Explorer makes looking at the TLS directory very easy- simply click on the TLS Directory tab:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/236.png"><img class="aligncenter  wp-image-2762" title="The directory" src="2418_fichiers/236.png" alt="" height="178" width="537"></a> </p><p></p>
+<p>Let’s go over these fields.</p>
+<ul style="list-style-type: circle;">
+<li><span style="color: #ff6600;">StartAddressOfRawData: The address (offset) of the raw data on disk. Rarely used.</span></li>
+<li><span style="color: #ff6600;">EndAddressOfRawData: The end address on disk. Rarely used.</span></li>
+<li><span style="color: #ff6600;">AddressOfIndex: The slot in the TLS array that the TLS takes.</span></li>
+<li><span style="color: #ff6600;">AddressOfCallbacks: A pointer to an array of callback addresses.</span></li>
+<li><span style="color: #ff6600;">SizeOfZeroFill: Rarely used.</span></li>
+<li><span style="color: #ff6600;">Characteristics: Rarely used.</span></li>
+</ul>
+<p>The only real field of value in this entity is the 
+AddressOfCallbacks. This is a pointer to an array of callbacks. Because 
+we can have more than one TLS callback code routine, this points to the 
+first one in the list. There can be several callbacks, though, and the 
+only way to see them all is in a hex dump. So that’s where we’ll go 
+next…</p>
+<h2><span style="color: #0a77e1;">The Dump</span></h2>
+<p>We saw earlier that the TLS directory structure is stored in the .data section, so let’s bring that section up in CFF Explorer:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/331.png"><img class="aligncenter  wp-image-2764" title="CFF Section headers" src="2418_fichiers/331.png" alt="" height="122" width="902"></a> </p><p></p>
+<p>As soon as you click on the .data section, CFF tells you that it contains TLS data and where the directory begins:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/428.png"><img class="aligncenter size-full wp-image-2765" title=".data contains TLS" src="2418_fichiers/428.png" alt="" height="138" width="247"></a> </p><p></p>
+<p>Though keep in mind that this is not the beginning of the TLS 
+section, only the TLS directory. CFF will show a hex dump of the 
+beginning of the .data section:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/526.png"><img class="aligncenter  wp-image-2766" title=".data dump" src="2418_fichiers/526.png" alt="" height="195" width="505"></a> </p><p></p>
+<p>We will take a closer look at this section, in order to understand what data is contained in this region.</p>
+<p>CFF Explorer has told us that the actual directory has started at 
+offset 0×30 (or 0×7030 in the .data section, which is the same address).
+ Following along with the various fields in the above picture of the TLS
+ directory, at offset 30 is the StartAddressOfRawData and the 
+EndAddressOfRawData:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/626.png"><img class="aligncenter  wp-image-2768" title="First two addresses" src="2418_fichiers/626.png" alt="" height="157" width="502"></a> </p><p></p>
+<p>Next up is the AddressOfIndex, which we can see is 409781 (little endian):</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/719.png"><img class="aligncenter  wp-image-2769" title="AddressOfIndex" src="2418_fichiers/719.png" alt="" height="126" width="505"></a> </p><p></p>
+<p>Next is the AddressOfCallbacks. The address here is 407014:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/817.png"><img class="aligncenter  wp-image-2770" title="AddressOfCallbacks" src="2418_fichiers/817.png" alt="" height="106" width="504"></a> </p><p></p>
+<p>This address should ring some bells…notice that it is at address 7014
+ after our ImageBase of 40000. This points into the .data section of our
+ binary, the section we are currently looking in. So this address field 
+holds a pointer to a callback, a pointer to another address in the .data
+ section at offset 0×14 (the .data section starts at 0×7000, so 0×7014 
+is offset 0×14 in section 0×7000). Looking to this address, we see the 
+actual address of the TLS function callback:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/914.png"><img class="aligncenter  wp-image-2771" title="Pointer to callback" src="2418_fichiers/914.png" alt="" height="146" width="509"></a> </p><p></p>
+<p>So 401450 is the actual address of the TLS callback code. Let’s have a look at this code in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1019.png"><img class="aligncenter size-full wp-image-2774" title="TLS code" src="2418_fichiers/1019.png" alt="" height="242" width="557"></a> </p><p></p>
+<p>This is the actual code in the TLS callback. Now let’s confirm when 
+this callback is actually called. Remove all breakpoints in the code and
+ set Olly to run until the beginning of the main module:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1121.png"><img class="aligncenter  wp-image-2775" title="Olly settings" src="2418_fichiers/1121.png" alt="" height="217" width="251"></a> </p><p></p>
+<p>and please make sure the TLSCarch plugin is not in the plugins 
+directory for right now. When we run the app, it automatically 
+terminates, never stopping at the entry point (which is 401000):</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1219.png"><img class="aligncenter  wp-image-2777" title="Program terminates" src="2418_fichiers/1219.png" alt="" height="356" width="476"></a> </p><p></p>
+<p>Now let’s try something a little different. Set Olly to break at the system entry point:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1317.png"><img class="aligncenter  wp-image-2778" title="Break at system" src="2418_fichiers/1317.png" alt="" height="224" width="229"></a> </p><p></p>
+<p>and set a breakpoint at 401000, at the beginning of the actual code. 
+Now, when we re-start the target, we will break in ntdll.dll (before 
+anything has run). Hitting F9 and the target terminates again. We went 
+from the system entry point and never made it to our program’s entry 
+point.</p>
+<p>One last thing…place a breakpoint at 401450 (the beginning of the TLS
+ callback) and re-load the target. We first stop at the system entry 
+point. Now run the target. We stop at the TLS callback. This proves that
+ our callback is running between the system entry point and the 
+beginning of our program:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1513.png"><img class="aligncenter  wp-image-2779" title="break at tls" src="2418_fichiers/1513.png" alt="" height="198" width="356"></a> </p><p></p>
+<p>Now that we’re here, let’s take a look at what this callback actually does:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/176.png"><img class="aligncenter size-full wp-image-2788" title="Main TLS breakdown" src="2418_fichiers/176.png" alt="" height="247" width="591"></a> </p><p></p>
+<p>As you can see, there is some heavy anti-debugging going on here. 
+First is a manual call to IsDebuggerPresent at address 40145F. This 
+calls the following routine:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/237.png"><img class="aligncenter  wp-image-2789" title="IsDebuggerPresent" src="2418_fichiers/237.png" alt="" height="77" width="553"></a> </p><p></p>
+<p>which, if you recall from my last tutorial, is just the manual way of
+ calling this API. Next we call the NQuerryInformationProcess 
+anti-debugging API:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/332.png"><img class="aligncenter size-full wp-image-2790" title="NtQuery" src="2418_fichiers/332.png" alt="" height="372" width="627"></a> </p><p></p>
+<p>When called with ProcessInformationClass set to 7 (ProcessDebugPort 
+constant), the system will set ProcessInformation to -1 if the process 
+if it is debugged.</p>
+<p>Interestingly, this routine further obfuscates itself by loading the 
+address of ntdll and the NtQueryInformationProcess manually. Next we 
+call another system debug check at 40146D. After this call, we must 
+change the zero flag to keep going (unless you happen to have all of the
+ options in OllyAdvanced set) :</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/429.png"><img class="aligncenter size-full wp-image-2791" title="We must zero this out" src="2418_fichiers/429.png" alt="" height="233" width="530"></a> </p><p></p>
+<p>The code then calls it’s own exception handler at address 401400:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/527.png"><img class="aligncenter size-full wp-image-2792" title="Custom exception" src="2418_fichiers/527.png" alt="" height="184" width="586"></a> </p><p></p>
+<p>Here, the target registers its own exception, pointing to address 
+401426. It then purposely causes an exception, hoping the debugger will 
+get confused. Fortunately, Olly is not confused and passes execution to 
+the proper exception handler at address 401426.</p>
+<p>After all this, we finally arrive at the proper entry point, though, 
+this program is very sneaky and later calls the TLS code again, as well 
+as some other anti-debugging techniques. I will stop here as our 
+tutorial is on TLS callbacks and not anti-debugging, but feel free to 
+investigate the target further.</p>
+<h2><span style="color: #0a77e1;">Multiple TLS Callbacks</span></h2>
+<p>Programmers are not limited to only one TLS callback. Let’s look at 
+one program that has multiple callbacks and see how it differs. Load 
+TLS_example_1.exe in CFF Explorer and click on the “Data Directories”:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/177.png"><img class="aligncenter  wp-image-2796" title="TLS section" src="2418_fichiers/177.png" alt="" height="154" width="440"></a> </p><p></p>
+<p>Here, we can see the offset of the TLS Directory information is at 
+offset 08 in the .data section, which starts at 03000. Clicking “TLS 
+Directory” in CFF, we see the information displayed in a friendly 
+manner:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/238.png"><img class="aligncenter  wp-image-2797" title="Seeing the callback offset" src="2418_fichiers/238.png" alt="" height="185" width="385"></a> </p><p></p>
+<p>The important field here is the AddressOfCallbacks, and we can see it
+ is at offset 03020, or offset 020 in the .data section. Now clicking on
+ the “Section Headers”, and then on the .data section, CFF tells us that
+ the TLS is in this section and shows us a dump:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/333.png"><img class="aligncenter  wp-image-2798" title="Viewing the section" src="2418_fichiers/333.png" alt="" height="436" width="518"></a> </p><p></p>
+<p>Looking at the raw data, we see the familiar start and end addresses at the beginning of the TLS directory (at offset 08):</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/430.png"><img class="aligncenter  wp-image-2799" title="Start and end" src="2418_fichiers/430.png" alt="" height="151" width="506"></a> </p><p></p>
+<p>Next we see the AddressOfCallbacks (skipping the other fields as they are not important here):</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/528.png"><img class="aligncenter  wp-image-2800" title="Offset of callback in dump" src="2418_fichiers/528.png" alt="" height="139" width="505"></a> </p><p></p>
+<p>So we know the address of the callback array is at 403020, or offset 
+03020, or 20 bytes after the beginning of the .data section. Looking at 
+the 20th byte and orward, we see that there are 5 addresses, meaning 
+this binary has five callbacks:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/627.png"><img class="aligncenter  wp-image-2801" title="All 5 callbacks" src="2418_fichiers/627.png" alt="" height="203" width="563"></a> </p><p></p>
+<p>Looking at this, we know that the TLS callbacks are at addresses 40101A, 401034, 40104E, 401068 and 401082.</p>
+<p>Now this time, before you load the target in Olly, copy the TLSCatch 
+plugin into the plugins directory. This time, when we load the target in
+ Olly, we see that several breakpoints have been set:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/720.png"><img class="aligncenter size-full wp-image-2803" title="Olly sets breakpoints" src="2418_fichiers/720.png" alt="" height="143" width="465"></a> </p><p></p>
+<p>The first breakpoint is the module’s main entry point (set because I 
+have the ‘break on module’s entry point’ set in Olly). Next there are 5 
+breakpoints set, each with a label that begins with “tlscallback_#”. 
+This plugin has automatically parsed our binary, extracted the callback 
+address, and has placed a breakpoints on all of the callbacks. 
+Double-clicking one of these shows us the actual code for the callbacks:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/818.png"><img class="aligncenter  wp-image-2804" title="The callback routines" src="2418_fichiers/818.png" alt="" height="438" width="555"></a> </p><p></p>
+<p>Obviously this is a really simple binary, and all that the callbacks do is display a message box, but you get the idea.</p>
+<p>Keep in mind that DLLs can have TLS callbacks just like exe files. 
+This means if we have 3 DLLs that our target requires, all of which have
+ TLS callbacks, when our exe loads, the Windows loader will load each of
+ these DLLs into the target’s memory space, and as each is loaded, the 
+callbacks for each will be called. This would be quite a challenge to 
+keep track of. But things can also get a little worse…</p>
+<h2><span style="color: #0a77e1;">Dynamically Created TLS Callbacks…</span></h2>
+<p>One thing that is not widely known (and because of this we’re sure to
+ see more of) is the fact that TLS callbacks can be created dynamically,
+ bypassing most of our techniques for discovering them. The way this 
+works is by setting up a single TLS callbcak (or loading a DLL with a 
+callback in it), which then creates another callback dynamically. Our 
+plugin would not catch this, and the callback would not show up in the 
+PE header. The only way to find such a trick would be to start at the 
+system entry breakpoint (in ntdll.dll) and step through until you 
+created the new callback, stepping into it at this time,and debugging it
+ as it’s run.</p>
+<p>Nothing like keeping things interesting…</p>
+<p>Let’s take a look at a program that creates TLS callbacks dynamically
+ (thanks to&nbsp;@waleedassar for providing the binary). This is a 
+pretty tough executable to reverse in that every time the TLS is called,
+ it basically resets itself to call the TLS callback again. It also has 
+some anti-debugging mechanisms built in. If we run this binary in a 
+command window, we see that a message is displayed over and over with an
+ incrementing counter. This counter is actually keeping track of every 
+time it calls the TLS callback:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/178.png"><img class="aligncenter size-full wp-image-2825" title="Running dynamic tls" src="2418_fichiers/178.png" alt="" height="334" width="361"></a> </p><p></p>
+<p>What this program does is modifies itself so that when the TLS is 
+called, it resets it to call it again on the next loop. This loop is 
+deep in the Windows loader. It loads the address of the callback and 
+passes execution to it. It then checks to see if there is another 
+callback, and if there is, it calls it. What the program is doing is 
+making the loader think there is another callback, so the loader keeps 
+calling (the same) callback over and over.</p>
+<p>Loading Dynamic_TLS.exe into Olly, we see that Olly has found the first TLS callback:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/239.png"><img class="aligncenter size-full wp-image-2824" title="Breakpoints in Olly" src="2418_fichiers/239.png" alt="" height="231" width="465"></a> </p><p></p>
+<p>Double-clicking on the tlscallback_0 line, Olly takes us to the actual callback code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/334.png"><img class="aligncenter size-full wp-image-2826" title="The first tls" src="2418_fichiers/334.png" alt="" height="304" width="611"></a> </p><p></p>
+<p>This routine first does some housekeeping, then checks if we’re being
+ debugged and exits if we are. If not, it loads another address into the
+ callback array, so that the loader will call this next address ( 401120
+ ). It then returns control to the loader. The loader then calls what it
+ thinks is the next TLS callback at address 401120. TLS Catch will not 
+break at this new TLS callback, as it was created dynamically:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/431.png"><img class="aligncenter size-full wp-image-2827" title="Second callback" src="2418_fichiers/431.png" alt="" height="305" width="572"></a> </p><p></p>
+<p>This routine creates yet another TLS callback at address 401163. It 
+also checks if there is a breakpoint set on this routine and exits if 
+there is. It then returns to the loader which now calls the third 
+callback:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/529.png"><img class="aligncenter size-full wp-image-2828" title="Third callback" src="2418_fichiers/529.png" alt="" height="276" width="619"></a> </p><p></p>
+<p>This routine then quietly calls printf to display the message and 
+sets the TLS callback back to the original entry of the first callback. 
+This makes the loader start the process all over again.</p>
+<p>This binary is obviously an example of an extreme case, though 
+packers and malware are always looking for extreme cases, so don’t be 
+surprised if you don’t see something like this in the near future.</p>
+<h2><span style="color: #0a77e1;">Making Our Own TLS Callback</span></h2>
+<p>For the really sadistic out there, I have decided to include a 
+section on making our own binary that has a TLS callback so you can 
+investigate it further. I will use RadASM to create a binary that does 
+nothing but call our own callback, displaying a goodboy or badboy 
+depending on if we’re being debugged or not (though this won’t work if 
+you are using a plugin that hides Olly).</p>
+<p>First, we create an empty Win32 project. I have called it, 
+surprisingly, “TLS Callback”. Now create a “TLS Callback.Asm” file and 
+enter the following data (I have also included the source file for this 
+project if you would like to save yourself some typing):</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/6a.png"><img class="aligncenter  wp-image-2838" title="Source code" src="2418_fichiers/6a.png" alt="" height="1146" width="505"></a> </p><p></p>
+<p>You can see that I initially create a structure that resembles the 
+TLS structure. I then populate the callback address, TlsCallBack2, as 
+the offset of our TLS code. The main routine does nothing but quits. 
+Finally, the TLS code checks IsDebuggerPresent and displays the 
+appropriate message depending on the results.</p>
+<p>This binary keeps track of a flag for if the callback has been called
+ or not. This is because TLS calls can come both at the beginning and at
+ the end of a programs life cycle. We only want to run ours once, hence 
+the flag.</p>
+<p>After building the binary, we must change the TLS info inside of the 
+PE header. Load our compiled program into CFF Explorer and click on the 
+Data Directories tab:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/721.png"><img class="aligncenter  wp-image-2830" title="No callback info" src="2418_fichiers/721.png" alt="" height="147" width="441"></a> </p><p></p>
+<p>You will notice that there is no TLS information in the binary. 
+Clicking on the Section Headers tab, then on the .data section, we see 
+that our TLS is actually in there and it begins at offset 0×46:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/819.png"><img class="aligncenter  wp-image-2831" title="The actual raw data" src="2418_fichiers/819.png" alt="" height="363" width="502"></a> </p><p></p>
+<p>Now, clicking back in the Data Directories, double-click in the 
+TLS&nbsp; Directory RVA and change it to 3046. Then change the TLS Size 
+to 18. Now save the binary (I saved it as “TLS Callback_modified.exe” 
+then re-load it in CFF Explorer. We can see that our TLS is there and 
+that CFF Explorer has created a directory for it:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/915.png"><img class="aligncenter  wp-image-2832" title="Enter the data manually" src="2418_fichiers/915.png" alt="" height="110" width="622"></a> </p><p></p>
+<p>Clicking on the TLS Directory tab, we see the information we hard-coded into the binary:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1020.png"><img class="aligncenter  wp-image-2833" title="Our new data" src="2418_fichiers/1020.png" alt="" height="143" width="328"></a> </p><p></p>
+<p>Now load the binary in Olly. There is now a breakpoint for our callback routine in the breakpoints window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1122.png"><img class="aligncenter size-full wp-image-2834" title="BP on our custom TLS" src="2418_fichiers/1122.png" alt="" height="187" width="456"></a> </p><p></p>
+<p>and double-clicking on this, we can see our actual TLS callback:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/1220.png"><img class="aligncenter size-full wp-image-2835" title="Our custom code" src="2418_fichiers/1220.png" alt="" height="241" width="629"></a> </p><p></p>
+<p>and if you run the app, you will see that it works just like expected…</p>
+<p>Special Thanks to MRHPx for his injection info,&nbsp; <a href="http://thelegendofrandom.com/blog/archives/code.google.com/p/corkami/"><span style="text-decoration: underline; color: #0a77e1;">Ange Albertini</span></a> </p> , ap0x, and <a href="http://waleedassar.blogspot.com/"><span style="text-decoration: underline; color: #0a77e1;">@waleedassar</span></a>  &amp; <a href="http://blog.dkbza.org/"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">Ero Carrera</span></span></a>  for help with the more technical stuff.<p></p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">27 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-4630">
+     <div id="comment-4630">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/65ea5157c719a257c0e4dad2c3a990de.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>anonymous</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4630" title="">September 28th, 2012 on 3:55 am</a>  </small>
+
+			<p>wow amazing i feel asif i KNOW things now</p>
+<p>things ive never known before</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4630#respond" onclick='return addComment.moveForm("comment-4630", "4630", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4639">
+     <div id="comment-4639">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/8294f5292a8cfaae28ecfb96dc36966f.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Yorath</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4639" title="">September 28th, 2012 on 9:19 am</a>  </small>
+
+			<p>Hi, you said ‘This routine creates yet another TLS callback at 
+address 401163′, but I can’t see where the program create the new TLS 
+callback. And in the picture above the text I referenced, you said ‘Save
+ new TLS address’, I also don’t know why. That line only assign the 
+value of the first byte in the entry point to [ebp-c], how come it save 
+new TLS address?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4639#respond" onclick='return addComment.moveForm("comment-4639", "4639", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4682">
+     <div id="comment-4682">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4682" title="">September 28th, 2012 on 10:07 pm</a>  </small>
+
+			<p>It is far easier if you step through it as you will see the address actually loaded in to the callback array.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4682#respond" onclick='return addComment.moveForm("comment-4682", "4682", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4668">
+     <div id="comment-4668">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/140038f170eb1973d9c1145e68ff8ee8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>NewBohemian</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4668" title="">September 28th, 2012 on 6:12 pm</a>  </small>
+
+			<p>“Dynamically created TLS callbacks”<br>
+–&gt; at address 00401170 you say it’s 3rd callback, but it’s Module entry Point, n’est-ce pas???</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4668#respond" onclick='return addComment.moveForm("comment-4668", "4668", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4683">
+     <div id="comment-4683">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4683" title="">September 28th, 2012 on 10:08 pm</a>  </small>
+
+			<p>The entry point is at 401000. 401170 is the last of the three 
+callbacks. This routine prints the actual message to the screen. The 
+entry point doesn’t do anything.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4683#respond" onclick='return addComment.moveForm("comment-4683", "4683", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-3" id="li-comment-4724">
+     <div id="comment-4724">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/140038f170eb1973d9c1145e68ff8ee8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>NewBohemian</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4724" title="">September 29th, 2012 on 7:07 pm</a>  </small>
+
+			<p>How can it be a TLS callback address when CFF explorer says:</p>
+<p>AddessOfEntryPoint  00001170</p>
+<p>(Imagebase 00400000)</p>
+<p>I used Win 7 64 bit btw.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4724#respond" onclick='return addComment.moveForm("comment-4724", "4724", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4693">
+     <div id="comment-4693">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/d750f5ad5e2d8ba7092e1ed0ea0072cc.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://darkl1ght.tk/" rel="external nofollow" class="url">ludkiller</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4693" title="">September 29th, 2012 on 1:58 am</a>  </small>
+
+			<p>I am now looking forward for more, this is getting better and better <img src="2418_fichiers/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4693#respond" onclick='return addComment.moveForm("comment-4693", "4693", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4694">
+     <div id="comment-4694">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4694" title="">September 29th, 2012 on 2:24 am</a>  </small>
+
+			<p>That means a lot, ludkiller. Thanks.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4694#respond" onclick='return addComment.moveForm("comment-4694", "4694", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-4701">
+     <div id="comment-4701">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/a8021ea53a915fd4567893f2f5155191.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>bharani</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4701" title="">September 29th, 2012 on 6:53 am</a>  </small>
+
+			<p>Ur Blog was nice and very useful to me.This address has to change 
+“Next up is the AddressOfIndex, which we can see is 409781——(409718) 
+(little endian):”<br>
+I checked a file which is having TLS Dir pointing to .tls section.In 
+that AddressOfCallBacks points to the address which is zero.Please give 
+me a clarification.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4701#respond" onclick='return addComment.moveForm("comment-4701", "4701", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4749">
+     <div id="comment-4749">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4749" title="">September 30th, 2012 on 5:06 pm</a>  </small>
+
+			<p>That probably means there are no callbacks.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4749#respond" onclick='return addComment.moveForm("comment-4749", "4749", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4748">
+     <div id="comment-4748">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>reverser</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4748" title="">September 30th, 2012 on 4:20 pm</a>  </small>
+
+			<p>Very nice post, but there is one thing as mentioned before: in 
+“Dynamically Created TLS Callbacks…” section, the last screen shot from 
+Olly Debugger DOES NOT MATCH the disassembled code from 
+“Dynamic_TLS.exe” provided on your website. There is no third TLS 
+callback involved. Please double check it and thanks again for this 
+tutorial!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4748#respond" onclick='return addComment.moveForm("comment-4748", "4748", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-4750">
+     <div id="comment-4750">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/140038f170eb1973d9c1145e68ff8ee8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>NewBohemian</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4750" title="">September 30th, 2012 on 5:09 pm</a>  </small>
+
+			<p>It’s the same issue I have:<br>
+at address 00401170 it’s not 3rd callback, it’s Module entry Point according to the PE header.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4750#respond" onclick='return addComment.moveForm("comment-4750", "4750", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-3" id="li-comment-4760">
+     <div id="comment-4760">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4760" title="">September 30th, 2012 on 9:52 pm</a>  </small>
+
+			<p>Sorry, guys, been in tutorial hell for the past couple days. Will look into this Monday morning and will post in the forum.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4760#respond" onclick='return addComment.moveForm("comment-4760", "4760", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4866">
+     <div id="comment-4866">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>CrazyDebugger</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4866" title="">October 2nd, 2012 on 6:07 pm</a>  </small>
+
+			<p>Awesome article! Thanks for sharing!!!</p>
+<p>-crazy</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4866#respond" onclick='return addComment.moveForm("comment-4866", "4866", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4879">
+     <div id="comment-4879">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/9c2c936220fc36782008dcc4d275f6c2.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Hanan</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4879" title="">October 2nd, 2012 on 9:45 pm</a>  </small>
+
+			<p>Great post, Thanks.</p>
+<p>Is the method of creating TLS section above is the “offical” way of creating such a section using ASM ?</p>
+<p>I have the same problem as mentioned above about the 3rd TLS callback.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4879#respond" onclick='return addComment.moveForm("comment-4879", "4879", "respond", "2418")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4891">
+     <div id="comment-4891">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2418_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4891" title="">October 3rd, 2012 on 4:28 am</a>  </small>
+
+			<p>Not really official, more like a random way;)</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=4891#respond" onclick='return addComment.moveForm("comment-4891", "4891", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-5283">
+     <div id="comment-5283">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>ator</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5283" title="">October 11th, 2012 on 1:54 am</a>  </small>
+
+			<p>Address is not right.. Should be:</p>
+<p>409781 not 409718</p>
+<p>at least I think <img src="2418_fichiers/icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=5283#respond" onclick='return addComment.moveForm("comment-5283", "5283", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5284">
+     <div id="comment-5284">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>ator</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5284" title="">October 11th, 2012 on 1:55 am</a>  </small>
+
+			<p>Bah… Got that backwards..</p>
+<p>409718 not 409781</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=5284#respond" onclick='return addComment.moveForm("comment-5284", "5284", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-6850">
+     <div id="comment-6850">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/6c8e321881ddbc0525da17caa014e667.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://n/A" rel="external nofollow" class="url">toTHOR2 (2T2)</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-6850" title="">November 4th, 2012 on 5:30 pm</a>  </small>
+
+			<p>Thank You for this in-depth explanation of TLS Callbacks.<br>
+As one would say “I have seen the light.”.<br>
+The time and effort you devote to these Tutorials is really appreciated.  U B da Man!</p>
+<p>2T2</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=6850#respond" onclick='return addComment.moveForm("comment-6850", "6850", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13902">
+     <div id="comment-13902">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Jochen</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-13902" title="">January 26th, 2013 on 5:24 pm</a>  </small>
+
+			<p>; Self-modifying TLS callbacks<br>
+; This PE has only one TLS callback active at load time.<br>
+; However, the callback executes 0×10 times because it modifies TLS table before returning.<br>
+; Copyleft (c) Omega Red 2007<br>
+; fasm source</p>
+<p>; 32-bit executable<br>
+format PE GUI<br>
+entry start</p>
+<p>include ‘win32a.inc’<br>
+include ‘\macro\proc32.inc’<br>
+;————————————————<br>
+section ‘all’ code data readable writable executable</p>
+<p>start:<br>
+    cinvoke     printf, buf, fmt, [count]<br>
+    invoke      msgbox, 0, buf, t_main, 0<br>
+    invoke      exit, 0<br>
+;————————————————<br>
+tls_callback0:<br>
+    inc         dword [count]<br>
+    cmp         dword [count], 0×10     ; callback executed 0×10 times?<br>
+    jge         tls_end</p>
+<p>    ; add another callback entry before returning<br>
+    mov         eax, [count]<br>
+    mov         dword [tls_callbacks+4*eax], tls_callback0</p>
+<p>tls_end:<br>
+    ret         0x0c<br>
+;————————————————<br>
+t_main          db  ‘main’,0<br>
+buf             db  0×100   dup (0)<br>
+fmt             db  ‘tls count: %d’,0<br>
+count           dd  0<br>
+;————————————————<br>
+; TLS directory<br>
+; !!! it’s possible to change tls table WHILE IN TLS CALLBACK itself,<br>
+; fex you have only 1 tls at first, but this tls adds some more -<br>
+; those added will execute normally (table is not cached by loader)!<br>
+align   0×10<br>
+data 9  ; tls<br>
+dd 0                ;Raw Data Start VA<br>
+dd 0                ;Raw Data End VA<br>
+dd tls_index        ;Address of Index<br>
+dd tls_callbacks    ;Address of Callbacks<br>
+dd 0                ;Size of Zero Fill<br>
+dd 0                ;Reserved</p>
+<p>tls_index       dd  0<br>
+tls_callbacks:      ; only one callback is present initially<br>
+                dd  tls_callback0   ; callback proc<br>
+                dd  0xff dup (0)    ; space reserved for more callback entries (but null at load time)<br>
+                dd  0<br>
+end data<br>
+;————————————————</p>
+<p>;  invoke ExitProcess, 0</p>
+<p>data import</p>
+<p>library user,   ‘user32.dll’,\<br>
+        kernel, ‘kernel32.dll’</p>
+<p>import  user,\<br>
+        printf, ‘wsprintfA’,\<br>
+        msgbox, ‘MessageBoxA’</p>
+<p>import  kernel,\<br>
+        exit, ‘ExitProcess’<br>
+end data<br>
+;————————————————</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=13902#respond" onclick='return addComment.moveForm("comment-13902", "13902", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-16894">
+     <div id="comment-16894">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>D4ph1</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-16894" title="">February 5th, 2013 on 10:53 pm</a>  </small>
+
+			<p>R4ndom you made a small mistake. In the .data section of your exe 
+the TLS begins at 0×47 and NOT 0×46 as you say in the tutorial!<br>
+Cheers</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=16894#respond" onclick='return addComment.moveForm("comment-16894", "16894", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-23681">
+     <div id="comment-23681">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/cf34fd4e56d953af59995872ea3fae10.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://noneworthmentioning/" rel="external nofollow" class="url">COX</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-23681" title="">March 8th, 2013 on 10:02 pm</a>  </small>
+
+			<p>Hi,</p>
+<p>About one decade ago I was cracking dos programs.<br>
+Since then I got in the automotive business and lost the contact with CPP, C# and co.</p>
+<p>Now, I was trying to reverse M a n i c T i m e for a colleague to get access to the pro features and I got lost in threads.</p>
+<p>I have just a small request. When time is at hand, please have a look
+ at the app and let me know how hard do you find it to break it.</p>
+<p>I don’t want the solution maybe just some pointers to what to learn, to do it on my own.</p>
+<p>Thank you for the excellent tutorials, I’ve read a few.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=23681#respond" onclick='return addComment.moveForm("comment-23681", "23681", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-73709">
+     <div id="comment-73709">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/513976dff111c134ea31b5b9e86ceab9.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.somthingaboutshoes.com/" rel="external nofollow" class="url">Shoes Outlet Store</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-73709" title="">June 21st, 2013 on 9:24 am</a>  </small>
+
+			<p>Dude.. I am not considerably into looking through, but in some way
+ I received to go through lots of content articles on your weblog. Its 
+remarkable how exciting it is for me to check out you really often. -</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=73709#respond" onclick='return addComment.moveForm("comment-73709", "73709", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-75552">
+     <div id="comment-75552">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/7a1ed0fe8c42d22cbe7c0b2bb3ce1c46.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.bestforextradingplatformsreport.com/" rel="external nofollow" class="url">Dominique</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-75552" title="">July 5th, 2013 on 9:00 am</a>  </small>
+
+			<p>My brother suggested I might like this web site.<br>
+He was once totally right. This put up actually made my day.</p>
+<p>You cann’t imagine just how so much time I had spent for this info! Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=75552#respond" onclick='return addComment.moveForm("comment-75552", "75552", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-75947">
+     <div id="comment-75947">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/74c8376bfef218f2cfb3180f2e697720.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.youtube.com/watch?v=1GzXy_QMKC4" rel="external nofollow" class="url">Walkfit Platinum Reviews</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-75947" title="">July 8th, 2013 on 3:59 pm</a>  </small>
+
+			<p>It can also be done manually on a chiropractic table. Woodworking clubs,<br>
+furniture enthusiast groups, and other organizations can give or sell<br>
+you plans. Physical therapy generally involves stretching, strengthening and exercising the back in a safe and gentle manner.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=75947#respond" onclick='return addComment.moveForm("comment-75947", "75947", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-80001">
+     <div id="comment-80001">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/579c01146ae07af3c2a5ac775f0ce790.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>johnnycannuk</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-80001" title="">August 7th, 2013 on 5:11 pm</a>  </small>
+
+			<p>Nice article..quite helpful. I have a weird one that I think might be a FAKE TLS callback:</p>
+<p>CFF says there’s a call back and that the tables is located in the 
+BSS section. But the offset actually puts the addressofCallbacks in the 
+top of the .rdata section the value points to the sizeofZerofill 
+segment, which when static is 0.</p>
+<p>Perhaps its dynamic or perhaps its meant to make me waste my time…weird</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=80001#respond" onclick='return addComment.moveForm("comment-80001", "80001", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-85946">
+     <div id="comment-85946">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2418_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>tip</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-85946" title="">September 24th, 2013 on 12:45 pm</a>  </small>
+
+			<p>best tutorials!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418?replytocom=85946#respond" onclick='return addComment.moveForm("comment-85946", "85946", "respond", "2418")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2418#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="2418" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="2418" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="3d91edc072" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/2418/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/2418/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/2418" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyNCwzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MjQxODtzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.c884c5042cebfb58c7366d0770d83030"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2418_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

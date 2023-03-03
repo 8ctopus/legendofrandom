@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #20A: Working With Visual Basic Binaries, Pt. 1 «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1947_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1947_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #20A: Working With Visual Basic Binaries, Pt. 1 Comments Feed" href="http://thelegendofrandom.com/blog/archives/1947/feed">
+<script type="text/javascript" src="1947_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1947_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1947_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Wait, Has Anyone Seen Internet Explorer? He Was Just Here…" href="http://thelegendofrandom.com/blog/archives/1999">
+<link rel="next" title="My Apologies" href="http://thelegendofrandom.com/blog/archives/2057">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1947">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1947">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1947_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1947_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1947_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1947_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1947">R4ndom’s Tutorial #20A: Working With Visual Basic Binaries, Pt. 1</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Sep.02, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial we will go over working with targets written in 
+Visual Basic. Unfortunately, to become a well-rounded reverse engineer, 
+we must know how to deal with these animals as there are many 
+applications written in VB. Because this is a rather large subject, I 
+will split it into two tutorials.</p>
+<p>We will be looking at two crackmes, both included in the download of 
+this tutorial. We will also be using VB Decompiler (the Lite version) 
+which is included in the download.</p>
+<p>As always, this tutorial, as well as all support files, can be downloaded on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline; color: #0a77e1;">tutorials</span></a> </p> page.<p></p>
+<p><span id="more-1947"></span></p>
+<div style="margin-bottom:8em;"><span style="display:none;">.</span></div>
+<h2><span style="color: #0a77e1;">Introducing Visual Basic</span></h2>
+<p>Visual Basic is an event-driven language. This means that instead of a
+ program running from beginning to end, VB reacts to events that happen 
+in a window. This is similar to Windows programming in that events take 
+place and call methods that are registered to handle those events, but 
+VB differs in that most of the processing and message creation is 
+performed in a DLL file. This file is the Visual Basic ‘runtime’.</p>
+<p>The process of creating an application is a little different than, 
+say, C++. You generally create a window (or dialog box) by dragging 
+elements from a toolbox onto your window canvas. It is similar to C# 
+.NET in this regard (and Delphi). Once you have your window built, you 
+then create methods that will handle any events that can come from a 
+user interacting with your windows contents; if a user clicks a button, 
+the method you have made that handles the button event is called. If a 
+user types in an edit box, the edit box method is called. Because the 
+only code you are providing is the event code, most of the window’s 
+processing is done for you. All of this processing is done in a DLL file
+ called “msvbvm60.dll”, though the ’60′ may be different if using a 
+different version of the runtime.</p>
+<p>Another huge difference between Visual Basic and more traditional 
+languages is a programmer has the option of compiling a VB application 
+natively or in something called P-code. Native is simply assembly 
+language, running natively on a processor, therefore OS and processor 
+specific. P-code, on the other hand, is interpreted, much like Java and 
+.NET, making it runnable on various operating systems. Interpreted means
+ that, after compiling your VB application into P-code, when a user runs
+ your application, something like a virtual machine is run, which 
+interprets the P-code into native code for that specific operating 
+system on-the-fly. When used, the p-code engine is a relatively simple 
+machine that processes a series of “high-level” operation codes 
+(“opcodes”). This engine is also stack-based, so very few arguments or 
+functions are passed through registers.</p>
+<p>The benefit of this is that if you install the VB runtime on, say, a 
+Mac, then the P-code compiled application will be interpreted and run on
+ a Mac. Switching to a Linux environment simply means running the Linux 
+virtual machine (by installing the runtime), and voila, your app will 
+run in Linux. Of course the downside is you take a speed hit as the code
+ must be converted to native code before running.</p>
+<p>Because VB applications can be compiled into P-code, the traditional 
+debugging tools are a lot harder to use. Combine this with the fact that
+ most of the time is spent in a DLL we don’t care about, and it can be 
+quite challenging. The good news is that there are a couple tools out 
+there that will help us. We will be going over these shortly.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Investigating The Target in Olly</span></h2>
+<p>When you first load a Visual Basic program in a debugger such as 
+Olly, you will see a call is immediately performed into the VB DLL, 
+where it will stay until an event happens. Because of this, VB programs 
+are a little different to reverse engineer. The first thing you will 
+notice is that the call stack is worthless; this is because most of the 
+program’s running time is within a DLL file, the VB runtime DLL. We 
+don’t care about this DLL, but we do care about the callback methods 
+that handle events.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/12.png"><img class="aligncenter size-full wp-image-2019" title="Beginning of a VB program" src="1947_fichiers/12.png" alt="" height="156" width="577"></a> </p><p></p>
+<p>Another difference is in the way strings are handled. Because most of
+ the message boxes, as well as all other window controls, are stored in 
+resource sections, Olly won’t display strings like a traditional C or 
+C++ program. Therefore, using strings to find relevant sections of code 
+is usually not an option:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/2.jpg"><img class="aligncenter size-full wp-image-1950" title="Strings is a VB program" src="1947_fichiers/2.jpg" alt="" height="413" width="414"></a> </p><p></p>
+<p><em>***If you want to see the following data yourself in Olly, load CrackmeVB1.exe.***</em></p>
+<p>Another hindrance to reversing is the fact that the method calls are 
+completely different in a VB executable. Instead of calls to such things
+ as RegisterWindowEx and MessageBoxA, VB uses its own API calls, 
+embedded in the runtime DLL:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/3.jpg"><img class="aligncenter size-full wp-image-1951" title="VB method calls" src="1947_fichiers/3.jpg" alt="" height="439" width="650"></a> </p><p></p>
+<p>Clicking through to one of these methods details the difference between VB and what we are used to:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/4.jpg"><img class="aligncenter size-full wp-image-1952" title="Normal code in a VB program" src="1947_fichiers/4.jpg" alt="" height="578" width="732"></a> </p><p></p>
+<p>As you can see, there are no helpful strings, no recognizable API calls.</p>
+<p>Before we look at the tools at our disposal, let’s see what the basic
+ file structure of a VB executable is. I have loaded CrackmeVB1.exe, 
+which is compiled in P-code. Scrolling to the top of the code in the 
+disassembly view, we see the list of functions in the binary:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/5.jpg"><img class="aligncenter size-full wp-image-1953" title="List of functions" src="1947_fichiers/5.jpg" alt="" height="370" width="454"></a> </p><p></p>
+<p>This is a reference for the runtime for the API calls that will be needed when the program is run.</p>
+<p>Scrolling down a little we come to the jump table. This is similar to
+ the jump table seen in most windows binaries and is there to help with 
+code relocation:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/6.jpg"><img class="aligncenter size-full wp-image-1954" title="the jump table" src="1947_fichiers/6.jpg" alt="" height="292" width="742"></a> </p><p></p>
+<p>After this, we come to a vast sea of data. This is where the VB 
+binary stores it’s resources. Anything from strings, to buttons, to 
+callbacks are stored in here. One thing to note is that Visual Basic 
+uses the actual name of a callback; so if you want “MyButtonCallback” to
+ handle the button event, that string will be used to reference it. 
+Because of this, you will see the various callback names embedded in 
+this resource section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/7.jpg"><img class="aligncenter size-full wp-image-1955" title="The callback names" src="1947_fichiers/7.jpg" alt="" height="471" width="438"></a> </p><p></p>
+<p>Scrolling down (much) further, we get to the actual event callbacks. 
+These are the user generated callback methods to handle the various 
+events. As you can see, there is no documentation as to which callback 
+methods each is, though we will change this later with MAP files:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/8.jpg"><img class="aligncenter size-full wp-image-1956" title="Callback methods" src="1947_fichiers/8.jpg" alt="" height="615" width="525"></a> </p><p></p>
+<p>Lastly we come to the Import Address Table, or IAT. We will get *much* more familiar with this in the tutorials on unpacking:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/89.jpg"><img class="aligncenter size-full wp-image-1957" title="IAT" src="1947_fichiers/89.jpg" alt="" height="322" width="583"></a> </p><p></p>
+<p>and that’s pretty much it. Obviously, this isn’t a heck of a lot of information to work with. Fortunately, we have a tool…</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">VB Decompiler Lite<br>
+</span></h2>
+<p>VB Decompiler is available in both a ‘Lite’ and ‘Pro’ version, the 
+Lite version being free (and so, the one included with this tutorial). 
+VB Decompiler allows us to decompile Visual Basic code, that has been 
+converted into P-code, back into the original VB source code. Well, 
+almost anyway <img src="1947_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">
+ . It also allows us to view the resources embedded in the executable in
+ a much friendlier format. Running VB Decompiler Lite, we first see the 
+main screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/11.png"><img class="aligncenter size-full wp-image-2004" title="decompiler main screen" src="1947_fichiers/11.png" alt="" height="505" width="737"></a> </p><p></p>
+<p>Opening our first crackme, “CrackmeVB1.exe” and selecting the ‘Decompile’ button, we see the main project:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/21.png"><img class="aligncenter size-full wp-image-2005" title="VB Decompiler main project window" src="1947_fichiers/21.png" alt="" height="884" width="724"></a> </p><p></p>
+<p>Most of this information is unimportant- mostly just file attributes 
+etc. Notice, though, that in the project tree (under the ‘Forms’ folder)
+ there are two forms, form1 and Form2. These are the resources 
+associated with each form. Because there are two, we know that this 
+application actually has two forms; One the main window and, in this 
+case, one an about screen. Running that app confirms this:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/317.png"><img class="aligncenter size-full wp-image-1963" title="Two forms in this crackme" src="1947_fichiers/317.png" alt="" height="337" width="639"></a> </p><p></p>
+<p>You will also notice two additional things when running this target; 
+The about screen is in a different language, and you cannot click the 
+“OK” button in the about screen. If any of you have followed my 
+tutorials on modifying binaries, you will know that, of course, this is 
+my favorite thing about this crackme <img src="1947_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> .</p>
+<p>If you double click on “Form2″ in the “Forms” folder (in the project 
+tree of VB Decompiler) we will see the various resources, along with 
+attributes, for Form2:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/31.png"><img class="aligncenter size-full wp-image-2006" title="Viewing Form2's details" src="1947_fichiers/31.png" alt="" height="772" width="604"></a> </p><p></p>
+<p>Here we can see that there is one button with the text “OK”, one 
+label with the text in a different language, and one callback method for
+ the “OK” button event called “Command1″.</p>
+<p>Double clicking on Form1 brings up the main window’s attributes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/510.png"><img class="aligncenter size-full wp-image-1965" title="Form1 attributes" src="1947_fichiers/510.png" alt="" height="1016" width="651"></a> </p><p></p>
+<p>Now we know several important things about this crackme; the 
+important button is called “Check!” and has a callback method with the 
+name of “Command2″, and Form1 is the main form we want to concern 
+ourselves with. If you look down the tree, under the “Code” node, you 
+will see the code that corresponds with the various forms. Opening the 
+‘Form1′ tree, we see that there are five callbacks, one for the 
+“Checkit” button (Command2_Click_402FD0) and others for other buttons 
+and mouse movements. If you run the target, you will see that the mouse 
+movements callback is to change the color of the text when you hover 
+over it.</p>
+<p>What we want is Command2, as that’s our callback:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/52.png"><img class="aligncenter size-full wp-image-2009" title="Seeing the callbacks" src="1947_fichiers/52.png" alt="" height="769" width="740"></a> </p><p></p>
+<p>Double clicking on this shows us the actual assembly code…</p>
+<p>The important thing about this screen is the address of the callback.
+ All we really wanted to use VB Decompiler for (in this case) is to find
+ the address of the callback for the “Checkit” button, which we can see 
+is 402FD0. Going to this address in Olly (with the target loaded) shows 
+us the beginning of the callback function:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/6.png"><img class="aligncenter size-full wp-image-2010" title="The beginning of the callback" src="1947_fichiers/6.png" alt="" height="337" width="635"></a> </p><p></p>
+<p>If you set a BP here, run the target, and enter a username and 
+serial, you will see that, after clicking the “Checkit” button, Olly 
+pauses at our callback. We have now found our main registration callback
+ code!!!</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">VB Decompiler Pro</span></h2>
+<p>I wanted to show what the actual P-code looks like, and for that we 
+need VB Decompiler Pro. Unfortunately, this application requires that 
+you buy it (… <img src="1947_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  …) to use this function. Looking at the same code in VB Decompiler Pro looks like this:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/7.png"><img class="aligncenter size-full wp-image-2011" title="VB Decompiler Pro" src="1947_fichiers/7.png" alt="" height="522" width="894"></a> </p><p></p>
+<p>Here, we can see the actual P-code method for the callback. First, 
+several variables are set up. The background is changed at 4030A2, a 
+procedure is called at 4030D9 (and it looks pretty interesting), and 
+then what is probably our magic compare/jump is performed at address 
+4030E1. We can see that if the results of calling the procedure at 
+403800 are true, we will then jump to 4030E8. If not, we will fall 
+through and perform the instructions beginning at address 4030E2. Taking
+ a little time, we could actually find the patch this way, though I 
+personally like going back to Olly to do it, as it doesn’t hurt my brain
+ so much.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Patching the App</span></h2>
+<p>Going to address 402FD0, the beginning of the callback, we can see the actual code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/10.png"><img class="aligncenter size-full wp-image-2041" title="Beginning of callback in Olly" src="1947_fichiers/10.png" alt="" height="234" width="677"></a> </p><p></p>
+<p>Setting a BP here and restarting the target, then stepping down some,
+ we see at address 4030AA the background of the window changes color, 
+just as we suspected from the P-code:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/111.png"><img class="aligncenter size-full wp-image-2042" title="Changing the background color" src="1947_fichiers/111.png" alt="" height="259" width="841"></a> </p><p></p>
+<p>At address 4030E3, we see the badboy message pop up:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/13.png"><img class="aligncenter size-full wp-image-2029" title="Badboy called" src="1947_fichiers/13.png" alt="" height="171" width="483"></a> </p><p></p>
+<p>Looking at that area of code, we can see that right before it is a compare/jump combo:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/23.png"><img class="aligncenter  wp-image-2030" title="Compare/jump combo" src="1947_fichiers/23.png" alt="" height="225" width="640"></a> </p><p></p>
+<p>Let’s set a BP at address 4030E1, restart the target, and see if 
+that’s the check. When Olly pauses, changing the zero flag forces the 
+jump at address 4030E1. Unfortunately, this doesn’t display anything. 
+This means we want to take a closer look at the call to address 4032C0 
+at address 4030E3. Placing a BP here, restarting the target, and 
+stepping in, we see the main decryption routine:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/33.png"><img class="aligncenter size-full wp-image-2031" title="Main decryption routine" src="1947_fichiers/33.png" alt="" height="522" width="626"></a> </p><p></p>
+<p>As we will see shortly, there are some very standard method calls in 
+VB that should be memorized. Scrolling down the code, we see one of 
+these at address 403644:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/43.png"><img class="aligncenter size-full wp-image-2032" title="vbaTstEq" src="1947_fichiers/43.png" alt="" height="294" width="656"></a> </p><p></p>
+<p>vbaVarTstEq is like StrCmp in native code- it checks two entities to 
+see if they match. Highlighting the call down three lines at address 
+40364F and clicking “Enter”, Olly follows the call and we see we’re on 
+the right track:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/54.png"><img class="aligncenter size-full wp-image-2033" title="On the right track" src="1947_fichiers/54.png" alt="" height="287" width="781"></a> </p><p></p>
+<p>So we know we must make the code execute to address 403644. Looking 
+above this at the various jumps, we find the following JE at address 
+40344F:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/63.png"><img class="aligncenter size-full wp-image-2034" title="The key conditional jump" src="1947_fichiers/63.png" alt="" height="135" width="653"></a> </p><p></p>
+<p>which jumps to the area of code we want:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/72.png"><img class="aligncenter size-full wp-image-2035" title="Jump to the goodboy" src="1947_fichiers/72.png" alt="" height="245" width="766"></a> </p><p></p>
+<p>So let’s place a BP at address 40344F, run the target, and change the zero flag to force the jump:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/8.png"><img class="aligncenter size-full wp-image-2036" title="Forcing the jump" src="1947_fichiers/8.png" alt="" height="190" width="622"></a> </p><p></p>
+<p>Now, stepping down to the JE instruction at 40364D, we obviously want
+ to stop this from jumping over our call to the goodboy. Changing the 
+zero flag when we land here, we see that we have in fact cracked the 
+target:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/9.png"><img class="aligncenter size-full wp-image-2037" title="The target is cracked" src="1947_fichiers/9.png" alt="" height="171" width="476"></a> </p><p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Frequently Called Methods</span></h2>
+<p>As stated earlier, there are some methods that are called a lot when looking at protection schemes:</p>
+<p><span style="color: #ff6600;">_vbaVarTstEq</span><br>
+<span style="color: #ff6600;">_vbaVarTstNe</span><br>
+<span style="color: #ff6600;">_vbaVarCmpEq</span><br>
+<span style="color: #ff6600;">_vbaStrCmp</span><br>
+<span style="color: #ff6600;">_vbaStrComp</span><br>
+<span style="color: #ff6600;">_vbaStrCompVar</span></p>
+<p>9 out of 10 times, one of these routines will be used to compare a 
+serial with the correct one. One of these, _vbaVarTstEq, was used in the
+ previous crackme.</p>
+<p>Go ahead and load CrackmeVB2.exe into Olly. Performing a search of intermodular calls, we see one of our suspicious calls:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/22.png"><img class="aligncenter size-full wp-image-2020" title="Intermodular calls" src="1947_fichiers/22.png" alt="" height="572" width="444"></a> </p><p></p>
+<p>Here we see the call to _vbaStrCmp. Looking up the String.Compare 
+method call in the Visual Basic API, we see that it takes two strings as
+ arguments and returns an int. The return value is either -1, 0 (for 
+equals) and 1, depending on if the first is greater than or less than 
+the second, or zero if they are equal. This is what the call looks like 
+in VB:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/32.png"><img class="aligncenter size-full wp-image-2021" title="VB Compare Strings" src="1947_fichiers/32.png" alt="" height="181" width="330"></a> </p><p></p>
+<p>Double clicking this call in Olly, we jump to where this call is performed.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/42.png"><img class="aligncenter size-full wp-image-2022" title="The strcmp call" src="1947_fichiers/42.png" alt="" height="181" width="676"></a> </p><p></p>
+<p>Let’s set a BP on this line and run the target:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/53.png"><img class="aligncenter size-full wp-image-2023" title="Running the vault target" src="1947_fichiers/53.png" alt="" height="174" width="309"></a> </p><p></p>
+<p>Entering a password (I entered ’12121212′) and clicking OK, Olly breaks right where we want him to:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/62.png"><img class="aligncenter size-full wp-image-2025" title="Olly breaks on strcmp" src="1947_fichiers/62.png" alt="" height="271" width="623"></a> </p><p></p>
+<p>Looking down a little bit at address 403f40, we see our wonderful 
+compare/jump instruction. Stepping down to there and changing the zero 
+flag, then running the target, we see that this was our simplest crack 
+yet <img src="1947_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  :</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/71.png"><img class="aligncenter size-full wp-image-2026" title="Vault success" src="1947_fichiers/71.png" alt="" height="224" width="315"></a> </p><p></p>
+<p>There is a lot to take in here, but the most important thing is to 
+mess around some on your own and discover how this stuff works on your 
+own. I have included a crackme that we will be going over in the next 
+tutorial (crackmeVB3.exe), so that you may try your hand at it. 
+Following the same steps in this tutorial will solve this crackme as 
+well.</p>
+<p>In the next tutorial we will go over Smartcheck and the Point-H method, as well as creating MAP files.</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">12 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-3738">
+     <div id="comment-3738">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3738" title="">September 3rd, 2012 on 3:31 pm</a>  </small>
+
+			<p>Oh boy I just came across this site and at the moment at part 11 
+of the tutorials. And just now you added a new tutorial, thanks man, 
+honestly words can’t describe how grateful we are to have you with us in
+ this world.</p>
+<p>The title of the tutorial got me wondering; we know that apps codded 
+in C#, Java, VB do not get “translated” into ASM code, instead Bytecode 
+that the virtual machine reads. Not sure, I am new and sorry for my 
+ignorance but what I want to know is:</p>
+<p>1- Do you deal with VB and C# in the same manner? seeing as they both use .net framework and CLR I think?<br>
+2- Do we deal with JAVA code in similar fashion? guess not because different framework and different VM?<br>
+3- Do executable’s language plays a huge role when RE? meaning if you 
+know how to RE C++ programs, would it be similar to RE exes that are not
+ codded in C++?</p>
+<p>Sorry for my English, and I hope I didn’t bother you with my questions.</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3738#respond" onclick='return addComment.moveForm("comment-3738", "3738", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-3739">
+     <div id="comment-3739">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1947_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3739" title="">September 3rd, 2012 on 4:11 pm</a>  </small>
+
+			<p>You do not deal with .NET languages and Java in the same way. 
+There are tools for each of those that help with reverse engineering.</p>
+<p>And you deal with all languages that compile to native code the same. You deal with all ‘interpreted’ languages differently.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3739#respond" onclick='return addComment.moveForm("comment-3739", "3739", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-3744">
+     <div id="comment-3744">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Modnar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3744" title="">September 3rd, 2012 on 5:26 pm</a>  </small>
+
+			<p>Thanks for taking your time and answering my questions!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3744#respond" onclick='return addComment.moveForm("comment-3744", "3744", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-3923">
+     <div id="comment-3923">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/d5336d69ae0d217a290061546069991b.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gustavo</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3923" title="">September 9th, 2012 on 2:57 am</a>  </small>
+
+			<p>What about enabling a button in a VB program, how can we do that?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3923#respond" onclick='return addComment.moveForm("comment-3923", "3923", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-3938">
+     <div id="comment-3938">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1947_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3938" title="">September 9th, 2012 on 4:26 pm</a>  </small>
+
+			<p>I thought about including that but the tutorial was getting too long as it was! Maybe I’ll do a separate tut on that.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3938#respond" onclick='return addComment.moveForm("comment-3938", "3938", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-3" id="li-comment-3950">
+     <div id="comment-3950">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/d5336d69ae0d217a290061546069991b.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gustavo</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3950" title="">September 10th, 2012 on 5:34 am</a>  </small>
+
+			<p>Thanks.</p>
+<p>For those readers interested in understanding how programs like VB 
+Decompiler can actually all that info about a VB program, I recommend 
+this paper I’ve just found, “Visual Basic Reversed – A decompiling 
+approach”: <a href="http://www.reteam.org/papers/e46.pdf" rel="nofollow">http://www.reteam.org/papers/e46.pdf</a> </p><p></p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3950#respond" onclick='return addComment.moveForm("comment-3950", "3950", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-4" id="li-comment-3951">
+     <div id="comment-3951">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/d5336d69ae0d217a290061546069991b.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gustavo</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3951" title="">September 10th, 2012 on 5:34 am</a>  </small>
+
+			<p>…can actually *gather* all that info</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3951#respond" onclick='return addComment.moveForm("comment-3951", "3951", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3997">
+     <div id="comment-3997">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/366ffd0022f5f68dd72b68a3a9ff0dad.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>bfg2</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3997" title="">September 11th, 2012 on 12:30 pm</a>  </small>
+
+			<p>is there any way to bypass a form in visual basic p-code ???<br>
+for example i want to by pass form1. when some one open the exe it 
+automatically opens the next form or form2 insted of calling form1 ???</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=3997#respond" onclick='return addComment.moveForm("comment-3997", "3997", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4002">
+     <div id="comment-4002">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1947_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4002" title="">September 11th, 2012 on 2:43 pm</a>  </small>
+
+			<p>NOP out the call to create form when dealing with form1</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=4002#respond" onclick='return addComment.moveForm("comment-4002", "4002", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4046">
+     <div id="comment-4046">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/366ffd0022f5f68dd72b68a3a9ff0dad.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>bfg2</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4046" title="">September 12th, 2012 on 12:30 pm</a>  </small>
+
+			<p>what is your email address can you see the target for me i tried every possibilty but failed :-p</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=4046#respond" onclick='return addComment.moveForm("comment-4046", "4046", "respond", "1947")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4053">
+     <div id="comment-4053">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1947_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4053" title="">September 12th, 2012 on 2:47 pm</a>  </small>
+
+			<p>Click “Contact” on the top of any web page to email me.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=4053#respond" onclick='return addComment.moveForm("comment-4053", "4053", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-71245">
+     <div id="comment-71245">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1947_fichiers/8474758819be69a3f29de365540f8a77.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://sebastiantarb5.wordpress.com/2012/06/21/helpful-the-cheapest-van-insurance-info-to-make-you-conscious-of-this-sophisticated-topic/" rel="external nofollow" class="url">Collette Beemon</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-71245" title="">June 7th, 2013 on 7:32 am</a>  </small>
+
+			<p>What i do not realize is if truth be told how you’re not actually 
+much more neatly-favored than you might be now. You are so intelligent. 
+You understand thus considerably in terms of this matter, produced me 
+for my part imagine it from a lot of varied angles. Its like men and 
+women aren’t involved except it is one thing to do with Woman gaga! Your
+ personal stuffs nice. At all times care for it up!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947?replytocom=71245#respond" onclick='return addComment.moveForm("comment-71245", "71245", "respond", "1947")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1947#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1947" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1947" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="c3f3968533" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1947/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1947/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1947" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MTk0NztzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.e10c2b0eb1a08b96392bf8809fc10f7d"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1947_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

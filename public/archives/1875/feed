@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom&#8217;s Tutorial #19: Patchers</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1875/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1875</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: dup2</title>
+		<link>http://thelegendofrandom.com/blog/archives/1875#comment-74201</link>
+		<dc:creator>dup2</dc:creator>
+		<pubDate>Tue, 25 Jun 2013 00:38:08 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1875#comment-74201</guid>
+		<description><![CDATA[Hello, I was just wondering how to make a patch like this one below...
+
+&quot;IDM v6.xx.release.5-patch&quot; (find in google)
+
+What it does is search &amp; replace (SNR) but the thing about
+this particular patch is...
+
+It offers to add a &quot;First and last Name&quot; to the the .exe
+file in question leaving the product registered to any
+individual.
+
+How can we add this &quot;add name&quot; feature in dup2...?
+
+Can anyone help...]]></description>
+		<content:encoded><![CDATA[<p>Hello, I was just wondering how to make a patch like this one below&#8230;</p>
+<p>&#8220;IDM v6.xx.release.5-patch&#8221; (find in google)</p>
+<p>What it does is search &amp; replace (SNR) but the thing about<br />
+this particular patch is&#8230;</p>
+<p>It offers to add a &#8220;First and last Name&#8221; to the the .exe<br />
+file in question leaving the product registered to any<br />
+individual.</p>
+<p>How can we add this &#8220;add name&#8221; feature in dup2&#8230;?</p>
+<p>Can anyone help&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kdma</title>
+		<link>http://thelegendofrandom.com/blog/archives/1875#comment-4719</link>
+		<dc:creator>kdma</dc:creator>
+		<pubDate>Sat, 29 Sep 2012 17:05:53 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1875#comment-4719</guid>
+		<description><![CDATA[Hello, i&#039;m trying to extract the fugly mp3 for completing the tutorial but i seem to do something wrong,i believe the mp3 is loaded at 00401078 and its 36e9b bytes long so i tried to dump this section by doing a binary copy of said bytes and save the result as a mp3 but obviously it doesnt work can you enlighten me?:) thanks 
+also why did you make the tutorial not &quot;advanced&quot; ? its a pretty cool crackme such a waste to patch it :(]]></description>
+		<content:encoded><![CDATA[<p>Hello, i&#8217;m trying to extract the fugly mp3 for completing the tutorial but i seem to do something wrong,i believe the mp3 is loaded at 00401078 and its 36e9b bytes long so i tried to dump this section by doing a binary copy of said bytes and save the result as a mp3 but obviously it doesnt work can you enlighten me?:) thanks<br />
+also why did you make the tutorial not &#8220;advanced&#8221; ? its a pretty cool crackme such a waste to patch it <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ciccio</title>
+		<link>http://thelegendofrandom.com/blog/archives/1875#comment-3546</link>
+		<dc:creator>ciccio</dc:creator>
+		<pubDate>Wed, 29 Aug 2012 13:56:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1875#comment-3546</guid>
+		<description><![CDATA[thanks]]></description>
+		<content:encoded><![CDATA[<p>thanks</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

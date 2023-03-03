@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Modifying Binaries: Adding a Menu Item</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/759/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/759</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: vy</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-2071</link>
+		<dc:creator>vy</dc:creator>
+		<pubDate>Wed, 01 Aug 2012 12:19:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-2071</guid>
+		<description><![CDATA[Ah yes, I see the issue now.]]></description>
+		<content:encoded><![CDATA[<p>Ah yes, I see the issue now.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-2028</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Tue, 31 Jul 2012 16:53:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-2028</guid>
+		<description><![CDATA[You would not be able to change the ID in resource hacker and do a search because the original ID of the resource is hard-coded in the binary, Changing the ID in resource hacker will not change the code that references the resource.
+
+Doing this exact thing (looking up the ID in resource hacker) cannot be done automatically, but there are other ways you could automate this process. You would need some interaction, though, from the user]]></description>
+		<content:encoded><![CDATA[<p>You would not be able to change the ID in resource hacker and do a search because the original ID of the resource is hard-coded in the binary, Changing the ID in resource hacker will not change the code that references the resource.</p>
+<p>Doing this exact thing (looking up the ID in resource hacker) cannot be done automatically, but there are other ways you could automate this process. You would need some interaction, though, from the user</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: vy</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-2021</link>
+		<dc:creator>vy</dc:creator>
+		<pubDate>Tue, 31 Jul 2012 15:18:42 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-2021</guid>
+		<description><![CDATA[I&#039;m really enjoying the tutorials but this is my favourite so far.
+
+Firstly; if I was having trouble finding a specific item ID in Olly, couldn&#039;t I just change the ID in ResHacker to something unique, find it in Olly, then note down the address and change it back?
+
+Second; if I was just patching a file it would be simple to write a piece of ASM or C code to do the job for me, so rather than distributing a patched .exe (if I were to do such a thing) I could just distribute the patcher. But if we&#039;re changing things in ResHacker, can this be automated in code?
+
+Many thanks for the tutorials, 
+
+vy]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m really enjoying the tutorials but this is my favourite so far.</p>
+<p>Firstly; if I was having trouble finding a specific item ID in Olly, couldn&#8217;t I just change the ID in ResHacker to something unique, find it in Olly, then note down the address and change it back?</p>
+<p>Second; if I was just patching a file it would be simple to write a piece of ASM or C code to do the job for me, so rather than distributing a patched .exe (if I were to do such a thing) I could just distribute the patcher. But if we&#8217;re changing things in ResHacker, can this be automated in code?</p>
+<p>Many thanks for the tutorials, </p>
+<p>vy</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Modifying Binaries: Adding a Menu Item &#171; msg1len Official Website</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-790</link>
+		<dc:creator>Modifying Binaries: Adding a Menu Item &#171; msg1len Official Website</dc:creator>
+		<pubDate>Tue, 03 Jul 2012 06:09:22 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-790</guid>
+		<description><![CDATA[[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. &#160;    Leave a comment [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. &nbsp;    Leave a comment [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-556</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Mon, 25 Jun 2012 16:17:51 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-556</guid>
+		<description><![CDATA[I&#039;m working on it :)]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m working on it <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kg</title>
+		<link>http://thelegendofrandom.com/blog/archives/759#comment-481</link>
+		<dc:creator>kg</dc:creator>
+		<pubDate>Fri, 22 Jun 2012 07:58:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=759#comment-481</guid>
+		<description><![CDATA[Can you add self keygen tutorial(s)?
+btw  tutorials are  great.]]></description>
+		<content:encoded><![CDATA[<p>Can you add self keygen tutorial(s)?<br />
+btw  tutorials are  great.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

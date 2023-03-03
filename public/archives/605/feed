@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: A new series of tutorials</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/605/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/605</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: ohyes</title>
+		<link>http://thelegendofrandom.com/blog/archives/605#comment-447</link>
+		<dc:creator>ohyes</dc:creator>
+		<pubDate>Wed, 20 Jun 2012 20:13:07 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=605#comment-447</guid>
+		<description><![CDATA[you are great man!
+thx for tutorial, i&#039;m forward to continuing]]></description>
+		<content:encoded><![CDATA[<p>you are great man!<br />
+thx for tutorial, i&#8217;m forward to continuing</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gdogg</title>
+		<link>http://thelegendofrandom.com/blog/archives/605#comment-375</link>
+		<dc:creator>gdogg</dc:creator>
+		<pubDate>Sat, 16 Jun 2012 23:01:39 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=605#comment-375</guid>
+		<description><![CDATA[I&#039;m excited!]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m excited!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/605#comment-333</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Fri, 15 Jun 2012 05:16:07 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=605#comment-333</guid>
+		<description><![CDATA[Awesome, I was searching for this stuff for a while now and finally &lt;3 you R4ndom]]></description>
+		<content:encoded><![CDATA[<p>Awesome, I was searching for this stuff for a while now and finally &lt;3 you R4ndom</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

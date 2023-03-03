@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom’s Guide to RadASM: Creating Our First Project</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2517/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2517</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Modnar</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517#comment-6458</link>
+		<dc:creator>Modnar</dc:creator>
+		<pubDate>Sun, 28 Oct 2012 15:10:09 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517#comment-6458</guid>
+		<description><![CDATA[I am also interested but I am not sure which file to open as notepad?
+
+Thanks.]]></description>
+		<content:encoded><![CDATA[<p>I am also interested but I am not sure which file to open as notepad?</p>
+<p>Thanks.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: awesome</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517#comment-4736</link>
+		<dc:creator>awesome</dc:creator>
+		<pubDate>Sun, 30 Sep 2012 01:16:27 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517#comment-4736</guid>
+		<description><![CDATA[learning new things GREAT]]></description>
+		<content:encoded><![CDATA[<p>learning new things GREAT</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517#comment-4609</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 14:54:07 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517#comment-4609</guid>
+		<description><![CDATA[Open it in notepad. That is one thing WinASM has over RadASM- you can view the actual code in the dialog file...]]></description>
+		<content:encoded><![CDATA[<p>Open it in notepad. That is one thing WinASM has over RadASM- you can view the actual code in the dialog file&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Hanan</title>
+		<link>http://thelegendofrandom.com/blog/archives/2517#comment-4602</link>
+		<dc:creator>Hanan</dc:creator>
+		<pubDate>Thu, 27 Sep 2012 08:14:24 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2517#comment-4602</guid>
+		<description><![CDATA[How can i see the code behind the dialog ?]]></description>
+		<content:encoded><![CDATA[<p>How can i see the code behind the dialog ?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

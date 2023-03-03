@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modifying Binaries: Making a Window Non-Closeable «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1172_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1172_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » Modifying Binaries: Making a Window Non-Closeable Comments Feed" href="http://thelegendofrandom.com/blog/archives/1172/feed">
+<script type="text/javascript" src="1172_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1172_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1172_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Update to Tutorial #13 Challenge" href="http://thelegendofrandom.com/blog/archives/1169">
+<link rel="next" title="Winner of the tutorial #13 challenge" href="http://thelegendofrandom.com/blog/archives/1234">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1172">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1172">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1172_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1172_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1172_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1172_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                               <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1172">Modifying Binaries: Making a Window Non-Closeable</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jul.10, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts in Intermediate" rel="category tag">Intermediate</a> , <a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts in Modifying Binaries" rel="category tag">Modifying Binaries</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial I will discuss various ways of making a window 
+non-closeable. This can come in handy in a variety of cases. Perhaps you
+ would like to display an inspirational quote in a window, “Just because
+ you are unique, does not mean you are useful”, for example. Most users 
+would close this window before really having a chance to think about 
+these words of wisdom. Making the window non-closeable helps solve this 
+problem. Or perhaps you would like to remind a co-worker that there is 
+more to life than work, so send him a game (like “Kill Bunnies With Your
+ Genitalia II”) and make it so it won’t close, thus reminding him that 
+there are always alternatives to working yourself to death.</p>
+<p>You can download the files for this tutorial <a href="http://thelegendofrandom.com/files/tuts/Making_a_Window_Non-closeable.zip"><span style="text-decoration: underline; color: #0a77e1;">here.</span></a> </p><p></p>
+<p><span id="more-1172"></span></p>
+<h2><span style="color: #0a77e1;">Types Of Windows</span></h2>
+<p>Because Windows has different types of windows, accomplishing this 
+feat is slightly different, depending on which method was used to create
+ the window. There are basically three types of windows; A normal 
+window, A dialog box, A dialog that is acting as the main window. I will
+ explain these three cases separately, as the process is different for 
+each. I have included a binary representing all three types. Let’s start
+ with…</p>
+<h2><span style="color: #0a77e1;">A Normal Window</span></h2>
+<p>If you open an app in Olly and do a search for All intermodular calls
+ and see “RegisterClass” or “RegisterClassEx” (providing the app is not 
+packed), then you can assume that this is a probably normal window 
+(meaning not a dialog box). I have included the file “Guru.exe” in this 
+download that uses this type of window. It basically just creates a 
+window and displays a helpful message in it:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/120.png"><img class="aligncenter  wp-image-1177" title="Running the app" src="1172_fichiers/120.png" alt="" height="140" width="560"></a> </p><p></p>
+<p style="text-align: left;">Loading the app in Olly and doing a search for intermodular calls gives us the following:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/220.png"><img class="aligncenter size-full wp-image-1178" title="Find RegisterClassEx" src="1172_fichiers/220.png" alt="" height="332" width="558"></a> </p><p></p>
+<p style="text-align: left;">Notice that there is a RegisterClassExA. That’s what we want. Double click:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/316.png"><img class="aligncenter size-full wp-image-1179" title="Go to RegisterClassEx" src="1172_fichiers/316.png" alt="" height="265" width="771"></a> </p><p></p>
+<p style="text-align: left;">And here we see the call to 
+RegisteClassExA. Notice right before the call is a PUSH EAX. Getting 
+help on RegisterClasExA will help with that:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/416.png"><img class="aligncenter size-full wp-image-1180" title="Help on RegisterClassEx" src="1172_fichiers/416.png" alt="" height="661" width="566"></a> </p><p></p>
+<p style="text-align: left;">So RegisterClassExA takes one argument- a 
+pointer to a WNDCLASSEX structure. The preceding PUSH EAX was this 
+pointer. Here is what the API has to say about WNDCLASSEX:</p>
+<p style="text-align: left;"><em><strong>typedef struct _WNDCLASSEX {</strong></em><br>
+<em><strong> UINT&nbsp;&nbsp;&nbsp; cbSize;</strong></em><br>
+<em><strong> UINT&nbsp;&nbsp;&nbsp; style;</strong></em><br>
+<em><strong> WNDPROC lpfnWndProc;</strong></em><br>
+<em><strong> int&nbsp;&nbsp;&nbsp;&nbsp; cbClsExtra;</strong></em><br>
+<em><strong> int&nbsp;&nbsp;&nbsp;&nbsp; cbWndExtra;</strong></em><br>
+<em><strong> HANDLE&nbsp; hInstance;</strong></em><br>
+<em><strong> HICON&nbsp;&nbsp; hIcon;</strong></em><br>
+<em><strong> HCURSOR hCursor;</strong></em><br>
+<em><strong> HBRUSH&nbsp; hbrBackground;</strong></em><br>
+<em><strong> LPCTSTR lpszMenuName;</strong></em><br>
+<em><strong> LPCTSTR lpszClassName;</strong></em><br>
+<em><strong> HICON&nbsp;&nbsp; hIconSm;</strong></em><br>
+<em><strong> } WNDCLASSEX;</strong></em></p>
+<p style="text-align: left;">One thing you should know is that if your 
+app calls RegisterClass instead of RegisterClassExA, the WNDCLASS 
+structure will be used instead of the WNDCLASSEX structure. The only 
+difference between the two (that we care about) is the the ExA version 
+starts with a cbSize element, whereas the WNDCLASS does not have this 
+element.</p>
+<p style="text-align: left;">The element of he WNDCLASSEX structure we 
+want is the ‘style’ element, which is the second argument (the first in 
+WNDCLASS). Let’s see this structure for ourselves. Set a BP on the PUSH 
+EAX at address 40109D and re-start the app:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/56.png"><img class="aligncenter size-full wp-image-1181" title="Placing the BP" src="1172_fichiers/56.png" alt="" height="198" width="668"></a> </p><p></p>
+<p style="text-align: left;">We can see that the argument is pWndClassEx
+ and is equal to 0018FF44. We can also look in the status window and see
+ that in fact EAX is equal to this:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/66.png"><img class="aligncenter size-full wp-image-1182" title="Pointer to WndClassEx" src="1172_fichiers/66.png" alt="" height="155" width="168"></a> </p><p></p>
+<p style="text-align: left;">Now, look over at the stack. We can see the start of the WNDCLASSEX structure beginning at stack address 18FF44:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/76.png"><img class="aligncenter size-full wp-image-1183" title="Showing it on the stack" src="1172_fichiers/76.png" alt="" height="199" width="289"></a> </p><p></p>
+<p style="text-align: left;">Here, the first argument is 0×30, which is 
+the cbSize argument. So we know the size of this WNDCLASSEX structure is
+ 0×30 bytes. Now single step over the PUSH EAX statement:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/86.png"><img class="aligncenter size-full wp-image-1184" title="Stepping over" src="1172_fichiers/86.png" alt="" height="110" width="626"></a> </p><p></p>
+<p style="text-align: left;">and notice that this pointer has been pushed on to the stack:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/96.png"><img class="aligncenter size-full wp-image-1185" title="the stack gets updated" src="1172_fichiers/96.png" alt="" height="201" width="341"></a> </p><p></p>
+<p style="text-align: left;">So, here is our first argument (we don’t care about it):</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/106.png"><img class="aligncenter size-full wp-image-1186" title="The first element" src="1172_fichiers/106.png" alt="" height="201" width="310"></a> </p><p></p>
+<p style="text-align: left;">And here is the style argument and the 
+pointer to WndProc. I added the pointer to WndProc because sometimes you
+ want to find where the main WndProc is and this is a good way to do it 
+(though that’s material for another tutorial!).</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/1110.png"><img class="aligncenter size-full wp-image-1187" title="The next two elelments" src="1172_fichiers/1110.png" alt="" height="198" width="287"></a> </p><p></p>
+<p style="text-align: left;">We can see that the style is set to 3. This
+ is the default look of the window and means ‘show me a standard window,
+ with all the standard stuff’. Now what we want to do is change this and
+ add a simple command to it that Windows uses to grey out the close 
+button. The constant is CS_NOCLOSE and it disables the Close command on 
+the System menu. CS_NOCLOSE is equal to 0×200. Generally, when you want 
+to combine attributes you OR them together, so that’s what we need to do
+ here. We need to OR 0×03 with 0×200 which equals 0×203. Right-click on 
+the stack line at address 18FF48 and choose ‘modify’:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/124.png"><img class="aligncenter size-full wp-image-1188" title="Modifying the stack" src="1172_fichiers/124.png" alt="" height="202" width="397"></a> </p><p></p>
+<p style="text-align: left;">Now let’s change this to our new attribute setting:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/135.png"><img class="aligncenter size-full wp-image-1189" title="OR-ing our value" src="1172_fichiers/135.png" alt="" height="192" width="388"></a> </p><p></p>
+<p style="text-align: left;">and click OK. We now have our new setting on the stack:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/144.png"><img class="aligncenter size-full wp-image-1190" title="The result on the stack" src="1172_fichiers/144.png" alt="" height="196" width="294"></a> </p><p></p>
+<p style="text-align: left;">Go ahead and run the app:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/154.png"><img class="aligncenter  wp-image-1191" title="The finished product" src="1172_fichiers/154.png" alt="" height="140" width="560"></a> </p><p></p>
+<p style="text-align: left;">and you will notice that you may no longer 
+close this window. Added to the fact that the window can not be covered 
+by another window, it certainly makes it’s point. Of course, the user 
+can always minimize it, but that icon just sits there… calling 
+out…wanting to be opened…</p>
+<p style="text-align: left;">If we want to patch this binary to always 
+do this, we simply need to find where this style value of 3 is being 
+pushed on to the stack and replace it with a 0×203. Looking up a couple 
+lines we can clearly see the culprit:</p>
+<p style="text-align: left;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/163.png"><img class="aligncenter size-full wp-image-1196" title="The patch" src="1172_fichiers/163.png" alt="" height="266" width="765"></a> </p><p></p>
+<p style="text-align: left;">So patching this line to <strong>MOV [LOCAL.11], 203</strong> will patch the app for good <img src="1172_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> .</p>
+<h2 style="text-align: left;"><span style="color: #0a77e1;">A Dialog Box As Main<br>
+</span></h2>
+<p>Sometimes apps are set up where the main screen is in fact a dialog 
+box. This is helpful in that you can allow Windows to handle a lot of 
+the overhead having to do with buttons, edit boxes etc. Go ahead and 
+load “Helpful.exe” into Olly. Run it and you will see a dialog box:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/125.png"><img class="aligncenter size-full wp-image-1200" title="The dialog as main" src="1172_fichiers/125.png" alt="" height="158" width="426"></a> </p><p></p>
+<p>Notice that clicking the CLOSE button or the ‘X’ on the title bar both close the dialog.</p>
+<p>Doing a search in intermodular calls shows that this app has a 
+RegisterClass (RegisterClassExA), so we know it sets up it’s own window 
+(as opposed to a true dialog opened by another window which will not 
+have a register class, as we will see…):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/223.png"><img class="aligncenter size-full wp-image-1201" title="Intermodular calls" src="1172_fichiers/223.png" alt="" height="278" width="538"></a> </p><p></p>
+<p>We will start the same way we did with the previous example. Go to 
+the RegisterClassExA and place a BP on it and re-start the app:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/317.png"><img class="aligncenter size-full wp-image-1202" title="Placing the BP" src="1172_fichiers/317.png" alt="" height="258" width="701"></a> </p><p></p>
+<p>Now look at the stack window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/417.png"><img class="aligncenter size-full wp-image-1203" title="A different stack" src="1172_fichiers/417.png" alt="" height="200" width="300"></a> </p><p></p>
+<p>Notice that most everything is the same, except this time there is an
+ argument called “DLGCLASS”. This is to tell windows that this dialog 
+should be our main program window and to send messages to it just like a
+ normal window.</p>
+<p>Go ahead and modify the stack and turn the 3 into a 203 so we can grey out the close button:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/57.png"><img class="aligncenter size-full wp-image-1204" title="Modifying the stack" src="1172_fichiers/57.png" alt="" height="190" width="404"></a> </p><p></p>
+<p>You can also patch the instruction at address 401203 to always load in 203 as our value:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/67.png"><img class="aligncenter size-full wp-image-1205" title="Patching the attribute" src="1172_fichiers/67.png" alt="" height="116" width="644"></a> </p><p></p>
+<p>Typically with dialog boxes there is a button that will close the 
+dialog along with the normal ‘X’ on the title bar. Sometimes it’s called
+ ‘OK’ or ‘Cancel’, or in our case it’s called ‘Close’:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/77.png"><img class="aligncenter size-full wp-image-1206" title="The close button" src="1172_fichiers/77.png" alt="" height="158" width="426"></a> </p><p></p>
+<p>What we need to do is get rid of the functionality that allows the 
+dialog to be closed by a button. The easiest way to do this is to find 
+the DestroyWindow call by looking in our intermodular calls again:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/87.png"><img class="aligncenter size-full wp-image-1207" title="Again to the intermodular calls" src="1172_fichiers/87.png" alt="" height="278" width="538"></a> </p><p></p>
+<p>Notice that right before the DestroyWindow call, there is a JNZ instruction that allows the program to skip this call.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/97.png"><img class="aligncenter size-full wp-image-1208" title="Call to DestroyWindow" src="1172_fichiers/97.png" alt="" height="202" width="644"></a> </p><p></p>
+<p>If a button is pressed that sends a quit message, this call will not 
+jump and DestroyWindow will be called. So what we want to do is make it 
+ALWAYS jump so that DestroyWindow is never called:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/107.png"><img class="aligncenter size-full wp-image-1209" title="Make it jump always" src="1172_fichiers/107.png" alt="" height="113" width="624"></a> </p><p></p>
+<p>Here, I just hit the space bar on the line and changed the JNZ to a 
+JMP. Now, any button on the dialog that tries to close the dialog window
+ through a button will fail, as it will always jump over the call to 
+DestroyWindow. Go ahead and try it and you will notice that the close 
+button does nothing and the ‘X’ in the title bar is greyed out <img src="1172_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/1111.png"><img class="aligncenter size-full wp-image-1211" title="Success" src="1172_fichiers/1111.png" alt="" height="158" width="426"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">A Standard Dialog Box</span></h2>
+<p>A standard dialog box is usually called from another window (think of
+ the “Are you sure” dialogs with the OK and CANCEL button). Though this 
+is the norm, they do not always have to be called from another window. 
+The “Helpful2.exe” binary simply opens a dialog with no parent, though 
+the techniques on this dialog will work for dialogs called from another 
+window as well. Go ahead and run the app:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/126.png"><img class="aligncenter size-full wp-image-1215" title="Running the app" src="1172_fichiers/126.png" alt="" height="178" width="426"></a> </p><p></p>
+<p>You will notice that it looks almost the same as the last one, except this time there’s a menu added:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/127.png"><img class="aligncenter size-full wp-image-1221" title="File menu" src="1172_fichiers/127.png" alt="" height="184" width="432"></a> </p><p></p>
+<p>I wanted to add this to show you how to defeat menu items as well. 
+Loading the app in Olly is where you’ll notice the difference though:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/136.png"><img class="aligncenter size-full wp-image-1216" title="Olly looks different" src="1172_fichiers/136.png" alt="" height="480" width="742"></a> </p><p></p>
+<p>There is very little code. Notice that a window is not created like 
+it was in the last two examples. There is no WNDCLASS and no call to 
+RegisterClass. This looks more like the code you would see in a bigger 
+app when the app decides to open a dialog box. Because there is a parent
+ window already created, you do no have to go through the process of 
+creating a whole new one from scratch.</p>
+<p>If you do a search for intemodular calls you will notice that there 
+is no RegisterClass, so changing the WNDCLASS structure to add a NOCLOSE
+ attribute is out of the question:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/145.png"><img class="aligncenter size-full wp-image-1217" title="No registerclass" src="1172_fichiers/145.png" alt="" height="188" width="469"></a> </p><p></p>
+<p>Fortunately, there is a very simple way to stop not only the ‘X’ in 
+the title bar, but also any child that tries to close the window, 
+including buttons and menu items. Even though this binary does not have a
+ RegisterClass, it does have an EndDialog. EndDialog is called whenever 
+the program wants to close a standard dialog window. All we have to do 
+is make sure this method is never called.</p>
+<p>Looking at intermodular calls window, double click on EndDialog:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/155.png"><img class="aligncenter size-full wp-image-1218" title="EndDialog" src="1172_fichiers/155.png" alt="" height="141" width="645"></a> </p><p></p>
+<p>Just like in the last example, there is a JNZ right before the call 
+to EndDialog that, if equal, will allow falling through to the EndDialog
+ call. What we want o do is simply change this JNZ to a JMP like we did 
+in the last example:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/164.png"><img class="aligncenter size-full wp-image-1219" title="Patching the jump" src="1172_fichiers/164.png" alt="" height="217" width="681"></a> </p><p></p>
+<p>Go ahead and run the app and you will notice the dialog cannot be closed.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/173.png"><img class="aligncenter size-full wp-image-1220" title="Final app" src="1172_fichiers/173.png" alt="" height="178" width="426"></a> </p><p></p>
+<p>-Now go out and do some good.</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">5 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-987">
+     <div id="comment-987">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1172_fichiers/1e0a1022bf1e937229864bde798c80ee.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>kongo_86</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-987" title="">July 11th, 2012 on 1:51 pm</a>  </small>
+
+			<p>Hey R4ndom, good stuff with everything you posted!</p>
+<p>Justt two things. I saw this typo: “..The element of he WNDCLASSEX..”</p>
+<p>Also a more technical Question: can you  explain why you chose to OR 
+0×03 and 0×200? I see where the hex numbers come from, i am asking more 
+of why OR and not ADD or AND..</p>
+<p>thanks</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172?replytocom=987#respond" onclick='return addComment.moveForm("comment-987", "987", "respond", "1172")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-995">
+     <div id="comment-995">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1172_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-995" title="">July 11th, 2012 on 3:47 pm</a>  </small>
+
+			<p>Per the Windows API for WndClassEX:<br>
+“Specifies the class style(s). Styles can be combined by using the bitwise OR (|) operator.”</p>
+<p>So I guess it;s just the way Microsoft wanted it, and so it shall be.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172?replytocom=995#respond" onclick='return addComment.moveForm("comment-995", "995", "respond", "1172")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-1186">
+     <div id="comment-1186">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1172_fichiers/55f2f1879ff78c7feb2417921c01efba.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Cracker</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1186" title="">July 15th, 2012 on 7:48 am</a>  </small>
+
+			<p>What if i go to taskbar and rightclick =&gt; Close?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172?replytocom=1186#respond" onclick='return addComment.moveForm("comment-1186", "1186", "respond", "1172")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-1198">
+     <div id="comment-1198">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1172_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1198" title="">July 15th, 2012 on 4:39 pm</a>  </small>
+
+			<p>Good question.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172?replytocom=1198#respond" onclick='return addComment.moveForm("comment-1198", "1198", "respond", "1172")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-74539">
+     <div id="comment-74539">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1172_fichiers/e4414d94111fef7eb1aa1a5a2210a0d8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.b-craft.co.jp/userinfo.php?uid=15134" rel="external nofollow" class="url">How Long Does It Take For Thyromine To Work</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-74539" title="">June 27th, 2013 on 9:46 am</a>  </small>
+
+			<p>Appreciating the commitment you put into your blog and detailed information you provide.<br>
+It’s awesome to come across a blog every once in a while that isn’t the<br>
+same unwanted rehashed material. Fantastic read!<br>
+I’ve bookmarked your site and I’m adding your RSS feeds to my Google account.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172?replytocom=74539#respond" onclick='return addComment.moveForm("comment-74539", "74539", "respond", "1172")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1172#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1172" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1172" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="3edb939e5f" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1172/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1172/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1172" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo3OiIyNCwzMiw1IjtzOjEwOiJjb250ZW50X2lkIjtpOjExNzI7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.2434dfb7771e5045380e8c49019114b2"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1172_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

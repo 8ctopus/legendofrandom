@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/933?replytocom=1368 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:18:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>R4ndom&#8217;s Tutorial #14: NAGS (And I don&#8217;t Mean Your Mother) &laquo;  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1" />
+<meta name="robots" content="follow, all" />
+
+<link rel="shortcut icon" href="../wp-content/themes/jarrah/favicon.ico" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="../feed" />
+<link rel="pingback" href="../xmlrpc.php" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/css/menu.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" href="wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random &raquo; R4ndom&#8217;s Tutorial #14: NAGS (And I don&#8217;t Mean Your Mother) Comments Feed" href="933/feed" />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4511.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/ajax-quick-subscribe/ajax9d52.js?ver=3.5.1'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min9d52.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Ask and You Shall Receive: A New ASCII Plugin' href='1247.html' />
+<link rel='next' title='R4ndom&#8217;s Tutorial #15: Using The Call Stack' href='1093' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='933.html' />
+<link rel='shortlink' href='../indexcf93.html?p=933' />
+<meta name='robots' content='noindex,nofollow' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input type="text" value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput"/>
+    <input type="submit" class="submitbutton" value="" />
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                </ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="archives/933">R4ndom&#8217;s Tutorial #14: NAGS (And I don&#8217;t Mean Your Mother)</a> </h2>
+          	<div class="postmeta">by <a href="archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jul.16, 2012, under <a href="archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>Nags, or nag screens, are generally message boxes that pop up to remind you that your trial is ending, you need to register, a reminder about visiting the website&#8230; basically anything that&#8217;s nagging and not necessary (like most bosses <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> ). Many Freeware programs come free because they&#8217;re full of nags (ads, time-trials, re-directs). Commercial software also includes them often, reminding you &#8220;you have 18 days left to try this product.&#8221; etc. Getting rid of nags is a central theme in reverse engineering, and sometimes provides it&#8217;s own set of challenges. In this tutorial we will be going over two apps that have nags. We will then bypass them so they no longer show, and then patch them so they won&#8217;t ever come back.</p>
+<p>I will also be introducing a new plugin for Olly called IDAFicator. It has many features and settings. you can download the plugin from the<a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline; color: #0a77e1;"> tools</span></a>  page. Because there are so many features, I am also including a tutorial by the author of IDAFicator in the download for this tutorial. I highly recommend watching it as there are a lot of very cool features to this plugin.</p>
+<p>You can download the files and PDF version of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a>  page.</p>
+<p><span id="more-933"></span></p>
+<h2><span style="color: #0a77e1;">The First App</span></h2>
+<p>The first binary we will look at is Nag1.exe. Running the program immediately pops up the nag:</p>
+<p><a href="wp-content/uploads/2012/07/1.png"><img class="aligncenter size-full wp-image-934" title="Nag 1" src="wp-content/uploads/2012/07/1.png" alt="" width="487" height="171" /></a> </p>
+<p>You can obviously tell this was made by a cracker <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Anyway, after clicking OK you get the main screen:</p>
+<p><a href="wp-content/uploads/2012/07/2.png"><img class="aligncenter size-full wp-image-935" title="Main screen" src="wp-content/uploads/2012/07/2.png" alt="" width="310" height="327" /></a> </p>
+<p>Notice it says &#8220;Nag not removed!. I, of course, could not help clicking the &#8220;Hints&#8221; button and was rewarded with some very detailed information:</p>
+<p><a href="wp-content/uploads/2012/07/3.png"><img class="aligncenter size-full wp-image-936" title="Great hint!" src="wp-content/uploads/2012/07/3.png" alt="" width="344" height="336" /></a> </p>
+<p>Gee, thanks. Load the app in Olly and let&#8217;s try old reliable: search for strings:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/07/4.png"><img class="aligncenter  wp-image-940" title="Show Strings" src="wp-content/uploads/2012/07/4.png" alt="" width="654" height="202" /></a> </p>
+<p>and we&#8217;re in luck. You can see the text for the nag screen at address 4010AE. Let&#8217;s dbl-click that and jump to where the nag is created:</p>
+<p><a href="wp-content/uploads/2012/07/5.png"><img class="aligncenter size-full wp-image-937" title="Jump to nag" src="wp-content/uploads/2012/07/5.png" alt="" width="825" height="264" /></a> </p>
+<p>Hmm, an interesting string above it, but let&#8217;s ignore that for now. Let&#8217;s click on the first line of the MessageBoxA code at address 4010A7 to see where it&#8217;s called from:</p>
+<p><a href="wp-content/uploads/2012/07/6.png"><img class="aligncenter size-full wp-image-938" title="Find jump to nag" src="wp-content/uploads/2012/07/6.png" alt="" width="831" height="138" /></a> </p>
+<p>And we can see that it is called from a JE instruction at address 40108B, right after a compare. Well, we certainly recognize this scenario <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> . Let&#8217;s place a BP on that JE instruction:</p>
+<p><a href="wp-content/uploads/2012/07/7.png"><img class="aligncenter size-full wp-image-939" title="The jump to the nag" src="wp-content/uploads/2012/07/7.png" alt="" width="826" height="224" /></a> </p>
+<p>And run the app. We break at our BP and see that we are going to jump to the nag screen instructions, so let&#8217;s make it not jump:</p>
+<p><a href="wp-content/uploads/2012/07/8.png"><img class="aligncenter size-full wp-image-945" title="Set the zero flag" src="wp-content/uploads/2012/07/8.png" alt="" width="70" height="72" /></a> and then run the app:</p>
+<p><a href="wp-content/uploads/2012/07/9.png"><img class="aligncenter size-full wp-image-941" title="Dirty Crack!!!" src="wp-content/uploads/2012/07/9.png" alt="" width="310" height="327" /></a> </p>
+<p>So, that&#8217;s what the &#8220;Dirty Crack&#8221; thing was all about- apparently we didn&#8217;t patch enough. Let&#8217;s restart the app and Olly will pause at our BP. Zero out the zero flag again:</p>
+<p><a href="wp-content/uploads/2012/07/8.png"><img class="aligncenter size-full wp-image-945" title="Set the zero flag" src="wp-content/uploads/2012/07/8.png" alt="" width="70" height="72" /></a> </p>
+<p>and let&#8217;s step twice to the next jump. As you could probably guess by now, this jump SHOULD jump to our good boy, but instead falls through to our bad boy:</p>
+<p><a href="wp-content/uploads/2012/07/10.png"><img class="aligncenter size-full wp-image-942" title="The second jump" src="wp-content/uploads/2012/07/10.png" alt="" width="827" height="230" /></a> </p>
+<p>Let&#8217;s just patch that to always jump:</p>
+<p><a href="wp-content/uploads/2012/07/11.png"><img class="aligncenter size-full wp-image-943" title="The patch" src="wp-content/uploads/2012/07/11.png" alt="" width="701" height="242" /></a> </p>
+<p>and when we run the app we see we were right:</p>
+<p><a href="wp-content/uploads/2012/07/12.png"><img class="aligncenter size-full wp-image-944" title="Success" src="wp-content/uploads/2012/07/12.png" alt="" width="310" height="327" /></a> </p>
+<p>We can obviously patch this program by keeping our current patch and going back to address 40108B (where we originally zeroed out the zero flag) and patch it to never jump. Saving these two patches will work fine. But I also want to show you (as I have mentioned before, and if I haven&#8217;t I should have) that there are ALWAYS other ways to patch an app, usually many. Restart the app and scroll to our BP:</p>
+<p><a href="wp-content/uploads/2012/07/13.png"><img class="aligncenter  wp-image-946" title="Finding the next patch" src="wp-content/uploads/2012/07/13.png" alt="" width="782" height="241" /></a> </p>
+<p>Notice that this collection of instructions is something like this (in a high-level language):</p>
+<p><em><strong>if (contents of 4032B0 == 3)</strong></em><br />
+<em><strong>    jump &#8220;Dirty Crack&#8221;</strong></em><br />
+<em><strong>else if( contents of 4032B0 == 2)</strong></em><br />
+<em><strong>    jump to &#8220;Show Nag Screen</strong></em><br />
+<em><strong>else if (contents of 4032B0 == 1)</strong></em><br />
+<em><strong>    jump to Good Boy Msg</strong></em><br />
+<em><strong>else</strong></em><br />
+<em><strong>    Display &#8220;Dirty Crack&#8221;</strong></em></p>
+<p>We know that since the nag screen is displayed by default, the contents of memory address 4032B0 will always equal 2, as that&#8217;s the jump that is taken. Well, what if we just bypassed this whole if/then clause and immediately jumped to the good boy? So if we replace the very first jump to just jump to the good boy, we would only need one patch. Try it:</p>
+<p><a href="wp-content/uploads/2012/07/14.png"><img class="aligncenter size-full wp-image-947" title="Patching the second patch" src="wp-content/uploads/2012/07/14.png" alt="" width="788" height="358" /></a> </p>
+<p>Now run the app:</p>
+<p><a href="wp-content/uploads/2012/07/15.png"><img class="aligncenter size-full wp-image-948" title="Success2" src="wp-content/uploads/2012/07/15.png" alt="" width="310" height="327" /></a> </p>
+<p>And you can see that it accomplished the same thing. Another, even more elegant solution may be to think, &#8220;If the contents of 4032B0  are always equal to 2, and to hit the good boy message it needs to be 1, why not just place a 1 in this memory location and we&#8217;ll always hit the good boy?&#8221; You should try this. Restart the app, click on the dump window, go to address 4032B0 and binary edit it to be a one. Did it work?</p>
+<p>Another thing to keep in mind is there are always other ways to find the code section we are looking for. For example, if we couldn&#8217;t use strings in this example, we could do a search for Intermodular calls:</p>
+<p><a href="wp-content/uploads/2012/07/16.png"><img class="aligncenter size-full wp-image-949" title="A different way- messageBoxA" src="wp-content/uploads/2012/07/16.png" alt="" width="533" height="277" /></a> </p>
+<p>Notice that there are 4 calls to MessageBoxA. Right click one of them and choose &#8220;Place a breakpoint on every call to MessageBoxA&#8221;. When you run the app, before anything is displayed we stop at the following line of code:</p>
+<p><a href="wp-content/uploads/2012/07/17.png"><img class="aligncenter size-full wp-image-950" title="Leads us there" src="wp-content/uploads/2012/07/17.png" alt="" width="833" height="178" /></a> </p>
+<p>Look familiar? It is the nag messagebox !! So always keep in mind that there are more than one way to accomplish something. Soon, we will also be learning some other techniques that can be used (like windows message handlers) that will give you an even bigger bag of tricks.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The Second App</span></h2>
+<p>Now let&#8217;s take a look at Nag2.exe. It is similar but we will solve it in different ways. When we start the app, we get the expected nag:</p>
+<p><a href="wp-content/uploads/2012/07/182.png"><img class="aligncenter size-full wp-image-998" title="Starting the app" src="wp-content/uploads/2012/07/182.png" alt="" width="454" height="171" /></a> </p>
+<p>and after clicking OK we get the main screen:</p>
+<p><a href="wp-content/uploads/2012/07/191.png"><img class="aligncenter size-full wp-image-999" title="Main screen" src="wp-content/uploads/2012/07/191.png" alt="" width="295" height="192" /></a> </p>
+<p>At this point I closed the app and loaded it into Olly:</p>
+<p>&nbsp;</p>
+<p><a href="wp-content/uploads/2012/07/201.png"><img class="aligncenter size-full wp-image-1000" title="First loaded into Olly" src="wp-content/uploads/2012/07/201.png" alt="" width="717" height="234" /></a> </p>
+<p>First things first, let&#8217;s see if there are any strings. One thing I wanted to point out here is the plugin IDAFicator. Among many additions, it provides a group of buttons along the top that making searching for strings a lot easier. When clicking the strings button (Str), it shows both ASCII and Unicode and also brings the cursor up to the top automatically so you don&#8217;t have to scroll to the top your self. Here&#8217;s what the buttons look like:</p>
+<p><a href="wp-content/uploads/2012/07/112.png"><img class="aligncenter size-full wp-image-1053" title="IDAFicator buttons" src="wp-content/uploads/2012/07/112.png" alt="" width="457" height="101" /></a> </p>
+<p>The first button (the left and right arrow) take you forward and back. For example, if you click on a call, then press enter to go to that call, clicking the first icon will take you back to the call instruction. Right-clicking takes you forward. The second button will attempt to find the beginning of the current function, while right-clicking will attempt to find the end. The next is the strings button. Next is the Hardware BreakPoints button. It brings up a nice dialog that shows you all of your hardware breakpoints. Very handy. The target icon opens the folder where your app resides and the list icon brings up a dialog to enter multiple lines of assembly code, used for if you are changing a substantial part of the exe.</p>
+<p>You will also notice a new menu item called &#8220;Breakpoint-&gt;&#8221; that opens a drop down of many used API calls so you can set breakpoints on them automatically:</p>
+<p><a href="wp-content/uploads/2012/07/213.png"><img class="aligncenter size-full wp-image-1055" title="IDAFicator's drop down" src="wp-content/uploads/2012/07/213.png" alt="" width="573" height="329" /></a> </p>
+<p>Lastly, there is a context menu item added that allows you to restore hidden bytes, which we will get to in a future tutorial.</p>
+<p>So go ahead and click in the strings button (&#8220;Str&#8221;) on the new button bar:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/07/212.png"><img class="aligncenter  wp-image-1001" title="Searching for strings" src="wp-content/uploads/2012/07/212.png" alt="" width="717" height="255" /></a> </p>
+<p>and on the seventh line down we see our nag&#8217;s text, so let&#8217;s double-click:</p>
+<p><a href="wp-content/uploads/2012/07/221.png"><img class="aligncenter size-full wp-image-1002" title="Jumping to the nag" src="wp-content/uploads/2012/07/221.png" alt="" width="769" height="166" /></a> </p>
+<p>To see the nag&#8217;s method. It is a self contained method (there is a RETN above and below it) so we know it is called from somewhere. Click on the first line of it at address 401074 to see where it&#8217;s called from:</p>
+<p><a href="wp-content/uploads/2012/07/231.png"><img class="aligncenter size-full wp-image-1003" title="Finding what jumps to it" src="wp-content/uploads/2012/07/231.png" alt="" width="773" height="384" /></a> </p>
+<p>and we can see it&#8217;s called from 401012, a JE instruction. Let&#8217;s put a breakpoint on this and run the app:</p>
+<p><a href="wp-content/uploads/2012/07/241.png"><img class="aligncenter size-full wp-image-1004" title="Placing the BP" src="wp-content/uploads/2012/07/241.png" alt="" width="770" height="112" /></a> </p>
+<p>and we break on that JE instruction. Notice that it is not calling our nag screen. The reason for this is we happen to be in the middle of Window&#8217;s message handler. I will be going into depth on message handlers in another tutorial, but for now just know that all GUI windows programs have a message handler and Windows sends various message through it. Depending on which message comes thru (and whether we wish to do anything out of the ordinary when a certain action is achieved) we can add our own code to override Window&#8217;s normal routines. For example, when we click the &#8216;X&#8217; to close a window, Windows will send a message through the message handler that says &#8220;hey, the user wants to close the window.&#8221; We can either let the message go through, in which case Windows will handle it and close the window, or we can &#8216;trap&#8217; this message and do what we want (maybe pop up a dialog that says &#8220;You have not saved, are you sure you want to quit?&#8221;.</p>
+<p>Our breakpoint happens to be right in the middle of this, so the first message that has come through does not match the message that this app expects to override in order to show the nag:</p>
+<p><a href="wp-content/uploads/2012/07/251.png"><img class="aligncenter size-full wp-image-1005" title="No jump" src="wp-content/uploads/2012/07/251.png" alt="" width="708" height="182" /></a> </p>
+<p>Go ahead and hit F9 to run the app and we will stop at the same BP, but this time, the jump will be taken, showing our nag. Let&#8217;s tell Olly to not show the nag:</p>
+<p><a href="wp-content/uploads/2012/07/271.png"><img class="aligncenter size-full wp-image-1006" title="This time we jump" src="wp-content/uploads/2012/07/271.png" alt="" width="76" height="77" /></a> </p>
+<p>Now, if we leave this breakpoint, 34 more messages will be sent through this message handler. You can either keep the BP in place and click run 34 times (in which case, at some point you will see the window appear, the buttons being drawn etc) or you can remove the BP and just hit run once. In this case, the call is not made to the nag again so removing the BP and running it is fine:</p>
+<p><a href="wp-content/uploads/2012/07/28.png"><img class="aligncenter size-full wp-image-1007" title="Running through all the messages" src="wp-content/uploads/2012/07/28.png" alt="" width="705" height="228" /></a> </p>
+<p>We then have our main screen:</p>
+<p><a href="wp-content/uploads/2012/07/29.png"><img class="aligncenter size-full wp-image-1008" title="And the main screen" src="wp-content/uploads/2012/07/29.png" alt="" width="295" height="192" /></a> </p>
+<p>Notice that the initial nag is now gone.</p>
+<h2><span style="color: #0a77e1;">Patching the App</span></h2>
+<p>Normally what we would do is patch the JE instruction that jumps to the nag with a NOP so that it never jumps, but I wanted to show you another way this patch can be accomplished. We know that when the correct message comes through the message handler (in this case the second message) our nag code will be called. Well, what if we allowed the jump to the nag, but changed the nag to just jump right back again?</p>
+<p><a href="wp-content/uploads/2012/07/301.png"><img class="aligncenter size-full wp-image-1009" title="Making the patch" src="wp-content/uploads/2012/07/301.png" alt="" width="784" height="394" /></a> </p>
+<p>Here, the jump will be made to the nag instructions at 401074, but then we will immediately jump back to the line after the initial jump (401014). Basically, our program will jump, then jump right back to the next line:</p>
+<p><a href="wp-content/uploads/2012/07/312.png"><img class="aligncenter size-full wp-image-1010" title="The new jump" src="wp-content/uploads/2012/07/312.png" alt="" width="664" height="333" /></a> </p>
+<p>There is really no difference between NOPing the JE instruction at 401012 or adding a jump back at 401074, but I wanted you to start noticing that there are always multiple ways to patch- sometimes NOPing a call is not the best way. Remember, you OWN this binary- you can add whatever code you want, so don&#8217;t be afraid to modify it, especially when learning.</p>
+<p>Running the app shows that the nag has been bypassed just the same:</p>
+<p><a href="wp-content/uploads/2012/07/321.png"><img class="aligncenter size-full wp-image-1011" title="Success" src="wp-content/uploads/2012/07/321.png" alt="" width="295" height="192" /></a> </p>
+<p>Now let&#8217;s save the patch. Highlight the changed code (it&#8217;s OK if you highlight more), and select &#8220;Copy to executable&#8221; -&gt; &#8220;Selection&#8221;:</p>
+<p><a href="wp-content/uploads/2012/07/32b.png"><img class="aligncenter size-full wp-image-1012" title="Copying to exe" src="wp-content/uploads/2012/07/32b.png" alt="" width="728" height="480" /></a> </p>
+<p>Then right click in this new window and select &#8220;Save file&#8221;:</p>
+<p><a href="wp-content/uploads/2012/07/32c.png"><img class="aligncenter size-full wp-image-1013" title="Saving to file" src="wp-content/uploads/2012/07/32c.png" alt="" width="764" height="324" /></a> </p>
+<p>I saved it as a different name, in this case Nag2_partial.exe. You&#8217;ll see why I called it partial in a minute:</p>
+<p><a href="wp-content/uploads/2012/07/32d.png"><img class="aligncenter size-full wp-image-1014" title="Saving it as a different name" src="wp-content/uploads/2012/07/32d.png" alt="" width="519" height="373" /></a> </p>
+<p>OK. Go ahead and load this new patched program in Olly and let&#8217;s try it out. We jump right to the main screen, so we know the patch worked. Now click exit and we get:</p>
+<p><a href="wp-content/uploads/2012/07/33.png"><img class="aligncenter size-full wp-image-1015" title="Uh oh" src="wp-content/uploads/2012/07/33.png" alt="" width="266" height="171" /></a> </p>
+<p>Uh oh. I guess the author was really determined here. Let&#8217;s go find this second nag. Go back to strings and we can see that this nag&#8217;s text is in there as well:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/07/35.png"><img class="aligncenter  wp-image-1016" title="Searching for second nag" src="wp-content/uploads/2012/07/35.png" alt="" width="819" height="292" /></a> </p>
+<p>Many, many, many apps do this; they start with a nag, and after closing the app, they add another one. Most of the time, when searching for the first nag&#8217;s text string, you will just automatically look for any others. Dbl-click on this text:</p>
+<p><a href="wp-content/uploads/2012/07/36.png"><img class="aligncenter size-full wp-image-1017" title="The second nag" src="wp-content/uploads/2012/07/36.png" alt="" width="766" height="233" /></a> </p>
+<p>and here we see the method for this nag. Clicking on the first line of it we can see that the second nag is being called right after the first nag was called, but it uses a different message to trigger it (probably a window destroy message). So when this message comes through, signaling that the user has selected &#8220;Exit&#8221;, the second nag will be called.</p>
+<p>Your first thought may be &#8220;why don&#8217;t we just put another jump in this one to jump right back like we did in the last one. Well, looking closely at this method, we can see that it calls the second nag, but then it immediately calls EndDialog. So jumping right back will not work as our dialog will never close:</p>
+<p><a href="wp-content/uploads/2012/07/37.png"><img class="aligncenter size-full wp-image-1018" title="Can't jump back" src="wp-content/uploads/2012/07/37.png" alt="" width="770" height="296" /></a> </p>
+<p>So you next thought might be, &#8220;let&#8217;s just change the JE instruction at 401026 to jump to the EndDialog, jumping right over the nag MessageBoxA instruction.&#8221; This is a good thought, so let&#8217;s try it:</p>
+<p><a href="wp-content/uploads/2012/07/38.png"><img class="aligncenter size-full wp-image-1019" title="Jump to close dialog" src="wp-content/uploads/2012/07/38.png" alt="" width="770" height="295" /></a> </p>
+<p>Change the JE instrution at 401026 to jump to 401062 instead, jumping to the first line of EndDialog:</p>
+<p><a href="wp-content/uploads/2012/07/39.png"><img class="aligncenter size-full wp-image-1020" title="The patch" src="wp-content/uploads/2012/07/39.png" alt="" width="767" height="311" /></a> </p>
+<p>and run the app:</p>
+<p><a href="wp-content/uploads/2012/07/40.png"><img class="aligncenter size-full wp-image-1021" title="well that didn't work" src="wp-content/uploads/2012/07/40.png" alt="" width="366" height="180" /></a> </p>
+<p>Well, that doesn&#8217;t look too promising. So we obviously did something wrong. Here&#8217;s what we&#8217;re going to do; let&#8217;s run the app without our patch, stepping through it, and see what it does, then run it with the patch and see how they are different. Re-start the app and click &#8220;Exit&#8221; and we will break at our patch (which is gone now that we re-started the app):</p>
+<p><a href="wp-content/uploads/2012/07/411.png"><img class="aligncenter size-full wp-image-1022" title="Go back to the patch" src="wp-content/uploads/2012/07/411.png" alt="" width="762" height="245" /></a> </p>
+<p>Step a couple lines and when you step over the call to MessageBoxA you will see the nag:</p>
+<p><a href="wp-content/uploads/2012/07/42.png"><img class="aligncenter size-full wp-image-1023" title="Run it through normally" src="wp-content/uploads/2012/07/42.png" alt="" width="266" height="171" /></a> </p>
+<p>Now step two more times until we are on our call to EndDialog:</p>
+<p><a href="wp-content/uploads/2012/07/43.png"><img class="aligncenter size-full wp-image-1024" title="Stop at end dialog" src="wp-content/uploads/2012/07/43.png" alt="" width="772" height="142" /></a> </p>
+<p>and let&#8217;s look at the stack. We can see that there are four items on the stack; a handle to our window, the result of the end dialog, a pointer to the first line of our code (401000), and a return address to user32.</p>
+<p><a href="wp-content/uploads/2012/07/44.png"><img class="aligncenter size-full wp-image-1025" title="Look at the stack" src="wp-content/uploads/2012/07/44.png" alt="" width="431" height="208" /></a> </p>
+<p>Now restart the app, and when we get to our patch, activate it (patches window, hit space bar with it selected):</p>
+<p><a href="wp-content/uploads/2012/07/45.png"><img class="aligncenter size-full wp-image-1026" title="Activate the patch" src="wp-content/uploads/2012/07/45.png" alt="" width="768" height="411" /></a> </p>
+<p>Now we will jump over the message box nag call. Step until you get to the EndDialog call:</p>
+<p><a href="wp-content/uploads/2012/07/46.png"><img class="aligncenter size-full wp-image-1027" title="Stop again at end dialog" src="wp-content/uploads/2012/07/46.png" alt="" width="618" height="72" /></a> </p>
+<p>and let&#8217;s look at our stack. We have the handle to the window, the result code, and a return to user32. We are missing the pointer to the first line of our code at 401000!!!</p>
+<p><a href="wp-content/uploads/2012/07/47.png"><img class="aligncenter size-full wp-image-1028" title="compare the stacks" src="wp-content/uploads/2012/07/47.png" alt="" width="435" height="213" /></a> </p>
+<p>If you scroll up and take a look at the call to the second nag, you will notice that before the message box is created, ESI is pushed onto the stack. This is a pointer to our code. It just so happens that this program pushes it before calling message box, though it could have been done after. So we are missing an important push that the app needs in order to run EndDialog properly. The problem is we have some initialization code we want, then a call to a nag we don&#8217;t want, then a call to EndDialog that we do want:</p>
+<p><a href="wp-content/uploads/2012/07/48.png"><img class="aligncenter size-full wp-image-1029" title="The culprit" src="wp-content/uploads/2012/07/48.png" alt="" width="770" height="249" /></a> </p>
+<p>Well, let&#8217;s get rid of the code we don&#8217;t want. Highlight the MessageBoxA instructions (from 40104F to 40105C) and right click. Select &#8220;Binary&#8221; -&gt; &#8220;fill with NOPs&#8221;:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/07/49.png"><img class="aligncenter  wp-image-1030" title="Fill with NOPs" src="wp-content/uploads/2012/07/49.png" alt="" width="641" height="207" /></a> </p>
+<p>And bam! no more call to our nag:</p>
+<p><a href="wp-content/uploads/2012/07/50.png"><img class="aligncenter size-full wp-image-1031" title="NOPs all around" src="wp-content/uploads/2012/07/50.png" alt="" width="767" height="342" /></a> </p>
+<p>Now when you run the app, you will notice that the app closes normally. You can now save this patch and there will be no nags left <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> .</p>
+<p>&nbsp;</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">6 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-1301">
+     <div id="comment-1301">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/00554dd290f9d95df515fdda7cb04859?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Neezy</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1301" title="">July 17th, 2012 on 12:48 am</a>  </small>
+
+			<p>Greetings Random,</p>
+<p>Did you get the email I sent you on Friday with about the binary.  Was just wondering if you received it and what you think about it.</p>
+<p>Thanks</p>
+<p>- Neezy</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=1301#respond' onclick='return addComment.moveForm("comment-1301", "1301", "respond", "933")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-nwokiller odd alt thread-odd thread-alt depth-1" id="li-comment-1309">
+     <div id="comment-1309">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/1cdbe37f816e36761bf61b3287c6d1fa?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>nwokiller</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1309" title="">July 17th, 2012 on 5:28 am</a>  </small>
+
+			<p>Really good, well explained tuts bro. You may inspire a new generation of reversers with tuts like these. Enjoy going through them(even the easy ones) just to see how the mind of another reverser works and learn a few new tricks too. Looking forward to the hard ones : ) Keep up the good work.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=1309#respond' onclick='return addComment.moveForm("comment-1309", "1309", "respond", "933")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-ludkiller even depth-2" id="li-comment-1331">
+     <div id="comment-1331">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='ludkiller' src='wp-content/uploads/2012/06/ludkiller_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://darkl1ght.tk/' rel='external nofollow' class='url'>ludkiller</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1331" title="">July 17th, 2012 on 2:16 pm</a>  </small>
+
+			<p>oh maybe we should make a statue of random the new zeus ;p</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=1331#respond' onclick='return addComment.moveForm("comment-1331", "1331", "respond", "933")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-3" id="li-comment-1368">
+     <div id="comment-1368">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1368" title="">July 18th, 2012 on 2:37 am</a>  </small>
+
+			<p>Guys, let&#8217;s not go overboard. A painting of me on the ceiling of the Sistine Chapel would be more than enough&#8230;</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=1368#respond' onclick='return addComment.moveForm("comment-1368", "1368", "respond", "933")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-19980">
+     <div id="comment-19980">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/3cafcebd9c732297bf2fdfab778ea4ed?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Sr0cR</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-19980" title="">February 18th, 2013 on 2:13 am</a>  </small>
+
+			<p>thanks, this is a good tutorial, make me inspired&#8230;<br />
+see you in next tutor.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=19980#respond' onclick='return addComment.moveForm("comment-19980", "19980", "respond", "933")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-75724">
+     <div id="comment-75724">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/070ffbf4d16a6b64f35499c6a445b488?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Rehan</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-75724" title="">July 6th, 2013 on 5:04 pm</a>  </small>
+
+			<p>You Should Fill 00401012 and 00401026 with NOPs and<br />
+put an instruction JMP SHORT 00401093 at address 00401029 except filling all with NOPs &#8230; <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  (Better One !) <img src='wp-includes/images/smilies/icon_razz.gif' alt=':P' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/933?replytocom=75724#respond' onclick='return addComment.moveForm("comment-75724", "75724", "respond", "933")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="archives/933#respond">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name </small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+ <input type='hidden' name='comment_post_ID' value='933' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='1368' />
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" type="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" />
+<input type="hidden" name="comment_post_ID" value="933" />
+</p>
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="38339e1505" /></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href='archives/933/feed'><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> &#183; <a href="archives/933/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input type="text" name="log" id="log" value="" size="20" />
+<input type="password" name="pwd" id="pwd" size="20" />
+<input type="submit" name="submit" value="Send" class="button" />
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
+       <input type="hidden" name="redirect_to" value="/blog/archives/933?replytocom=1368" />
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To&#8230;">And The Most Posts Submitted In A Single Sitting Goes To&#8230;</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">youbaraj sharma on <a href="archives/7#comment-85460">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments"><a href='http://www.economicscafe.com.sg/' rel='external nofollow' class='url'>jc economics tuition</a>  on <a href="archives/258#comment-85252">Tutorial #4: Using Olly, Part 2</a> </li><li class="recentcomments">Ray on <a href="archives/654#comment-85087">R4ndom&#8217;s Tutorial #9: No Strings Attached</a> </li><li class="recentcomments">equal on <a href="archives/506#comment-84987">Tutorial #8: Frame Of Reference</a> </li><li class="recentcomments">Deeren on <a href="archives/2420#comment-84709">R4ndom’s Guide to RadASM: Installing and Set Up</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+	<li><a href='archives/date/2012/05' title='May 2012'>May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="archives/category/randoms-ramblings" title="View all posts filed under Random&#039;s Ramblings">Random&#039;s Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name='widget_quick_subscribe_form' id='widget_quick_subscribe_form'><input type='email' name='QS_user_email_widget' id='QS_user_email_widget' placeholder='email@email.com' onFocus='fadeSubmitIn("widget_qsSubmit");' onBlur='fadeSubmitOut(this, "widget_qsSubmit");'  onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;'><input style='display:none;' type='button' value='subscribe!' id='widget_qsSubmit' class='widget_qsSubmit' onClick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");'></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2961">And The Most Posts Submitted In A Single Sitting Goes To&#8230; </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href='archives/tag/adding-functionality' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>adding functionality</a> 
+<a href='archives/tag/assembly-language' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>assembly language</a> 
+<a href='archives/tag/binary' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>binary</a> 
+<a href='archives/tag/code-cave' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>code cave</a> 
+<a href='archives/tag/code-caves' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>code caves</a> 
+<a href='archives/tag/cracking' class='tag-link-8' title='5 topics' style='font-size: 16pt;'>cracking</a> 
+<a href='archives/tag/crackme' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>crackme</a> 
+<a href='archives/tag/ebook' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>ebook</a> 
+<a href='archives/tag/exploting-binaries' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>exploting binaries</a> 
+<a href='archives/tag/guide' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Guide</a> 
+<a href='archives/tag/olly' class='tag-link-14' title='2 topics' style='font-size: 11pt;'>Olly</a> 
+<a href='archives/tag/ollydbg' class='tag-link-10' title='4 topics' style='font-size: 14.666666666667pt;'>ollydbg</a> 
+<a href='archives/tag/olly-tutorial' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>olly tutorial</a> 
+<a href='archives/tag/plugins' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>plugins</a> 
+<a href='archives/tag/reverse-engineering-2' class='tag-link-7' title='3 topics' style='font-size: 13pt;'>reverse engineering</a> 
+<a href='archives/tag/sandbox' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>sandbox</a> 
+<a href='archives/tag/tools' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>Tools</a> 
+<a href='archives/tag/tutorial' class='tag-link-16' title='2 topics' style='font-size: 11pt;'>tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright &copy; 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6OTMzO3M6NjoiYXV0aG9yIjtzOjY6IlJhbmRvbSI7fQ==.97ed88a9e336b1b5a3be02e463b159c0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
+
+</body>
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/933?replytocom=1368 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:18:29 GMT -->
+</html>

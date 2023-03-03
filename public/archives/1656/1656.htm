@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DLL Injection – A Simple Message Box «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1656_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1656_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » DLL Injection – A Simple Message Box Comments Feed" href="http://thelegendofrandom.com/blog/archives/1656/feed">
+<script type="text/javascript" src="1656_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1656_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1656_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Using Resource Hacker to Change Windows’ Behaviour" href="http://thelegendofrandom.com/blog/archives/1697">
+<link rel="next" title="100th Member in the Forum!!!" href="http://thelegendofrandom.com/blog/archives/1714">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1656">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1656">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1656_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1656_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1656_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1656_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1656">DLL Injection – A Simple Message Box</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Aug.13, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts in Intermediate" rel="category tag">Intermediate</a> , <a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts in Modifying Binaries" rel="category tag">Modifying Binaries</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Requirements<br>
+</span></h2>
+<p>In this tutorial, we will go over adding a message box using DLL 
+injection. This is meant to be a gentle introduction to the subject and 
+not a detailed analysis (which will be in later tutorials).</p>
+<p>For this tutorial, you will need OllyDBG v.1.10, IIDKing, and MASM. 
+IIDKing is included in the download of this tutorial, available on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a> </p> page.<p></p>
+<p>You may also want to use an IDE for the assembly- I am using RadASM which you can get <a title="RadASM" href="http://www.oby.ro/rad_asm/"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">here</span></span></a> </p>.
+ You can also download MASM on the RadASM site. You may also want my 
+version of OllyDBG if you want the tutorial to match your version. You 
+can get that on the <a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tools</span></span></a>  page.<p></p>
+<p>Lastly, because of the nature of DLL injection, your virus scanner 
+may give a false positive on the downloaded files, or files you create 
+during this tutorial. Because many viruses use the technique in this 
+tutorial, the false positive is to be expected. If you downloaded the 
+tutorials directly from my site, you have nothing to worry about as all 
+files have been scanned (many times). If, however, you do not download 
+from my site, you may run the suspicious file through 
+www.VirsuTotal.com. The benefit of this site is that it runs the file 
+through the top 42 virus scanners, instead of just one. It is a good way
+ of detecting false positives. Generally, if VirusTotal shows less than 
+3-4 positives, I consider it safe. Any more than that and I run it in a 
+virtual machine, as the file may be infected.</p>
+<p><span id="more-1656"></span></p>
+<h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>If you have read my other tutorials on modifying binaries, you know 
+that you can add functionality to an executable by modifying the code 
+directly, using code caves. This method is perfectly legitimate, if not a
+ little time consuming. There is an alternative to this method, however,
+ in that your added functionality code can be put into a separate file, a
+ DLL file, and this code can be called when the target app is loaded. 
+This saves the trouble of finding a code cave, worrying about offsets 
+etc. Though DLL injection also has it’s limitations (especially when 
+using resources).</p>
+<p>In this tutorial we will be adding a Message Box to a freeware 
+program called “ColorPicker”. It is a very simple freeware program that 
+simply allows you to select a pixel anywhere on the screen and it will 
+show the color values of that pixel. Using a simple program like this 
+helps us not get bogged down in other details.</p>
+<p>Running the app, we see the main screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/116.png"><img class="aligncenter size-full wp-image-1658" title="Running the target" src="1656_fichiers/116.png" alt="" height="136" width="357"></a> </p><p></p>
+<p>What we want to do is add a nag message box before the main screen is displayed. In this case we will use DLL injection.</p>
+<h2><span style="color: #0a77e1;">DLLs</span></h2>
+<p>A DLL file is a collection of functions that, theoretically anyway, 
+many applications need. Instead of having the same function in every 
+application, each application that needs a specific function can call 
+the required function inside of a DLL file, so that there only has to be
+ one DLL file that every app uses. This cuts down on code and memory 
+use.</p>
+<p>The name, Dynamic Link Library gives some of this away. It is a 
+‘library’, a collection of functions that multiple apps use. These 
+functions, available in the DLL, are ‘linked’ in with the application 
+that needs them. This is done ‘dynamically’ when the app is first loaded
+ into memory. Perhaps a picture will help:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/Graph1.png"><img class="aligncenter size-full wp-image-1668" title="Graph1" src="1656_fichiers/Graph1.png" alt="" height="778" width="475"></a> </p><p></p>
+<p>When a normal file is loaded, any DLL files that the application 
+needs are loaded into the address space of that application, so that the
+ app can make calls to APIs inside that DLL. If another Windows program 
+is started that also needs a function from the same DLL, the DLL is also
+ copied into the address space of this new app. For example, 
+Kernel32.dll is loaded with (just about) every application in Windows. 
+Kernel32.dll offers several methods that an application can call, for 
+example ExitProcess that closes a window. Any application that needs to 
+be able to close itself will have Kernel32.dll loaded into its address 
+space, and will have the ExitProcess function available to call.</p>
+<p>You may say to yourself, “If a DLL is loaded into every program’s 
+memory space that needs it, it doesn’t really cut down on memory as 
+every program has a copy of it, so they are not sharing.” well, Windows 
+has a special way of dealing with DLLs that even though the applications
+ think that they each have a copy of the DLL all to themselves, they all
+ really share the same code. Windows just makes it seem like they all 
+have a copy.</p>
+<p>If you load up the target into Olly and look in the memory window, 
+you will see all of the DLLs loaded into the applications memory space:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/29.png"><img class="aligncenter size-full wp-image-1659" title="DLLs loaded into memory" src="1656_fichiers/29.png" alt="" height="739" width="608"></a> </p><p></p>
+<p>We can see that this application uses several DLLs, with names like Guard32.dll, Oledlg.dll, and Olepro32.dll.</p>
+<p>If you then do a search for all intermodular calls, you will see all 
+of the functions available from each of the DLLs available to this 
+application:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/39.png"><img class="aligncenter size-full wp-image-1660" title="All intermodular calls" src="1656_fichiers/39.png" alt="" height="522" width="498"></a> </p><p></p>
+<p>A DLL file is very similar to a normal executable file except all (or
+ most) of it’s functions are set up to be used by other applications 
+instead of itself. When you create a DLL, you set up a certain file, 
+called a DEF file (for ‘definition’), that lists all of the function 
+names that will be available for other applications to use. When you 
+then assemble and link this DLL, the compiler makes a table that can be 
+used, with all of the names and associated addresses of all of the 
+functions. This is how the application finds these functions (well, not 
+exactly, but close enough).</p>
+<p>Just like a ‘normal’ .exe file, a DLL has a “main” function, called 
+DllEntry, that is executed when the DLL is loaded into any program’s 
+address space. The difference between a DLL and a normal binary is that 
+the main function of a DLL is called whenever the DLL is loaded into ANY
+ applications memory space- you do not need to actually run the DLL. 
+This allows the DLL to set up any housekeeping it needs before making 
+itself available to the application. This is where DLL injection come 
+is.</p>
+<h2><span style="color: #0a77e1;">DLL Injection</span></h2>
+<p>DLL Injection is a way of injecting our own DLLs into an executable 
+that wasn’t initially set up to use it. You first create your own DLL, 
+and then you add it to an application. You can do this programatically, 
+though we won’t do so in this tutorial, as that is quite detailed. Here,
+ we will use a program called IIDKing by Santmat. What it does is loads 
+the target application and injects our DLL into it, saving the modified 
+target after. When the target app loads, before any code of the 
+application is run, the Windows loader will load our DLL along with any 
+others the application needs. Anything we put inside the DLL main 
+function will be run automatically (as long as we tell the compiler that
+ is should be run automatically-see below). We can also modify the 
+application to call our DLL whenever we want. Therefore, our DLL is 
+injected into another binary.</p>
+<p>DLL Injection can be used for a lot of things; patching a binary, cracking an application, keygenning, unpacking, virus writing.</p>
+<p>Writing a DLL is not that hard. In fact, it is very much like writing
+ a normal .exe file. Really, the only difference is how you compile it. 
+In this tutorial, we will add a message box when the application is 
+first started.</p>
+<p>Let’s get started creating a DLL. Start up RadASM:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/117.png"><img class="aligncenter size-full wp-image-1676" title="Starting RadASM" src="1656_fichiers/117.png" alt="" height="560" width="669"></a> </p><p></p>
+<p>If you haven’t loaded MASM as a language yet, do so by selecting 
+Options -&gt; Programming Languages. Select the three dots (“…”) to add a
+ language and choose the masm.ini file:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/210.png"><img class="aligncenter size-full wp-image-1677" title="Select language" src="1656_fichiers/210.png" alt="" height="275" width="257"></a> </p><p></p>
+<p>Now, create a new project by selecting File -&gt; New Project. Make 
+sure MASM is selected in the Assembler drop down, and choose “Dll 
+Project”. Type in a name for your project and click next:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/118.png"><img class="aligncenter size-full wp-image-1686" title="Creating a project" src="1656_fichiers/118.png" alt="" height="431" width="535"></a> </p><p></p>
+<p>Select “None” for the template and click Next. Make sure “Def” is selected, along with “Asm”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/211.png"><img class="aligncenter size-full wp-image-1687" title="Select options" src="1656_fichiers/211.png" alt="" height="431" width="535"></a> </p><p></p>
+<p>Click Next. Leave all the options the same in the “Make” window and click Finish. You should now have a blank project:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/311.png"><img class="aligncenter size-full wp-image-1688" title="Blank project" src="1656_fichiers/311.png" alt="" height="666" width="798"></a> </p><p></p>
+<p>Now open the MsgBox.asm file by double-clicking it in the project 
+tree. Right now, there is nothing there, so you will get a blank screen.
+ Now, let’s add the DLL code in:</p>
+<p><em>***The code is also included in the download of this tutorial***</em></p>
+<p>We’ll go over this code piece by piece. First we declare some 
+housekeeping stuff, telling the compiler which CPU we’re running on and 
+what kind of calling conventions to use:</p>
+<p><span style="color: #fc7a02;">.386</span><br>
+<span style="color: #fc7a02;">.model flat,stdcall</span><br>
+<span style="color: #fc7a02;">option casemap:none</span></p>
+<p>Next, we define any files that this DLL needs, namely some Windows 
+files that contain the code for the MessageBox and other 
+behind-the-scene functions:</p>
+<p><span style="color: #fc7a02;">include \masm32\include\windows.inc</span><br>
+<span style="color: #fc7a02;">include \masm32\include\user32.inc</span><br>
+<span style="color: #fc7a02;">include \masm32\include\kernel32.inc</span><br>
+<span style="color: #fc7a02;">includelib \masm32\lib\user32.lib</span><br>
+<span style="color: #fc7a02;">includelib \masm32\lib\kernel32.lib</span></p>
+<p>Now we declare some strings that we will use, namely the title of the opening nag and the message of the opening nag:</p>
+<p><span style="color: #fc7a02;">.data</span><br>
+<span style="color: #fc7a02;">AppName1 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;db “Windows format!”,0</span><br>
+<span style="color: #fc7a02;">LoadMsg &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;db “Click OK to format your hard drive…”,0</span></p>
+<p>Finally, we define the code for the DllEntry function. First is the actual definition:</p>
+<p><span style="color: #fc7a02;">.code<br>
+DllEntry proc hInstance:HINSTANCE, reason:DWORD, reserved1:DWORD</span></p>
+<p>Next we have an IF statement for when we load the DLL. anything we 
+put under the “reason==DLL_PROCESS_ATTACH” statement will be run when 
+the application laods in the DLL In this case we just bring up a dialog 
+box:</p>
+<p><span style="color: #fc7a02;">.if reason==DLL_PROCESS_ATTACH<br>
+invoke MessageBox,NULL,addr LoadMsg,addr AppName1,MB_OK<br>
+.endif<br>
+</span></p>
+<p>At the end, we return a true in the EAX register. This is a normal way for a DLL to return:</p>
+<p><span style="color: #fc7a02;">mov&nbsp; eax,TRUE</span><br>
+<span style="color: #fc7a02;">ret</span></p>
+<p>And finally, we end the procedure definition:</p>
+<p><span style="color: #fc7a02;">DllEntry Endp</span><br>
+<span style="color: #fc7a02;">End DllEntry</span></p>
+<p>The last thing we need to do is create an actual function that could 
+theoretically be called. I say ‘theoretically’ because in our case it 
+will not be called. The reason we’re creating it is you need at least 
+one callable function in the DLL in order to inject it. So we will 
+create a dummy function. Insert it between the last two lines, (the 
+“DLLEntry endp” and “End DllEntry” lines):</p>
+<p><span style="color: #fc7a02;">TestProc proc</span><br>
+<span style="color: #fc7a02;">&nbsp;&nbsp; &nbsp;invoke MessageBox,NULL,addr LoadMsg,addr AppName1,MB_OK</span><br>
+<span style="color: #fc7a02;">&nbsp;&nbsp; &nbsp;ret&nbsp;&nbsp; &nbsp;</span><br>
+<span style="color: #fc7a02;">TestProc endp</span></p>
+<p>This just invokes another message box, but we’ll never see it as it’s never called.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/120.png"><img class="aligncenter size-full wp-image-1702" title="Dll in RadASM" src="1656_fichiers/120.png" alt="" height="620" width="574"></a> </p><p></p>
+<p>Now let’s create the DEF file. Right click in the project window tree
+ and choose “Add New” -&gt; “File”. Save the file as ‘MsgBox.Def’. Now 
+let’s put in our definition:</p>
+<p><span style="color: #fc7a02;">LIBRARY MsgBox<br>
+EXPORTS TestProc<br>
+</span></p>
+<p>This tells the compiler that the name of our library will be “MsgBox”
+ and the function that can be called in it is called “TestProc”. That’s 
+it. Now this DLL will make the TestProc function available to all 
+applications that use this DLL:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/214.png"><img class="aligncenter size-full wp-image-1704" title="DEF file" src="1656_fichiers/214.png" alt="" height="146" width="223"></a> </p><p></p>
+<p>It’s time to compile our DLL. Hit F5 to assemble the project, 
+creating the .obj file. If there are any errors, they will appear at the
+ bottom of the screen. Otherwise it will say the build was made. Now 
+link it by selecting “Make” -&gt; “link”. If everything ran as expected,
+ there will be a message saying the make was done. You will also have a 
+DLL file in the project folder:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/58.png"><img class="aligncenter size-full wp-image-1691" title="Project folder" src="1656_fichiers/58.png" alt="" height="413" width="255"></a> </p><p></p>
+<p>We now have a legitimate DLL file <img src="1656_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  .</p>
+<h2><span style="color: #0a77e1;">Injecting Our DLL File</span></h2>
+<p>Now that we have our DLL, we will inject it into our target. Start up
+ IIDKing. Click the “Pick a file” button and select the target, in this 
+case the ColorPicker.exe file:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/67.png"><img class="aligncenter size-full wp-image-1692" title="Load the target" src="1656_fichiers/67.png" alt="" height="360" width="522"></a> </p><p></p>
+<p>Now we need to select our DLL. Click on the “Click to pick DLL” 
+button and select our DLL file. That will bring up the API selection 
+box:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/313.png"><img class="aligncenter size-full wp-image-1705" title="API Selection box" src="1656_fichiers/313.png" alt="" height="353" width="410"></a> </p><p></p>
+<p>Select our TestProc function and click the “Add them!” button. Then, 
+on the main IIDKing screen, click “Add them!”. You will get a message 
+saying it was successfully added to the target:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/212.png"><img class="aligncenter size-full wp-image-1694" title="Successfully added" src="1656_fichiers/212.png" alt="" height="214" width="496"></a> </p><p></p>
+<p>Now for the coup d’grace…Start the target. You will see our first message box appear:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/312.png"><img class="aligncenter size-full wp-image-1695" title="First message box" src="1656_fichiers/312.png" alt="" height="154" width="256"></a> </p><p></p>
+<p>Clicking OK will bring up the main application’s window.</p>
+<p>You have now injected a DLL into an executable…</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+<p>[=-Docendo discimus-=]</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">8 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-2805">
+     <div id="comment-2805">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>RageMachine</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2805" title="">August 14th, 2012 on 5:28 pm</a>  </small>
+
+			<p>Very interesting, I have a question (as usual). For the code here:<br>
+reason==DLL_PROCESS_ATTACH</p>
+<p>Would there be a way to make this reason be the event within the 
+‘host’ program. For instance, if the program does some action such as 
+make a popup, could we set the “reason” to be the popup action – and 
+then set the code to simply close the window or suppress it?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=2805#respond" onclick='return addComment.moveForm("comment-2805", "2805", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-2813">
+     <div id="comment-2813">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1656_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2813" title="">August 14th, 2012 on 6:45 pm</a>  </small>
+
+			<p>No. In this case you would simply make a function in the DLL that 
+would be called (like replacing the TestProc code with your own) and 
+then in the target app you would simply call this function. For example,
+ if you wanted the message box to pop up when a mouse click occurs, you 
+would trap the message handler for the mouse, and then call TestProc 
+when this happened.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=2813#respond" onclick='return addComment.moveForm("comment-2813", "2813", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-2965">
+     <div id="comment-2965">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/439854593281a62218bbc0644a2ba22b.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>puddleofmudd</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2965" title="">August 17th, 2012 on 1:10 pm</a>  </small>
+
+			<p>Very concise and helpful. Thanks for taking the time.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=2965#respond" onclick='return addComment.moveForm("comment-2965", "2965", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3536">
+     <div id="comment-3536">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/3da0d72fbbcd5a5af817b1fca846c646.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>drdoom121</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3536" title="">August 29th, 2012 on 8:03 am</a>  </small>
+
+			<p>Nice Tutorial!<br>
+I was wondering how can i manually modify the colorpicker program instead of using IIDKing??to get better insight.</p>
+<p>How can i use WindowsHook and CreateRemoteThread to inject dll</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=3536#respond" onclick='return addComment.moveForm("comment-3536", "3536", "respond", "1656")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-3549">
+     <div id="comment-3549">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1656_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3549" title="">August 29th, 2012 on 2:31 pm</a>  </small>
+
+			<p>That will be covered in one of the next tutorials</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=3549#respond" onclick='return addComment.moveForm("comment-3549", "3549", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-5031">
+     <div id="comment-5031">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/45fbe65d6f93f6805cd4e60d16f3540c.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>alfarizy</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-5031" title="">October 6th, 2012 on 2:18 pm</a>  </small>
+
+			<p>hello random</p>
+<p>how to by pass dll files if the dll language not in english</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=5031#respond" onclick='return addComment.moveForm("comment-5031", "5031", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-12881">
+     <div id="comment-12881">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/ab483cb566d854867fc782fd7b52091b.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.thepaydayloanhouse.com/" rel="external nofollow" class="url">pay day online</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-12881" title="">January 19th, 2013 on 12:57 am</a>  </small>
+
+			<p>You must be having or clothing, you power find yourself needing some supplies in command to meet your customers<br>
+of necessity.  It is so simple to get Instant Payday elaborated web of loan borrowing,<br>
+so you can find. This way, they are sure that they will get their day, online, you need to know approximately day<br>
+loans or comparability day loans, this nonfiction can demonstrate utile.</p>
+<p>Look into my web blog; <a href="http://www.thepaydayloanhouse.com/" rel="nofollow">pay day online</a> </p><p></p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=12881#respond" onclick='return addComment.moveForm("comment-12881", "12881", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-49919">
+     <div id="comment-49919">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1656_fichiers/68024cc5bcabba2e06b39b76b060d859.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.slideshare.net/kellym836/gillette-fusion-coupon-big-savings" rel="external nofollow" class="url">Gail Burgess</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-49919" title="">May 2nd, 2013 on 7:04 pm</a>  </small>
+
+			<p>In these days of austerity and relative anxiousness about taking 
+on debt, some people balk against the idea of utilizing a credit card to
+ make purchase of merchandise and also pay for a trip, preferring, 
+instead just to rely on the particular tried as well as trusted method 
+of making transaction – cash. However, in case you have the cash on hand
+ to make the purchase completely, then, paradoxically, that’s the best 
+time for you to use the card for several motives.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656?replytocom=49919#respond" onclick='return addComment.moveForm("comment-49919", "49919", "respond", "1656")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>2 Trackbacks / Pingbacks for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-3672">
+     <div id="comment-3672">
+			<div class="commentbody">
+			<cite><a href="http://lazionews.info/the-legend-di-festival-schouwburg-x-2/" rel="external nofollow" class="url">The Legend di Festival Schouwburg X | lazionews.info</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3672" title="">September 1st, 2012 on 2:01 pm</a>  </small>
+
+			<p>[...] KonserAuthorHouse Authors DigestAlanya-A place where the sun
+ smilesWeekly Wrap Up: Week 5 of AugustDLL Injection – A Simple Message 
+Box   .set-header:after{ background-image: [...]</p>
+			</div>
+     </div>
+</li>
+   <li class="pingback odd alt thread-odd thread-alt depth-1" id="li-comment-4299">
+     <div id="comment-4299">
+			<div class="commentbody">
+			<cite><a href="http://www.garage4hackers.com/f24/made-patch-c-now-how-bind-into-existing-dll-2408.html#post8853" rel="external nofollow" class="url">Made a patch in C, now how to bind it into an existing DLL ?</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4299" title="">September 18th, 2012 on 11:09 am</a>  </small>
+
+			<p>[...]  [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1656#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1656" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1656" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="099d393b26" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1656/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1656/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1656" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo3OiIyNCwzMiw1IjtzOjEwOiJjb250ZW50X2lkIjtpOjE2NTY7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.b1f2b725be5aec4f0f99d1b87aa267ed"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1656_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

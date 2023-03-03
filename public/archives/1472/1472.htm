@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #17: Working With Delphi Binaries «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1472_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1472_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #17: Working With Delphi Binaries Comments Feed" href="http://thelegendofrandom.com/blog/archives/1472/feed">
+<script type="text/javascript" src="1472_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1472_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1472_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="R4ndom’s Tutorial #16B: Self Modifying Code" href="http://thelegendofrandom.com/blog/archives/1424">
+<link rel="next" title="Much to Offer from this Low-Level Site" href="http://thelegendofrandom.com/blog/archives/1650">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1472">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1472">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1472_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1472_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1472_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1472_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                               <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1472">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Aug.08, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><p>In this tutorial we will discuss 
+working with binaries written in Delphi. Delphi binaries are quite 
+different then binaries written in other languages. You can generally 
+tell a Delphi program by the numerous calls (far more than a typical 
+program) as well as some other techniques we will be discussing.</p>
+<p>Included in the tutorial download are the two crackme’s, the Delphi Decompiler (DeDe), and ExeInfoPE, available on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a> </p> page.<p></p>
+<p>You will also need Resource Hacker (and OllyDBG)&nbsp; available on the <a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tools</span></span></a> </p> page.<p></p>
+<p><span id="more-1472"></span></p>
+<h2><span style="color: #0a77e1;">Delphi</span></h2>
+<p>Most program construction in Delphi is by using forms, which are 
+basically just windows or dialog boxes. You design them using a graphic 
+utility to ‘paint’ the form, meaning to add buttons, edit boxes etc 
+wherever you would like them. Really, the only thing you need to do 
+after that is let the Delphi compiler know which actions you would like 
+to handle and what you would like to do should that action happen. For 
+example, when a button is clicked, you may want to open a file dialog 
+box. In this case you would let the Delphi compiler know that the button
+ should be associated with your code that you provide, and this code 
+simply opens the file dialog.</p>
+<p>These forms, along with everything associated with them (strings, 
+sizes, colors) are stored in resources, in theory like a normal C++ 
+application, but implemented far differently. One interesting thing is 
+that Delphi associates all of these resources by name, meaning that the 
+name you called the specific resource is the name that will be 
+hard-coded into the executable, and the name that the executable will 
+use to ‘look up’ resources. This is both good and bad. Good in that you 
+can easily find these names that are associated with resources. Bad in 
+that they are all stored in one area and are not logically int3erwoven 
+into the code, so finding the code that goes along with a resource (say,
+ a button click) is a lot tougher.</p>
+<p>Much of the programming is done for you, other than, say, C++. There 
+is a tremendous amount done ‘behind the scenes’ in a Delphi program. 
+This is one reason the code looks different than what you may expect.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The first target</span></h2>
+<p>One of the first questions you may have is, “How do I know that I’m 
+dealing with a Delphi program?” After a lot more experience, they stand 
+out like a sore thumb, but until then, we are going to use a tool that 
+will help. Go ahead and run ExeInfoPE. This program is generally used to
+ discover what packer has been used on a packed binary (and we will use 
+it a great deal when we get to packing). But, lucky for us, if the 
+program is not packed it also tells us what language the program was 
+written in. When you first run ExeInfoPE you will see the startup 
+screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/1.png"><img class="aligncenter size-full wp-image-1475" title="ExeInfoPE" src="1472_fichiers/1.png" alt="" height="246" width="497"></a> </p><p></p>
+<p>Go ahead and load our first target, DelphiCrackme.exe into ExeInfoPE 
+and you will see the various fields populated (you can just drag the 
+crackme icon and drop it into the ExeInfoPE window):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/2.png"><img class="aligncenter size-full wp-image-1476" title="Showing Delphi" src="1472_fichiers/2.png" alt="" height="246" width="497"></a> </p><p></p>
+<p>Here we can see that ExeInfoPE has found that this binary was 
+compiled in Delphi. Under that you cannot also see that it is not 
+packed. Also, just as a quick aside, as soon as you load the binary into
+ Olly you will see that you’re dealing with something different:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/3.png"><img class="aligncenter size-full wp-image-1477" title="Delphi in Olly" src="1472_fichiers/3.png" alt="" height="487" width="492"></a> </p><p></p>
+<p>You can tell it doesn’t look like the typical apps we’ve been dealing with.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Looking at Delphi resources</span></h2>
+<p>One of the most important differences, at least to a reverse 
+engineer, of a Delphi program is the resources. Loading up the 
+DelphiCrackme into Resource Hacker, you should notice a new folder that 
+is not typically not there called RCDATA. Opening this folder shows us 
+the resource sections associated with this binary:</p>
+<p><em>*** If you do not have Resource Hacker you can download it from the <span style="color: #0a77e1;"><a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="text-decoration: underline; color: #0a77e1;">tools</span></a> </span></em></p><em> page ***</em><p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/4.png"><img class="aligncenter size-full wp-image-1478" title="Cracmke in resource hacker" src="1472_fichiers/4.png" alt="" height="821" width="609"></a> </p><p></p>
+<p>Generally, the most important sub-folder (resource sections) are the 
+TFORM sections. These are the windows/dialog boxes in the Delphi 
+program. In this particular crackme, we can see that there is one form, 
+TFORM1. Clicking on the little flower inside TFORM1 opens the main data 
+area for this section in Resource Hacker (as you can see above). This 
+data tells you everything about the form; the size, the colors, the 
+placement on the screen, the title (caption), any fields or buttons it 
+has in it- everything.</p>
+<p>Usually, the first place I look is the ‘Caption’ as this tells you 
+what will be in the title bar in the window. In this case it’s “Delphi –
+ MsgBoxes”. The importance of this field is, in an app that has many 
+forms called TFORM1, TFORM2, TFORM3… it is difficult to know which form 
+is associated with which window. Looking at the captions can help 
+distinguish this. For example, the caption may say “Register” letting us
+ know it’s the registration screen, or “About” for the about screen.</p>
+<p>Finally, of importance to us is the button objects at the bottom. The
+ reason these are important is because we generally want to trap the 
+program after a button has been hit, say, after hitting OK on the 
+registration screen after entering our username and serial. The 
+important thing about the buttons is the button name for the method when
+ the button is clicked. In this case it’s “Button1Click”. As I said 
+earlier, Delphi programs connect everything with ASCII names, so when 
+the app wishes to run the code associated with clicking this button, it 
+will look up the name “Button1Clicked” to find the method.</p>
+<p>From viewing this file in a resource viewer, we have gathered that 
+there is one form (window) with one button. The caption of he window is 
+“Delphi – MsgBoxes” and the callback function that handles the click of 
+the button is called “Button1Click”.</p>
+<p>Now let’s move on to using one of the most important tools in dealing with Delphi programs…</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Using DeDe</span></h2>
+<p>Delphi Decompiler loads&nbsp; a Delphi program and breaks it down for
+ you, showing all the forms data we’ve seen, but also where all the 
+methods are called, the address of all the methods, and the method 
+names. It also shows a complete decompilation of the binary if we wish, 
+along with capabilities to modify it. Let’s go ahead and run DeDe. After
+ a really kick-ass splash screen (if you’re 9) we see the main window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/11.png"><img class="aligncenter size-full wp-image-1485" title="Main DeDe screen" src="1472_fichiers/11.png" alt="" height="585" width="757"></a> </p><p></p>
+<p>First, we need to load our program in so DeDe can decompile it. You 
+can either select the open folder icon or just drag our DelphiCrackme 
+into the DeDe window and choose ‘Yes’ to allow DeDe to begin processing 
+the binary. At this point, DeDe pops up a message box asking if the 
+target has loaded:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/21.png"><img class="aligncenter size-full wp-image-1486" title="target loaded?" src="1472_fichiers/21.png" alt="" height="154" width="254"></a> </p><p></p>
+<p>at the same time, it runs the target as we can see the target’s main window appear:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/31.png"><img class="aligncenter size-full wp-image-1487" title="Main target window" src="1472_fichiers/31.png" alt="" height="123" width="143"></a> </p><p></p>
+<p>Sometimes, if there is a nag or splash that pops up at he beginning 
+of running the target, you will want to proceed to the main part of the 
+program before telling DeDe to process the app. In this case, the target
+ is already fully loaded, so you can click the OK button and allow DeDe 
+to proceed. deDe will then close the target and ask if you want to 
+perform more robust processing on the app:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/5.png"><img class="aligncenter size-full wp-image-1488" title="More processing?" src="1472_fichiers/5.png" alt="" height="233" width="411"></a> </p><p></p>
+<p>I usually choose no here, as clicking yes has never given me any more
+ info that I need. DeDe will then finish processing the target and the 
+main window will be populated:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/6.png"><img class="aligncenter size-full wp-image-1489" title="DeDe Main window loaded" src="1472_fichiers/6.png" alt="" height="585" width="757"></a> </p><p></p>
+<p>DeDe defaults to showing us the class info, as we can see by the 
+“Classes Info” tab being depressed. You can scroll through the list if 
+you like, but what we want is the “Forms” tab:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/8.png"><img class="aligncenter size-full wp-image-1491" title="Forms tab" src="1472_fichiers/8.png" alt="" height="770" width="650"></a> </p><p></p>
+<p>&nbsp;</p>
+<p>Here, we can see the info we saw in Resource Hacker; the attributes 
+for the form. The reason I show you this is so that in the future you 
+can bypass the Resource Hacker step and just look at it in DeDe. Now 
+click on the “Procedures” tab. This is the most important tab in DeDe:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/9.png"><img class="aligncenter size-full wp-image-1492" title="The procedures tab" src="1472_fichiers/9.png" alt="" height="498" width="655"></a> </p><p></p>
+<p>Here, DeDe shows us the method callback names and addresses for the 
+TForm1 form. Since this is a very simple program, there is only one 
+button, and therefore, only one callback. BUT, the nice thing is we now 
+know the address of this callback- 457F0C. Remember that address! Now 
+let’s load the crackme into Olly and see what we can do…</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Finding the patch</span></h2>
+<p>If you do a search for strings you will see that you are our of luck:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/12.png"><img class="aligncenter size-full wp-image-1494" title="Search for strings" src="1472_fichiers/12.png" alt="" height="178" width="521"></a> </p><p></p>
+<p>Searching for intermodular calls also is a dead giveaway for a Delphi program:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/22.png"><img class="aligncenter size-full wp-image-1495" title="intermodular calls" src="1472_fichiers/22.png" alt="" height="694" width="510"></a> </p><p></p>
+<p>You will notice that Delphi makes A LOT of calls.</p>
+<p>Normally, at this point, we would try to run the app and pause it on 
+the bad boy message, but you will find that this won’t work in this case
+ because when you return, you will be about 15 layers down in calls, and
+ finding the actual code that handles the processing of the message box 
+is almost impossible.</p>
+<p>BUT, if we recall from DeDe, we know the address that is called when 
+the button is clicked. It’s 457F0C. So let’s go check that address out 
+in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/32.png"><img class="aligncenter size-full wp-image-1496" title="Adress of callback" src="1472_fichiers/32.png" alt="" height="271" width="667"></a> </p><p></p>
+<p>Ahhhhh. That looks much better <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  Let’s place a BP at the beginning of this (457F0C) and run the app:</p>
+<p><em>*** Olly may give you a warning that you are setting a BP in a data section. Just ignore it. ***</em></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/41.png"><img class="aligncenter size-full wp-image-1497" title="run the app" src="1472_fichiers/41.png" alt="" height="123" width="143"></a> </p><p></p>
+<p>Notice it says we are unregistered. Also, notice the name in the 
+title. “Delphi – MsgBoxes”. And there is one button. All this should 
+look familiar. Go ahead and press the button and Olly will break at our 
+BP:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/51.png"><img class="aligncenter size-full wp-image-1498" title="Olly breaks" src="1472_fichiers/51.png" alt="" height="246" width="580"></a> </p><p></p>
+<p>Now it is just a matter of stepping the code and leading Olly the 
+right way to display the good boy instead of the bad boy. I don’t need 
+to tell you how to do this. (If I do, please go back and re-read the 
+tutorials in this series.)</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/61.png"><img class="aligncenter size-full wp-image-1499" title="Kastang!!!!" src="1472_fichiers/61.png" alt="" height="128" width="115"></a> </p><p></p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The second target</span></h2>
+<p>In my quest to find targets that will not hurt anyone, the second app
+ we will be looking at is freeware, though it does have a nag that is 
+displayed until you register the app. Registration is free. It was the 
+least downloaded app in the “tools” category on Cnet, with 4 downloads 
+in the last year. It is a program called Exif2htm. I have no idea what 
+an exif file is, but apparently you can convert them into html files 
+using this program.</p>
+<p>When we load the app into ExeInfoPE we see that it is in fact a Delphi program and not packed:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/13.png"><img class="aligncenter size-full wp-image-1504" title="ExeInfo" src="1472_fichiers/13.png" alt="" height="246" width="497"></a> </p><p></p>
+<p>Running the app, we can see the nag popup:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/23.png"><img class="wp-image-1505 alignnone" title="Nag" src="1472_fichiers/23.png" alt="" height="91" width="639"></a> </p><p></p>
+<p>Clicking OK we can see what took a graphic designer a long time to create such a colorful UI:<br>
+<a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/33.png"><img class="aligncenter size-full wp-image-1507" title="Main screen" src="1472_fichiers/33.png" alt="" height="583" width="762"></a> </p><p></p>
+<p>Anyway, we can see it is UNREGISTERED at the top. Clicking “About” gives us the about screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/42.png"><img class="aligncenter size-full wp-image-1508" title="About screen" src="1472_fichiers/42.png" alt="" height="218" width="313"></a> </p><p></p>
+<p>and clicking “Register” on the bottom gives us the registration screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/52.png"><img class="aligncenter size-full wp-image-1509" title="Registration screen" src="1472_fichiers/52.png" alt="" height="209" width="367"></a> </p><p></p>
+<p>Entering false data gives us an unfortunate message:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/62.png"><img class="aligncenter size-full wp-image-1510" title="Unfortunate message" src="1472_fichiers/62.png" alt="" height="211" width="368"></a> </p><p></p>
+<h2><span style="color: #0a77e1;">Using DeDe</span></h2>
+<p>Let’s load the app into DeDe and see what we can see. Make sure you click past the nag before hitting OK for DeDe to proceed:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/71.png"><img class="aligncenter size-full wp-image-1511" title="DeDe starts up" src="1472_fichiers/71.png" alt="" height="582" width="729"></a> </p><p></p>
+<p>Clicking on Forms gives us the forms window. Clicking on TForm1, we can see that this is probably the main window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/81.png"><img class="aligncenter size-full wp-image-1512" title="Form1" src="1472_fichiers/81.png" alt="" height="750" width="634"></a> </p><p></p>
+<p>We can also see a caption for Files, and if we look down farther, 
+there are more for “save”, “print” and “editor”. Clicking on TForm2 is 
+far more interesting, though:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/91.png"><img class="aligncenter size-full wp-image-1513" title="Form2" src="1472_fichiers/91.png" alt="" height="985" width="633"></a> </p><p></p>
+<p>So the caption is ‘Register’, we can see the labels for the edit 
+boxes are ‘Name’ and ‘Code’, and we can see two buttons at the bottom, 
+‘OK’, and ‘Cancel’. Let’s click on the “Procedures” tab and see what 
+we’ve got:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/10.png"><img class="aligncenter size-full wp-image-1515" title="Procedures" src="1472_fichiers/10.png" alt="" height="590" width="630"></a> </p><p></p>
+<p>Clicking on Unit2 – TForm2 we can see that there is one method, 
+“BitBtn1Click”, which we saw in the forms window corresponds with the 
+“OK” button on the bottom of the registration window. We can also see 
+that DeDe shows the RVA of the address for this method. Something tells 
+me that is going to be very helpful here. Let’s write down that address 
+and load up the app in Olly.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Finding the patch</span></h2>
+<p>This does not look like a very friendly binary in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/14.png"><img class="aligncenter size-full wp-image-1516" title="Loaded in Olly" src="1472_fichiers/14.png" alt="" height="439" width="569"></a> </p><p></p>
+<p>Let’s go to our saved address and see what we have (I placed a BP on it to remember it):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/24.png"><img class="aligncenter size-full wp-image-1517" title="First callback" src="1472_fichiers/24.png" alt="" height="545" width="742"></a> </p><p></p>
+<p>Toward the end we can see the message that comes up telling us to 
+restart he app to see if our registration code worked. This is a 
+technique used quite often, and it does provide a small challenge to us.
+ The problem is we don’t know if we typed in the right code until we 
+restart, and the area that checks if it was right could be anywhere in 
+the program. We also can’t force our code to be right as we don’t know 
+where the instructions are that check if it’s correct or not! But using a
+ little common sense, you will see that it’s no that much harder to get 
+past a protection like this.</p>
+<p>The hint comes from the fact that, after you enter your code, the app
+ must store it somewhere (or at least store SOMETHING somewhere) so that
+ when it restarts it can look and see if we stored the correct code in 
+or not. It could either store our entered name and code, or it could 
+store a flag that we are registered, or any of a number of other things.
+ The point is, though, it must store something.</p>
+<p>There are only a couple places a program can store data from run to 
+run of the app. Almost always it’s the registry or an ini file. So what 
+we have to do is find out where this data is stored so that when we run 
+the app again we can find where this data is processed and checked for 
+if we’re registered or not.</p>
+<p>We have our BP set, so let’s run the app in Olly. Click on Register, 
+enter some fake data, and click OK. Olly should break at our BP:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/34.png"><img class="aligncenter size-full wp-image-1519" title="Olly breaks on callback" src="1472_fichiers/34.png" alt="" height="526" width="824"></a> </p><p></p>
+<p>Now let’s look at the code where Olly broke. At first is a bunch of 
+pushes that set up a bunch of variables on the stack. We then push some 
+varibles onto the stack and make a call at 4A0095. If you step over the 
+code (stopping at address 4A009A, you will see something interesting in 
+the info window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/43.png"><img class="aligncenter size-full wp-image-1520" title="First call" src="1472_fichiers/43.png" alt="" height="214" width="429"></a> </p><p></p>
+<p>It appears it is doing something with our username. 
+99.99999999999999999% of the time this will be a check to make sure we 
+actually entered something into the edit text field in the registration 
+window (usually returning a length). The fact that EAX equals 6 on 
+return helps support this hypothesis, though we don’t know for sure. 
+There is a check if EAX equals zero right after this and a jump. I’m 
+sure you can guess what that’s for. Slowly stepping over the next couple
+ instructions, we then see our code pop up in the window as well:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/53.png"><img class="aligncenter size-full wp-image-1521" title="Second call" src="1472_fichiers/53.png" alt="" height="190" width="383"></a> </p><p></p>
+<p>What do you want to bet that this is doing the same thing on our 
+code? EAX again is compared with zero (it is 8 this time, which just 
+happens to be the length of my code <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">
+  ) and jumps if it is zero. Next we pass a couple more calls, each of 
+which loads our name and code as arguments again. You can step over this
+ code until we get to the big red flag at address 4A0101:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/63.png"><img class="aligncenter size-full wp-image-1522" title="The red flag" src="1472_fichiers/63.png" alt="" height="133" width="579"></a> </p><p></p>
+<p>This looks very important. It is a data file that looks like it is 
+going to create. Stepping over the next two lines brings us to address 
+4A010B:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/72.png"><img class="aligncenter size-full wp-image-1523" title="The file path" src="1472_fichiers/72.png" alt="" height="176" width="574"></a> </p><p></p>
+<p>What appears to be a file path is displayed in the info window. It 
+points to the location I am currently running the app from (my desktop).
+ In this file path is the name of the dat file it looks like it’s going 
+to create. Stepping a couple more times until you step over the call at 
+4A0112, you may notice a little something pop up on your desktop:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/82.png"><img class="aligncenter size-full wp-image-1524" title="icon" src="1472_fichiers/82.png" alt="" height="85" width="85"></a> </p><p></p>
+<p>Hmmm. That wasn’t there before. My file has a Notepad++ icon because 
+that’s what I’ve associated .dat files with- yours may look different. 
+Let’s open this file and have a look (you can open it in any text 
+editor):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/92.png"><img class="aligncenter size-full wp-image-1525" title="the data file" src="1472_fichiers/92.png" alt="" height="274" width="428"></a> </p><p></p>
+<p>Well, I think we found out where our info will be stored <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">
+  We know that the app creates a file called reginfo.dat in the same 
+folder as the app is stored, and in this file is saved our entered name 
+and code. Now that we know how the program is going to check for if we 
+are registered or not, we can use this to find the code. Go in to Olly 
+and do a search for strings and search for “reginfo.dat”. Mine came up 
+with two instances, the second of which was the area we were just 
+looking at where the reginfo file was created. The first looks very 
+interesting though:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/101.png"><img class="aligncenter size-full wp-image-1526" title="strings" src="1472_fichiers/101.png" alt="" height="131" width="668"></a> </p><p></p>
+<p>I placed a BP on the reference to reginfo and double clicked to see what the code looks like:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/111.png"><img class="aligncenter size-full wp-image-1527" title="The main BP" src="1472_fichiers/111.png" alt="" height="333" width="570"></a> </p><p></p>
+<p>Scrolling up, we can see that there are no conditional jumps, though 
+below our BP we see several. Go ahead and close the app (clicking run in
+ Olly and clicking OK in the registry window and closing the app through
+ the app- not through Olly. We want to make sure all of the code that 
+stores the registered info get’s done). Now, right when we re-start the 
+app we break at our new BP:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/121.png"><img class="aligncenter size-full wp-image-1528" title="re-start the app" src="1472_fichiers/121.png" alt="" height="172" width="618"></a> </p><p></p>
+<p>Now lets single step to see what’s going on…At the first conditional 
+jump at address 49AC26 we do not jump. This could be OK or it could be a
+ potential place we want to patch, we don’t know yet, so let’s keep 
+stepping. The next set of instructions loads our username and code from 
+the data file and performs some calls with it. This is looking much more
+ likely. When we get to the next conditional jump, we see that we are 
+indeed going to jump:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/131.png"><img class="aligncenter size-full wp-image-1529" title="The second jump" src="1472_fichiers/131.png" alt="" height="195" width="573"></a> </p><p></p>
+<p>Stepping in we can see where we jump to:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/141.png"><img class="aligncenter size-full wp-image-1530" title="Not looking good" src="1472_fichiers/141.png" alt="" height="260" width="767"></a> </p><p></p>
+<p>This is not looking good. Continuing to step, we will eventually run 
+the “Shareware” code, so we know we have gone too far. Let’s re-start 
+the app and see what happens if we don’t make that last jump.</p>
+<p>*** You may wonder why I didn’t try patching the conditional jump at 
+address 49AC26. The answer is, I did, and we still got he bad boy 
+message ***</p>
+<p>Step until you get to the second conditional jump at address 49AC58:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/15.png"><img class="aligncenter size-full wp-image-1531" title="the second conditional jump" src="1472_fichiers/15.png" alt="" height="272" width="568"></a> </p><p></p>
+<p>Now, let’s tell Olly not to jump by changing he zero flag and keep 
+stepping through code. We will eventually come to the last conditional 
+jump at address 49AC78:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/16.png"><img class="aligncenter size-full wp-image-1532" title="The last jump" src="1472_fichiers/16.png" alt="" height="196" width="532"></a> </p><p></p>
+<p>Looking down where this jump jumps to we can see that it is the same 
+destination as the previous jump. If you want, you can step through it, 
+though you will see that it is the same outcome, setting our app as 
+shareware. This tells us that this is a second check on our name/code 
+pair. Let’s keep Olly from jumping by setting the zero flag again and 
+keep going:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/17.png"><img class="aligncenter size-full wp-image-1533" title="Keep going" src="1472_fichiers/17.png" alt="" height="165" width="536"></a> </p><p></p>
+<p>Now if you keep stepping, you will notice that nothing noticeable 
+happens, so go ahead and run the app. You will notice that our nag does 
+not show and that the main window pops up. Also you will notice that 
+there is no UNREGISTERED text anymore:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/18.png"><img class="aligncenter size-full wp-image-1534" title="No more bad boy" src="1472_fichiers/18.png" alt="" height="427" width="489"></a> </p><p></p>
+<p>We have now forced the app to use whatever name and code have been entered! We have cracked the app <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p>&nbsp;</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+<p>&nbsp;</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">8 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment byuser comment-author-rip06 even thread-even depth-1" id="li-comment-2603">
+     <div id="comment-2603">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="Xor06" src="1472_fichiers/Rip06_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Rip06</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2603" title="">August 10th, 2012 on 6:04 am</a>  </small>
+
+			<p>Agian a Really nice tutorial from you <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">  maybe you should upload Dede to the toolz section or make a like to where it can be downloaded <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">   </p>
+<p>until you do here is the link:</p>
+<p><a href="http://www.softpedia.com/get/Programming/Debuggers-Decompilers-Dissasemblers/DeDe.shtml" rel="nofollow">http://www.softpedia.com/get/Programming/Debuggers-Decompilers-Dissasemblers/DeDe.shtml</a> </p><p></p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=2603#respond" onclick='return addComment.moveForm("comment-2603", "2603", "respond", "1472")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-2625">
+     <div id="comment-2625">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1472_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2625" title="">August 10th, 2012 on 3:13 pm</a>  </small>
+
+			<p>Good point. I’ll do that right now.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=2625#respond" onclick='return addComment.moveForm("comment-2625", "2625", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-3196">
+     <div id="comment-3196">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/c972dfe78186efa69f41019e4ca2ad9d.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Etor</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3196" title="">August 21st, 2012 on 7:20 pm</a>  </small>
+
+			<p>Ahah, nice breakpoint at the beginning of the tutorial <img src="1472_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=3196#respond" onclick='return addComment.moveForm("comment-3196", "3196", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-14724">
+     <div id="comment-14724">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>m</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-14724" title="">January 29th, 2013 on 9:06 pm</a>  </small>
+
+			<p>You can try IDR. Is much more powerful than DeDe. It can resolves delphi call [ecx+x].</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=14724#respond" onclick='return addComment.moveForm("comment-14724", "14724", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-47626">
+     <div id="comment-47626">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/b2674462a899ed5b209b52e459a8d8c4.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Gomes</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-47626" title="">April 30th, 2013 on 11:34 am</a>  </small>
+
+			<p>Hi R4ndom</p>
+<p>Could you give me some help, maybe a hint on a Delphi demo version 
+app? It is not my intention to hack this software, I have been learning a
+ little of assembly language and will practising, I found this nice 
+peace of program that combines a flash file with an exe file.<br>
+can you send me a short mail so I can identify the app?<br>
+Thank you in advance.<br>
+Regards<br>
+Gomes</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=47626#respond" onclick='return addComment.moveForm("comment-47626", "47626", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-60039">
+     <div id="comment-60039">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/2047f404a33fbcb812ff877d628b44e4.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>tcm1998</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-60039" title="">May 14th, 2013 on 5:08 pm</a>  </small>
+
+			<p>Can’t believe that no-one has ever said anything about this, but I ALSO had to patch the JE to JMP at 408F1E.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=60039#respond" onclick='return addComment.moveForm("comment-60039", "60039", "respond", "1472")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-2" id="li-comment-77487">
+     <div id="comment-77487">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>bdnt</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-77487" title="">July 20th, 2013 on 4:37 pm</a>  </small>
+
+			<p>That’s because there’s another check if your serial is below 7 
+digit… so if you use below 7 digit then you had to patch the JE on 
+408F1E</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=77487#respond" onclick='return addComment.moveForm("comment-77487", "77487", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-85945">
+     <div id="comment-85945">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1472_fichiers/750538fcc18ab5ef09080333c028ae22.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>C4lculated</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-85945" title="">September 24th, 2013 on 12:42 pm</a>  </small>
+
+			<p>The Delphi CrackMe did not open correctly with OllyDBG v1.10 
+(R4andom’s version) for me, I had to use v2.01, and the exif2htm utility
+ did’nt open correctly with v2.01 and I had to use v1.10 (R4andom’s 
+version). Funny that it happened only to me… I use Win7 ultimate x64</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472?replytocom=85945#respond" onclick='return addComment.moveForm("comment-85945", "85945", "respond", "1472")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1472#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1472" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1472" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="a0be756d2e" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1472/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1472/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1472" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MTQ3MjtzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.878b7db1ac5a19ac90419fcdaba3108e"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1472_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

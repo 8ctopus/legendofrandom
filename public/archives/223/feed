@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Tutorial #7: More Crackmes</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/223/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/223</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Wed, 18 Sep 2013 02:04:37 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Pascal</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-75169</link>
+		<dc:creator>Pascal</dc:creator>
+		<pubDate>Mon, 01 Jul 2013 17:39:18 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-75169</guid>
+		<description><![CDATA[I get 21/47 on virustotal.com for canyou.dll . I guess it&#039;s safe anyways because you wouldn&#039;t post a virus (wouldn&#039;t you?)?]]></description>
+		<content:encoded><![CDATA[<p>I get 21/47 on virustotal.com for canyou.dll . I guess it&#8217;s safe anyways because you wouldn&#8217;t post a virus (wouldn&#8217;t you?)?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: damian</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-43725</link>
+		<dc:creator>damian</dc:creator>
+		<pubDate>Fri, 26 Apr 2013 22:34:48 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-43725</guid>
+		<description><![CDATA[Hi i have a problem when i write the nop command  , so when i click f9 to run program  come some error at the program is broken can you help me why it coming out somthing to me]]></description>
+		<content:encoded><![CDATA[<p>Hi i have a problem when i write the nop command  , so when i click f9 to run program  come some error at the program is broken can you help me why it coming out somthing to me</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: lex</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-14772</link>
+		<dc:creator>lex</dc:creator>
+		<pubDate>Wed, 30 Jan 2013 01:31:50 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-14772</guid>
+		<description><![CDATA[I spent a great deal of time skimming through reverse engineering tuts and i have to say hands down these are the most detailed and easy to follow series i ever read, i actually prefer your tuts over any videos i found,Let me ask you this.. do you believe you can crack any software ? can you say that with the educational information you provide focused and determined readers will posses the power to conquer any software ?]]></description>
+		<content:encoded><![CDATA[<p>I spent a great deal of time skimming through reverse engineering tuts and i have to say hands down these are the most detailed and easy to follow series i ever read, i actually prefer your tuts over any videos i found,Let me ask you this.. do you believe you can crack any software ? can you say that with the educational information you provide focused and determined readers will posses the power to conquer any software ?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gadour</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-10272</link>
+		<dc:creator>gadour</dc:creator>
+		<pubDate>Sun, 16 Dec 2012 13:47:36 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-10272</guid>
+		<description><![CDATA[First of all thank you very much for this site really great, I wonder with all the politeness is how you can find the serial number for crackme8 because I can not find this series because it is composed of a series intelligent and thank you in advance]]></description>
+		<content:encoded><![CDATA[<p>First of all thank you very much for this site really great, I wonder with all the politeness is how you can find the serial number for crackme8 because I can not find this series because it is composed of a series intelligent and thank you in advance</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: gadour</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-10058</link>
+		<dc:creator>gadour</dc:creator>
+		<pubDate>Fri, 14 Dec 2012 15:36:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-10058</guid>
+		<description><![CDATA[First of all thank you very much for this really great website I wonder with all politeness is how you can find the serial for crackme8 because I can not find a serial because it consists of an intelligent and thank you in advance]]></description>
+		<content:encoded><![CDATA[<p>First of all thank you very much for this really great website I wonder with all politeness is how you can find the serial for crackme8 because I can not find a serial because it consists of an intelligent and thank you in advance</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: maxluvr1981</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-9616</link>
+		<dc:creator>maxluvr1981</dc:creator>
+		<pubDate>Tue, 11 Dec 2012 09:48:18 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-9616</guid>
+		<description><![CDATA[Thank you.]]></description>
+		<content:encoded><![CDATA[<p>Thank you.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: kdma</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-4151</link>
+		<dc:creator>kdma</dc:creator>
+		<pubDate>Fri, 14 Sep 2012 22:37:52 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-4151</guid>
+		<description><![CDATA[I dont understand the serial check routine after the serial you entered goes into &quot;keygenning&quot; routine you arrive at one point where the real check is done:
+
+XOR [ARG.2],1337C0DE
+SUB [ARG.2],BADC0DE5
+MOV EAX,[LOCAL.1]
+NOT [ARG.2]
+XOR EAX,[ARG.2]
+NEG EAX
+SBB EAX,EAX
+INC EAX
+
+I dont understand the &quot;check&quot; that is going on here,the C flag get set here but i am missing the whole picture,any clue?]]></description>
+		<content:encoded><![CDATA[<p>I dont understand the serial check routine after the serial you entered goes into &#8220;keygenning&#8221; routine you arrive at one point where the real check is done:</p>
+<p>XOR [ARG.2],1337C0DE<br />
+SUB [ARG.2],BADC0DE5<br />
+MOV EAX,[LOCAL.1]<br />
+NOT [ARG.2]<br />
+XOR EAX,[ARG.2]<br />
+NEG EAX<br />
+SBB EAX,EAX<br />
+INC EAX</p>
+<p>I dont understand the &#8220;check&#8221; that is going on here,the C flag get set here but i am missing the whole picture,any clue?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: doccc</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-3876</link>
+		<dc:creator>doccc</dc:creator>
+		<pubDate>Thu, 06 Sep 2012 21:00:25 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-3876</guid>
+		<description><![CDATA[Great piece of work and knowledge, big thanks for that. You write so clear and straightforward, keep going.
+
+Unfortunately canyou.dll treated as trojan - 10 / 41 at virustotal.com]]></description>
+		<content:encoded><![CDATA[<p>Great piece of work and knowledge, big thanks for that. You write so clear and straightforward, keep going.</p>
+<p>Unfortunately canyou.dll treated as trojan &#8211; 10 / 41 at virustotal.com</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-2369</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Mon, 06 Aug 2012 04:13:47 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-2369</guid>
+		<description><![CDATA[Because of the nature of some of the apps and crackmes in this series&#039; nature, false positives show up from time to time. The best way to see if it&#039;s a false positive is to go to www.virustotal.com and upload the file. It will scan the file using 42 different virus scanners. If you only get 3 or four hits, you know it&#039;s nothing. More than 7- I would stay away from.
+
+If you downloaded the files from me, you do not need to worry about them- all of mine were scanned with VirusTotal before I even did the tutorials.]]></description>
+		<content:encoded><![CDATA[<p>Because of the nature of some of the apps and crackmes in this series&#8217; nature, false positives show up from time to time. The best way to see if it&#8217;s a false positive is to go to <a href="http://www.virustotal.com" rel="nofollow">http://www.virustotal.com</a> and upload the file. It will scan the file using 42 different virus scanners. If you only get 3 or four hits, you know it&#8217;s nothing. More than 7- I would stay away from.</p>
+<p>If you downloaded the files from me, you do not need to worry about them- all of mine were scanned with VirusTotal before I even did the tutorials.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Electric_Sheep</title>
+		<link>http://thelegendofrandom.com/blog/archives/223#comment-2366</link>
+		<dc:creator>Electric_Sheep</dc:creator>
+		<pubDate>Mon, 06 Aug 2012 02:15:17 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=223#comment-2366</guid>
+		<description><![CDATA[I&#039;ve been really enjoying these tutorials. I went through 3- 7 today already, and I&#039;ll probably do 8 and 9 as well...
+One issue:
+Avg detects crackme8 as the virus Win32/Heri . Is it a false positive, or is it possible that the crackme creator is malicious. Thank R4ndom!]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;ve been really enjoying these tutorials. I went through 3- 7 today already, and I&#8217;ll probably do 8 and 9 as well&#8230;<br />
+One issue:<br />
+Avg detects crackme8 as the virus Win32/Heri . Is it a false positive, or is it possible that the crackme creator is malicious. Thank R4ndom!</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

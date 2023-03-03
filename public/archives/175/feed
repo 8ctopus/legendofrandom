@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: The Reverse Engineers Toolkit</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/175/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/175</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: 4everFrustrated</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-67232</link>
+		<dc:creator>4everFrustrated</dc:creator>
+		<pubDate>Thu, 23 May 2013 05:07:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-67232</guid>
+		<description><![CDATA[Has anyone ever come across (or God willing, created) a .rbs file decompiler ruby files from sketchup?
+
+I am such a noob that it hurts! I have no idea what any of this stuff means. I tried Olly Debugger as per the translated instructions from the first of the following links and it might as well have been hieroglyphics. I tried as many ways as I could, but got completely lost trying to view/find the .rbs file I was looking for.
+
+Could someone please let me know if there&#039;s anything out there to make this task any easier for a FIRST-TIMER like myself?--or better yet--&gt; could someone PLEASE make a youtube-like video of what to do and what to look for when it comes to descrambling a .rbs file for first-timers??
+
+I would like to decompile a .rbs file if I could, but I did not understand the following links (add the &quot;http://www.&quot; prefix on your own to the following links- the first one will have to be translated from Russian):
+
+xaker.name/forvb/showthread.php?t=26882
+
+and the other link is:
+
+enigmagroup.org/forums/pelcgbtencul-qvfphffvba/need-help-reversing-an-encryption/
+
+
+.....I&#039;m terribly sorry for the long post, but I all of this stuff is a different universe to me. I sincerely thank in advance anyone who who reads this and can help. I admire all of you who can do this kind of technical stuff- it&#039;s way out of my league.
+
+I&#039;ll check back on this page frequently to see if anyone posts a response...again, THANKS!]]></description>
+		<content:encoded><![CDATA[<p>Has anyone ever come across (or God willing, created) a .rbs file decompiler ruby files from sketchup?</p>
+<p>I am such a noob that it hurts! I have no idea what any of this stuff means. I tried Olly Debugger as per the translated instructions from the first of the following links and it might as well have been hieroglyphics. I tried as many ways as I could, but got completely lost trying to view/find the .rbs file I was looking for.</p>
+<p>Could someone please let me know if there&#8217;s anything out there to make this task any easier for a FIRST-TIMER like myself?&#8211;or better yet&#8211;&gt; could someone PLEASE make a youtube-like video of what to do and what to look for when it comes to descrambling a .rbs file for first-timers??</p>
+<p>I would like to decompile a .rbs file if I could, but I did not understand the following links (add the &#8220;http://www.&#8221; prefix on your own to the following links- the first one will have to be translated from Russian):</p>
+<p>xaker.name/forvb/showthread.php?t=26882</p>
+<p>and the other link is:</p>
+<p>enigmagroup.org/forums/pelcgbtencul-qvfphffvba/need-help-reversing-an-encryption/</p>
+<p>&#8230;..I&#8217;m terribly sorry for the long post, but I all of this stuff is a different universe to me. I sincerely thank in advance anyone who who reads this and can help. I admire all of you who can do this kind of technical stuff- it&#8217;s way out of my league.</p>
+<p>I&#8217;ll check back on this page frequently to see if anyone posts a response&#8230;again, THANKS!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: sak</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-46210</link>
+		<dc:creator>sak</dc:creator>
+		<pubDate>Mon, 29 Apr 2013 03:59:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-46210</guid>
+		<description><![CDATA[nice work
+please include download link]]></description>
+		<content:encoded><![CDATA[<p>nice work<br />
+please include download link</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: honeyn3t &#187; those other guys are the shirts; we are the t-shirts&#8230; &#187; IRISSCERT CyberChallenge Top Tip No.2</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-7471</link>
+		<dc:creator>honeyn3t &#187; those other guys are the shirts; we are the t-shirts&#8230; &#187; IRISSCERT CyberChallenge Top Tip No.2</dc:creator>
+		<pubDate>Tue, 13 Nov 2012 22:40:27 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-7471</guid>
+		<description><![CDATA[[...] out this handy list or useful tools to perform reverse engineering here.        Tweet      Share       [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] out this handy list or useful tools to perform reverse engineering here.        Tweet      Share       [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: A Damn Fine Program&#8230;CmpDisasm &#171; The Legend Of Random</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-4109</link>
+		<dc:creator>A Damn Fine Program&#8230;CmpDisasm &#171; The Legend Of Random</dc:creator>
+		<pubDate>Thu, 13 Sep 2012 23:54:57 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-4109</guid>
+		<description><![CDATA[[...] A Damn Fine Program&#8230;CmpDisasm by R4ndom on Sep.13, 2012, under Tools  DonDD from the REPT forums has come out with a new tool that I have been looking for for a long time. A simple compare utility that compares disassembled code. I have tons of compare utilities, all that compare raw hex bytes, but none of them will show the differences based on a disassembly of the binaries. This tool is simple, yet powerful. You can view the differences or save them into a log file. You can also compare raw hex and PE Headers. If you&#8217;ve ever written tutorials on patching binaries, you know why this is such a needed tool. DonDD is my new hero. In fact, I am so happy that this tool came out, I am adding it to my Reverse Engineering Toolbox tutorial. [...]]]></description>
+		<content:encoded><![CDATA[<p>[...] A Damn Fine Program&#8230;CmpDisasm by R4ndom on Sep.13, 2012, under Tools  DonDD from the REPT forums has come out with a new tool that I have been looking for for a long time. A simple compare utility that compares disassembled code. I have tons of compare utilities, all that compare raw hex bytes, but none of them will show the differences based on a disassembly of the binaries. This tool is simple, yet powerful. You can view the differences or save them into a log file. You can also compare raw hex and PE Headers. If you&#8217;ve ever written tutorials on patching binaries, you know why this is such a needed tool. DonDD is my new hero. In fact, I am so happy that this tool came out, I am adding it to my Reverse Engineering Toolbox tutorial. [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mahmoud</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-3404</link>
+		<dc:creator>Mahmoud</dc:creator>
+		<pubDate>Sat, 25 Aug 2012 05:06:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-3404</guid>
+		<description><![CDATA[Great Job Man]]></description>
+		<content:encoded><![CDATA[<p>Great Job Man</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: shane</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-234</link>
+		<dc:creator>shane</dc:creator>
+		<pubDate>Sat, 09 Jun 2012 16:48:05 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-234</guid>
+		<description><![CDATA[Great list :)]]></description>
+		<content:encoded><![CDATA[<p>Great list <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-130</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Sun, 03 Jun 2012 03:29:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-130</guid>
+		<description><![CDATA[thanks for the login window on the main page, Love your tutorial and you &lt;3]]></description>
+		<content:encoded><![CDATA[<p>thanks for the login window on the main page, Love your tutorial and you &lt;3</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-113</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sat, 02 Jun 2012 13:50:23 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-113</guid>
+		<description><![CDATA[Immunity debugger is actually a pretty good debugger. It started as ollyDBG but broke off in it&#039;s own direction. There are some very positive things about it. The one drawback is that Olly kept a lot of the support fans so plugins and scripts continued to be developed and they far outpaced Immunity. My suggestion, tho, is to try them both. You may find that you like Immunity better, and you can generally work around any shortcomings. Heck, use both, using the features you like from each!]]></description>
+		<content:encoded><![CDATA[<p>Immunity debugger is actually a pretty good debugger. It started as ollyDBG but broke off in it&#8217;s own direction. There are some very positive things about it. The one drawback is that Olly kept a lot of the support fans so plugins and scripts continued to be developed and they far outpaced Immunity. My suggestion, tho, is to try them both. You may find that you like Immunity better, and you can generally work around any shortcomings. Heck, use both, using the features you like from each!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: synapse</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-109</link>
+		<dc:creator>synapse</dc:creator>
+		<pubDate>Sat, 02 Jun 2012 07:24:32 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-109</guid>
+		<description><![CDATA[Just curious. I was on the webpage of Immunity Debugger and they say its an improved OllyDBG. Is it better than Olly + Plugins? I&#039;m asking because you are very fond of Olly.]]></description>
+		<content:encoded><![CDATA[<p>Just curious. I was on the webpage of Immunity Debugger and they say its an improved OllyDBG. Is it better than Olly + Plugins? I&#8217;m asking because you are very fond of Olly.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/175#comment-101</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Fri, 01 Jun 2012 20:53:35 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=175#comment-101</guid>
+		<description><![CDATA[I added The Art Of Assembly to the tools page. Enjoy.]]></description>
+		<content:encoded><![CDATA[<p>I added The Art Of Assembly to the tools page. Enjoy.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

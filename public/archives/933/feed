@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: R4ndom&#8217;s Tutorial #14: NAGS (And I don&#8217;t Mean Your Mother)</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/933/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/933</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: Rehan</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-75724</link>
+		<dc:creator>Rehan</dc:creator>
+		<pubDate>Sat, 06 Jul 2013 17:04:16 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-75724</guid>
+		<description><![CDATA[You Should Fill 00401012 and 00401026 with NOPs and
+put an instruction JMP SHORT 00401093 at address 00401029 except filling all with NOPs ... :) (Better One !) :P]]></description>
+		<content:encoded><![CDATA[<p>You Should Fill 00401012 and 00401026 with NOPs and<br />
+put an instruction JMP SHORT 00401093 at address 00401029 except filling all with NOPs &#8230; <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  (Better One !) <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_razz.gif' alt=':P' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sr0cR</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-19980</link>
+		<dc:creator>Sr0cR</dc:creator>
+		<pubDate>Mon, 18 Feb 2013 02:13:37 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-19980</guid>
+		<description><![CDATA[thanks, this is a good tutorial, make me inspired...
+see you in next tutor.]]></description>
+		<content:encoded><![CDATA[<p>thanks, this is a good tutorial, make me inspired&#8230;<br />
+see you in next tutor.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-1368</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Wed, 18 Jul 2012 02:37:08 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-1368</guid>
+		<description><![CDATA[Guys, let&#039;s not go overboard. A painting of me on the ceiling of the Sistine Chapel would be more than enough...]]></description>
+		<content:encoded><![CDATA[<p>Guys, let&#8217;s not go overboard. A painting of me on the ceiling of the Sistine Chapel would be more than enough&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-1331</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Tue, 17 Jul 2012 14:16:59 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-1331</guid>
+		<description><![CDATA[oh maybe we should make a statue of random the new zeus ;p]]></description>
+		<content:encoded><![CDATA[<p>oh maybe we should make a statue of random the new zeus ;p</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-1309</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Tue, 17 Jul 2012 05:28:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-1309</guid>
+		<description><![CDATA[Really good, well explained tuts bro. You may inspire a new generation of reversers with tuts like these. Enjoy going through them(even the easy ones) just to see how the mind of another reverser works and learn a few new tricks too. Looking forward to the hard ones : ) Keep up the good work.]]></description>
+		<content:encoded><![CDATA[<p>Really good, well explained tuts bro. You may inspire a new generation of reversers with tuts like these. Enjoy going through them(even the easy ones) just to see how the mind of another reverser works and learn a few new tricks too. Looking forward to the hard ones : ) Keep up the good work.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Neezy</title>
+		<link>http://thelegendofrandom.com/blog/archives/933#comment-1301</link>
+		<dc:creator>Neezy</dc:creator>
+		<pubDate>Tue, 17 Jul 2012 00:48:33 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=933#comment-1301</guid>
+		<description><![CDATA[Greetings Random,
+
+Did you get the email I sent you on Friday with about the binary.  Was just wondering if you received it and what you think about it.
+
+
+Thanks
+
+- Neezy]]></description>
+		<content:encoded><![CDATA[<p>Greetings Random,</p>
+<p>Did you get the email I sent you on Friday with about the binary.  Was just wondering if you received it and what you think about it.</p>
+<p>Thanks</p>
+<p>- Neezy</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

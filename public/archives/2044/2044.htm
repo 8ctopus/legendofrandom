@@ -1,0 +1,1408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #20B: Working With Visual Basic Binaries, Pt 2 «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="2044_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="2044_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #20B: Working With Visual Basic Binaries, Pt 2 Comments Feed" href="http://thelegendofrandom.com/blog/archives/2044/feed">
+<script type="text/javascript" src="2044_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2044_fichiers/ajax.js"></script>
+<script type="text/javascript" src="2044_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Article on Cryptography" href="http://thelegendofrandom.com/blog/archives/2123">
+<link rel="next" title="We’re back up!" href="http://thelegendofrandom.com/blog/archives/2268">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/2044">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=2044">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="2044_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="2044_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="2044_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="2044_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/index.html">Home</a> </li>
+                <li class="page_item page-item-2"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/sample-page.html">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/tools.html">Tools</a> </li>
+<li class="page_item page-item-153"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/contact-2.html">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="file:///Y:/thelegendofrandom.com/site/thelegendofrandom.com/blog/challenges.html">Challenges</a> </li>			
+
+                <li style="left: 12px; width: 58px; overflow: hidden;" class="back"><div class="left"></div></li></ul>
+
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/2044">R4ndom’s Tutorial #20B: Working With Visual Basic Binaries, Pt 2</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Sep.07, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><p>This is part 2 of Working with 
+Visual Basic Binaries. In this tutorial we will be using VB Decompiler 
+which is available in the download from part 1 of this tutorial. We will
+ also be using MapConvert and OllyVBHelper- plugins for Olly, P32Dasm 
+and some additional crackmes, all of which are available in the download
+ of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline; color: #0a77e1;">tutorials</span></a> </p> page.<br>
+<span id="more-2044"></span><p></p>
+<div style="margin-bottom:8em;"><span style="display:none;">.</span></div>
+<h2><span style="color: #0a77e1;">Investigating CrackmeVB3</span></h2>
+<p>Let’s begin by loading the crackme into Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/24.png"><img class="aligncenter size-full wp-image-2065" title="Beginning of target" src="2044_fichiers/24.png" alt="" height="130" width="603"></a> </p><p></p>
+<p>Here, we see our typical call into the VB runtime. You have to admit,
+ it’s pretty amazing (bonehead?) that we can write an entire executable 
+in two lines of code!</p>
+<p>Now, because we don’t know much about this binary, let’s investigate 
+it. Running the target, we see that it has a nag set to a timer of 5 
+seconds:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Nag.png"><img class="aligncenter size-full wp-image-2069" title="Nag" src="2044_fichiers/Nag.png" alt="" height="196" width="369"></a> </p><p></p>
+<p>We’ll definitely want to get rid of that! After 5 seconds we see the main serial screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/crackmemain.png"><img class="aligncenter size-full wp-image-2070" title="crackmemain" src="2044_fichiers/crackmemain.png" alt="" height="100" width="370"></a> </p><p></p>
+<p>and entering a wrong serial, the badboy is displayed:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/badboy.png"><img class="aligncenter size-full wp-image-2071" title="badboy" src="2044_fichiers/badboy.png" alt="" height="301" width="378"></a> </p><p></p>
+<p>Let’s take a look at the target’s guts, shall we? This time, instead of VB Decompiler, let’s use P32Dasm.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Using P32Dasm</span></h2>
+<p>P32Dasm is a native and P-code decompiler. It is very similar to VB 
+Decompiler, though it does have some added benefits (like exporting MAP 
+files that work).</p>
+<p>Loading CrackmeVB3.exe into P32Dasm, we see the main screen, with some data about the target:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Main.png"><img class="aligncenter size-full wp-image-2068" title="Main P32Dasm" src="2044_fichiers/Main.png" alt="" height="820" width="624"></a> </p><br>
+You should notice some similarities to VB Decompiler, especially the 
+Form1.Command2.click. This is the callback to a clicking of a button. At
+ the top are ASCII strings used in the target (obviously not 
+obfuscated), and at the bottom we see several timer functions. At the 
+top of the P32Dasm window are some toolbar buttons that you should be 
+familiar with:<p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/toolbar.png"><img class="aligncenter size-full wp-image-2072" title="toolbar" src="2044_fichiers/toolbar.png" alt="" height="135" width="501"></a> </p><p></p>
+<p>Clicking on “Strings”, we see something similar to the “Search For -&gt; Strings” in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Strings.png"><img class="aligncenter size-full wp-image-2073" title="Strings" src="2044_fichiers/Strings.png" alt="" height="273" width="353"></a> </p><p></p>
+<p>Though, unlike Olly, double clicking on one does not take you to the disassembly of that section of code.</p>
+<p>Next is the Constants toolbar button, but clicking on this reveals 
+that there aren’t any. Then we come to ‘Imports’, which is similar to 
+“All intermodular calls” in Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Imports.png"><img class="aligncenter size-full wp-image-2074" title="Imports" src="2044_fichiers/Imports.png" alt="" height="714" width="353"></a> </p><p></p>
+<p>The _vbaStrCmp should stick out like a sore thumb…</p>
+<p>Next is the Exports, but this target doesn’t have any, so it’s blank.</p>
+<p>“Objects” should remind you of the VB Decompiler screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Objects.png"><img class="aligncenter size-full wp-image-2075" title="Objects" src="2044_fichiers/Objects.png" alt="" height="608" width="369"></a> </p><p></p>
+<p>This shows all of the VB ‘objects’ in the target, such as buttons, 
+labels and timers. We can plainly see that the “Check” button is called 
+“Command1″, and we can assume that this is our main check button 
+callback.</p>
+<p>Last up is the “Procedures” window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Procedures.png"><img class="aligncenter size-full wp-image-2076" title="Procedures" src="2044_fichiers/Procedures.png" alt="" height="395" width="251"></a> </p><p></p>
+<p>This shows us all of the callbacks in the target. We can see that our
+ check button callback is called “Command1_Click”, as Command1 is the 
+callback of our “Check” button.</p>
+<p>One thing I wanted to point out is that very suspicious series of five’s in the strings section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/5555.png"><img class="aligncenter size-full wp-image-2077" title="5555" src="2044_fichiers/5555.png" alt="" height="212" width="587"></a> </p><p></p>
+<p>It couldn’t really be that simple, could it?</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/555-entered.png"><img class="aligncenter size-full wp-image-2078" title="555 entered" src="2044_fichiers/555-entered.png" alt="" height="100" width="370"></a> </p><p></p>
+<p>No, please tell me it isn’t:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Success.png"><img class="aligncenter size-full wp-image-2079" title="Success1" src="2044_fichiers/Success.png" alt="" height="171" width="335"></a> </p><p></p>
+<p>Oh brother. Oh well, let’s continue to examine this crackme so we can
+ see how using P32Dasm will help us in other ways (like removing that 
+nag). One tool we have is map files…</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Making a MAP File</span></h2>
+<p>A MAP file is a collection of names for procedure calls that have 
+been compiled into the VB code. Remember, VB uses actual string names to
+ reference callbacks, so we can extrapolate these and import them into 
+Olly. We can do this in VB Decompiler Pro (File -&gt; Save Procedure 
+List) but since the pro version is not free, we can also use P32Dasm. 
+Open the target in P32Dasm again and select “File” -&gt; “Export to MAP 
+file”. Save the MAP file and then load CrackmeVB3.exe in Olly. Let’s 
+take a look at our main suspicious callback before loading the map file.
+ I chose the address of the Command1_Click callback at 4055F4:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Goodboy-callback1.png"><img class="aligncenter size-full wp-image-2081" title="Goodboy callback" src="2044_fichiers/Goodboy-callback1.png" alt="" height="141" width="584"></a> </p><p></p>
+<p>Loading the target in Olly and jumping to that address, we see where the Check button callback begins:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Command1-callback.png"><img class="aligncenter size-full wp-image-2082" title="Command1 callback" src="2044_fichiers/Command1-callback.png" alt="" height="269" width="619"></a> </p><p></p>
+<p>We will use the MAP converter plugin for Olly (included in the 
+download) in order to bring in the MAP file we created in P32Dasm. Save 
+the DLL for the MapConv plugin in the plugins directory for Olly and 
+restart Olly (if you haven’t already). Load the target and select 
+“Plugins” -&gt; “MapConv” -&gt; “Replace Comments”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/14.png"><img class="aligncenter size-full wp-image-2066" title="Loading the MAP file" src="2044_fichiers/14.png" alt="" height="395" width="509"></a> </p><p></p>
+<p>Select the MAP file we created in P32Dasm. This allows us to put the 
+MAP file info in the comments column. You can also load them into the 
+label column, though I personally find this harder to read. Now, when we
+ look at the callback, we see that the callback information has been 
+added to help us out:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/MAP-loaded.png"><img class="aligncenter size-full wp-image-2083" title="MAP loaded" src="2044_fichiers/MAP-loaded.png" alt="" height="320" width="626"></a> </p><p></p>
+<p>As you can see, we now have a comment for our callback. Now right 
+click and select “Search for” -&gt; “All user-defined comments”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/User-comments.png"><img class="aligncenter size-full wp-image-2084" title="User comments" src="2044_fichiers/User-comments.png" alt="" height="220" width="545"></a> </p><p></p>
+<p>Now we can see all the names of our callbacks!</p>
+<p>Scrolling down in the Command1_Click callback, we can see the goodboy, badboy, and the obvious patch that needs to be made:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/The-patch.png"><img class="aligncenter size-full wp-image-2086" title="The patch" src="2044_fichiers/The-patch.png" alt="" height="353" width="746"></a> </p><br>
+Now all that’s left is…<p></p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Removing the Nag</span></h2>
+<p>Looking back in P32Dasm, let’s take a look at the timer calls:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/15.png"><img class="aligncenter size-full wp-image-2090" title="Timer calls" src="2044_fichiers/15.png" alt="" height="820" width="624"></a> </p><p></p>
+<p>From this screen, we can see that Form2 is the nag screen (because it is the one calling the timers).</p>
+<p><em>***You may wonder why we call a timer 6 times; this is because 
+obviously the person who created this crackme did not know how to 
+properly use timers, so they call a one second timer 6 times to mimic a 
+six-second countdown. ***</em></p>
+<p>We can also see from this screen that Form2.Command1_Click is the 
+callback for clicking the OK button after the timer has expired. A very 
+simple solution (though probably not the most elegant) is to simply 
+override the first timer call and make it jump to the callback for the 
+OK button being clicked. This means that when the first callback for the
+ timer is called (meaning we just started the target and we are starting
+ the first one-second timer), we will instead call the code that handles
+ the clicking of the OK button after the timer has expired. This will in
+ effect simply fool the program into calling the ‘close nag screen’ code
+ instead of the ‘start first timer’ code.</p>
+<p>Looking at the first timer callback code at address 405AC5:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/25.png"><img class="aligncenter size-full wp-image-2091" title="Beginning of first timer" src="2044_fichiers/25.png" alt="" height="275" width="667"></a> </p><p></p>
+<p>Let’s just change the beginning to point directly to the code that 
+handles the closing of the nag screen. From P32Dasm, we can see that 
+this callback is at address 4059C2 (the Command1_Click callback code):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/34.png"><img class="aligncenter size-full wp-image-2092" title="The OK button callback" src="2044_fichiers/34.png" alt="" height="240" width="509"></a> </p><p></p>
+<p>Now, let’s patch it:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/44.png"><img class="aligncenter size-full wp-image-2093" title="Patch applied" src="2044_fichiers/44.png" alt="" height="177" width="664"></a> </p><p></p>
+<p>Now, if you re-start the target, you will see the nag show up for 
+just a quick second, then disappear. Like I said, not the most elegant, 
+but this tutorial is not about “elegantly removing nags” <img src="2044_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">OllyVBHelper Plugin</span></h2>
+<p>Another helpful tool in the battle with Visual Basic is the 
+OllyVBHelper plugin. The purpose of this plugin is to find and re-label 
+natively compiled VB imports (DLLs). It also finds and renames DLL 
+function call stubs. As an example, I loaded one of the crackmes in Olly
+ (doesn’t matter which one) and chose “Search for” -&gt; “All user 
+labels”. Before running the plugin, his window is empty:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Labels-before.png"><img class="aligncenter size-full wp-image-2111" title="Labels before" src="2044_fichiers/Labels-before.png" alt="" height="292" width="501"></a> </p><p></p>
+<p>Now, running the plugin:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/VBHelper.png"><img class="aligncenter size-full wp-image-2112" title="VBHelper" src="2044_fichiers/VBHelper.png" alt="" height="540" width="740"></a> </p><p></p>
+<p>and we can see that we now have all of our method calls displayed, similar to if we imported a MAP file.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/Labels-after.png"><img class="aligncenter size-full wp-image-2113" title="Labels after" src="2044_fichiers/Labels-after.png" alt="" height="637" width="508"></a> </p><p></p>
+<p>A nice little time-saver.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Using the ‘Point-H’ Technique<br>
+</span></h2>
+<p>Point-H is a technique introduced by Ricardo Narvaja in his cracking 
+tutorials (in Spanish). The ‘H’ stands for Hmemcopy, a very old Windows 
+95 API call. This call was run directly by the OS for copying ASCII 
+strings, and could be used to find points of interest in cracking. The 
+Point-H is a more modern way of achieving this.</p>
+<p>In ntdll32.dll, there is an API that Windows calls when it wants to 
+copy a string. This function is used often, from copying names of 
+imported DLLs, to comparing Windows messages, to API functions like 
+GetDlgItemTextA and SetDlgItemTextA. In the later case, we can use this 
+API to trap when a username or password is initially copied from the 
+window and returned to our program. For example, in our crackme there 
+may be a section that, after clicking the “Sign in” button, our program 
+get’s the entered password from the password field by calling 
+GetDlgItemTextA. When we call this function, kernel32 calls it’s own 
+internal API that copies this value from the window into a temporary 
+variable. Kernel32 then returns this value to our program as a return 
+value of GetDlgItemTextA.</p>
+<p>If we know the location of this internal string copying API, we can 
+pause at it, check what string is being copied, and if it is one we’re 
+interested in (like a password) we can then follow execution until it 
+returns back to our target program’s code and we will see where the 
+target receives the password.</p>
+<p>The Point-H location will be the same on my computer no matter which 
+target I am running, but will be a different location from another 
+computer’s address, therefore, when we find the address of Point-H on my
+ system, you will have to substitute your own address on your system.</p>
+<p>This method is especially useful on targets that are heavily 
+obfuscated, encrypted, or just too hard to find the right code section 
+to start with (like Visual Basic executables). It gives you at least a 
+starting point to begin at…</p>
+<p>I have included a crackme with the files of this tutorial called 
+“Point-H Crackme.exe”. It is not a VB target, as we will just use this 
+to find the actual address of this point-h API call.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Finding ‘Point-H’</span></h2>
+<p>First, I would suggest doing these steps with a clean install of Olly
+ (just move the ‘plugins’ folder in the Olly install directory 
+temporarily to your desktop) as I have had problems with certain plugins
+ and false breaks in the past. Load the Point-H Crackme into Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/110.png"><img class="aligncenter size-full wp-image-2137" title="Loading the crackme" src="2044_fichiers/110.png" alt="" height="202" width="599"></a> </p><p></p>
+<p><em>*** Make sure you are paused at 401000 and not at the raw entry 
+to the file. If you are not paused at the real OEP (401000) try pressing
+ F9 once- Olly should then pause at the real entry point. If that 
+doesn’t work, just open the ‘Memory’ window (“Me” icon in the toolbar), 
+highlight the Point-H Crackme ‘CODE’ section and hit enter. This will 
+take you to the entry point of the actual binary. ***</em></p>
+<p>Now right click in the diassembly window and select “Search for” 
+-&gt; “Name (label) in current modile”, or hit Ctrl-N. This will bring 
+up the names window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/26.png"><img class="aligncenter size-full wp-image-2138" title="Names window" src="2044_fichiers/26.png" alt="" height="650" width="421"></a> </p><p></p>
+<p>Toward the bottom will be the TranslateMessage API. Right-click on this and select “Conditional log breakpoint on import”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/35.png"><img class="aligncenter size-full wp-image-2139" title="Setting the conditional BP" src="2044_fichiers/35.png" alt="" height="424" width="412"></a> </p><p></p>
+<p>This will bring up the conditional breakpoint screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/45.png"><img class="aligncenter size-full wp-image-2140" title="Conditional breakpoint window" src="2044_fichiers/45.png" alt="" height="420" width="466"></a> </p><p></p>
+<p>Set up the screen as shown. We will use this conditional breakpoint 
+to weed out all of the calls to translate message until we hit the 
+message with the ID of 201. Looking at our old cheat sheet for Windows 
+message IDs (provided in tutorial 16A), we see that this ID corresponds 
+to the left mouse button down message. This is to trap the 
+TranslateMessage function when processing the click of the “OK” button 
+in the crackme.</p>
+<p>When you click OK in the conditional breakpoint window, you should see the breakpoint in the ‘Breakpoints’ window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/131.png"><img class="aligncenter size-full wp-image-2128" title="Breakpoints window" src="2044_fichiers/131.png" alt="" height="144" width="394"></a> </p><p></p>
+<p>You may notice that it says “Log” under the Active column, letting us know that this is in fact a log BP.</p>
+<p>Go ahead and run the crackme. select “Edit” -&gt; “Register”, and put
+ in a name and serial. Make sure you use TAB to move among the fields or
+ our left mouse click message will fire our breakpoint prematurely. I 
+entered “R4ndom” for the name and “12121212″ for the serial:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/55.png"><img class="aligncenter size-full wp-image-2141" title="Entering name and serial" src="2044_fichiers/55.png" alt="" height="331" width="383"></a> </p><p></p>
+<p>Now click OK and Olly should break at our conditional breakpoint:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/64.png"><img class="aligncenter size-full wp-image-2142" title="Break on memory access" src="2044_fichiers/64.png" alt="" height="241" width="498"></a> </p><p></p>
+<p>Now we want to search for our serial in memory. Open the Memory 
+window by clicking the “Me” icon or typing Alt-M. Right-click in this 
+window and choose “Search”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/73.png"><img class="aligncenter size-full wp-image-2143" title="Searching memory" src="2044_fichiers/73.png" alt="" height="460" width="460"></a> </p><p></p>
+<p>In the ASCII field, enter 12121212:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/81.png"><img class="aligncenter size-full wp-image-2144" title="Searching for the serial in memory" src="2044_fichiers/81.png" alt="" height="217" width="379"></a> </p><p></p>
+<p>Olly should show us where in memory our serial resides:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/91.png"><img class="aligncenter size-full wp-image-2145" title="The serial in memory" src="2044_fichiers/91.png" alt="" height="218" width="476"></a> </p><p></p>
+<p>We want to tell Olly to pause when this memory address is accessed. 
+Highlight the first byte of the serial and right-click on it. select 
+“Breakpoint” -&gt; “Memory, On access”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/101.png"><img class="aligncenter size-full wp-image-2146" title="Memory on access BP" src="2044_fichiers/101.png" alt="" height="400" width="520"></a> </p><p></p>
+<p>Now hit F9 to run the target. Olly will then break on our memory 
+breakpoint (you may break at our previous conditional BP first, in which
+ case just hit F9 again):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/112.png"><img class="aligncenter size-full wp-image-2147" title="Olly breaks" src="2044_fichiers/112.png" alt="" height="399" width="526"></a> </p><p></p>
+<p>This is the Point-H on your system. On mine, as we can see, it’s 
+774E23BE. Write this down. If you look in the registers window, you will
+ see our serial in ESI:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/142.png"><img class="aligncenter size-full wp-image-2130" title="Serial in the registers window" src="2044_fichiers/142.png" alt="" height="137" width="260"></a> </p><p></p>
+<p>Let’s now experiment a little with this magical breakpoint. Delete 
+the log breakpoint as well as the memory BPs set earlier. Add a hardware
+ BP on execute on the Point-H address (so it won’t be lost on a 
+re-start) and restart the target. We should then break before we see the
+ main crackme window:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/151.png"><img class="aligncenter size-full wp-image-2131" title="Breaking at point h" src="2044_fichiers/151.png" alt="" height="193" width="575"></a> </p><p></p>
+<p>And looking in the registers window, we see that the string we are copying is “OpenProcessToken”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/16.png"><img class="aligncenter size-full wp-image-2132" title="OpenProcessToken" src="2044_fichiers/16.png" alt="" height="169" width="255"></a> </p><p></p>
+<p>Hitting F9 repeatedly, you will see various strings in the ESI 
+register, each time ntdll32 calls this internal API. Besides API names, 
+you will see various number sequences flash by as well as other things- 
+basically anything the ntdll32 copies as a string.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Using ‘Point-H’ to Crack the Target</span></h2>
+<p>Now, you may be asking yourself, “Great. I did all this work. What’s the point?” (pun intended <img src="2044_fichiers/icon_smile.gif" alt=":)" class="wp-smiley">
+  ) Let’s try it out. Temporarily disable the BP on the Point-H address 
+and re-start the target. Select “Register” again from the menu and enter
+ a name and serial. Before hitting OK, set the BP on Point-H again, then
+ click OK in the target.</p>
+<p><em>*** If you need to find the address of Point-H to set the BP, 
+open the memory window, click once on ntdll’s .text section (toward the 
+bottom) and click Enter. This will bring up ntdll in the disassembly 
+window. Now you can goto (Ctrl-G) the address of Point-H. ***</em></p>
+<p>Olly breaks at our breakpoint, and looking in the registers window, we can see that this time through is with our username:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/17.png"><img class="aligncenter size-full wp-image-2133" title="username in the register" src="2044_fichiers/17.png" alt="" height="140" width="259"></a> </p><p></p>
+<p>Hitting F9 again, we see that we are now at the copying of the serial:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/18.png"><img class="aligncenter size-full wp-image-2134" title="Copying the serial" src="2044_fichiers/18.png" alt="" height="144" width="284"></a> </p><p></p>
+<p>Now for the magic. Open the memory window, right-click on our 
+target’s CODE section and choose “Set break on access”. This way we will
+ break as soon as ntdll32 returns to our target’s code. Hitting F9, Olly
+ pauses in our code section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/19.png"><img class="aligncenter size-full wp-image-2135" title="Back to our code" src="2044_fichiers/19.png" alt="" height="242" width="688"></a> </p><p></p>
+<p>As you can see, we paused right after a call to GetDlgItemTextA. Deep
+ inside ntdll32, this function eventually called our code containing the
+ Point-H address. It then returned to our target’s code at address 
+4012E9. We now have a starting point to try and crack this crackme. The 
+crackme has just gotten the entered serial number, and will soon do 
+something with it. Of course, because this crackme is not very hard, 
+it’s not really that impressive, but in a commercial app, with 
+encryption and protection routines, being able to zero in on this code 
+is a life-saver.</p>
+<p>In the case of this specific crackme, continuing to step through the 
+code, and placing access breakpoints on the code section of the crackme,
+ it doesn’t take long before we get to the relevant code for patching (I
+ leave this up to you…).</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">Another Target Using Point-H</span></h2>
+<p>Let’s try another crackme using this technique. Load “CrackmeVB4.exe”
+ into Olly. First, let’s find our Point-H address; open the Memory 
+window, scroll to the bottom, and highlight whatever section your 
+point-h address is in. For me, that would be address 774E23BE in 
+ntdll.dll’s .text section:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/113.png"><img class="aligncenter size-full wp-image-2162" title="Ntdll in memory" src="2044_fichiers/113.png" alt="" height="404" width="549"></a> </p><p></p>
+<p>Click Enter while this line is highlighted, which opens this module 
+in the disassembler. Now, hit Ctrl-G and enter the address of the 
+point-h on your system to make Olly jump to that location:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/27.png"><img class="aligncenter size-full wp-image-2163" title="Go to point-h" src="2044_fichiers/27.png" alt="" height="388" width="428"></a> </p><p></p>
+<p>and we land at point-h:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/36.png"><img class="aligncenter size-full wp-image-2164" title="Point-H on my system" src="2044_fichiers/36.png" alt="" height="220" width="503"></a> </p><p></p>
+<p>Now, keeping this location available in the disassembly window (but 
+without placing a breakpoint yet), and run the target. First, a nag 
+comes up (for what seems like 3 hours), and then we see the main entry 
+screen:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/46.png"><img class="aligncenter size-full wp-image-2165" title="Crackme main screen" src="2044_fichiers/46.png" alt="" height="225" width="242"></a> </p><p></p>
+<p>Enter a name and serial, as I’ve done here, and then set your 
+breakpoint (F2) on the point-h in Olly, before clicking OK in the 
+target. After setting the breakpoint, click OK in the target and Olly 
+will break at our point-h:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/56.png"><img class="aligncenter size-full wp-image-2166" title="Olly breaks at point-h" src="2044_fichiers/56.png" alt="" height="332" width="685"></a> </p><p></p>
+<p>As we can see in the registers window, this isn’t the stop we want to
+ investigate, so click F9 again. You will need to press F9 a couple more
+ times until a string comes up that we are interested in. In this case, 
+the “You Get Wrong…” string looks pretty promising:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/65.png"><img class="aligncenter size-full wp-image-2167" title="badboy string" src="2044_fichiers/65.png" alt="" height="228" width="736"></a> </p><p></p>
+<p>Now what we want to do is trap execution as soon as we get back to 
+our target’s code. Because of the nature of Visual Basic, we can’t just 
+set an access memory breakpoint on the code section of our target (as we
+ would in a native application). So what we want to do is single step 
+(over) until we get back to our target’s code. We will first go into 
+user32.dll (setting the cursor etc) and back through the VB runtime. The
+ badboy will be displayed, after which we will step quite a ways 
+further, but eventually, we will land here:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/09/92.png"><img class="aligncenter size-full wp-image-2169" title="In the land of good code" src="2044_fichiers/92.png" alt="" height="570" width="750"></a> </p><p></p>
+<p>Here we can clearly see that we are returning after a call to 
+rtcMsgBox which displayed our badboy message window. Above this we see 
+our badboy being created, and more importantly, above that we see our 
+goodboy. Now, finding the patch (at address 408677) is extremely easy. 
+Of course, in this specific crackme, using P32Dasm or VB Decompiler 
+would have been far simpler, but when we run into a devilish VB target 
+where these simple tricks won’t work, the Point-H method can be 
+invaluable.</p>
+<h2></h2>
+<h2><span style="color: #0a77e1;">What About Smartcheck?</span></h2>
+<p>This may come as quite a shock to you, but I am not going over 
+Smartcheck. This set of tutorials is meant as a *current* guide to 
+reverse engineering. Because Numega’s Smartcheck is not compatible with 
+operating systems beyond Windows Vista (though it is possible with a lot
+ of work in compatibility modes, running in a virtual machine, 
+installing old VB runtimes etc) I believe it shouldn’t be a part of a 
+current reverser’s toolkit. I have shown how, using tools that work with
+ all versions of Windows like VB Decompiler and P32Dasm, any target can 
+be examined and cracked using just these tools. By all means, if you are
+ using Windows XP and can get Smartcheck to work, it is a valuable tool 
+and should be used. But until someone takes up the charge and makes 
+Smartcheck compatible with newer operating systems, I feel it’s just too
+ old to be relevant.</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">17 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-4007">
+     <div id="comment-4007">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Modnar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4007" title="">September 11th, 2012 on 6:14 pm</a>  </small>
+
+			<p>Have been half through this one, it’s good so far but it 
+introduces new things such as labels and conditional breakpoint which 
+you never talked about them before, and I don’t know; it just feels that
+ there is more to them.</p>
+<p>I mean I have no idea how MSG==201 works, like is MSG a keyword in ollydbg which refers to windows msgs?</p>
+<p>And what exactly are labels? do they work the same as search for inter-modular functions?</p>
+<p>Other than that a great tutorial as usual!</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4007#respond" onclick='return addComment.moveForm("comment-4007", "4007", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-4011">
+     <div id="comment-4011">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2044_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4011" title="">September 11th, 2012 on 7:37 pm</a>  </small>
+
+			<p>Duly noted. I will try to include some of these topics in future tuts.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4011#respond" onclick='return addComment.moveForm("comment-4011", "4011", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-3" id="li-comment-4039">
+     <div id="comment-4039">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Modnar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4039" title="">September 12th, 2012 on 9:23 am</a>  </small>
+
+			<p>Thanks for all your hard work man. <img src="2044_fichiers/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4039#respond" onclick='return addComment.moveForm("comment-4039", "4039", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4091">
+     <div id="comment-4091">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/fa1e89cd3e60753fa815868825f001b8.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://x-ray-team.blogspot.com/" rel="external nofollow" class="url">icky</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4091" title="">September 13th, 2012 on 1:49 pm</a>  </small>
+
+			<p>hy bro.. i have same program..may be u interest to make crack  tuts about this …. </p>
+<p><a href="http://www.4shared.com/rar/YWThkZSx/MIG33.html" rel="nofollow">http://www.4shared.com/rar/YWThkZSx/MIG33.html</a> </p>?<p></p>
+<p>i am always waiting for u solution or tuts</p>
+<p>GREZZ.. <img src="2044_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4091#respond" onclick='return addComment.moveForm("comment-4091", "4091", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-4331">
+     <div id="comment-4331">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/e7873ed9c72e2b59659e02ab6548d3bc.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>seven</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4331" title="">September 19th, 2012 on 7:30 am</a>  </small>
+
+			<p>hi<br>
+is there any tutorial to patch a vb application, which using Harddisk 
+serial/encrypt/decode it, send that code to the application maker, then 
+we receive back the unlock key from them….<br>
+please make some tutorial about this<br>
+thanks</p>
+<p>2 funtions i get from vb decompiler:</p>
+<p>Public Function CheckFirstRegister(EG_ID) ’11011610<br>
+  ‘Data Table: 11001E54<br>
+  Dim var_E2 As Integer<br>
+  Dim var_12C As Variant<br>
+  Dim var_14C As Variant<br>
+  Dim var_16C As Variant<br>
+  Dim var_18C As Variant<br>
+  Dim var_1AC As Variant<br>
+  Dim var_1CC As Variant<br>
+  Dim var_1EC As Variant<br>
+  Dim var_20C As Variant<br>
+  Dim var_22C As Variant<br>
+  Dim var_24C As Variant<br>
+  Dim var_26C As Variant<br>
+  Dim var_28C As Variant<br>
+  Dim var_2AC As Variant<br>
+  Dim var_2CC As Variant<br>
+  Dim var_2EC As Variant<br>
+  Dim var_30C As Variant<br>
+  Dim var_32C As Variant<br>
+  Dim var_34C As Variant<br>
+  Dim var_364 As Variant<br>
+  Dim var_374 As String<br>
+  Dim var_86 As Integer<br>
+  loc_11011328: On Error Goto loc_110115EE<br>
+  loc_1101132D: var_E2 = &amp;HFF<br>
+  loc_11011336: var_FC = ” ============= ALREADY REGISTERED? =============”<br>
+  loc_1101133C: Call Proc_1_29_1100B834(var_FC, var_E2)<br>
+  loc_1101134C: var_10C = Chr(&amp;H53)<br>
+  loc_1101135C: var_11C = Chr(&amp;H6F)<br>
+  loc_11011364: var_12C = var_10C &amp; var_11C<br>
+  loc_11011370: var_13C = Chr(&amp;H66)<br>
+  loc_11011378: var_14C = var_12C &amp; var_13C<br>
+  loc_11011384: var_15C = Chr(&amp;H74)<br>
+  loc_1101138C: var_16C = var_14C &amp; var_15C<br>
+  loc_11011398: var_17C = Chr(&amp;H77)<br>
+  loc_110113A0: var_18C = var_16C &amp; var_17C<br>
+  loc_110113AC: var_19C = Chr(&amp;H61)<br>
+  loc_110113B4: var_1AC = var_18C &amp; var_19C<br>
+  loc_110113C0: var_1BC = Chr(&amp;H72)<br>
+  loc_110113C8: var_1CC = var_1AC &amp; var_1BC<br>
+  loc_110113D4: var_1DC = Chr(&amp;H65)<br>
+  loc_110113DC: var_1EC = var_1CC &amp; var_1DC<br>
+  loc_110113E8: var_1FC = Chr(&amp;H5C)<br>
+  loc_110113F0: var_20C = var_1EC &amp; var_1FC<br>
+  loc_110113FC: var_21C = Chr(&amp;H4D)<br>
+  loc_11011404: var_22C = var_20C &amp; var_21C<br>
+  loc_11011410: var_23C = Chr(&amp;H69)<br>
+  loc_11011418: var_24C = var_22C &amp; var_23C<br>
+  loc_11011424: var_25C = Chr(&amp;H63)<br>
+  loc_1101142C: var_26C = var_24C &amp; var_25C<br>
+  loc_11011438: var_27C = Chr(&amp;H72)<br>
+  loc_11011440: var_28C = var_26C &amp; var_27C<br>
+  loc_1101144C: var_29C = Chr(&amp;H6F)<br>
+  loc_11011454: var_2AC = var_28C &amp; var_29C<br>
+  loc_11011460: var_2BC = Chr(&amp;H73)<br>
+  loc_11011468: var_2CC = var_2AC &amp; var_2BC<br>
+  loc_11011474: var_2DC = Chr(&amp;H6F)<br>
+  loc_1101147C: var_2EC = var_2CC &amp; var_2DC<br>
+  loc_11011488: var_2FC = Chr(&amp;H66)<br>
+  loc_11011490: var_30C = var_2EC &amp; var_2FC<br>
+  loc_1101149C: var_31C = Chr(&amp;H74)<br>
+  loc_110114A4: var_32C = var_30C &amp; var_31C<br>
+  loc_110114B0: var_33C = Chr(&amp;H5C)<br>
+  loc_110114B8: var_34C = var_32C &amp; var_33C<br>
+  loc_110114BD: var_F0 = CStr(var_34C)<br>
+  loc_1101151B: var_FC = “SOFTWARE\Microsoft\Windows\CurrentVersion\MCP\”<br>
+  loc_1101152C: Proc_0_0_1100EA9C(var_10C, -2147483646, var_FC)<br>
+  loc_11011535: var_90 = CStr(var_10C)<br>
+  loc_1101154C: var_FC = “SOFTWARE\Microsoft\Windows\CurrentVersion\App Management\Exc\”<br>
+  loc_1101155D: Proc_0_0_1100EA9C(var_10C, -2147483646, var_FC, EG_ID)<br>
+  loc_11011566: var_94 = CStr(var_10C)<br>
+  loc_11011572: var_364 = var_90<br>
+  loc_1101157A: var_10C = Trim(var_364)<br>
+  loc_11011582: var_374 = vbNullString<br>
+                If (var_10C = var_374) Then<br>
+  loc_11011593:   var_FC = GetSerialHardDisk()<br>
+  loc_1101159B:   var_D8 = var_FC<br>
+  loc_110115A1:   var_364 = var_D8<br>
+  loc_110115A9:   var_10C = Trim(var_364)<br>
+  loc_110115B1:   var_374 = vbNullString<br>
+                  If (var_10C = var_374) Then<br>
+  loc_110115C1:     var_86 = 0<br>
+  loc_110115C4:     GoTo loc_110115CC<br>
+                  End If<br>
+  loc_110115C9:   var_86 = &amp;HFF<br>
+  loc_110115CC:   ‘ Referenced from: 110115C4<br>
+  loc_110115CC:   GoTo loc_110115D4<br>
+                End If<br>
+  loc_110115D1: var_86 = &amp;HFF<br>
+  loc_110115D4: ‘ Referenced from: 110115CC<br>
+  loc_110115DA: var_FC = ” ============= REGISTER END =============”<br>
+  loc_110115E0: Call Proc_1_29_1100B834(var_FC, var_E2, var_86, var_86, var_86)<br>
+  loc_110115E8: arg_4 = 1<br>
+  loc_110115EE: ‘ Referenced from: 11011328<br>
+  loc_110115F0: var_86 = 0<br>
+  loc_110115F9: var_FC = ” ============= REGISTER ERROR =============”<br>
+  loc_110115FF: Call Proc_1_29_1100B834(var_FC, var_E2, var_86)<br>
+  loc_11011607: arg_4 = EG_ID<br>
+End Function</p>
+<p>Public Function CheckRegister(EG_ID, Pass) ’11014FA4<br>
+  ‘Data Table: 11001E54<br>
+  Dim var_E6 As Integer<br>
+  Dim var_150 As Variant<br>
+  Dim var_180 As Variant<br>
+  Dim var_130 As Variant<br>
+  Dim var_170 As Variant<br>
+  Dim var_190 As Variant<br>
+  Dim var_1B0 As Variant<br>
+  Dim var_1D0 As Variant<br>
+  Dim var_1F0 As Variant<br>
+  Dim var_210 As Variant<br>
+  Dim var_230 As Variant<br>
+  Dim var_250 As Variant<br>
+  Dim var_270 As Variant<br>
+  Dim var_290 As Variant<br>
+  Dim var_2B0 As Variant<br>
+  Dim var_2D0 As Variant<br>
+  Dim var_2F0 As Variant<br>
+  Dim var_310 As Variant<br>
+  Dim var_330 As Variant<br>
+  Dim var_350 As Variant<br>
+  Dim var_110 As Variant<br>
+  Dim var_368 As Variant<br>
+  Dim var_390 As Variant<br>
+  Dim var_378 As String<br>
+  Dim var_100 As String<br>
+  Dim var_140 As Variant<br>
+  Dim var_3C4 As Variant<br>
+  Dim var_160 As Variant<br>
+  Dim var_3E4 As String<br>
+  Dim var_3F4 As Variant<br>
+  Dim var_1A0 As Variant<br>
+  Dim var_414 As String<br>
+  Dim var_1C0 As Integer<br>
+  Dim var_424 As Variant<br>
+  Dim var_1E0 As Variant<br>
+  Dim var_444 As String<br>
+  Dim var_200 As Integer<br>
+  Dim var_454 As Variant<br>
+  Dim var_220 As Variant<br>
+  Dim var_380 As String<br>
+  Dim var_E8 As Integer<br>
+  Dim var_398 As String<br>
+  Dim var_3A0 As String<br>
+  Dim var_FA As Integer<br>
+  Dim var_120 As Variant<br>
+  Dim var_3D4 As Variant<br>
+  Dim var_86 As Integer<br>
+  loc_110145A4: On Error Goto loc_11014F82<br>
+  loc_110145A9: var_E6 = &amp;HFF<br>
+  loc_110145B2: var_100 = ” ============= CHECK ALREADY REGISTERED ? =============”<br>
+  loc_110145B8: Call Proc_1_29_1100B834(var_100, var_E6)<br>
+  loc_110145C3: var_110 = Now<br>
+  loc_110145CE: var_120 = Year(var_110)<br>
+  loc_110145D9: var_130 = Now<br>
+  loc_110145E4: var_140 = Month(var_130)<br>
+  loc_110145EC: var_150 = var_120 &amp; var_140<br>
+  loc_110145F3: var_160 = Now<br>
+  loc_110145FE: var_170 = Day(var_160)<br>
+  loc_11014606: var_180 = var_150 &amp; var_170<br>
+  loc_11014614: var_AC = Proc_4_13_1100BC1C(CStr(var_180))<br>
+                If (Pass  var_AC) Then<br>
+  loc_11014638:   arg_4 = var_E6<br>
+                End If<br>
+  loc_11014646: var_110 = Chr(&amp;H53)<br>
+  loc_11014656: var_120 = Chr(&amp;H6F)<br>
+  loc_1101465E: var_130 = var_110 &amp; var_120<br>
+  loc_1101466A: var_140 = Chr(&amp;H66)<br>
+  loc_11014672: var_150 = var_130 &amp; var_140<br>
+  loc_1101467E: var_160 = Chr(&amp;H74)<br>
+  loc_11014686: var_170 = var_150 &amp; var_160<br>
+  loc_11014692: var_180 = Chr(&amp;H77)<br>
+  loc_1101469A: var_190 = var_170 &amp; var_180<br>
+  loc_110146A6: var_1A0 = Chr(&amp;H61)<br>
+  loc_110146AE: var_1B0 = var_190 &amp; var_1A0<br>
+  loc_110146BA: var_1C0 = Chr(&amp;H72)<br>
+  loc_110146C2: var_1D0 = var_1B0 &amp; var_1C0<br>
+  loc_110146CE: var_1E0 = Chr(&amp;H65)<br>
+  loc_110146D6: var_1F0 = var_1D0 &amp; var_1E0<br>
+  loc_110146E2: var_200 = Chr(&amp;H5C)<br>
+  loc_110146EA: var_210 = var_1F0 &amp; var_200<br>
+  loc_110146F6: var_220 = Chr(&amp;H4D)<br>
+  loc_110146FE: var_230 = var_210 &amp; var_220<br>
+  loc_1101470A: var_240 = Chr(&amp;H69)<br>
+  loc_11014712: var_250 = var_230 &amp; var_240<br>
+  loc_1101471E: var_260 = Chr(&amp;H63)<br>
+  loc_11014726: var_270 = var_250 &amp; var_260<br>
+  loc_11014732: var_280 = Chr(&amp;H72)<br>
+  loc_1101473A: var_290 = var_270 &amp; var_280<br>
+  loc_11014746: var_2A0 = Chr(&amp;H6F)<br>
+  loc_1101474E: var_2B0 = var_290 &amp; var_2A0<br>
+  loc_1101475A: var_2C0 = Chr(&amp;H73)<br>
+  loc_11014762: var_2D0 = var_2B0 &amp; var_2C0<br>
+  loc_1101476E: var_2E0 = Chr(&amp;H6F)<br>
+  loc_11014776: var_2F0 = var_2D0 &amp; var_2E0<br>
+  loc_11014782: var_300 = Chr(&amp;H66)<br>
+  loc_1101478A: var_310 = var_2F0 &amp; var_300<br>
+  loc_11014796: var_320 = Chr(&amp;H74)<br>
+  loc_1101479E: var_330 = var_310 &amp; var_320<br>
+  loc_110147AA: var_340 = Chr(&amp;H5C)<br>
+  loc_110147B2: var_350 = var_330 &amp; var_340<br>
+  loc_110147B7: var_F4 = CStr(var_350)<br>
+  loc_11014815: var_100 = “SOFTWARE\Microsoft\Windows\CurrentVersion\MCP\”<br>
+  loc_11014826: Proc_0_0_1100EA9C(var_110, -2147483646, var_100)<br>
+  loc_1101482F: var_94 = CStr(var_110)<br>
+  loc_11014846: var_100 = “SOFTWARE\Microsoft\Windows\CurrentVersion\App Management\Exc\”<br>
+  loc_11014857: Proc_0_0_1100EA9C(var_110, -2147483646, var_100, EG_ID)<br>
+  loc_11014860: var_98 = CStr(var_110)<br>
+  loc_1101486C: var_100 = GetSerialHardDisk()<br>
+  loc_11014874: var_DC = var_100<br>
+                If (Len(var_DC) &gt; 8) Then<br>
+  loc_11014884:   var_110 = 8<br>
+  loc_11014891:   var_368 = var_DC<br>
+  loc_11014899:   var_120 = Mid$(var_368, 1, var_110)<br>
+  loc_110148A2:   var_DC = CStr(var_120)<br>
+  loc_110148AC:   GoTo loc_110148FA<br>
+                End If<br>
+                If (Len(var_DC) = 0) Then<br>
+  loc_110148BF:   var_DC = “12345678″<br>
+  loc_110148C2:   GoTo loc_110148FA<br>
+                End If<br>
+                If (Len(var_DC)  ”<br>
+  loc_11014CB0: Call Proc_1_29_1100B834(var_3A0 &amp; var_F0, var_E6)<br>
+  loc_11014CCA: var_F8 = Proc_2_5_1100C218(var_F0, var_380)<br>
+  loc_11014CDB: Call Proc_1_29_1100B834(” change to Binary :” &amp; var_F8, var_E6)<br>
+  loc_11014CF1: var_F8 = Proc_2_15_1100C840(var_F8, global_64)<br>
+                If (Len(var_F8) = 0) Then<br>
+  loc_11014D01:   GoTo loc_11014F82<br>
+                End If<br>
+  loc_11014D12: Call Proc_1_29_1100B834(“Shift Left 3 :” &amp; var_F8, var_E6)<br>
+  loc_11014D22: var_368 = var_A8<br>
+  loc_11014D2A: var_110 = Right(var_368, 2)<br>
+  loc_11014D38: var_380 = vbNullString<br>
+  loc_11014D46: Call Proc_1_27_1100E450(CStr(var_110), var_380, var_398)<br>
+  loc_11014D4F: var_3A0 = “&amp;h” &amp; var_398<br>
+  loc_11014D54: var_FA = CInt(var_3A0)<br>
+  loc_11014D6D: var_368 = var_A8<br>
+  loc_11014D75: var_110 = Right(var_368, 2)<br>
+  loc_11014D7D: var_378 = “Right(SerialGet, 2) ”<br>
+  loc_11014D85: var_120 = var_378 &amp; var_110<br>
+  loc_11014D8E: Call Proc_1_29_1100B834(CStr(var_120), var_E6)<br>
+  loc_11014DA5: var_368 = var_A8<br>
+  loc_11014DAD: var_110 = Right(var_368, 2)<br>
+  loc_11014DB8: var_380 = vbNullString<br>
+  loc_11014DC6: Call Proc_1_27_1100E450(CStr(var_110), var_380, var_398)<br>
+  loc_11014DD9: Call Proc_1_29_1100B834(“Chr2Num(Right(SerialGet, 2)) ” &amp; var_398, var_E6)<br>
+  loc_11014DEC: var_120 = 56<br>
+  loc_11014DFC: var_110 = CVar(var_F8 &amp; var_F8) ‘String<br>
+  loc_11014E02: var_130 = Mid$(var_110, CLng(var_FA), var_120)<br>
+  loc_11014E0B: var_F8 = CStr(var_130)<br>
+  loc_11014E22: var_100 = CStr(var_FA)<br>
+  loc_11014E26: var_380 = “Get 64 start from digit ” &amp; var_100<br>
+  loc_11014E2D: var_398 = var_380 &amp; ” :”<br>
+  loc_11014E38: Call Proc_1_29_1100B834(var_398 &amp; var_F8, var_E6)<br>
+  loc_11014E50: var_F8 = Proc_2_11_1100DA5C(var_F8, var_FA)<br>
+  loc_11014E61: Call Proc_1_29_1100B834(“Change to Hex :” &amp; var_F8, var_E6)<br>
+  loc_11014E69: var_110 = 14<br>
+  loc_11014E76: var_368 = var_A8<br>
+  loc_11014E7E: var_120 = Mid$(var_368, 1, var_110)<br>
+  loc_11014E89: var_380 = “WDYEFAHZIJKLQMNOPGRXTSBUVC”<br>
+  loc_11014E9C: var_398 = DecryptRound(CStr(var_120), 3, var_380)<br>
+  loc_11014EA4: var_90 = var_398<br>
+  loc_11014EB5: var_110 = 14<br>
+  loc_11014EC2: var_368 = var_A8<br>
+  loc_11014ECA: var_120 = Mid$(var_368, 1, var_110)<br>
+  loc_11014ED2: var_390 = “Decrypt 14 digit SerialGet :”<br>
+  loc_11014EDA: var_130 = var_390 &amp; var_120<br>
+  loc_11014EDE: var_3C4 = ”  —&gt; ”<br>
+  loc_11014EE3: var_140 = var_130 &amp; var_3C4<br>
+  loc_11014EEA: var_3D4 = CVar(var_90) ‘String<br>
+  loc_11014EED: var_150 = var_140 &amp; var_3D4<br>
+  loc_11014EF6: Call Proc_1_29_1100B834(CStr(var_150), var_E6)<br>
+  loc_11014F11: var_100 = vbNullString<br>
+  loc_11014F1A: Call Proc_1_25_1100F7F0(var_F8, var_100)<br>
+  loc_11014F22: var_F8 = var_380<br>
+                If (var_90 = var_F8) Then<br>
+  loc_11014F39:   var_100 = “Same result, already registered.. ”<br>
+  loc_11014F3F:   Call Proc_1_29_1100B834(var_100, var_E6)<br>
+  loc_11014F49:   var_86 = &amp;HFF<br>
+  loc_11014F4C:   GoTo loc_11014F68<br>
+                End If<br>
+  loc_11014F55: var_100 = “different result, not register yet.. ”<br>
+  loc_11014F5B: Call Proc_1_29_1100B834(var_100, var_E6, var_86)<br>
+  loc_11014F65: var_86 = 0<br>
+  loc_11014F68: ‘ Referenced from: 11014F4C<br>
+  loc_11014F6E: var_100 = ” =============CHECK REGISTER END =============”<br>
+  loc_11014F74: Call Proc_1_29_1100B834(var_100, var_E6, var_86)<br>
+  loc_11014F7C: arg_4 = var_380<br>
+  loc_11014F82: ‘ Referenced from: 11014D01<br>
+  loc_11014F82: ‘ Referenced from: 11014966<br>
+  loc_11014F82: ‘ Referenced from: 110145A4<br>
+  loc_11014F84: var_86 = 0<br>
+  loc_11014F8D: var_100 = ” ============= CHECK REGISTER ERROR =============”<br>
+  loc_11014F93: Call Proc_1_29_1100B834(var_100, var_E6)<br>
+  loc_11014F9B: arg_4 = var_86<br>
+End Function</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4331#respond" onclick='return addComment.moveForm("comment-4331", "4331", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4949">
+     <div id="comment-4949">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4949" title="">October 4th, 2012 on 5:13 pm</a>  </small>
+
+			<p>Hi,i seem not to be able to find point-h on my system, i tried 
+with vanilla olly,but the first thing i noticed is that my istruction is
+ different than yours<br>
+MOVZX ECX,BYTE PTR DS:[EDI]<br>
+and it belongs to kernel32 instead of ntdll,even though i followed your 
+instruction step by step,also when i restarted the target the string 
+OpenProcessToken didnt appear,i used plain olly on xp,could it be that 
+this works this way only on 7?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4949#respond" onclick='return addComment.moveForm("comment-4949", "4949", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-4952">
+     <div id="comment-4952">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2044_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4952" title="">October 4th, 2012 on 5:45 pm</a>  </small>
+
+			<p>You still may be on the same track…The point-h on my windows xp system looks vastly different than my windows 7 point-h.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4952#respond" onclick='return addComment.moveForm("comment-4952", "4952", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-3" id="li-comment-4954">
+     <div id="comment-4954">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4954" title="">October 4th, 2012 on 6:43 pm</a>  </small>
+
+			<p>I believe its wrong because in the first crackme i stop at the 
+beginning of the routine that contains the call to GetDgtItem and in the
+ second one i get the you are wrong popup and nothing appears in the 
+registers apart from some other strings repeated some times like “name 
+is Your name” “serial is your serial”</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4954#respond" onclick='return addComment.moveForm("comment-4954", "4954", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-4" id="li-comment-4964">
+     <div id="comment-4964">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>kdma</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4964" title="">October 4th, 2012 on 11:34 pm</a>  </small>
+
+			<p>Well apart point-h what about that ugly nag?i tried looking around but its well hidden in msvbvm50.dll</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4964#respond" onclick='return addComment.moveForm("comment-4964", "4964", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-5" id="li-comment-4983">
+     <div id="comment-4983">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="2044_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4983" title="">October 5th, 2012 on 3:16 pm</a>  </small>
+
+			<p>It is being called from the target’s code somewhere. Just keep at it.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=4983#respond" onclick='return addComment.moveForm("comment-4983", "4983", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-ap0g even thread-even depth-1" id="li-comment-8730">
+     <div id="comment-8730">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="ap0g" src="2044_fichiers/ap0g_avatar-60x60.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>ap0g</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8730" title="">December 2nd, 2012 on 4:10 am</a>  </small>
+
+			<p>R4ndom,</p>
+<p>I could not find the P32Dasm file included in the zip for this 
+tutorial nor on the tools page. Of course I found it easily with a 
+simple web search but I just wanted to let you know that it is not 
+included with the tutorial files as indicated. Thank you so much for the
+ tutorials and I am excited and looking forward to learning more about 
+RE!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=8730#respond" onclick='return addComment.moveForm("comment-8730", "8730", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-26986">
+     <div id="comment-26986">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/18bb6377099e8503e8499f09c7089a9a.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Jkcnair</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-26986" title="">March 27th, 2013 on 7:23 am</a>  </small>
+
+			<p>Excellent series of tuts i ever seen.Thanks Random.I am using point-H finder to find my systems point-h painlessly.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=26986#respond" onclick='return addComment.moveForm("comment-26986", "26986", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-54671">
+     <div id="comment-54671">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/29ed8971d458f60ab9ac74c179fd4700.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://propianolessonsnow.com/" rel="external nofollow" class="url">piano lessons toddlers boston</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-54671" title="">May 9th, 2013 on 12:51 am</a>  </small>
+
+			<p>habitual piano lessonss are very bulky and expensive, whereas lectures; find a line<br>
+or individual who are uncoerced to instruct you.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=54671#respond" onclick='return addComment.moveForm("comment-54671", "54671", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-75608">
+     <div id="comment-75608">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/26b6ecb6fa4efd227295114b457934fa.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://adwiteeya.com/" rel="external nofollow" class="url">Adwiteeya Agrawal</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-75608" title="">July 5th, 2013 on 5:21 pm</a>  </small>
+
+			<p>I too had a problem with nag removal.<br>
+The nag stays there for 7000ms and there is a particular code that is 
+looped 7 times before a jump to the callback is made. But i couldn’t 
+trace any further.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=75608#respond" onclick='return addComment.moveForm("comment-75608", "75608", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-77583">
+     <div id="comment-77583">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>bdnt</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-77583" title="">July 21st, 2013 on 3:15 pm</a>  </small>
+
+			<p>Hi R4ndom… using win7 64bit with olly 1.10 can’t trap the memory 
+bp, using olly 2.01 can’t conditional log bp since right click on names 
+didn’t show it.<br>
+Can we do point H on win7 64bit?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=77583#respond" onclick='return addComment.moveForm("comment-77583", "77583", "respond", "2044")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-81492">
+     <div id="comment-81492">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/d27923c3f6c5b79e15adcbcf584d5775.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>pornpinoy</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-81492" title="">August 17th, 2013 on 9:40 am</a>  </small>
+
+			<p>Yes u can! im using win7 64</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=81492#respond" onclick='return addComment.moveForm("comment-81492", "81492", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-77664">
+     <div id="comment-77664">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="2044_fichiers/2a57d0e48acad25ee93328cd8af28e2e.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.amigosdivebelize.com/index.php?option=com_blog&amp;view=comments&amp;pid=348442&amp;Itemid=0" rel="external nofollow" class="url">be taller</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-77664" title="">July 22nd, 2013 on 7:03 am</a>  </small>
+
+			<p>In so many ways, I am more more offended by the “generic commenter” than I am<br>
+by the more obvious spammer.  You may ask<br>
+why Because at least the obvious spammer is completely open and honest about their spamming!<br>
+I know who they are. The so called generic commenter is a cheat and a faker!<br>
+You can probably notice that I have strong feelings towards these<br>
+type of spammers</p>
+<p>my homepage … <a href="http://www.amigosdivebelize.com/index.php?option=com_blog&amp;view=comments&amp;pid=348442&amp;Itemid=0" rel="nofollow">be taller</a> </p><p></p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044?replytocom=77664#respond" onclick='return addComment.moveForm("comment-77664", "77664", "respond", "2044")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/2044#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="2044" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="2044" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="e5c9ff18c7" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/2044/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/2044/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/2044" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/1722#comment-85953">A New Tutorial by Xor06 : Bypassing a Server Check</a> </li><li class="recentcomments">tip on <a href="http://thelegendofrandom.com/blog/archives/2418#comment-85946">R4ndom’s Tutorial #23: TLS Callbacks</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1472#comment-85945">R4ndom’s Tutorial #17: Working With Delphi Binaries</a> </li><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MjA0NDtzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.e65fc2c68e567d68cd737faf92ba905b"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="2044_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

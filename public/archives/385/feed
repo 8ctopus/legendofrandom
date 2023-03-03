@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Added some assembly language texts.</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/385/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/385</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: shane</title>
+		<link>http://thelegendofrandom.com/blog/archives/385#comment-242</link>
+		<dc:creator>shane</dc:creator>
+		<pubDate>Sun, 10 Jun 2012 03:18:07 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=385#comment-242</guid>
+		<description><![CDATA[the above book i mentioned is the best i have come across, it&#039;s a reference text on assembly, so it&#039;s quite large and extensive, for newcomers into assembly , they may like to just read a few parts and code for it, not to read the whole book in one shot like a novel. :)]]></description>
+		<content:encoded><![CDATA[<p>the above book i mentioned is the best i have come across, it&#8217;s a reference text on assembly, so it&#8217;s quite large and extensive, for newcomers into assembly , they may like to just read a few parts and code for it, not to read the whole book in one shot like a novel. <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: shane</title>
+		<link>http://thelegendofrandom.com/blog/archives/385#comment-239</link>
+		<dc:creator>shane</dc:creator>
+		<pubDate>Sun, 10 Jun 2012 03:07:39 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=385#comment-239</guid>
+		<description><![CDATA[i would suggest the art of assembly language (aoa) which is NOT on HLA.
+read online at http://maven.smith.edu/~thiebaut/ArtOfAssembly/artofasm.html
+download individual chapters at http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/
+or full text in pdf format at www.planetpdf.com/codecuts/pdfs/aoa.pdf]]></description>
+		<content:encoded><![CDATA[<p>i would suggest the art of assembly language (aoa) which is NOT on HLA.<br />
+read online at <a href="http://maven.smith.edu/~thiebaut/ArtOfAssembly/artofasm.html" rel="nofollow">http://maven.smith.edu/~thiebaut/ArtOfAssembly/artofasm.html</a><br />
+download individual chapters at <a href="http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/" rel="nofollow">http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/</a><br />
+or full text in pdf format at <a href="http://www.planetpdf.com/codecuts/pdfs/aoa.pdf" rel="nofollow">http://www.planetpdf.com/codecuts/pdfs/aoa.pdf</a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: R4ndom</title>
+		<link>http://thelegendofrandom.com/blog/archives/385#comment-236</link>
+		<dc:creator>R4ndom</dc:creator>
+		<pubDate>Sat, 09 Jun 2012 20:07:13 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=385#comment-236</guid>
+		<description><![CDATA[You know, I forgot it was in HLA. I HATED that. I would much more recommend another one. I will go thru my collection of eBooks and put up a different one that&#039;s not HLA. Thanks for the notice...]]></description>
+		<content:encoded><![CDATA[<p>You know, I forgot it was in HLA. I HATED that. I would much more recommend another one. I will go thru my collection of eBooks and put up a different one that&#8217;s not HLA. Thanks for the notice&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: synapse</title>
+		<link>http://thelegendofrandom.com/blog/archives/385#comment-235</link>
+		<dc:creator>synapse</dc:creator>
+		<pubDate>Sat, 09 Jun 2012 17:30:57 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=385#comment-235</guid>
+		<description><![CDATA[Thanks for uploading these. Art of Assembly uses HLA and I would rather use the standard NASM or MASM syntax than learning HLA constructs. PC Assembly Language is great, its really nicely organized and its not going to take forever to finish reading.]]></description>
+		<content:encoded><![CDATA[<p>Thanks for uploading these. Art of Assembly uses HLA and I would rather use the standard NASM or MASM syntax than learning HLA constructs. PC Assembly Language is great, its really nicely organized and its not going to take forever to finish reading.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: New Version of TLSCatch Olly Plugin Released</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/2750/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/2750</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: waliedassar</title>
+		<link>http://thelegendofrandom.com/blog/archives/2750#comment-4574</link>
+		<dc:creator>waliedassar</dc:creator>
+		<pubDate>Wed, 26 Sep 2012 04:34:06 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2750#comment-4574</guid>
+		<description><![CDATA[I have ported my &quot;TLSCatch&quot; plugin to Immunity Debugger.
+Tested with version 1.85 on Windows XP and 7.
+
+http://code.google.com/p/ollytlscatch/downloads/detail?name=IMMDbg_TLSCatch.dll]]></description>
+		<content:encoded><![CDATA[<p>I have ported my &#8220;TLSCatch&#8221; plugin to Immunity Debugger.<br />
+Tested with version 1.85 on Windows XP and 7.</p>
+<p><a href="http://code.google.com/p/ollytlscatch/downloads/detail?name=IMMDbg_TLSCatch.dll" rel="nofollow">http://code.google.com/p/ollytlscatch/downloads/detail?name=IMMDbg_TLSCatch.dll</a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Hanan</title>
+		<link>http://thelegendofrandom.com/blog/archives/2750#comment-4534</link>
+		<dc:creator>Hanan</dc:creator>
+		<pubDate>Mon, 24 Sep 2012 20:17:43 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=2750#comment-4534</guid>
+		<description><![CDATA[Is there a way to install it on Immunity Debugger?]]></description>
+		<content:encoded><![CDATA[<p>Is there a way to install it on Immunity Debugger?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

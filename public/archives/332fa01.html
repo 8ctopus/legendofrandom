@@ -1,0 +1,1341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/332?replytocom=471 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:15:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>Tutorial #5: Our First (Sort Of) Crack &laquo;  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1" />
+<meta name="robots" content="follow, all" />
+
+<link rel="shortcut icon" href="../wp-content/themes/jarrah/favicon.ico" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="../feed" />
+<link rel="pingback" href="../xmlrpc.php" />
+<link rel="stylesheet" href="../wp-content/themes/jarrah/css/menu.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" href="wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random &raquo; Tutorial #5: Our First (Sort Of) Crack Comments Feed" href="332/feed" />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4511.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/ajax-quick-subscribe/ajax9d52.js?ver=3.5.1'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min9d52.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Tutorial #4: Using Olly, Part 2' href='258.html' />
+<link rel='next' title='Added some assembly language texts.' href='385.html' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='332.html' />
+<link rel='shortlink' href='../index221f.html?p=332' />
+<meta name='robots' content='noindex,nofollow' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/jarrah/js/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input type="text" value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput"/>
+    <input type="submit" class="submitbutton" value="" />
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item "><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                </ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="archives/332">Tutorial #5: Our First (Sort Of) Crack</a> </h2>
+          	<div class="postmeta">by <a href="archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jun.08, 2012, under <a href="archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial we will be finishing up some last minute Olly things as we review a crackme. Well, sort of a crackme. It&#8217;s really just the program we used before but changed to ask for a serial number and displays either a good message if you get the serial right, or bad message if you get it wrong. I chose to do it this way, as opposed to jumping into a completely different crackme, because I want you to be able to focus on the serial checking routine, and not get bogged down in all off the other superfluous code. Next tutorial we will be going over a real crackme (I promise).</p>
+<p>In this tutorial, all you need is OllyDBG (either my version or the original), and a copy of my revised crackme, which, by the way, I am calling the &#8220;First Assembly Kracking Engine&#8221;, or F.A.K.E. It is included in the files download for this tut. (and yes, Gdogg, I know kracking does not start with a &#8216;K&#8217; <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>You can download the files and PDF version of this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline;"><span style="color: #0a77e1; text-decoration: underline;">tutorials</span></span></a>  page.</p>
+<p>Let&#8217;s get started.</p>
+<p><span id="more-332"></span></p>
+<div id="attachment_333" class="wp-caption aligncenter" style="width: 623px"><a href="wp-content/uploads/2012/06/1.png"><img class=" wp-image-333 " title="Olly Main Screen" src="wp-content/uploads/2012/06/1.png" alt="" width="613" height="455" /></a> <p class="wp-caption-text">Olly Main Screen</p></div>
+<p>If you load up the FAKE.exe in Olly, you will notice that the first page of code is the same as our last program we studied.</p>
+<p><a href="wp-content/uploads/2012/06/2.png"><img class="aligncenter size-full wp-image-334" title="Deja Vu" src="wp-content/uploads/2012/06/2.png" alt="Deja Vu" width="668" height="229" /></a> </p>
+<p>Let&#8217;s run the app, as knowing how it works is vitally important:</p>
+<p><a href="wp-content/uploads/2012/06/3.png"><img class="aligncenter size-full wp-image-335" title="Running the Crackme" src="wp-content/uploads/2012/06/3.png" alt="Running the Crackme" width="300" height="200" /></a> </p>
+<p>Click on register and the following dialog appears:</p>
+<p><a href="wp-content/uploads/2012/06/4.png"><img class="aligncenter size-full wp-image-336" title="Crackme" src="wp-content/uploads/2012/06/4.png" alt="Crackme" width="416" height="152" /></a> </p>
+<p>I entered a serial:</p>
+<p><a href="wp-content/uploads/2012/06/5.png"><img class="aligncenter size-full wp-image-337" title="Serial Entered" src="wp-content/uploads/2012/06/5.png" alt="Serial Entered" width="416" height="152" /></a> </p>
+<p>Then, after clicking the Enter Serial I get the following very bad message:</p>
+<div id="attachment_339" class="wp-caption aligncenter" style="width: 426px"><a href="wp-content/uploads/2012/06/6.png"><img class="size-full wp-image-339" title="Denied" src="wp-content/uploads/2012/06/6.png" alt="" width="416" height="152" /></a> <p class="wp-caption-text">Denied</p></div>
+<p>DANG IT! And I tried so hard!!!!! <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>Now, I want to show you the first method every new reverse engineer learns in order to find the registry checking routine:</p>
+<h2><span style="color: #0a77e1;">Searching For All Text Strings</span></h2>
+<p>Let me first say that many &#8216;seasoned&#8217; reversers (read crackers) out there think that this method should be rarely used. This is because it is a very obvious method, and because of that, anyone trying to protect their program from reverse engineering will disable it. Face it, any program out there that has been packed, protected, encrypted, or changed because the author of the program is not a complete knucklehead will block use the &#8216;search for strings&#8217; method by encrypting the strings. THAT BEING SAID, I find that there are a lot of knucklehead authors out there, so don&#8217;t tell any &#8216;seasoned&#8217; crackers out there, but it&#8217;s one of the first things I check. (ps. It&#8217;s also one of the first things the &#8216;seasoned&#8217; crackers check too <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>Basically, this method involves asking Olly to search the memory space of your program, searching for anything that looks like an ASCII or Unicode text string. Usually, it will be immediately apparent whether this technique worked or not; there will either be a plethora of text strings, many of which look very juicy (like &#8220;Thank you for registering!!!&#8221;), or there will be very few text strings, many of which look like this: &#8220;F@7=&#8221;.</p>
+<p>Knowing whether there are legitimate text strings in a binary can give you some valuable information itself. such as whether the binary has been packed or protected in some way, whether it&#8217;s perhaps a malicious binary (after all, having the string &#8220;Send all user&#8217;s passwords to www.badguys.com&#8221; wouldn&#8217;t be very responsible virus writing), and even if the binary was written in a more rarely used language.</p>
+<p>Let&#8217;s see how we do this. Right-click in the assembly window and choose &#8220;Serach For&#8221;-&gt;&#8221;All Referenced Text Strings&#8221;:</p>
+<div id="attachment_340" class="wp-caption aligncenter" style="width: 468px"><a href="wp-content/uploads/2012/06/7.png"><img class="size-full wp-image-340" title="Search for Strings" src="wp-content/uploads/2012/06/7.png" alt="" width="458" height="616" /></a> <p class="wp-caption-text">Search for Strings</p></div>
+<p>And Olly will search the program&#8217;s memory space and display the Text String Window:</p>
+<p><a href="wp-content/uploads/2012/06/8.png"><img class="aligncenter size-full wp-image-341" title="Text Strings" src="wp-content/uploads/2012/06/8.png" alt="Text Strings" width="727" height="256" /></a> </p>
+<p>Hmmm, this looks interesting:) Keep in mind that this list is REALLY short as this app is really tiny. Normally, there could be thousands of entries here. Anyway, do you notice what I notice:</p>
+<p><a href="wp-content/uploads/2012/06/9.png"><img class="aligncenter size-full wp-image-342" title="The good message" src="wp-content/uploads/2012/06/9.png" alt="The good message" width="727" height="256" /></a> </p>
+<p>Looks very promising. Let&#8217;s jump to the code there and see what we see: double click on the &#8220;That serial is correct!!!!!&#8221; line and Olly will disassemble that area for us in the disassembly window:</p>
+<p><a href="wp-content/uploads/2012/06/10.png"><img class="aligncenter size-full wp-image-343" title="Jump to good message" src="wp-content/uploads/2012/06/10.png" alt="Jump to good message" width="736" height="447" /></a> </p>
+<p>It is now time for me to introduce the second rule in</p>
+<p style="text-align: center;"><span style="font-size: 14px; color: #0a77e1;"><strong>R4ndom&#8217;s Essential Truths About Reversing Data:</strong></span></p>
+<hr style="width: 600px;" width="600" />
+<p><span style="font-size: 16px; color: #0a77e1;"><strong>#2 Most protection schemes can be overcome by changing a simple jump instruction to jump to &#8216;good&#8217; code instead of &#8216;bad&#8217; code.</strong></span></p>
+<hr style="height: 1px; width: 600px;" size="1" width="600" />
+<p>&nbsp;</p>
+<p>What this means is that almost every time before a bad message is displayed, there is some sort of check (Are we registered? Was the entered reg code correct? Is the time trial over?&#8230;) and there will be a jump after this compare that will either jump to the good message or the bad message depending on the outcome of the compare.</p>
+<p>Let&#8217;s look for ourselves&#8230;Starting at the good message &#8220;This serial is correct!!!!&#8221; at address 401222, start scrolling up the list, looking for jump statements, especially jump statements that have some sort of compare (or call) right before them. If it&#8217;s a call, you can probably guess that the compare is inside the call&#8230;In our example, the first jump is a JNZ at address 401220. I have added an arrow to show you where this jump will go if it is used:</p>
+<p><a href="wp-content/uploads/2012/06/13.png"><img class="aligncenter size-full wp-image-344" title="First JNZ" src="wp-content/uploads/2012/06/13.png" alt="First JNZ" width="714" height="123" /></a> </p>
+<p>Hmmm. Notice that it jumps right past the message we want and right to the message we don&#8217;t want <img src='wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' />  BUT, notice that right above this JNZ instruction is a CMP instruction <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  That means this is a potential point that determines whether Olly displays the message we want or don&#8217;t want. Let&#8217;s scroll up further:</p>
+<p><a href="wp-content/uploads/2012/06/11.png"><img class="aligncenter size-full wp-image-346" title="Jumps over Good message" src="wp-content/uploads/2012/06/11.png" alt="Jumps over Good message" width="736" height="447" /></a> </p>
+<p>There is another CMP/JNZ pair at 401212, and finally, a last one at 401207. If you look closely you will see that all three jumps jump past our good message and jump to the bad one. Logically, this means that three things are checked, and if any of them are triggered, we will hit the bad message. But, what happens if we don&#8217;t jump on any of these three jumps? Well, you can see that we will &#8220;fall through&#8221; to the good message. So, what this really means is we have to keep those jumps from jumping so that the program will keep &#8220;falling through&#8221; until it reaches our good message <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>Let&#8217;s run the app to see what it does, but first I want to show you:</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">How To Place A Comment</span></h2>
+<p>Comments are very useful, especially when you start getting into very intricate code. Code is already pretty hard to read, but with comments, we can remind ourselves of very important information. Here&#8217;s what we&#8217;re gonna do; we&#8217;re gonna set a comment on each of the JNZ instructions to remind ourselves what needs to happen.</p>
+<p>In order to place a comment, either double click on the line you want to place the comment in the last column (where Olly has placed the &#8220;This is the correct serial!!!!&#8221; as well as other comments) or you can simply highlight the line you wish to place a comment and hit the &#8220;;&#8221; key. So highlight address 40120A, hit the semi-colon key and type &#8220;We do NOT want to jump here!&#8221;. Now, do the same thing, with the same comment, at addresses 401215 and 401220. This will place a comment on each of the JNZ instruction:</p>
+<p><a href="wp-content/uploads/2012/06/14.png"><img class="aligncenter size-full wp-image-351" title="Placing Comments" src="wp-content/uploads/2012/06/14.png" alt="Placing Comments" width="482" height="144" /></a> </p>
+<p>Now, let&#8217;s set a breakpoint at address 401201 (or somewhere near here as it&#8217;s before our jump instructions):</p>
+<p><a href="wp-content/uploads/2012/06/16.png"><img class="aligncenter size-full wp-image-352" title="Place breakpoint" src="wp-content/uploads/2012/06/16.png" alt="Place breakpoint" width="676" height="176" /></a> </p>
+<p>and let&#8217;s run the program. Click &#8220;Register&#8221; on the crackme, enter a serial, and hit &#8220;Enter Serial&#8221;. Olly will now pause at our breakpoint:</p>
+<p><a href="wp-content/uploads/2012/06/16.png"><img class="aligncenter size-full wp-image-352" title="Place breakpoint" src="wp-content/uploads/2012/06/16.png" alt="Place breakpoint" width="676" height="176" /></a> </p>
+<p>Now, the first thing we notice is the line we stopped on:</p>
+<p><strong>MOV EBX, DWORD PTR DS:[403078]</strong></p>
+<p>From our last tutorial, we now know how to view the memory contents at this memory location- right-click that instruction and choose &#8220;Follow in Dump&#8221;-&gt;&#8221;Memory Address&#8221;. We then see that location in Olly&#8217;s dump window:</p>
+<p><a href="wp-content/uploads/2012/06/161.png"><img class="aligncenter size-full wp-image-353" title="Dump Window" src="wp-content/uploads/2012/06/161.png" alt="Dump Window" width="452" height="103" /></a> </p>
+<p>well, well, well. This just happens to be the serial number I entered. So, from this instruction, we now know that the first 4 bytes (since EAX is a 32-bit register) are loaded into EBX, which in this case are 31 32 31 32 which in ASCII is &#8220;1212&#8243;. Hit F8 and let&#8217;s check EBX:</p>
+<p><a href="wp-content/uploads/2012/06/17.png"><img class="aligncenter size-full wp-image-354" title="Register Window" src="wp-content/uploads/2012/06/17.png" alt="Register Window" width="182" height="104" /></a> </p>
+<p>If you want to see the actual ASCII characters in EBX, you can double click on the EBX register and it will show you the data in a couple of different formats, one of which is ASCII:</p>
+<p><a href="wp-content/uploads/2012/06/18.png"><img class="aligncenter size-full wp-image-355" title="View Register Window" src="wp-content/uploads/2012/06/18.png" alt="View Register Window" width="250" height="175" /></a> </p>
+<p><em>*For later use, remember this is also a way to change the register &#8216;on the fly&#8217; if you want to experiment with different values in different registers&#8230;</em></p>
+<p>I guess even though you already know this from reading your assembly language book (I mean, come on! I even put one up in the <span style="color: #0a77e1;"><a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="color: #0a77e1;">tools</span></a> </span> section!!!), that I don&#8217;t need to go over this, but just for a refresher I will explain&#8230;</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Little Endian Order</span></h2>
+<p>(or at least the least you need to know about it)</p>
+<p>Processors store data differently in memory, depending on the architecture of the processor. There are two types of ways to store data in memory; one is called Big-Endian and the other is Little-Endian. Intel uses Little-endian, so we must get used to this or it will really screw you up. Here is an example: Say you have the address 7E04F172 (which is a 4-byte, 32-bit number). When we split this up in to bytes you get 7E, 04, F1, 72. Now, one would think that when storing these bytes into memory (let&#8217;s say at location 1000) it would look like this:</p>
+<p>1000::7E<br />
+1001::04<br />
+1002::F1<br />
+1003::72</p>
+<p>as any rational minded person would. But since the developers at Intel are so much smarter than us mere mortals, they decided to store it in the much more logical way:</p>
+<p>1000::72<br />
+1001::F1<br />
+1002::04<br />
+1003::7E</p>
+<p>The first example above is Big-Endian, meaning the biggest end of the number (in decimal order) is stored first in memory. Since 7E000000 is bigger than 040000, the first byte is stored in the first location, the second in the second and so on. The second (obviously much smarter way) example is called Little-Endian, meaning store the smallest byte (in this case byte #4) first, followed by the third, second first, in that order in memory. Since 72 is smaller than F100, that will be stored first.</p>
+<p>The true genius of using LittleEndian as opposed to it&#8217;s bigger brother really shines when you start viewing memory side to side. In Big-Endian, the number 7E04F172 lookes like this:</p>
+<p>7E04F172</p>
+<p>which is obviously very confusing. Thank god that, with the help of Little-Endian, that same number 7E04F172 looks far more logical as:</p>
+<p>72F1047E</p>
+<p>What, you say? That&#8217;s just plain stupid- obviously the Big-Endian way makes far more sense, but then again, you are not a demi-god developer at Intel, so you do not even possess the brain power to begin to understand why this is FAR SUPERIOR. Anyway, (most) sarcasm aside, what this means is that when you look at code, both on disk and in memory, you must reverse all 4 bytes in a 4-byte number. Of course this is made even worse that Olly SOMETIMES does this for you, as you can see in the next picture:</p>
+<p><a href="wp-content/uploads/2012/06/19.png"><img class="aligncenter size-full wp-image-358" title="Endianness" src="wp-content/uploads/2012/06/19.png" alt="Endianness" width="670" height="133" /></a> </p>
+<p>That&#8217;s all I&#8217;m going to say about this for now, but for a while I will point out the Endianneses(es)ess to you.</p>
+<p>Now, back to our register window:</p>
+<p><a href="wp-content/uploads/2012/06/18.png"><img class="aligncenter size-full wp-image-355" title="View Register Window" src="wp-content/uploads/2012/06/18.png" alt="View Register Window" width="250" height="175" /></a> </p>
+<p>You will notice that the hexadecimal representation is in Little-Endian order (it should be 31323132) and that the Char(acters) are backward, as my serial started with 1212, not 2121. Trust me, you will get used to this.</p>
+<p>Let&#8217;s now move on to the next instruction:</p>
+<p><strong>CMP BL, 61</strong></p>
+<p>This is obviously a compare statement, comparing BL, which is the first byte in the EBX register (RTF(asm)M), with the value 61 (hex). We don&#8217;t really have a clue what this means (yet) so lets step over it. Finally we arrive at the first of our JNZ instructions:</p>
+<p><strong>JNZ SHORT FAKE.401236</strong></p>
+<p>Which as we recall, since we can read our comments we made earlier, that we DO NOT want to make this jump. I will remind you that JNZ stands for Jump if Not Zero, so these two lines basically mean &#8220;if the contents of BL are not equal to 61h, jump to the bad message&#8221;. Well, we can clearly see in the EBX register that the far right byte (BL) is not 61h, but instead is 31h, so already we&#8217;re stuck and we&#8217;re going to take this jump that we so much did not want to <img src='wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' /> </p>
+<p>But wait! Olly is a &#8216;dynamic&#8217; debugger so we should be able to dynamic that jump! Well, since you probably read an entire chapter on flags in your assembly language book, I am not going to go over:</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">CPU Flags</span></h2>
+<p>We briefly went over flags in an earlier tutorial, and I&#8217;m really not going to go into detail on them as I&#8217;m sure the index of your assembly book has an &#8220;F&#8221; section, but I will say that flags are the way the processor can know what the outcome of certain instructions are. There are a significant amount of instructions in the Intel library that affect flags, but the most important (at least for reversing) are &#8220;compare&#8221; instructions. Basically, the CPU performs a compare on two items, sets certain flags based on their relative properties (are they the same? is one bigger? is one negative?) and then performs jump statements based on these flags. This is all just a very fancy way of saying IF THEN statements. For example, in a high-level language you may have a line like this:</p>
+<pre>if( serialNumber == 3 )
+    dontShowNag();
+else
+    showNag();</pre>
+<p>in pseudo-assembly, this same set of instructions would be something like this:</p>
+<p>&nbsp;</p>
+<pre>compare serialNumber with 3
+   jump (if they are equal) to dontShowNag();
+   jump to showNag();</pre>
+<p>and in real assembly may look like this:</p>
+<pre><strong>MOV EAX, addressOfSerialNumber CMP EAX, 3 JE addressOfDontShowNag JMP adressOfShowNag</strong></pre>
+<p>First, EAX is loaded with our serial number. Next it is compared with &#8220;3&#8243;. If it is equal to 3 we jump to dontShowNag(). If it is not equal to 3, we pass the JE (Jump if Equal) instruction and hit the JMP (JuMP) instruction, which automatically jumps to showNag(), regardless of any flags.</p>
+<p>The important flags (for us) are the ZERO flag and the CARRY flag, shown as &#8220;Z&#8221; and &#8220;C&#8221; in Olly. Basically, by changing one of these two flags, we can prevent (or force) any jump in the program, as we&#8217;ll see right now:</p>
+<p><a href="wp-content/uploads/2012/06/201.png"><img class="aligncenter size-full wp-image-361" title="Jumping" src="wp-content/uploads/2012/06/201.png" alt="Jumping" width="782" height="171" /></a> </p>
+<p>On the line we are paused at (the first JNZ) we can see that Olly is going to take this jump by noticing that the jump arrow is red. If we were not going to take the jump, this line would be grey. ***If you are not using my version of Olly, the arrows will not be there, in which case you can look between the disassembly window and the dump window and Olly will tell you whether the jump will be taken or not. In our case, it shows this:</p>
+<p><a href="wp-content/uploads/2012/06/21.png"><img class="aligncenter size-full wp-image-362" title="Jump Is Taken" src="wp-content/uploads/2012/06/21.png" alt="Jump Is Taken" width="216" height="153" /></a> </p>
+<p>Now, we know Olly will take this jump unless we intercede, so let&#8217;s do that. Go over to the register window and look for the &#8220;Z&#8221; flag:</p>
+<p><a href="wp-content/uploads/2012/06/22.png"><img class="aligncenter size-full wp-image-363" title="Zero Flag" src="wp-content/uploads/2012/06/22.png" alt="Zero Flag" width="198" height="112" /></a> </p>
+<p>Notice that it is a zero. That means that the compare between 61h and the contents of BL (31h) are zero, or false, so they are not the same. We can now see why the Jump if Not Zero instruction will jump, because right now, the zero flag is not set, so it is &#8220;not zero&#8221;. Now, double click on the zero next to the zero flag and it should change to a 1: <a href="wp-content/uploads/2012/06/23.png"><img class="alignnone size-full wp-image-364" title="Change the zero flag" src="wp-content/uploads/2012/06/23.png" alt="Change the zero flag" width="59" height="30" /></a> </p>
+<p>and now notice that the arrow is grey (and that Olly says the jump is NOT taken):</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/06/24.png"><img class="size-full wp-image-365 aligncenter" title="Jump is not taken" src="wp-content/uploads/2012/06/24.png" alt="Jump is not taken" width="545" height="164" /></a> </p>
+<p>We have changed Olly&#8217;s flags, and at the same time, we have changed the programs behaviour <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  Go ahead, big shot, and hit F8 (you&#8217;ve earned it) and we should not take the jump :O We are now entering what looks like the same code segment, except this time EBX is being loaded with the second character of our serial, and it is being compared with 62h instead of 61h:</p>
+<p style="text-align: center;"><a href="wp-content/uploads/2012/06/25.png"><img class="wp-image-366 aligncenter" title="Next compare" src="wp-content/uploads/2012/06/25.png" alt="Next compare" width="424" height="47" /></a> </p>
+<p style="text-align: left;">We know that the second digit of our serial is not 62h and now we know what to do- F8 until you get to the JNZ statement, double click the zero flag, and keep going !!! You&#8217;ll pass right past the JNZ statement. We are almost there! The last section compares the third digit of our serial with 63h. The third digit of our serial is 31h, so the jump would normally be taken. Go ahead, you know what to do. We will then land on address 401222, one statement past the third jump:</p>
+<p style="text-align: left;"><a href="wp-content/uploads/2012/06/26.png"><img class="aligncenter size-full wp-image-368" title="Past the last jump" src="wp-content/uploads/2012/06/26.png" alt="Past the last jump" width="781" height="91" /></a> You&#8217;re heart should be pumping, because I think we both know what comes next. There are no more jumps between us and salvation, so either step over the next couple instructions (if you like to draw out the suspense) or just run the app (if you&#8217;re like me and can&#8217;t stand suspense) and we have reached the pearly gates:</p>
+<p style="text-align: left;"><a href="wp-content/uploads/2012/06/27.png"><img class="aligncenter size-full wp-image-369" title="The Pearly Gates" src="wp-content/uploads/2012/06/27.png" alt="The Pearly Gates" width="426" height="158" /></a> </p>
+<h2><span style="color: #0a77e1;">Homework</span></h2>
+<p style="text-align: left;">I know you weren&#8217;t expecting this, as this tutorial has already been so exciting, but I am going to end with two things. The first is another</p>
+<p style="text-align: center;"><span style="font-size: 14px;"><strong><span style="color: #0a77e1;">R4ndom&#8217;s Essential Truths About Reversing Data:</span></strong></span></p>
+<hr style="height: 1px; width: 600px;" size="1" width="600" />
+<p style="text-align: center;"><span style="font-size: 16px;"><strong><span style="color: #0a77e1;">#3 You will not learn reverse engineering by just reading tutorials. You MUST experiment on your own, and you must do a great deal of it.</span></strong></span></p>
+<hr style="height: 1px; width: 600px;" size="1" width="600" />
+<p style="text-align: left;">and in light of this new rule, I am leaving you with some homework. You mission, should you accept it, is to find out what the serial number is. This means, what is the input that you must enter into the serial box for none of the JNZs to jump? You know you have found it when, after entering the correct serial, you do not have to adjust the app in any way, it will simply show &#8220;That Serial is Correct!!!!!!!&#8221;</p>
+<p style="text-align: left;">-till next time</p>
+<p style="text-align: left;">-R4ndom</p>
+<p style="text-align: left;">ps. If you need a hint you may click on this<span style="text-decoration: underline;"><span style="text-decoration: underline;"> <a title="Hint" href="http://www.thelegendofrandom.com/blog/hint.html" target="_blank">link</a> </span></span>.</p>
+<p style="text-align: left;">pps. If you need additional hints, email me or leave a comment.</p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single"><a href="archives/tag/cracking" rel="tag">cracking</a> , <a href="archives/tag/olly" rel="tag">Olly</a> , <a href="archives/tag/ollydbg" rel="tag">ollydbg</a> , <a href="archives/tag/reverse-engineering-2" rel="tag">reverse engineering</a> </span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">39 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-208">
+     <div id="comment-208">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/71fe933cf30346c343ef90cac3151da4?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='https://synapse.wordpress.com/' rel='external nofollow' class='url'>synapse</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-208" title="">June 8th, 2012 on 4:12 am</a>  </small>
+
+			<p>I can&#8217;t find the link to download Fake.exe. Maybe I missed the link is it up?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=208#respond' onclick='return addComment.moveForm("comment-208", "208", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-213">
+     <div id="comment-213">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-213" title="">June 8th, 2012 on 3:27 pm</a>  </small>
+
+			<p>Sorry, You happened to catch me between uploading the tutorial and uploading the support files. They are all up there now.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=213#respond' onclick='return addComment.moveForm("comment-213", "213", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-230">
+     <div id="comment-230">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/522305c5e3e115d033741933bc2f40ad?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>shane</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-230" title="">June 9th, 2012 on 3:51 pm</a>  </small>
+
+			<p>Great Tut, Keep it coming bro <img src='wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=230#respond' onclick='return addComment.moveForm("comment-230", "230", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-ludkiller odd alt thread-even depth-1" id="li-comment-244">
+     <div id="comment-244">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='ludkiller' src='wp-content/uploads/2012/06/ludkiller_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://darkl1ght.tk/' rel='external nofollow' class='url'>ludkiller</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-244" title="">June 10th, 2012 on 3:34 am</a>  </small>
+
+			<p>nice keep them coming <img src='wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=244#respond' onclick='return addComment.moveForm("comment-244", "244", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-246">
+     <div id="comment-246">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-246" title="">June 10th, 2012 on 4:40 am</a>  </small>
+
+			<p>I&#8217;m trying, man, I&#8217;m trying.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=246#respond' onclick='return addComment.moveForm("comment-246", "246", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-269">
+     <div id="comment-269">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>gdogg</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-269" title="">June 12th, 2012 on 7:17 am</a>  </small>
+
+			<p>Love how quick these are coming out. I&#8217;m used to gdb/Linux so it&#8217;s nice to learn a new tool. I also lol&#8217;d at you calling me out.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=269#respond' onclick='return addComment.moveForm("comment-269", "269", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-308">
+     <div id="comment-308">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/9d2a9f528dd7b46be54f6c810294cc93?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>luc</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-308" title="">June 13th, 2012 on 9:38 pm</a>  </small>
+
+			<p>really well written, i like your tuts because they are really easy explained and straightforward. i love the simplicity.<br />
+please keep it up man!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=308#respond' onclick='return addComment.moveForm("comment-308", "308", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-471">
+     <div id="comment-471">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Morten</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-471" title="">June 21st, 2012 on 6:41 pm</a>  </small>
+
+			<p>I&#8217;ve always prefered Little Endian.<br />
+Just makes more sense.</p>
+<p>Eg. take the number 10 (0x0000000A)</p>
+<p>Say it&#8217;s stored at address 00404020, in Big Endian it&#8217;d look like<br />
+00404020: 0000000A</p>
+<p>While in Little Endian, you&#8217;d have<br />
+00404020: 0A000000</p>
+<p>So the first byte will actually contain something rather than 3 zero bytes, so if you know the number is currently less than 255 you could just read byte at 00404020, whereas in Big Endian you&#8217;d have to read a byte at 00404020+3.</p>
+<p>I hope that made sense.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=471#respond' onclick='return addComment.moveForm("comment-471", "471", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor even thread-even depth-1" id="li-comment-474">
+     <div id="comment-474">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-474" title="">June 21st, 2012 on 7:57 pm</a>  </small>
+
+			<p>That is precisely true, and wonderful if you&#8217;re dealing with 32-bit numbers that are below 255. The trouble begins when you get above 255, say </p>
+<p>0&#215;12345678&#8230;</p>
+<p>I mean this looks weird to me:</p>
+<p>00404020: 78563412</p>
+<p>as opposed to this:</p>
+<p>00404020: 12345678</p>
+<p>but it&#8217;s just my 2 cents worth <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=474#respond' onclick='return addComment.moveForm("comment-474", "474", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-2" id="li-comment-483">
+     <div id="comment-483">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Morten</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-483" title="">June 22nd, 2012 on 8:33 am</a>  </small>
+
+			<p>Well, I guess that&#8217;s just a matter of getting used to it.</p>
+<p>Just like getting used to pushing stuff onto the stack in reversed order.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=483#respond' onclick='return addComment.moveForm("comment-483", "483", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1967">
+     <div id="comment-1967">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/edb79dc5975f769b6a3a8ac49c52ec7b?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite><a href='http://www.spysharksecurity.tk/' rel='external nofollow' class='url'>Anwar Mohamed</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-1967" title="">July 30th, 2012 on 2:45 pm</a>  </small>
+
+			<p>The homework is so easy xD<br />
+The tutorial is well explained, thank u <img src='wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=1967#respond' onclick='return addComment.moveForm("comment-1967", "1967", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-3696">
+     <div id="comment-3696">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3696" title="">September 2nd, 2012 on 1:23 pm</a>  </small>
+
+			<p>First of all I would like to thank you for this great tutorial.</p>
+<p>Second, I have somethings that has been bothering me lately and I just cannot get the idea of why it&#8217;s happening, but it&#8217;s not the first time:<br />
+When I loaded the program from ollydbg downloaded from their website (version 1.10, plugins are: cmdbar, bookmark, nonawrite, hidedebugger and analyze this) I get this window:<br />
+<a href="http://i48.tinypic.com/10p1x14.png" rel="nofollow">http://i48.tinypic.com/10p1x14.png</a> </p>
+<p>However, when I load it with your ollydbg I get the same screen as you do, why is this? I just want to know how things work instead of loading the executable on all available olly&#8217;s and praying to be lucky..</p>
+<p>As I said not the first time happening, the first program (FirstProgram.exe) didn&#8217;t run propely in your ollydbg but worked in 1.10 ollydbg.</p>
+<p>Thanks in advanced, please keep it up.. Maybe you should do some about gamehacking (getting structs/classes out of a game, getting a function pointer etc for MMORPG games such as Diablo) :p.</p>
+<p>Please forgive me if my English is bad.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3696#respond' onclick='return addComment.moveForm("comment-3696", "3696", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-3740">
+     <div id="comment-3740">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3740" title="">September 3rd, 2012 on 4:30 pm</a>  </small>
+
+			<p>If I understand you correctly, you are asking why the default Olly looks different from my version&#8230;This is because I have gone in and customized all of the graphics in the gui to look different. I also have additional plugins that you don&#8217;t, and my .ini file has different settings than the default Olly.</p>
+<p>If that wasn&#8217;t your question, please fell free to ask again. You may want to ask in the forums though, as those get answered much faster than comments on the blog&#8230;</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3740#respond' onclick='return addComment.moveForm("comment-3740", "3740", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-3" id="li-comment-3746">
+     <div id="comment-3746">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Modnar</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3746" title="">September 3rd, 2012 on 5:29 pm</a>  </small>
+
+			<p>Nope. I am aware of that, what I meant is my default olly breaks in different EP, and when I run the program (F9) it gets terminated and never runs. I think it&#8217;s because of the error in the bottom &#8220;Debugged program was unable to process exception&#8221;, But I have no idea as I am a beginner.</p>
+<p>I will try the forums thing one day, thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3746#respond' onclick='return addComment.moveForm("comment-3746", "3746", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-4" id="li-comment-3760">
+     <div id="comment-3760">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3760" title="">September 3rd, 2012 on 8:01 pm</a>  </small>
+
+			<p>Ahhhh. You need to set your exception settings like mine. Go to debugging options in Olly and select the excpetions tab, then set the following:</p>
+<p>Check all boxes<br />
+At the bottom, select &#8220;Add range&#8221; and enter 00000000-ffffffff in the edit box that opens. This should display in the custom exception range box at the bottom/.</p>
+<p>Now, all exceptions will be automatically passed to the target and you should be fine.</p>
+<p>If for some reason all of these boxes ARE ALREADY checked, un-check them all and then re-start the target.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3760#respond' onclick='return addComment.moveForm("comment-3760", "3760", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-5" id="li-comment-3778">
+     <div id="comment-3778">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Modnar</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3778" title="">September 4th, 2012 on 9:17 am</a>  </small>
+
+			<p>That did not work, I played with options and figured it would. I even copied your ollydbg.ini to my olly still didn&#8217;t help, decided to just use yours. Can you explain to me or link me a tutorial regarding exceptions? I am really interested I know C++ and they are there (try, catch) but I have no idea what role do they play in reversing and how they have the ability to &#8220;break&#8221; debuggers.</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3778#respond' onclick='return addComment.moveForm("comment-3778", "3778", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment byuser comment-author-random bypostauthor even depth-6" id="li-comment-3789">
+     <div id="comment-3789">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='R4ndom' src='wp-content/uploads/2012/05/R4ndom_avatar-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3789" title="">September 4th, 2012 on 3:26 pm</a>  </small>
+
+			<p>I am working on a tut about exceptions, but it will still be a cpl weeks before it comes out. In the mean time, check out Lena&#8217;s tuts. She talks about them. do a search for &#8220;Index to Lena&#8217;s tutorials&#8221;</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3789#respond' onclick='return addComment.moveForm("comment-3789", "3789", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-7" id="li-comment-3791">
+     <div id="comment-3791">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Modnar</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3791" title="">September 4th, 2012 on 4:14 pm</a>  </small>
+
+			<p>Alright will do once I am done with your tuts, it can wait.</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3791#respond' onclick='return addComment.moveForm("comment-3791", "3791", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-3747">
+     <div id="comment-3747">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Modnar</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-3747" title="">September 3rd, 2012 on 5:33 pm</a>  </small>
+
+			<p>I am sorry I can not edit my previous post, thought those information would help:<br />
+When I press F9 nothing happens for like 15-25 seconds, after that I see the status of the program &#8220;Terminated&#8221; and the error in the bottom becomes &#8220;Process terminated, exit code 4000001E (1073741854.)</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=3747#respond' onclick='return addComment.moveForm("comment-3747", "3747", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-7088">
+     <div id="comment-7088">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/d36f4560e782522dc3971a86db1e9f32?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-7088" title="">November 8th, 2012 on 7:16 am</a>  </small>
+
+			<p>I solved the first piece of homework and I couldn&#8217;t be happier. Thanks a bunch.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=7088#respond' onclick='return addComment.moveForm("comment-7088", "7088", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-9471">
+     <div id="comment-9471">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>maxluvr</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-9471" title="">December 8th, 2012 on 11:22 am</a>  </small>
+
+			<p>Woooha!!! done.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=9471#respond' onclick='return addComment.moveForm("comment-9471", "9471", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-9472">
+     <div id="comment-9472">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>maxluvr1981</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-9472" title="">December 8th, 2012 on 11:22 am</a>  </small>
+
+			<p>Woohaaa! done</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=9472#respond' onclick='return addComment.moveForm("comment-9472", "9472", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-10466">
+     <div id="comment-10466">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/015ad53909bd78e2f79bc6c3cf46dc12?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>gadour</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10466" title="">December 18th, 2012 on 3:29 pm</a>  </small>
+
+			<p>thank you very much great tutorial but you can begin t find the correct password instead of patching</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=10466#respond' onclick='return addComment.moveForm("comment-10466", "10466", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-10468">
+     <div id="comment-10468">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/015ad53909bd78e2f79bc6c3cf46dc12?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>gadour</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10468" title="">December 18th, 2012 on 3:31 pm</a>  </small>
+
+			<p>thank you very much great tutorial but how can we find the t correct password instead of patching</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=10468#respond' onclick='return addComment.moveForm("comment-10468", "10468", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment even depth-2" id="li-comment-10701">
+     <div id="comment-10701">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a1568a06f790cf45a879598e81df19bd?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>7orri</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10701" title="">December 21st, 2012 on 12:14 am</a>  </small>
+
+			<p>did you figure it out? =)</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=10701#respond' onclick='return addComment.moveForm("comment-10701", "10701", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10700">
+     <div id="comment-10700">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a1568a06f790cf45a879598e81df19bd?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>7orri</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-10700" title="">December 21st, 2012 on 12:00 am</a>  </small>
+
+			<p>man.. this is SO excellent! ty for taking the time to offer all this!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=10700#respond' onclick='return addComment.moveForm("comment-10700", "10700", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-neophyte even thread-even depth-1" id="li-comment-20784">
+     <div id="comment-20784">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/d3c465f8ee28a669d820e9f2e3f5638c?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>neophyte</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-20784" title="">February 21st, 2013 on 1:43 pm</a>  </small>
+
+			<p>thnx for t tut. homework was so easy thnx for ur great explanation. I was not fond of Assembly language before. but after your tutorial . got eager to read more.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=20784#respond' onclick='return addComment.moveForm("comment-20784", "20784", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-24623">
+     <div id="comment-24623">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/08227c72a48fb6442a0b9e73438e125b?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Sean</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-24623" title="">March 13th, 2013 on 10:25 pm</a>  </small>
+
+			<p>Sorry if you have already answered this, but with  Modnar&#8217;s problem, I was getting the same thing and thought I was loading the wrong executable.  After a couple tutorials, I realized Olly was stopping early, but if I hit F9 again, it would lead me to your starting place.  Also, I&#8217;m on Windows7 64 bit.  Hope that helps.</p>
+<p>BTW, these are amazing.  I started with #1 yesterday and will be going through the complete series, as well as look at what else you have.</p>
+<p>Thanks a Brazillian!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=24623#respond' onclick='return addComment.moveForm("comment-24623", "24623", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-43447">
+     <div id="comment-43447">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/6a5fff9380e0b67af072560add7c3912?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>None</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-43447" title="">April 26th, 2013 on 5:00 pm</a>  </small>
+
+			<p>Thank you for the tutorial! I almost felt like a superhero when I guessed the password on my own!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=43447#respond' onclick='return addComment.moveForm("comment-43447", "43447", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-44828">
+     <div id="comment-44828">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2ed3301506c9cbf5f45b9566a48513b9?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>staafl</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-44828" title="">April 27th, 2013 on 9:39 pm</a>  </small>
+
+			<p>many thanks for your excellent tutorials and all the hard work you&#8217;ve put into them!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=44828#respond' onclick='return addComment.moveForm("comment-44828", "44828", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-53212">
+     <div id="comment-53212">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b03cb21ad7a2272abca046bde77f9f77?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Raider</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-53212" title="">May 7th, 2013 on 5:29 am</a>  </small>
+
+			<p>Hello, great tutorials! I would like to ask why my Ollydbg doesn&#8217;t show the yellow and blue colors on Calls and Jumps? I&#8217;m also really interested in the answer of the homework.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=53212#respond' onclick='return addComment.moveForm("comment-53212", "53212", "respond", "332")'>Reply</a>       </div>
+     </div>
+<ul class='children'>
+   <li class="comment odd alt depth-2" id="li-comment-53392">
+     <div id="comment-53392">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/b03cb21ad7a2272abca046bde77f9f77?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Raider</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-53392" title="">May 7th, 2013 on 10:59 am</a>  </small>
+
+			<p>I unfortunately also couldn&#8217;t understand this:<br />
+[quote]Well, we can clearly see in the EBX register that the far right byte (BL) is not 61h, but instead is 31h, so already we’re stuck and we’re going to take this jump that we so much did not want[/quote]</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=53392#respond' onclick='return addComment.moveForm("comment-53392", "53392", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-66005">
+     <div id="comment-66005">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-66005" title="">May 21st, 2013 on 7:17 pm</a>  </small>
+
+			<p>HOW CAN I MAKE THIS READ arrow ? IT DOESN&#8217;T APPEARS TO MY OLLYDBG ? THANKS IN ADVANCE</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=66005#respond' onclick='return addComment.moveForm("comment-66005", "66005", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-71337">
+     <div id="comment-71337">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/0df13ff8dff924e4c4a0b0f6c1cbc6b8?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>luca</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-71337" title="">June 7th, 2013 on 2:55 pm</a>  </small>
+
+			<p>please , i dont&#8217;find the code ! <img src='wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' />  help me !</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=71337#respond' onclick='return addComment.moveForm("comment-71337", "71337", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-71352">
+     <div id="comment-71352">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/0df13ff8dff924e4c4a0b0f6c1cbc6b8?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>luca</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-71352" title="">June 7th, 2013 on 6:01 pm</a>  </small>
+
+			<p>FOUND !!! <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />  but is it possible to save the changes in the exe ??now the exe &#8220;jump the jumps&#8221; and we can have the access without the code after modifing the flag and so on&#8230;.how can i save this  to the exe ?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=71352#respond' onclick='return addComment.moveForm("comment-71352", "71352", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-buttahnbred odd alt thread-even depth-1" id="li-comment-74481">
+     <div id="comment-74481">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://1.gravatar.com/avatar/130aaa7f4f642531708ab577ea8e2389?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>30-52-44-33-52</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-74481" title="">June 27th, 2013 on 1:19 am</a>  </small>
+
+			<p>Again thank you for the tutorial.  I like the little homework section that has us expand on what we&#8217;ve learned in this tutorial as well as previous ones.  A great example to start off for those of us who are new to this.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=74481#respond' onclick='return addComment.moveForm("comment-74481", "74481", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-75739">
+     <div id="comment-75739">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' />                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-75739" title="">July 6th, 2013 on 6:47 pm</a>  </small>
+
+			<p>Just for the record I find all of your tutorials hilarious and well done. If you wrote a book I&#8217;d buy it in a heartbeat (unless it doesn&#8217;t have sarcasm and smiley faces then I&#8217;ll have none of it!).</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=75739#respond' onclick='return addComment.moveForm("comment-75739", "75739", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-81661">
+     <div id="comment-81661">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/a834735455a40e4bdc83bff65f86dc2e?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Kon</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-81661" title="">August 19th, 2013 on 9:24 am</a>  </small>
+
+			<p>Thank you for a very well written tutorial.<br />
+Moving from a different debugger and into Olly was very challenging but you SIR made the transition enjoyable.<br />
+Thank you,<br />
+Kon</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=81661#respond' onclick='return addComment.moveForm("comment-81661", "81661", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-84359">
+     <div id="comment-84359">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt='' src='http://0.gravatar.com/avatar/2f30d49a96c465e0aa50f60f17dac0b3?s=60&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=R' class='avatar avatar-60 photo' height='60' width='60' />                </a>             
+            
+			<cite>Abutharik</cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-84359" title="">September 11th, 2013 on 10:55 am</a>  </small>
+
+			<p>It&#8217;s an inspiring work. I&#8217;m a man from least background of computer science and assembly language. Even though your demonstrations are really working because of it&#8217;s clarity. That&#8217;s because you&#8217;ve an overall vision to guide beginners in the world of reverse engineering. Hey one personal request: where can I get get your ollydbg.exe that shows red arrows for jumps. I desperately need it. I feel it as the most convenient way to visualize jumps.  olly, the one I&#8217;m working with is from your zipped archive downloaded from tutorial 3 package. Help me..</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class='comment-reply-link' href='archives/332?replytocom=84359#respond' onclick='return addComment.moveForm("comment-84359", "84359", "respond", "332")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+		<h3>1 Trackback or Pingback for this entry</h3>
+	<ul class="trackback">
+		     <li class="pingback even thread-even depth-1" id="li-comment-786">
+     <div id="comment-786">
+			<div class="commentbody">
+			<cite><a href='http://msg1len.wordpress.com/2012/07/03/our-first-sort-of-crack/' rel='external nofollow' class='url'>Our First (Sort Of) Crack &laquo; msg1len Official Website</a> </cite> 
+						<br />
+			<small class="commentmetadata"><a href="#comment-786" title="">July 3rd, 2012 on 5:24 am</a>  </small>
+
+			<p>[...] Original Post Share this:TwitterFacebookLike this:LikeBe the first to like this. [...]</p>
+			</div>
+     </div>
+</li>
+	</ul>
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="archives/332#respond">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name </small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+ <input type='hidden' name='comment_post_ID' value='332' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='471' />
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" type="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" />
+<input type="hidden" name="comment_post_ID" value="332" />
+</p>
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b467f33171" /></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href='archives/332/feed'><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> &#183; <a href="archives/332/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input type="text" name="log" id="log" value="" size="20" />
+<input type="password" name="pwd" id="pwd" size="20" />
+<input type="submit" name="submit" value="Send" class="button" />
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
+       <input type="hidden" name="redirect_to" value="/blog/archives/332?replytocom=471" />
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To&#8230;">And The Most Posts Submitted In A Single Sitting Goes To&#8230;</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><a href='http://www.economicscafe.com.sg/' rel='external nofollow' class='url'>jc economics tuition</a>  on <a href="archives/258#comment-85252">Tutorial #4: Using Olly, Part 2</a> </li><li class="recentcomments">Ray on <a href="archives/654#comment-85087">R4ndom&#8217;s Tutorial #9: No Strings Attached</a> </li><li class="recentcomments">equal on <a href="archives/506#comment-84987">Tutorial #8: Frame Of Reference</a> </li><li class="recentcomments">Deeren on <a href="archives/2420#comment-84709">R4ndom’s Guide to RadASM: Installing and Set Up</a> </li><li class="recentcomments">Abutharik on <a href="archives/833#comment-84487">R4ndom&#8217;s Tutorial #10: The Levels Of Patching</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+	<li><a href='archives/date/2012/05' title='May 2012'>May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="archives/category/randoms-ramblings" title="View all posts filed under Random&#039;s Ramblings">Random&#039;s Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name='widget_quick_subscribe_form' id='widget_quick_subscribe_form'><input type='email' name='QS_user_email_widget' id='QS_user_email_widget' placeholder='email@email.com' onFocus='fadeSubmitIn("widget_qsSubmit");' onBlur='fadeSubmitOut(this, "widget_qsSubmit");'  onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;'><input style='display:none;' type='button' value='subscribe!' id='widget_qsSubmit' class='widget_qsSubmit' onClick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");'></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="archives/2961">And The Most Posts Submitted In A Single Sitting Goes To&#8230; </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href='archives/date/2012/10' title='October 2012'>October 2012</a> </li>
+	<li><a href='archives/date/2012/09' title='September 2012'>September 2012</a> </li>
+	<li><a href='archives/date/2012/08' title='August 2012'>August 2012</a> </li>
+	<li><a href='archives/date/2012/07' title='July 2012'>July 2012</a> </li>
+	<li><a href='archives/date/2012/06' title='June 2012'>June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href='archives/tag/adding-functionality' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>adding functionality</a> 
+<a href='archives/tag/assembly-language' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>assembly language</a> 
+<a href='archives/tag/binary' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>binary</a> 
+<a href='archives/tag/code-cave' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>code cave</a> 
+<a href='archives/tag/code-caves' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>code caves</a> 
+<a href='archives/tag/cracking' class='tag-link-8' title='5 topics' style='font-size: 16pt;'>cracking</a> 
+<a href='archives/tag/crackme' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>crackme</a> 
+<a href='archives/tag/ebook' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>ebook</a> 
+<a href='archives/tag/exploting-binaries' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>exploting binaries</a> 
+<a href='archives/tag/guide' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Guide</a> 
+<a href='archives/tag/olly' class='tag-link-14' title='2 topics' style='font-size: 11pt;'>Olly</a> 
+<a href='archives/tag/ollydbg' class='tag-link-10' title='4 topics' style='font-size: 14.666666666667pt;'>ollydbg</a> 
+<a href='archives/tag/olly-tutorial' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>olly tutorial</a> 
+<a href='archives/tag/plugins' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>plugins</a> 
+<a href='archives/tag/reverse-engineering-2' class='tag-link-7' title='3 topics' style='font-size: 13pt;'>reverse engineering</a> 
+<a href='archives/tag/sandbox' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>sandbox</a> 
+<a href='archives/tag/tools' class='tag-link-4' title='1 topic' style='font-size: 8pt;'>Tools</a> 
+<a href='archives/tag/tutorial' class='tag-link-16' title='2 topics' style='font-size: 11pt;'>tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright &copy; 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czoxMzoiMyw1LDgsMTQsMTAsNyI7czoxMDoiY29udGVudF9pZCI7aTozMzI7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.7e1edcc515450765425f45591ca520ed"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
+
+</body>
+
+<!-- Mirrored from thelegendofrandom.com/blog/archives/332?replytocom=471 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 19 Sep 2013 11:15:10 GMT -->
+</html>

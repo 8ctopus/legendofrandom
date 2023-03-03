@@ -1,0 +1,1204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R4ndom’s Tutorial #15: Using The Call Stack «  The Legend Of Random</title>
+<meta name="generator" content="WordPress 3.5.1">
+<meta name="robots" content="follow, all">
+
+<link rel="shortcut icon" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/favicon.ico">
+<link rel="stylesheet" href="1093_fichiers/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random RSS Feed" href="http://thelegendofrandom.com/blog/feed">
+<link rel="pingback" href="http://thelegendofrandom.com/blog/xmlrpc.php">
+<link rel="stylesheet" href="1093_fichiers/menu.css" type="text/css" media="screen">
+<!--[if IE]><link rel="stylesheet" href="http://thelegendofrandom.com/blog/wp-content/themes/jarrah/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="The Legend Of Random » R4ndom’s Tutorial #15: Using The Call Stack Comments Feed" href="http://thelegendofrandom.com/blog/archives/1093/feed">
+<script type="text/javascript" src="1093_fichiers/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAjax = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1093_fichiers/ajax.js"></script>
+<script type="text/javascript" src="1093_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thelegendofrandom.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thelegendofrandom.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="R4ndom’s Tutorial #14: NAGS (And I don’t Mean Your Mother)" href="http://thelegendofrandom.com/blog/archives/933">
+<link rel="next" title="Double Whammy" href="http://thelegendofrandom.com/blog/archives/1395">
+<meta name="generator" content="WordPress 3.5.1">
+<link rel="canonical" href="http://thelegendofrandom.com/blog/archives/1093">
+<link rel="shortlink" href="http://thelegendofrandom.com/blog/?p=1093">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="1093_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="1093_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="1093_fichiers/jquery_004.js"></script>
+<script type="text/javascript" src="1093_fichiers/my-menu.js"></script>
+
+<!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+jQuery(document).ready(function(){ 
+    jQuery(document).pngFix(); 
+});
+
+/* ]]> */ 
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" align="center">
+	<div id="layouttop"></div>
+    
+    <!-- Header Starts -->
+    <div id="header">
+    	<div id="headerleft">
+        	              	<h1><a href="http://thelegendofrandom.com/blog">The Legend Of Random</a> </h1><h3>Programming and Reverse Engineering</h3>
+			      	   
+        </div>
+        <div id="headerright">
+        	<div id="searchboxo">
+        		<form method="get" id="searchform" action="http://thelegendofrandom.com/blog/">
+    <input value="Search keywords" name="s" id="searchbox" onfocus="this.value=''" class="searchinput" type="text">
+    <input class="submitbutton" value="" type="submit">
+</form> 
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    
+    
+    <div id="innerwrapper">
+    	
+        <!-- Main nav Starts here -->
+        <div id="navouter">
+            <div id="nav">
+
+                <ul class="lavalamp" id="menu1">
+                <li class="page_item  current_page_item"><a href="http://thelegendofrandom.com/blog">Home</a> </li>
+                <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
+<li class="page_item page-item-27"><a href="http://thelegendofrandom.com/blog/tools">Tools</a> </li>
+<li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
+<li class="page_item page-item-846"><a href="http://www.thelegendofrandom.com/forum/">Forum</a> </li>
+<li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
+			
+                <li style="left: 12px; width: 58px;" class="back"><div class="left"></div></li></ul>
+            
+            </div>
+        </div>
+        <!-- Main nav Ends -->
+<div id="maincol">
+		
+        <div class="postwrap">
+          	<h2 class="posttitle"><a href="http://thelegendofrandom.com/blog/archives/1093">R4ndom’s Tutorial #15: Using The Call Stack</a> </h2>
+          	<div class="postmeta">by <a href="http://thelegendofrandom.com/blog/archives/author/random" title="Posts by R4ndom" rel="author">R4ndom</a>  on Jul.18, 2012, under <a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts in Beginner" rel="category tag">Beginner</a> , <a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts in Reverse Engineering" rel="category tag">Reverse Engineering</a> , <a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts in Tutorials" rel="category tag">Tutorials</a> </div>
+            <div class="clr16"></div>
+          	<div class="postcontent"><h2><span style="color: #0a77e1;">Introduction</span></h2>
+<p>In this tutorial we will be removing a nag from a ‘real’ program. In 
+an attempt to help out the author’s, who spend a great deal of time 
+creating these apps, I have attempted to pick an app that will do the 
+least amount of harm. This time, I did a Google search for “Cracked 
+Software” and this program came up with the most hits, including 
+tutorials, serial numbers, keygens, you name it. Because it is so 
+incredibly easy to get a crack for this app, I figured someone would 
+probably not have much trouble getting it anyway. But please, if you do 
+like it, pay for it.</p>
+<p>We will also be adding a couple tricks to our arsenal for reverse 
+engineering. One note, if you are running these tutorials under 64-bit 
+windows 7 (like I am), Olly 1.10, even my version, the call stack trick 
+will not work. My suggestion is to do what I do: Run Olly 2.0 just to 
+perform the trick (and get the correct address) then switch back over to
+ my version of Olly for the rest of it. Or just use Olly 2.0- there are a
+ lot of nice features in it and it has been fixed to work properly with 
+64-bit operating systems.</p>
+<p>You can download the files for this tutorial on the <a title="Tutorials" href="http://thelegendofrandom.com/blog/sample-page"><span style="text-decoration: underline; color: #0a77e1;">tutorials</span></a> </p> page.<p></p>
+<p><span id="more-1093"></span></p>
+<h2><span style="color: #0a77e1;">Investigate The App</span></h2>
+<p>This program comes with the restriction that after 40 days (probably a
+ biblical thing?) a nag will appear, and trust me, I know from 
+experience, it is very naggy. Unfortunately, since the nag doesn’t 
+appear for 40 days (and 40 nights? -sorry) you have two choices; you can
+ install the app and wait 40 days before reading this tutorial or you 
+can simply set your system time to today plus 41 days, do the tutorial, 
+and reset the date back to today. Make sure you do one or the other 
+before doing the tutorial or it won’t match <img src="1093_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/128.png"><img class="aligncenter size-full wp-image-1251" title="Starting the app" src="1093_fichiers/128.png" alt="" height="738" width="578"></a> </p><p></p>
+<p>and after a second…</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/224.png"><img class="aligncenter size-full wp-image-1252" title="The nag" src="1093_fichiers/224.png" alt="" height="181" width="354"></a> </p><p></p>
+<p>This nag pops up. It pops up a lot while using the app. It is highly annoying. Also, we can see at the top ‘evaluation copy’:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/318.png"><img class="aligncenter size-full wp-image-1253" title="Unregistered" src="1093_fichiers/318.png" alt="" height="242" width="452"></a> </p><p></p>
+<p>I am going to show you two ways to get to the relevant code.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The First Way</span></h2>
+<p>So let’s load it in Olly and get started:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/418.png"><img class="aligncenter size-full wp-image-1254" title="Loading the app" src="1093_fichiers/418.png" alt="" height="297" width="630"></a> </p><p></p>
+<p>Start the app and wait for the nag to appear. Once it appears (and 
+before closing it) click in Olly and click the pause button (next to the
+ play button):</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/5-pause.png"><img class="aligncenter size-full wp-image-1255" title="Pause" src="1093_fichiers/5-pause.png" alt="" height="157" width="285"></a> </p><p></p>
+<p>Now, we want to find out where that nag came from, and ultimately, 
+what decided to show it. Of course we could search for strings or 
+intermodular calls, but I guarantee you that these tricks will not be 
+helpful for a lot of apps out there. So let’s learn another trick…</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The Call Stack</span></h2>
+<p>The call stack is Olly’s attempt at tracing through the code that got
+ us here and trying to figure out which functions were called. It also 
+attempts to show you arguments that were passed to the function. All of 
+this can be accomplished by using the ‘normal’ stack in the bottom 
+right, but the call stack is a much nicer view of this data. Keep in 
+mind that Olly is not perfect at this, though, and you can’t use 
+everything in this window as gospel (oops, I did it again). There is a 
+lot of guessing going on. Also, many times, this window will be blank. 
+This is usually caused by Olly getting completely lost or when reverse 
+engineering a Visual Basic program (VB programs don’t call functions the
+ same way as real programming languages do).</p>
+<p>To view the call stack, click the “St” button if using my version of Olly:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/68.png"><img class="aligncenter size-full wp-image-1256" title="The call stack" src="1093_fichiers/68.png" alt="" height="103" width="289"></a> </p><p></p>
+<p>Or, if using the default version of Olly, click the ‘K’ toolbar 
+button. Apparently, ‘Call’ starts with a ‘K’ in the author’s native 
+language:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/78.png"><img class="aligncenter size-full wp-image-1257" title="The stack" src="1093_fichiers/78.png" alt="" height="257" width="519"></a> </p><p></p>
+<p>A couple things to point out…The most recent call is at the top, just
+ like the stack. ‘Includes’ means that this instruction was involved in 
+the call, but Olly doesn’t know exactly how. A question mark means Olly 
+is a little unsure about that line, so take it with a grain of salt.</p>
+<p>In our specific example, we can see a ntdll function, some user32 
+functions, a call to DialogBoxParamA with arguments, some more calls to 
+user32, and a call at the bottom from our app, WinRAR. Here is how to 
+think of this: WinRAR, at address 442C44, called DispatchMessageA, in 
+this case with a message to display a dialog box. User32 then called the
+ DialogBoxParamA function to display the dialog box with the text 
+“evaluation copy” in the title, along with some other arguments. User32 
+then displayed this dialog and is currently waiting for our input, using
+ WaitMessage to do it.</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/88.png"><img class="aligncenter size-full wp-image-1258" title="Jumps to the call stack" src="1093_fichiers/88.png" alt="" height="257" width="519"></a> </p><p></p>
+<p>The important things in this window are the call to the dialog box 
+and the call from our app. Generally, when using the call stack, you 
+start at the top and find the first item that you can use to find the 
+code section you are interested in. If that one doesn’t work, you go 
+further down the list, checking each function call until we get ‘back’ 
+in the code far enough to find our compare/jump that determines if this 
+function is called or not. Let’s try checking out the call to 
+DialogBoxParamA by double-clicking that line:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/98.png"><img class="aligncenter size-full wp-image-1259" title="Jumpung to the dialog" src="1093_fichiers/98.png" alt="" height="265" width="770"></a> </p><p></p>
+<p>and we jump to the call to DialogBoxParamA. I have placed a BP at the
+ beginning of this set of instructions that performs the setup and call 
+to display the dialog. Above it, we can see several conditional jumps 
+which pop out to us. If you scroll up farther, you will notice some 
+comments that say “Case XX (WM_Something) of switch 0043F0A4″ where XX 
+is a hex number:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/108.png"><img class="aligncenter size-full wp-image-1260" title="The switch statement" src="1093_fichiers/108.png" alt="" height="550" width="773"></a> </p><p></p>
+<p>This is Olly’s way of showing a switch statement. If you scroll up, 
+you will notice that this is a really big switch statement. If you have 
+Windows programming experience, you will recognize the “WM_SOMETHING” 
+statements as Windows messages, and you will recognize this whole 
+section of code as a message procedure for Windows messages. Don’t worry
+ if you don’t know anything about this as a future tutorial will be 
+going over windows message procedures in greater detail. For now, we are
+ only interested in the case that involves our call to the dialog box. 
+Here, we can see the entire case:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/1112.png"><img class="aligncenter size-full wp-image-1261" title="Setting BPs" src="1093_fichiers/1112.png" alt="" height="450" width="757"></a> </p><p></p>
+<p>You will notice that it is in the section that handles WM_TIMER 
+messages. This is very telling. Why would our dialog box be in a message
+ handler for when a timer goes off? We will see shortly…</p>
+<p>Also notice that after the dialog is called there are several conditional jumps and compares:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/129.png"><img class="aligncenter size-full wp-image-1262" title="The dialog returns" src="1093_fichiers/129.png" alt="" height="193" width="668"></a> </p><p></p>
+<p>These jump the execution of the app based on what we clicked in the 
+dialog box; if you clicked “Close” it will jump to the code to close the
+ window etc.</p>
+<p>Scrolling back up to the beginning of the switch/case section we see that there is an initial compare and jump:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/137.png"><img class="aligncenter size-full wp-image-1263" title="Potential patch" src="1093_fichiers/137.png" alt="" height="386" width="715"></a> </p><p></p>
+<p>The jump here jumps over the call to open the nag dialog (along with a
+ lot of other code). Let’s see what this initial compare/jump is. 
+Right-click on the line that has the “Case 113 (WM_TIMER)” in it and 
+select “Goto”:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/146.png"><img class="aligncenter size-full wp-image-1264" title="Viewing the switch" src="1093_fichiers/146.png" alt="" height="689" width="845"></a> </p><p></p>
+<p>You will see in the drop down window that Olly shows us several of 
+the cases that can be handled by this switch statement. Clicking on 
+“More cases…” opens a dialog showing us all of them:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/156.png"><img class="aligncenter size-full wp-image-1265" title="The cases" src="1093_fichiers/156.png" alt="" height="331" width="294"></a> </p><p></p>
+<p>Clicking on a couple of these and selecting “Follow” will take you to
+ the code that handles that case. You will notice that at the beginning 
+of all of them is a compare/jump. What this means is that the assembly 
+language handles this switch/case statement as a huge if/then statement.
+ It would look something like this (in psuedo-code):</p>
+<p><strong>if (msg != WM_CREATE)</strong><br>
+<strong>&nbsp;&nbsp; jump to next if</strong><br>
+<strong>Do WM_CREATE code</strong><br>
+<strong>Jump to end</strong><br>
+<strong>if (msg != WM_DESTROY)</strong><br>
+<strong>&nbsp;&nbsp; jump to next if</strong><br>
+<strong>Do WM_DESTROY code</strong><br>
+<strong>Jump to end</strong><br>
+<strong>if (msg != WM_SIZE)</strong><br>
+<strong>&nbsp;&nbsp; jump to next if</strong><br>
+<strong>Do WM_SIZE code</strong><br>
+…</p>
+<p>So, at the beginning of each case, we check if this is the case for 
+the particular message coming thru, and if it’s not we jump to the next 
+compare. If it is, we skip the jump and fall through to the code that 
+handles the message.</p>
+<p>Now, because our specific case is a WM_TIMER messages, we can learn 
+(by looking up the message WM_TIMER on Google) that this message is a 
+handler for when the timer goes off. That means that somewhere this 
+timer must have been started. Scrolling up (quite a bit) we see the 
+culprit:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/165.png"><img class="aligncenter size-full wp-image-1266" title="SetTimer" src="1093_fichiers/165.png" alt="" height="188" width="768"></a> </p><p></p>
+<p>So now we can guess how we can override this nag…</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">Patching the App</span></h2>
+<p>The easiest way is to make this message handler not do anything when 
+the timer goes off. And the easiest way to do that is to make sure we 
+jump over this case every time. So go to the beginning of this case (113
+ – WM_TIMER)&nbsp; where it checks if this is the correct case and 
+change it to always jump:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/174.png"><img class="aligncenter size-full wp-image-1267" title="Paching the app" src="1093_fichiers/174.png" alt="" height="175" width="763"></a> </p><p></p>
+<p>and here’ s what the patch looks like:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/185.png"><img class="aligncenter size-full wp-image-1268" title="The patch" src="1093_fichiers/185.png" alt="" height="87" width="668"></a> </p><p></p>
+<p>Now, whenever this message procedure gets a message that the timer has gone off, it will simply ignore it <img src="1093_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> . Run the app and you will notice after a while that the nag does not show up anymore:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/194.png"><img class="aligncenter size-full wp-image-1269" title="No more nag" src="1093_fichiers/194.png" alt="" height="738" width="578"></a> </p><p></p>
+<p>The program still says “evaluation” in the title, but we will come 
+back to this in a future tutorial (as it’s a little more complicated to 
+change this- go ahead and try. It’s the best way to learn!) But for now,
+ even though it says “evaluation” it works fine and will never expire. 
+Well, that’s not exactly true; it will expire but it won’t do anything 
+about it <img src="1093_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> . Make sure you save the patch (as we did in several previous tutorials) to keep the changes.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">The Second Way</span></h2>
+<p>Now, I am going to show you another method we can use (instead of the
+ call stack) to find our dialog box section. Download Resource Hacker if
+ you don’t have it already. You can get it on the<span style="color: #0a77e1;"><a title="Tools" href="http://thelegendofrandom.com/blog/tools"><span style="color: #0a77e1;"> tools</span></a> </span></p>
+ page. Resource Hacker allows you to view and manipulate the resources 
+inside a PE file.&nbsp; We will get more into resources when we discuss 
+the make-up of the PE file, but for now just know that any resource that
+ the app uses (buttons, dialog boxes, bitmaps, icons, text strings) are 
+stored in a separate section of the file, separate from the code that 
+is. Really, the best way to see what I mean is to open Resource Hacker, 
+load a couple of program in it, and just look around.<p></p>
+<p>So let’s do just that…Open Resource Hacker and load in our app:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/204.png"><img class="aligncenter size-full wp-image-1271" title="Resource HAcker" src="1093_fichiers/204.png" alt="" height="492" width="531"></a> </p><p></p>
+<p>&nbsp;</p>
+<p>The tree on the left shows you the various resources that are in this
+ app. You can see it contains bitmaps, icons, menus, and most 
+importantly, dialog boxes:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/2110.png"><img class="aligncenter size-full wp-image-1270" title="Opening Resource Hacker" src="1093_fichiers/2110.png" alt="" height="355" width="224"></a> </p><p></p>
+<p>There are a lot of dialog boxes in this app. Go ahead and click on the first one, ABOUTRARDIALOG:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/225.png"><img class="aligncenter  wp-image-1272" title="A dialog" src="1093_fichiers/225.png" alt="" height="406" width="716"></a> </p><p></p>
+<p>Resource Hacker shows us the pertinent data to this dialog, including
+ the caption (what appears in the title of the window), buttons 
+associated with this dialog, and it’s various settings. It also opens a 
+window showing us exactly what the dialog will look like, in this case 
+the About dialog. After clicking through a bunch of them, you will come 
+across the one we want:</p>
+<p style="text-align: center;"><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/233.png"><img class="aligncenter  wp-image-1273" title="The reminder dialog" src="1093_fichiers/233.png" alt="" height="465" width="821"></a> </p><p></p>
+<p>Look familiar? Notice that the name of this dialog is ‘REMINDER’. 
+Sometimes Windows uses names to reference a dialog box, and other times 
+an ID. In this case it uses the name ‘REMINDER. Now we know all we need 
+to- load up the app in Olly and go to “search for strings”. Let’s search
+ for ‘REMINDER’:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/243.png"><img class="aligncenter size-full wp-image-1274" title="Got to the dialog" src="1093_fichiers/243.png" alt="" height="319" width="677"></a> </p><p></p>
+<p>and we see it in the list:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/253.png"><img class="aligncenter size-full wp-image-1275" title="Reminder" src="1093_fichiers/253.png" alt="" height="189" width="526"></a> </p><p></p>
+<p>Double-clicking on it brings us to the same section we came to by using the call stack:</p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/07/262.png"><img class="aligncenter size-full wp-image-1276" title="and we're there again" src="1093_fichiers/262.png" alt="" height="469" width="712"></a> </p><p></p>
+<p>In fact, you will see that one of the arguments passed to 
+DialogBoxParamA is the name, ‘REMINDER’. If the resource was identified 
+by an id instead of a name, we could find it by right-clicking the 
+disassembly window and selecting “Search for”-&gt;”Command”. Then enter 
+into the box ‘PUSH xx” where xx is the ID (in hex) of the resource. This
+ will take you to the call to the dialog box as well.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #0a77e1;">One More Thing</span></h2>
+<p>If you look around at the numerous tutorials on cracking this binary,
+ you will see that one of the methods is to simply delete the dialog box
+ in Resource Hacker. This does work in this case, and you will no longer
+ see the nag, though this won’t work in every case- it all depends on 
+how the program handles a missing resource. Given the simplicity of this
+ technique, it’s always worth trying.</p>
+<p>&nbsp;</p>
+<p>-Till next time</p>
+<p>R4ndom</p>
+<p>&nbsp;</p>
+<p>ps. Don’t forget to change your clock back <img src="1093_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+</div>
+          	<div class="clr"></div>
+          	<span class="linkpages"></span><div class="cleared"></div>
+          	
+			            
+				<div class="roundcornrrbox">
+                   	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+                    <div class="roubcornrcontent">
+            			<span class="posttags-single">No tags</span>
+                    	<div class="clr"></div>
+                    </div>
+                    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+                </div>                        
+                        
+			
+			        	
+            <div class="clr"></div>
+        </div> <!-- Closes topPost -->
+		<small></small>
+
+		<div id="comments">
+			            <!-- WP 2.7 and above -->
+            <div class="roundcornrrbox">
+	<div class="topleftcorner"><div class="toprightcorner"></div></div>
+	<div class="roubcornrcontent">
+
+		<h3 id="commentstitle">27 Comments for this entry</h3>
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-1465">
+     <div id="comment-1465">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/6e6e31f4130a75619e8abaa9a28fd56d.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://tpodt.net16.net/" rel="external nofollow" class="url">Mr. eXoDia</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1465" title="">July 19th, 2012 on 8:51 pm</a>  </small>
+
+			<p>I liked the tutorial a lot.. I just wanted to point you to an 
+alternative to ResHacker: ResEdit.net it has quite some nice features 
+and can also be used for programming.</p>
+<p>Greetings</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1465#respond" onclick='return addComment.moveForm("comment-1465", "1465", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-1466">
+     <div id="comment-1466">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/6e6e31f4130a75619e8abaa9a28fd56d.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite><a href="http://tpodt.net16.net/" rel="external nofollow" class="url">Mr. eXoDia</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1466" title="">July 19th, 2012 on 8:53 pm</a>  </small>
+
+			<p>Sorry for bumping, but another method is to screw up the hinst…</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1466#respond" onclick='return addComment.moveForm("comment-1466", "1466", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-3" id="li-comment-1476">
+     <div id="comment-1476">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1476" title="">July 20th, 2012 on 12:08 am</a>  </small>
+
+			<p>Been a while, eXoDia. Yes, that is a good resources. You ever 
+tried Resource Tuner? It’s the only one I’ve found to rip resources from
+ VB and Delphi. Check it out.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1476#respond" onclick='return addComment.moveForm("comment-1476", "1476", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-rip06 odd alt thread-odd thread-alt depth-1" id="li-comment-1468">
+     <div id="comment-1468">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="Xor06" src="1093_fichiers/Rip06_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>Rip06</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1468" title="">July 19th, 2012 on 9:00 pm</a>  </small>
+
+			<p>Thanks for the speed the new tut’s are coming with <img src="1093_fichiers/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1468#respond" onclick='return addComment.moveForm("comment-1468", "1468", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-1506">
+     <div id="comment-1506">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1506" title="">July 20th, 2012 on 5:41 pm</a>  </small>
+
+			<p>Once again you make a great tutorial. I am really learning a lot 
+of techniques from your tutorials, but I am having some trouble applying
+ them on my own. For instance, I took your advice and looked for an 
+application on download.com and ended up grabbing a SolSuite Solitaire 
+2012 – I will try looking at the callstack to remove the nagscreens 
+since I wasn’t sure how to work with that before. I am still struggling 
+trying to find registration parts of it though, it seems when I search 
+for strings I end up finding only ascii instructions on mailing 
+addresses – and nothing really of substance. If you could take a look at
+ it for a potential future tutorial or drop me some hints that would be 
+awesome <img src="1093_fichiers/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1506#respond" onclick='return addComment.moveForm("comment-1506", "1506", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-2" id="li-comment-1571">
+     <div id="comment-1571">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1571" title="">July 22nd, 2012 on 4:33 pm</a>  </small>
+
+			<p>I’m looking at it…</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1571#respond" onclick='return addComment.moveForm("comment-1571", "1571", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-3" id="li-comment-1572">
+     <div id="comment-1572">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Anonymous</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1572" title="">July 22nd, 2012 on 5:15 pm</a>  </small>
+
+			<p>Thanks! I’ve been been working at it and I found out an area that 
+appears to be doing some work on the input of the registration window – 
+pumping it through an algorithm and then Xor’ing, comparing, etc. The 
+only problem is I keep getting lost in the code because it appears to be
+ obfuscated, and sometimes I feel like the comparisons and some of the 
+variables it uses are false – and there is one section im missing where 
+my actual entries are taken into account.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1572#respond" onclick='return addComment.moveForm("comment-1572", "1572", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor odd alt depth-4" id="li-comment-1586">
+     <div id="comment-1586">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-1586" title="">July 22nd, 2012 on 11:14 pm</a>  </small>
+
+			<p>have you tried using DeDe as this is a Delphi program? Will help in finding the right calls.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=1586#respond" onclick='return addComment.moveForm("comment-1586", "1586", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-2554">
+     <div id="comment-2554">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Ryan</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2554" title="">August 9th, 2012 on 3:49 am</a>  </small>
+
+			<p>Just ran through this tutorial. It was easy to follow and very informative.</p>
+<p>One suggestion would be including how to export the patched executable. Had to search elsewhere for those details.</p>
+<p>Thanks</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=2554#respond" onclick='return addComment.moveForm("comment-2554", "2554", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-random bypostauthor odd alt thread-even depth-1" id="li-comment-2556">
+     <div id="comment-2556">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2556" title="">August 9th, 2012 on 3:59 am</a>  </small>
+
+			<p>Well, as I’ve gone over it in the last 10 tutorials, I’m afraid that at some point I must cut the umbilical…</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=2556#respond" onclick='return addComment.moveForm("comment-2556", "2556", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-2" id="li-comment-2575">
+     <div id="comment-2575">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Ryan</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-2575" title="">August 9th, 2012 on 2:00 pm</a>  </small>
+
+			<p>Aha. My fault, started from this tutorial first.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=2575#respond" onclick='return addComment.moveForm("comment-2575", "2575", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3163">
+     <div id="comment-3163">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite><a href="http://d4n3ws.polux-hosting.com/" rel="external nofollow" class="url">jehv</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3163" title="">August 21st, 2012 on 12:34 pm</a>  </small>
+
+			<p>what kind of tool permit you to go to switch case condition???<br>
+Don’t know a plugins like that do exit?? does it?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=3163#respond" onclick='return addComment.moveForm("comment-3163", "3163", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-2" id="li-comment-3175">
+     <div id="comment-3175">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3175" title="">August 21st, 2012 on 2:14 pm</a>  </small>
+
+			<p>It’s built in to OllyDBG</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=3175#respond" onclick='return addComment.moveForm("comment-3175", "3175", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-3" id="li-comment-3195">
+     <div id="comment-3195">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite><a href="http://d4n3ws.polux-hosting.com/" rel="external nofollow" class="url">jehv</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3195" title="">August 21st, 2012 on 7:09 pm</a>  </small>
+
+			<p>you’re right, i use olly for around 8years and i discover this functionality…i feel so ashamed.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=3195#respond" onclick='return addComment.moveForm("comment-3195", "3195", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-random bypostauthor even depth-4" id="li-comment-3201">
+     <div id="comment-3201">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="R4ndom" src="1093_fichiers/R4ndom_avatar-60x60.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>R4ndom</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3201" title="">August 21st, 2012 on 7:37 pm</a>  </small>
+
+			<p>I wish I could say that’s never happened to me, but I’d be lying.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=3201#respond" onclick='return addComment.moveForm("comment-3201", "3201", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1" id="li-comment-3815">
+     <div id="comment-3815">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>Modnar</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-3815" title="">September 5th, 2012 on 2:09 pm</a>  </small>
+
+			<p>I haven’t gone through the tutorial yet, just got to installing 
+WinRAR so not much of feedback I got but there is an important point 
+that I have to report:<br>
+You have to rename WinRAR.exe to anything [else], because the 
+installation will fail to install correctly unless you rename it (I have
+ no idea how WinRar failed to make a proper installation executable)</p>
+<p>Thanks!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=3815#respond" onclick='return addComment.moveForm("comment-3815", "3815", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-4599">
+     <div id="comment-4599">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/b649c22a44c1c5bb99e5f4061fbdf960.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>relhak</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-4599" title="">September 27th, 2012 on 5:53 am</a>  </small>
+
+			<p>You forgot to mention that if you are running Windows 7 64-Bit and
+ using Olly 2.0 for the call stack then you need to install the call 
+stack plugin, which you posted here: <a href="http://thelegendofrandom.com/blog/archives/2371" rel="nofollow">http://thelegendofrandom.com/blog/archives/2371</a> </p> .<br>
+Did you forget to include you needed a plugin because you use it so much that you forgot it was a plugin <img src="1093_fichiers/icon_razz.gif" alt=":P" class="wp-smiley">  ?<p></p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=4599#respond" onclick='return addComment.moveForm("comment-4599", "4599", "respond", "1093")'>Reply</a>       </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2" id="li-comment-77444">
+     <div id="comment-77444">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>bdt</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-77444" title="">July 20th, 2013 on 8:34 am</a>  </small>
+
+			<p>Any pointer of install OllyCallstack on Ollydbg v2.01 beta2?<br>
+Try extract to plugins directory but it didn’t work for me.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=77444#respond" onclick='return addComment.moveForm("comment-77444", "77444", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-ap0g even thread-even depth-1" id="li-comment-7557">
+     <div id="comment-7557">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="ap0g" src="1093_fichiers/ap0g_avatar-60x60.jpg" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>ap0g</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-7557" title="">November 15th, 2012 on 3:59 am</a>  </small>
+
+			<p>R4ndom,</p>
+<p>I have done all of the tutorials up to and including this one. I just
+ want to let you know how much I appreciate the time that you obviously 
+gave toward creating these tutorials for others. I feel like I have 
+already learned from you as much as I would only have learned from years
+ of experience on my own. I would totally hug you br0mance-style irl, 
+man. </p>
+<p>This was my favorite tutorial so far because I feel that it gave me 
+the opportunity to test my new skills in a practical way as opposed to 
+just trying them on applications that are specifically designed toward 
+our purposes. I look forward to continuing through the rest of them when
+ I get breaks from projects/studying</p>
+<p>Thanks again!!</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=7557#respond" onclick='return addComment.moveForm("comment-7557", "7557", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8217">
+     <div id="comment-8217">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>jeeva</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8217" title="">November 24th, 2012 on 8:39 pm</a>  </small>
+
+			<p>Please Help Me,</p>
+<p>Most them telling that reverse engineering is the old method for 
+cracking softwares and making keygens…. and also dll injection is the 
+best way to crack a software is it true…? Please help me in this 
+situation.. I got confusion in this… Mr. Random please help me….</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=8217#respond" onclick='return addComment.moveForm("comment-8217", "8217", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-8232">
+     <div id="comment-8232">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite><a href="http://www.softwaresprogramming.com/" rel="external nofollow" class="url">Kingstaa</a> </cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8232" title="">November 25th, 2012 on 1:10 am</a>  </small>
+
+			<p>Not true, what is the point of injecting dll if you can patch a software with a single nop or mov al,1??</p>
+<p>Dll injection is a technique which you must know, but it does not mean every software need dll injection.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=8232#respond" onclick='return addComment.moveForm("comment-8232", "8232", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8257">
+     <div id="comment-8257">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>jeeva</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8257" title="">November 25th, 2012 on 12:37 pm</a>  </small>
+
+			<p>SomeBody help me from this confusion</p>
+<p>Is Reverse Engineering is Olden type of software cracking….? pls 
+somebody help me… Or is there any other new technique is there for 
+software cracking…</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=8257#respond" onclick='return addComment.moveForm("comment-8257", "8257", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-8696">
+     <div id="comment-8696">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>linverse</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-8696" title="">December 1st, 2012 on 12:35 pm</a>  </small>
+
+			<p>To add to what relhak said above, the plugin is needed and only seems to work in Olly 2.01 beta2.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=8696#respond" onclick='return addComment.moveForm("comment-8696", "8696", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-16094">
+     <div id="comment-16094">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>infestor</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-16094" title="">February 3rd, 2013 on 4:00 pm</a>  </small>
+
+			<p>im using the latest 4.2 version of WinRar 32bit, but<br>
+main program entry is on very diffrent adress than 401000<br>
+and the REMINDER string doesnt even exist there, and cant run it in olly, it crashes saying 0×1 memory adress doesnt exist</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=16094#respond" onclick='return addComment.moveForm("comment-16094", "16094", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-16390">
+     <div id="comment-16390">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-60 photo avatar-default" height="60" width="60">                </a>             
+            
+			<cite>D4ph1</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-16390" title="">February 4th, 2013 on 4:01 pm</a>  </small>
+
+			<p>@infestor<br>
+Try to reinstall Olly. Maybe the configurations are messed up…The entry point is different but the idea remains the same.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=16390#respond" onclick='return addComment.moveForm("comment-16390", "16390", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-84015">
+     <div id="comment-84015">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/0e2853672c5664d0cd3a928e9a1f8209.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>lyen</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-84015" title="">September 7th, 2013 on 11:56 am</a>  </small>
+
+			<p>I encountered “Exception 000006BA – Exception is non-continuable” exception while running WinRAR with OllyDbg v2.01 (beta 2).<br>
+This exception does not appear when I use R4ndom’s OllyDbg.<br>
+Does anyone know how to solve this problem?</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=84015#respond" onclick='return addComment.moveForm("comment-84015", "84015", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1" id="li-comment-85750">
+     <div id="comment-85750">
+
+			<div class="commentbody">
+            
+                <a class="gravatar">
+                	<img alt="" src="1093_fichiers/750538fcc18ab5ef09080333c028ae22.png" class="avatar avatar-60 photo" height="60" width="60">                </a>             
+            
+			<cite>C4lculated</cite> 
+						<br>
+			<small class="commentmetadata"><a href="#comment-85750" title="">September 22nd, 2013 on 11:00 am</a>  </small>
+
+			<p>I’m using Win 7 x64 and R4ndom’s OllyDBG 1.10 and I DO get the 
+correct address in the call stack, and if I right-click it and choose 
+“show call” it takes me to the exact same address as in the tutorial.</p>
+			</div><div class="cleared"></div>
+
+      <div class="reply">
+         <a class="comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093?replytocom=85750#respond" onclick='return addComment.moveForm("comment-85750", "85750", "respond", "1093")'>Reply</a>       </div>
+     </div>
+</li>
+	</ul>
+	
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+		<div class="cleared"></div>
+	</div>
+
+	
+
+ 
+<div class="clr"></div>
+<div id="respond">
+<h3>Leave a Reply</h3>
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thelegendofrandom.com/blog/archives/1093#respond" style="display:none;">Click here to cancel reply.</a> </small>
+</div>
+ 
+<form action="http://thelegendofrandom.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name </small></label></p>
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) </small></label></p>
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+ <input name="comment_post_ID" value="1093" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<p><textarea name="comment" id="comment" cols="56" rows="10" tabindex="4"></textarea></p>
+<p><input name="submit" id="submit" class="submitbutton" tabindex="5" value="Leave comment" type="submit">
+<input name="comment_post_ID" value="1093" type="hidden">
+</p>
+
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="bf6822ba63" type="hidden"></p> 
+</form>
+</div>
+ 
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>            
+                    </div> <!-- Closes Comment -->
+
+<div id="extrastuff">
+<span id="rssleft"><a href="http://thelegendofrandom.com/blog/archives/1093/feed"><abbr title="Really Simple Syndication">RSS</abbr> feed for this post (comments)</a> </span>
+
+<span id="trackright"> · <a href="http://thelegendofrandom.com/blog/archives/1093/trackback" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a> </span>
+<div class="cleared"></div>
+</div>
+
+
+</div><!-- Closes Main -->
+
+
+<div id="rightcol">
+	<div class="roundcornrrbox">
+    <div class="topleftcorner"><div class="toprightcorner"></div></div>
+    <div class="roundcrrcnt">
+        <!-- Optional Intro -->
+                
+        <!-- widget -->
+
+
+
+<h2>Login</h2>
+<form action="http://thelegendofrandom.com/blog/wp-login.php" method="post">
+<input name="log" id="log" size="20" type="text">
+<input name="pwd" id="pwd" size="20" type="password">
+<input name="submit" value="Send" class="button" type="submit">
+    <p>
+       <label for="rememberme"><input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"> Remember me</label>
+       <input name="redirect_to" value="/blog/archives/1093" type="hidden">
+    </p>
+</form>
+<a href="http://thelegendofrandom.com/blog/wp-login.php?action=lostpassword">Recover password</a> 
+
+
+
+        		<li id="recent-posts-2" class="sidebaritem widget_recent_entries"><div class="sidebarbox">		<h2 class="widgettitle">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2980" title="My Absence">My Absence</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2975" title="What Are These Strange Posts?">What Are These Strange Posts?</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2966" title="Nice Beginning Article on Reversing Android">Nice Beginning Article on Reversing Android</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2963" title="She Is 17-years-old, She Did It Publicly In High School And While Drunk">She Is 17-years-old, She Did It Publicly In High School And While Drunk</a> 
+						</li>
+					<li>
+				<a href="http://thelegendofrandom.com/blog/archives/2961" title="And The Most Posts Submitted In A Single Sitting Goes To…">And The Most Posts Submitted In A Single Sitting Goes To…</a> 
+						</li>
+				</ul>
+		</div></li><li id="recent-comments-2" class="sidebaritem widget_recent_comments"><div class="sidebarbox"><h2 class="widgettitle">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><a href="http://rce-loverz.tk/" rel="external nofollow" class="url">X-Programmer</a>  on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85935">Tutorial #1 : What is Reverse Engineering</a> </li><li class="recentcomments">shub on <a href="http://thelegendofrandom.com/blog/archives/859#comment-85873">R4ndom’s Tutorial #9: Solution</a> </li><li class="recentcomments">C4lculated on <a href="http://thelegendofrandom.com/blog/archives/1093#comment-85750">R4ndom’s Tutorial #15: Using The Call Stack</a> </li><li class="recentcomments"><a href="http://gaspricestoday.co.uk/" rel="external nofollow" class="url">business electricity rates</a>  on <a href="http://thelegendofrandom.com/blog/archives/2100#comment-85744">R4ndom’s Tutorial #21: Anti-Debugging Techniques</a> </li><li class="recentcomments">youbaraj sharma on <a href="http://thelegendofrandom.com/blog/archives/7#comment-85460">Tutorial #1 : What is Reverse Engineering</a> </li></ul></div></li><li id="archives-2" class="sidebaritem widget_archive"><div class="sidebarbox"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/05" title="May 2012">May 2012</a> </li>
+		</ul>
+</div></li><li id="categories-2" class="sidebaritem widget_categories"><div class="sidebarbox"><h2 class="widgettitle">Categories</h2>		<ul>
+	<li class="cat-item cat-item-23"><a href="http://thelegendofrandom.com/blog/archives/category/beginner" title="View all posts filed under Beginner">Beginner</a> 
+</li>
+	<li class="cat-item cat-item-31"><a href="http://thelegendofrandom.com/blog/archives/category/challenges" title="View all posts filed under Challenges">Challenges</a> 
+</li>
+	<li class="cat-item cat-item-24"><a href="http://thelegendofrandom.com/blog/archives/category/intermediate" title="View all posts filed under Intermediate">Intermediate</a> 
+</li>
+	<li class="cat-item cat-item-32"><a href="http://thelegendofrandom.com/blog/archives/category/modifying-binaries" title="View all posts filed under Modifying Binaries">Modifying Binaries</a> 
+</li>
+	<li class="cat-item cat-item-25"><a href="http://thelegendofrandom.com/blog/archives/category/randoms-ramblings" title="View all posts filed under Random's Ramblings">Random's Ramblings</a> 
+</li>
+	<li class="cat-item cat-item-3"><a href="http://thelegendofrandom.com/blog/archives/category/reverse-engineering" title="View all posts filed under Reverse Engineering">Reverse Engineering</a> 
+</li>
+	<li class="cat-item cat-item-4"><a href="http://thelegendofrandom.com/blog/archives/category/tools" title="View all posts filed under Tools">Tools</a> 
+</li>
+	<li class="cat-item cat-item-5"><a href="http://thelegendofrandom.com/blog/archives/category/tutorials" title="View all posts filed under Tutorials">Tutorials</a> 
+</li>
+	<li class="cat-item cat-item-1"><a href="http://thelegendofrandom.com/blog/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> 
+</li>
+		</ul>
+</div></li><li id="meta-2" class="sidebaritem widget_meta"><div class="sidebarbox"><h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://thelegendofrandom.com/blog/wp-login.php?action=register">Register</a> </li>			<li><a href="http://thelegendofrandom.com/blog/wp-login.php">Log in</a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://thelegendofrandom.com/blog/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a> </li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a> </li>
+						</ul>
+</div></li><li id="ajax-quick-subscribe" class="sidebaritem widget_quick_subscribe"><div class="sidebarbox"><h2 class="widgettitle">Subscribe</h2>Enter your email to subscribe to future updates<div id="QSWidgetDiv" class="QSWidgetDiv"><form name="widget_quick_subscribe_form" id="widget_quick_subscribe_form"><input name="QS_user_email_widget" id="QS_user_email_widget" placeholder="email@email.com" onfocus='fadeSubmitIn("widget_qsSubmit");' onblur='fadeSubmitOut(this, "widget_qsSubmit");' onkeypress='return checkForEnter(event, "QS_user_email_widget", "QSWidgetDiv"); return false;' type="email"><input style="display:none;" value="subscribe!" id="widget_qsSubmit" class="widget_qsSubmit" onclick='submitQuickSubscribe("QS_user_email_widget", "QSWidgetDiv");' type="button"></form></div>			
+			</div></li> 
+
+        <div class="clr"></div>
+
+    	<div id="feedbox">
+            <div id="contrssbox">
+                <a href="http://thelegendofrandom.com/blog/feed">RSS Feed</a> 
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+    
+	<div id="bottompanel">
+    <div class="roundcornrrbox">
+        <div class="topleftcorner"><div class="toprightcorner"></div></div>
+        <div class="roundcrrcnt">
+        
+        	
+            <div class="col1">
+                
+					                    <h3>Recent Posts</h3>
+                    <ul>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2980">My Absence </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2975">What Are These Strange Posts? </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2966">Nice Beginning Article on Reversing Android </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2963">She Is 17-years-old, She Did It Publicly In High School And While Drunk </a> 
+                            </li>
+                                                    <li>
+                                <a href="http://thelegendofrandom.com/blog/archives/2961">And The Most Posts Submitted In A Single Sitting Goes To… </a> 
+                            </li>
+                        			
+                    </ul>
+                    
+
+                            </div>
+            
+            <div class="col2">
+                      
+                    <h3>Archives</h3>
+                    <ul>
+                        	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/10" title="October 2012">October 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/09" title="September 2012">September 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/08" title="August 2012">August 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/07" title="July 2012">July 2012</a> </li>
+	<li><a href="http://thelegendofrandom.com/blog/archives/date/2012/06" title="June 2012">June 2012</a> </li>
+                    </ul>
+
+                            </div>
+            
+            <div class="col3">
+                                    <h3>Tags</h3>
+                    <ul>
+                    	<a href="http://thelegendofrandom.com/blog/archives/tag/adding-functionality" class="tag-link-29" title="1 topic" style="font-size: 8pt;">adding functionality</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/assembly-language" class="tag-link-18" title="1 topic" style="font-size: 8pt;">assembly language</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/binary" class="tag-link-26" title="1 topic" style="font-size: 8pt;">binary</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-cave" class="tag-link-27" title="1 topic" style="font-size: 8pt;">code cave</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/code-caves" class="tag-link-30" title="1 topic" style="font-size: 8pt;">code caves</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/cracking" class="tag-link-8" title="5 topics" style="font-size: 16pt;">cracking</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/crackme" class="tag-link-17" title="1 topic" style="font-size: 8pt;">crackme</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ebook" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ebook</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/exploting-binaries" class="tag-link-28" title="1 topic" style="font-size: 8pt;">exploting binaries</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/guide" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Guide</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly" class="tag-link-14" title="2 topics" style="font-size: 11pt;">Olly</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/ollydbg" class="tag-link-10" title="4 topics" style="font-size: 14.666666666667pt;">ollydbg</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/olly-tutorial" class="tag-link-9" title="1 topic" style="font-size: 8pt;">olly tutorial</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/plugins" class="tag-link-11" title="1 topic" style="font-size: 8pt;">plugins</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/reverse-engineering-2" class="tag-link-7" title="3 topics" style="font-size: 13pt;">reverse engineering</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/sandbox" class="tag-link-13" title="1 topic" style="font-size: 8pt;">sandbox</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tools" class="tag-link-4" title="1 topic" style="font-size: 8pt;">Tools</a> 
+<a href="http://thelegendofrandom.com/blog/archives/tag/tutorial" class="tag-link-16" title="2 topics" style="font-size: 11pt;">tutorial</a>                     </ul>
+                    
+                            </div>
+            <div class="clr"></div>
+        
+
+            <div class="clr"></div>
+        </div>
+        <div class="bottomleftcorner"><div class="bottomrightcorner"></div></div>
+    </div>
+</div>
+<!-- Bottom Panel ends -->
+
+
+	
+    <div class="copyr">Copyright © 1996-2010 The Legend Of Random. All rights reserved.</div>    
+    <div class="clr16"></div>
+	</div>
+    <div id="layoutbottom"></div>
+</div>
+
+<div id="credit" align="center">
+	<abbr title="Jarrah/1.7">Jarrah</abbr> theme by <a href="http://www.templatesnext.org/">Templates Next</a>  
+    | Powered by <a href="http://wordpress.org/">WordPress</a>  
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czo2OiIyMywzLDUiO3M6MTA6ImNvbnRlbnRfaWQiO2k6MTA5MztzOjY6ImF1dGhvciI7czo2OiJSYW5kb20iO30=.39e10fbcf3c1a7afcf460e5013444f3f"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="1093_fichiers/wp-slimstat.js"></script><canvas style="display: none;" height="35" width="35"></canvas>
+
+
+</body></html>

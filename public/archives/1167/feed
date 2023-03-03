@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: A Pre-challenge to Tutorial #13</title>
+	<atom:link href="http://thelegendofrandom.com/blog/archives/1167/feed" rel="self" type="application/rss+xml" />
+	<link>http://thelegendofrandom.com/blog/archives/1167</link>
+	<description>Programming and Reverse Engineering</description>
+	<lastBuildDate>Thu, 19 Sep 2013 09:42:54 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.1</generator>
+	<item>
+		<title>By: nwokiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/1167#comment-959</link>
+		<dc:creator>nwokiller</dc:creator>
+		<pubDate>Tue, 10 Jul 2012 15:00:30 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1167#comment-959</guid>
+		<description><![CDATA[You are not authorised to access this area.ie can&#039;t download the binary : (]]></description>
+		<content:encoded><![CDATA[<p>You are not authorised to access this area.ie can&#8217;t download the binary : (</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: razor8</title>
+		<link>http://thelegendofrandom.com/blog/archives/1167#comment-957</link>
+		<dc:creator>razor8</dc:creator>
+		<pubDate>Tue, 10 Jul 2012 11:47:39 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1167#comment-957</guid>
+		<description><![CDATA[oh damn, and im not at home:(]]></description>
+		<content:encoded><![CDATA[<p>oh damn, and im not at home:(</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ludkiller</title>
+		<link>http://thelegendofrandom.com/blog/archives/1167#comment-953</link>
+		<dc:creator>ludkiller</dc:creator>
+		<pubDate>Tue, 10 Jul 2012 04:00:10 +0000</pubDate>
+		<guid isPermaLink="false">http://thelegendofrandom.com/blog/?p=1167#comment-953</guid>
+		<description><![CDATA[Information
+
+You are not authorised to access this area.
+
+:) Post the download link in your download section or somewhere else.]]></description>
+		<content:encoded><![CDATA[<p>Information</p>
+<p>You are not authorised to access this area.</p>
+<p> <img src='http://thelegendofrandom.com/blog/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  Post the download link in your download section or somewhere else.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

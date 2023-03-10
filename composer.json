@@ -1,0 +1,13 @@
+{
+  "name": "8ctopus/legend",
+  "type": "project",
+  "license": "MIT",
+  "description": "Legend of Random site copy",
+  "homepage": "https://legend.octopuslabs.io/",
+  "require": {
+    "8ctopus/nano-router": "^0.3.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}

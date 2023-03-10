@@ -17,3 +17,8 @@ RewriteEngine on
 
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# redirect all not existing files to router
+RewriteCond %{REQUEST_FILENAME} \.(html?|php)$
+RewriteCond %{REQUEST_FILENAME} !index.php$
+RewriteRule ^ /index.php [L]

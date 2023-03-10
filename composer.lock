@@ -8,24 +8,24 @@
     "packages": [
         {
             "name": "8ctopus/nano-router",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/8ctopus/nano-router.git",
-                "reference": "3084b096d2657ca5a3ee279f4e7ba6c9c1ef607f"
+                "reference": "bbb6ad8b05d6a5ee4f7608ee14ed4183b5f0c86f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/3084b096d2657ca5a3ee279f4e7ba6c9c1ef607f",
-                "reference": "3084b096d2657ca5a3ee279f4e7ba6c9c1ef607f",
+                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/bbb6ad8b05d6a5ee4f7608ee14ed4183b5f0c86f",
+                "reference": "bbb6ad8b05d6a5ee4f7608ee14ed4183b5f0c86f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "filp/whoops": "^2.14",
-                "friendsofphp/php-cs-fixer": "^3.8",
+                "friendsofphp/php-cs-fixer": "^3.4",
                 "phpmd/phpmd": "^2.13",
                 "phpstan/phpstan": "^1.9",
                 "phpunit/phpunit": "^9.5|^10.0"
@@ -53,9 +53,9 @@
             ],
             "support": {
                 "issues": "https://github.com/8ctopus/nano-router/issues",
-                "source": "https://github.com/8ctopus/nano-router/tree/0.3.2"
+                "source": "https://github.com/8ctopus/nano-router/tree/0.3.3"
             },
-            "time": "2023-03-04T08:28:06+00:00"
+            "time": "2023-03-10T06:05:14+00:00"
         }
     ],
     "packages-dev": [

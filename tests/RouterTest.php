@@ -8,11 +8,14 @@ use Oct8pus\NanoRouter\Response;
 
 final class RouterTest extends TestCase
 {
+    private string $dir;
     private NanoRouter $router;
 
     public function setUp() : void
     {
         parent::setUp();
+
+        $this->dir = __DIR__ . '/../public';
 
         $router = new NanoRouter();
 
@@ -24,7 +27,7 @@ final class RouterTest extends TestCase
                 $file = $this->findFile($dir);
             }
 
-            $path = __DIR__ . '/../public' . $dir . $file;
+            $path = $this->dir . $dir . $file;
 
             if (!file_exists($path)) {
                 return new Response(404);
@@ -55,13 +58,45 @@ final class RouterTest extends TestCase
     public function testRouter() : void
     {
         $this->setUp();
-        $this->mockRequest('GET', '/');
 
+        $this->mockRequest('GET', '/');
         $response = $this->router
             ->resolve();
 
         static::assertEquals(200, $response->status());
-        static::assertStringEqualsFile(__DIR__ . '/../public/index.html', $response->body());
+        static::assertStringEqualsFile($this->dir . '/index.html', $response->body());
+
+        $this->mockRequest('GET', '/index.html');
+        $response = $this->router
+            ->resolve();
+
+        static::assertEquals(200, $response->status());
+        static::assertStringEqualsFile($this->dir . '/index.html', $response->body());
+
+        $this->mockRequest('GET', '/index.php');
+        $response = $this->router
+            ->resolve();
+
+        static::assertEquals(404, $response->status());
+
+        $pages = [
+            '/challenges.html',
+            '/contact-2.html',
+            '/forum.html',
+            '/hint6.html',
+            '/sample-page.html',
+            '/tools.html',
+            //'/robots.txt',
+        ];
+
+        foreach ($pages as $page) {
+            $this->mockRequest('GET', $page);
+            $response = $this->router
+                ->resolve();
+
+            static::assertEquals(200, $response->status());
+            static::assertStringEqualsFile($this->dir . $page, $response->body());
+        }
     }
 
     private function mockRequest($method, $uri) : void
@@ -79,7 +114,7 @@ final class RouterTest extends TestCase
         ];
 
         foreach ($options as $option) {
-            $file = __DIR__ . '/../public'. $dir . $option;
+            $file = $this->dir. $dir . $option;
 
             if (file_exists($file)) {
                 return $option;

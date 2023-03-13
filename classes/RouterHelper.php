@@ -2,18 +2,21 @@
 
 namespace Legend;
 
+use Closure;
 use Oct8pus\NanoRouter\NanoRouter;
 use Oct8pus\NanoRouter\Response;
 
 class RouterHelper extends NanoRouter
 {
     public readonly string $dir;
+    private readonly ?Closure $callback;
 
-    public function __construct(string $dir)
+    public function __construct(string $dir, ?Closure $callback = null)
     {
         parent::__construct();
 
         $this->dir = $dir;
+        $this->callback = $callback;
 
         // deal with index pages
         $this->addRouteRegex('GET', '~^([/a-zA-Z0-9\-]+)*(index.html?)?$~', function (array $matches) : Response {
@@ -30,7 +33,11 @@ class RouterHelper extends NanoRouter
                 return new Response(404);
             }
 
-            return new Response(200, file_get_contents($path));
+            if (!isset($this->callback)) {
+                return new Response(200, file_get_contents($path));
+            } else {
+                return ($this->callback)(file_get_contents($path));
+            }
         });
 
         // deal with other pages
@@ -47,7 +54,11 @@ class RouterHelper extends NanoRouter
                 return new Response(404);
             }
 
-            return new Response(200, file_get_contents($file));
+            if (!$this->callback) {
+                return new Response(200, file_get_contents($file));
+            } else {
+                return ($this->callback)(file_get_contents($file));
+            }
         });
     }
 

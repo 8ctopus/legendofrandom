@@ -8,8 +8,8 @@ use Oct8pus\NanoRouter\Response;
 
 class RouterHelper extends NanoRouter
 {
-    public readonly string $dir;
-    private readonly ?Closure $callback;
+    public string $dir;
+    private ?Closure $callback;
 
     public function __construct(string $dir, ?Closure $callback = null)
     {

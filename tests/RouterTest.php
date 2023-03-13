@@ -57,12 +57,11 @@ final class RouterTest extends TestCase
         $this->setUp();
         $this->mockRequest('GET', '/');
 
-        static::expectOutputRegex('~<title> The Legend Of Random</title>~');
+        $response = $this->router
+            ->resolve();
 
-        // resolve route
-        $this->router
-            ->resolve()
-            ->send();
+        static::assertEquals(200, $response->status());
+        static::assertStringEqualsFile(__DIR__ . '/../public/index.html', $response->body());
     }
 
     private function mockRequest($method, $uri) : void

@@ -1,17 +1,13 @@
 <?php
 
 use Oct8pus\NanoRouter\NanoRouter;
+use Oct8pus\NanoRouter\Response;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $router = new NanoRouter();
 
-$router->addErrorHandler(404, function (string $requestPath) {
-    http_response_code(404);
-    echo "page not found {$requestPath}";
-});
-
-$router->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) {
+$router->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) : Response {
     $dir = $matches[1];
     $file = $matches[2] ?? '';
 
@@ -19,33 +15,34 @@ $router->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function 
         $file = findFile($dir);
     }
 
-    if (!file_exists(__DIR__ . $dir . $file)) {
-        http_response_code(404);
-        return;
+    $path = $dir . $file;
+
+    if (!file_exists(__DIR__ . $path)) {
+        return new Response(404, "page not found {$path}");
     }
 
-    displayPage($dir . $file);
+    error_log("tracking: {$path}");
+    return new Response(200, file_get_contents(__DIR__ . $path));
 });
 
-$router->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) {
+$router->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) : Response {
     $file = $matches[1];
 
     if ($file === '/index.php') {
-        http_response_code(404);
-        return;
+        return new Response(404);
+    } elseif (!file_exists(__DIR__ . $file)) {
+        return new Response(404);
     }
 
-    displayPage($file);
+    error_log("tracking: {$file}");
+    return new Response(200, file_get_contents(__DIR__ . $file));
 });
 
-// resolve routes
-$router->resolve();
+// resolve route
+$router
+    ->resolve()
+    ->send();
 
-function displayPage(string $file) : void
-{
-    echo file_get_contents(__DIR__ . $file);
-    error_log("tracking: {$file}");
-}
 
 function findFile(string $dir) : string
 {

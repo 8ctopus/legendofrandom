@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use Oct8pus\NanoRouter\Response;
+
 function tracking(string $tag) : string
 {
     return <<<HTML
@@ -19,8 +21,8 @@ function tracking(string $tag) : string
     HTML;
 }
 
-$router = (new Legend\RouterHelper(__DIR__, function (string $source) : string {
-    return str_replace('</head>', tracking('UA-XXXXX-Y') . '</head>', $source);
+$router = (new Legend\RouterHelper(__DIR__, function (string $source) : Response {
+    return new Response(200, str_replace('</head>', tracking('G-EQKHHME6YK') . '</head>', $source));
 }));
 
 $router

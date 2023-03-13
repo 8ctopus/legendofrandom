@@ -11,6 +11,11 @@
     "phpunit/phpunit": "^10.0",
     "roave/security-advisories": "dev-latest"
   },
+  "autoload": {
+    "psr-4": {
+      "Legend\\": "classes/"
+    }
+  },
   "scripts": {
     "test": "phpunit"
   }

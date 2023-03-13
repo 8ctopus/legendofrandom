@@ -5,17 +5,17 @@ namespace Legend;
 use Oct8pus\NanoRouter\NanoRouter;
 use Oct8pus\NanoRouter\Response;
 
-class RouterHelper
+class RouterHelper extends NanoRouter
 {
-    private string $dir;
-    private NanoRouter $router;
+    public readonly string $dir;
 
     public function __construct(string $dir)
     {
-        $this->dir = $dir;
-        $router = new NanoRouter();
+        parent::__construct();
 
-        $router->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) : Response {
+        $this->dir = $dir;
+
+        $this->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) : Response {
             $dir = $matches[1] ?? '/';
             $file = $matches[2] ?? '';
 
@@ -32,7 +32,7 @@ class RouterHelper
             return new Response(200, file_get_contents($path));
         });
 
-        $router->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) : Response {
+        $this->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) : Response {
             $file = $matches[1];
 
             if ($file === '/index.php') {
@@ -47,13 +47,6 @@ class RouterHelper
 
             return new Response(200, file_get_contents($file));
         });
-
-        $this->router = $router;
-
-        // resolve route
-        $this->router
-            ->resolve()
-            ->send();
     }
 
     private function findFile(string $dir) : string

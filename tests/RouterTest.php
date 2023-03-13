@@ -3,56 +3,17 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use Oct8pus\NanoRouter\NanoRouter;
-use Oct8pus\NanoRouter\Response;
+use Legend\RouterHelper;
 
 final class RouterTest extends TestCase
 {
-    private string $dir;
-    private NanoRouter $router;
+    private RouterHelper $router;
 
     public function setUp() : void
     {
         parent::setUp();
 
-        $this->dir = __DIR__ . '/../public';
-
-        $router = new NanoRouter();
-
-        $router->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) : Response {
-            $dir = $matches[1];
-            $file = $matches[2] ?? '';
-
-            if (empty($file)) {
-                $file = $this->findFile($dir);
-            }
-
-            $path = $this->dir . $dir . $file;
-
-            if (!file_exists($path)) {
-                return new Response(404);
-            }
-
-            return new Response(200, file_get_contents($path));
-        });
-
-        $router->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) : Response {
-            $file = $matches[1];
-
-            if ($file === '/index.php') {
-                return new Response(404);
-            }
-
-            $file = __DIR__ . '/../public/' . $file;
-
-            if (!file_exists($file)) {
-                return new Response(404);
-            }
-
-            return new Response(200, file_get_contents($file));
-        });
-
-        $this->router = $router;
+        $this->router = new RouterHelper(__DIR__ . '/../public');
     }
 
     public function testRouter() : void
@@ -66,6 +27,7 @@ final class RouterTest extends TestCase
         static::assertEquals(404, $response->status());
 
         $pages = [
+            '',
             '/',
             //'/forum/',
         ];
@@ -78,10 +40,10 @@ final class RouterTest extends TestCase
 
             static::assertEquals(200, $response->status());
 
-            if (file_exists($this->dir . $page . '/index.html')) {
-                $file = $this->dir . $page . '/index.html';
+            if (file_exists($this->router->dir . $page . '/index.html')) {
+                $file = $this->router->dir . $page . '/index.html';
             } else {
-                $file = $this->dir . $page . '/index.htm';
+                $file = $this->router->dir . $page . '/index.htm';
             }
 
             static::assertStringEqualsFile($file, $response->body());
@@ -112,7 +74,7 @@ final class RouterTest extends TestCase
                 ->resolve();
 
             static::assertEquals(200, $response->status());
-            static::assertStringEqualsFile($this->dir . $page, $response->body());
+            static::assertStringEqualsFile($this->router->dir . $page, $response->body());
         }
     }
 
@@ -120,24 +82,5 @@ final class RouterTest extends TestCase
     {
         $_SERVER['REQUEST_METHOD'] = $method;
         $_SERVER['REQUEST_URI'] = $uri;
-    }
-
-    private function findFile(string $dir) : string
-    {
-        $options = [
-            'index.html',
-            'index.htm',
-            'index.php',
-        ];
-
-        foreach ($options as $option) {
-            $file = $this->dir. $dir . $option;
-
-            if (file_exists($file)) {
-                return $option;
-            }
-        }
-
-        return '';
     }
 }

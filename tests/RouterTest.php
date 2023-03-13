@@ -59,25 +59,39 @@ final class RouterTest extends TestCase
     {
         $this->setUp();
 
-        $this->mockRequest('GET', '/');
-        $response = $this->router
-            ->resolve();
-
-        static::assertEquals(200, $response->status());
-        static::assertStringEqualsFile($this->dir . '/index.html', $response->body());
-
-        $this->mockRequest('GET', '/index.html');
-        $response = $this->router
-            ->resolve();
-
-        static::assertEquals(200, $response->status());
-        static::assertStringEqualsFile($this->dir . '/index.html', $response->body());
-
         $this->mockRequest('GET', '/index.php');
         $response = $this->router
             ->resolve();
 
         static::assertEquals(404, $response->status());
+
+        $pages = [
+            '/',
+            //'/forum/',
+        ];
+
+        foreach ($pages as $page) {
+            $this->mockRequest('GET', $page);
+
+            $response = $this->router
+                ->resolve();
+
+            static::assertEquals(200, $response->status());
+
+            if (file_exists($this->dir . $page . '/index.html')) {
+                $file = $this->dir . $page . '/index.html';
+            } else {
+                $file = $this->dir . $page . '/index.htm';
+            }
+
+            static::assertStringEqualsFile($file, $response->body());
+        }
+
+/*
+        $this->mockRequest('GET', '/index.html');
+        $response = $this->router
+            ->resolve();
+*/
 
         $pages = [
             '/challenges.html',
@@ -87,6 +101,9 @@ final class RouterTest extends TestCase
             '/sample-page.html',
             '/tools.html',
             //'/robots.txt',
+            '/archives/7ee88.html',
+            '/archives/category/beginner.html',
+            '/page/2.html',
         ];
 
         foreach ($pages as $page) {

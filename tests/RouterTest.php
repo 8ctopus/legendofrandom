@@ -29,7 +29,14 @@ final class RouterTest extends TestCase
         $pages = [
             '',
             '/',
-            //'/forum/',
+            '/forum/',
+            '/archives/category/beginner/',
+            '/archives/category/tutorials/',
+            '/archives/date/2012/06/',
+            '/archives/date/2012/07/',
+            '/archives/date/2012/08/',
+            '/archives/date/2012/09/',
+            '/archives/date/2012/10/',
         ];
 
         foreach ($pages as $page) {

@@ -15,7 +15,8 @@ class RouterHelper extends NanoRouter
 
         $this->dir = $dir;
 
-        $this->addRouteRegex('GET', '~^(/[a-zA-Z0-9\-]*)*(/index.html?)?$~', function (array $matches) : Response {
+        // deal with index pages
+        $this->addRouteRegex('GET', '~^([/a-zA-Z0-9\-]+)*(index.html?)?$~', function (array $matches) : Response {
             $dir = $matches[1] ?? '/';
             $file = $matches[2] ?? '';
 
@@ -32,6 +33,7 @@ class RouterHelper extends NanoRouter
             return new Response(200, file_get_contents($path));
         });
 
+        // deal with other pages
         $this->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (array $matches) : Response {
             $file = $matches[1];
 

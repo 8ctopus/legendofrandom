@@ -15,6 +15,11 @@ Header set Cache-Control "max-age=2620000, public"
 
 RewriteEngine on
 
+# do not rewrite let's encrypt
+RewriteCond %{REQUEST_URI} ^/\.well-known/acme-challenge/
+RewriteRule ^ - [L]
+
+# redirect to https
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 

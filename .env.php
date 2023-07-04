@@ -2,6 +2,7 @@
 
 return [
     'documentRoot' => __DIR__,
+    'host' => 'legend.octopuslabs.io',
     'router' => [
         'statsEnabled' => true,
         'file' => __DIR__ . '/../storage/route-stats.db',

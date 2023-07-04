@@ -1,3 +1,6 @@
-/vendor/*
+# composer
+/vendor/
 
+# phpunit
+/coverage/
 /.phpunit.result.cache

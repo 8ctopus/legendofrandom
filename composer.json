@@ -23,7 +23,12 @@
       "Legend\\": "src"
     }
   },
+  "autoload-dev": {
+      "psr-4": {
+          "Tests\\": "tests/"
+      }
+  },
   "scripts": {
-    "test": "phpunit"
+      "test": "phpunit --coverage-html=coverage"
   }
 }

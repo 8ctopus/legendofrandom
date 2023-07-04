@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65ccfb08f89b79c243df6e3c3f0cd5f4",
+    "content-hash": "6b766ae2db16a07a6fff1d278a739394",
     "packages": [
         {
             "name": "8ctopus/nano-router",
@@ -56,6 +56,68 @@
                 "source": "https://github.com/8ctopus/nano-router/tree/1.0.3"
             },
             "time": "2023-05-16T14:40:32+00:00"
+        },
+        {
+            "name": "httpsoft/http-emitter",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/httpsoft/http-emitter.git",
+                "reference": "b09e2834b6d40e022f0c0eb7417f97f496e376b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/httpsoft/http-emitter/zipball/b09e2834b6d40e022f0c0eb7417f97f496e376b6",
+                "reference": "b09e2834b6d40e022f0c0eb7417f97f496e376b6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0",
+                "psr/http-message": "^1.1|^2.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "httpsoft/http-message": "^1.1",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7",
+                "vimeo/psalm": "^4.9|^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HttpSoft\\Emitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evgeniy Zyubin",
+                    "email": "mail@devanych.ru",
+                    "homepage": "https://devanych.ru/",
+                    "role": "Founder and lead developer"
+                }
+            ],
+            "description": "Emitting of PSR-7 Response implementation",
+            "homepage": "https://httpsoft.org/",
+            "keywords": [
+                "emitter",
+                "http",
+                "http-emitter",
+                "http-message",
+                "php",
+                "psr-7"
+            ],
+            "support": {
+                "docs": "https://httpsoft.org/docs/emitter",
+                "issues": "https://github.com/httpsoft/http-emitter/issues",
+                "source": "https://github.com/httpsoft/http-emitter"
+            },
+            "time": "2023-05-05T20:18:44+00:00"
         },
         {
             "name": "httpsoft/http-message",
@@ -119,6 +181,66 @@
                 "source": "https://github.com/httpsoft/http-message"
             },
             "time": "2023-05-06T16:34:44+00:00"
+        },
+        {
+            "name": "httpsoft/http-server-request",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/httpsoft/http-server-request.git",
+                "reference": "3d773c8bcaa1c44793d35842fcd82a9d5fd5f193"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/httpsoft/http-server-request/zipball/3d773c8bcaa1c44793d35842fcd82a9d5fd5f193",
+                "reference": "3d773c8bcaa1c44793d35842fcd82a9d5fd5f193",
+                "shasum": ""
+            },
+            "require": {
+                "httpsoft/http-message": "^1.1",
+                "php": "^7.4|^8.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7",
+                "vimeo/psalm": "^4.9|^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HttpSoft\\ServerRequest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evgeniy Zyubin",
+                    "email": "mail@devanych.ru",
+                    "homepage": "https://devanych.ru/",
+                    "role": "Founder and lead developer"
+                }
+            ],
+            "description": "Infrastructure for creating PSR-7 ServerRequest and UploadedFile",
+            "homepage": "https://httpsoft.org/",
+            "keywords": [
+                "http",
+                "http-message",
+                "http-server-request",
+                "php",
+                "psr-7"
+            ],
+            "support": {
+                "docs": "https://httpsoft.org/docs/server-request",
+                "issues": "https://github.com/httpsoft/http-server-request/issues",
+                "source": "https://github.com/httpsoft/http-server-request"
+            },
+            "time": "2023-05-05T19:55:05+00:00"
         },
         {
             "name": "psr/http-factory",

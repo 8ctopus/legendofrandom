@@ -5,7 +5,8 @@
   "description": "Legend of Random site copy",
   "homepage": "https://legend.octopuslabs.io/",
   "require": {
-    "8ctopus/nano-router": "^1.0"
+    "8ctopus/nano-router": "^1.0",
+    "httpsoft/http-message": "^1.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0",

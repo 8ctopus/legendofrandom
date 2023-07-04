@@ -51,7 +51,9 @@ class Site extends Routes
                         $file = $file . $option;
                     }
                 }
-            } elseif (!file_exists($file)) {
+            }
+
+            if (!file_exists($file) || is_dir($file)) {
                 return new Response(404);
             }
 

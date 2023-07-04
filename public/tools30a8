@@ -91,7 +91,7 @@ jQuery(document).ready(function(){
                 <li class="page_item page-item-2"><a href="http://thelegendofrandom.com/blog/sample-page">Tutorials</a> </li>
 <li class="page_item page-item-27 current_page_item"><a href="tools">Tools</a> </li>
 <li class="page_item page-item-153"><a href="http://thelegendofrandom.com/blog/contact-2">Contact</a> </li>
-<li class="page_item page-item-846"><a href="forum/">Forum</a> </li>
+<li class="page_item page-item-846"><a href="/forum/">Forum</a> </li>
 <li class="page_item page-item-1790"><a href="http://thelegendofrandom.com/blog/challenges">Challenges</a> </li>
 			
                 </ul>

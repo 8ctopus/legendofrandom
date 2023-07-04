@@ -6,7 +6,7 @@ use Closure;
 use Oct8pus\NanoRouter\NanoRouter;
 use Oct8pus\NanoRouter\Response;
 
-class RouterHelper extends NanoRouter
+class Routes extends NanoRouter
 {
     public readonly string $dir;
     private readonly ?Closure $callback;

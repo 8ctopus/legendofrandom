@@ -14,7 +14,7 @@
 <updated>2013-05-12T19:20:25+00:00</updated>
 <published>2013-05-12T19:20:25+00:00</published>
 <id>forum/viewtopic.php?t=772&amp;p=42488#p42488</id>
-<link href="forum/viewtopic.php?t=772&amp;p=42488#p42488"/>
+<link href="/forum/viewtopic.php?t=772&amp;p=42488#p42488"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Tutorial 16A Question]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -27,7 +27,7 @@ Question 1 was never really answered, so I'd like to give it a go. Sorry for the
 <updated>2013-05-07T17:20:08+00:00</updated>
 <published>2013-05-07T17:20:08+00:00</published>
 <id>forum/viewtopic.php?t=36930&amp;p=39729#p39729</id>
-<link href="forum/viewtopic.php?t=36930&amp;p=39729#p39729"/>
+<link href="/forum/viewtopic.php?t=36930&amp;p=39729#p39729"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Avast won't let me download tutorial 22]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -40,7 +40,7 @@ it complains about Win32:Malware-gen in crackme.exe. Is this a known problem? I 
 <updated>2013-05-07T17:13:41+00:00</updated>
 <published>2013-05-07T17:13:41+00:00</published>
 <id>forum/viewtopic.php?t=36929&amp;p=39728#p39728</id>
-<link href="forum/viewtopic.php?t=36929&amp;p=39728#p39728"/>
+<link href="/forum/viewtopic.php?t=36929&amp;p=39728#p39728"/>
 <title type="html"><![CDATA[Welcome • Hi]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -53,7 +53,7 @@ Ik stumbled upon this site while searching for anti-debugging tricks. I'm dealin
 <updated>2013-05-03T19:43:43+00:00</updated>
 <published>2013-05-03T19:43:43+00:00</published>
 <id>forum/viewtopic.php?t=36155&amp;p=38915#p38915</id>
-<link href="forum/viewtopic.php?t=36155&amp;p=38915#p38915"/>
+<link href="/forum/viewtopic.php?t=36155&amp;p=38915#p38915"/>
 <title type="html"><![CDATA[Miscellaneous • EXETools Invite!!]]></title>
 
 <category term="Miscellaneous" scheme="forum/viewforum.php?f=10" label="Miscellaneous"/>
@@ -66,7 +66,7 @@ Hello guys, im new here, im sorry for the incovenience but i just want to downlo
 <updated>2013-04-26T16:22:17+00:00</updated>
 <published>2013-04-26T16:22:17+00:00</published>
 <id>forum/viewtopic.php?t=34242&amp;p=36932#p36932</id>
-<link href="forum/viewtopic.php?t=34242&amp;p=36932#p36932"/>
+<link href="/forum/viewtopic.php?t=34242&amp;p=36932#p36932"/>
 <title type="html"><![CDATA[OllyDBG • RODBG Simple ASCIITable for olly 2.xx]]></title>
 
 <category term="OllyDBG" scheme="forum/viewforum.php?f=14" label="OllyDBG"/>
@@ -79,7 +79,7 @@ is there any Simple ASCIITable 2.x plugin like in 1.x ?<p>Statistics: Posted by 
 <updated>2013-04-26T16:12:54+00:00</updated>
 <published>2013-04-26T16:12:54+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=36929#p36929</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=36929#p36929"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=36929#p36929"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -92,7 +92,7 @@ never late to learn  <img src="forum/images/smilies/icon_mrgreen.gif" alt=":mrgr
 <updated>2013-04-17T23:30:53+00:00</updated>
 <published>2013-04-17T23:30:53+00:00</published>
 <id>forum/viewtopic.php?t=29534&amp;p=32264#p32264</id>
-<link href="forum/viewtopic.php?t=29534&amp;p=32264#p32264"/>
+<link href="/forum/viewtopic.php?t=29534&amp;p=32264#p32264"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Dongle Key- or Hasp key]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -105,7 +105,7 @@ also this same program uses a &quot;key utility&quot; where i need a &quot;site 
 <updated>2013-04-17T18:30:36+00:00</updated>
 <published>2013-04-17T18:30:36+00:00</published>
 <id>forum/viewtopic.php?t=29534&amp;p=32205#p32205</id>
-<link href="forum/viewtopic.php?t=29534&amp;p=32205#p32205"/>
+<link href="/forum/viewtopic.php?t=29534&amp;p=32205#p32205"/>
 <title type="html"><![CDATA[Questions and Answers • Dongle Key- or Hasp key]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -118,7 +118,7 @@ Im trying to crack an ollllddd usb dongle key thats blacklisted, tring to get it
 <updated>2013-04-16T12:06:17+00:00</updated>
 <published>2013-04-16T12:06:17+00:00</published>
 <id>forum/viewtopic.php?t=676&amp;p=32115#p32115</id>
-<link href="forum/viewtopic.php?t=676&amp;p=32115#p32115"/>
+<link href="/forum/viewtopic.php?t=676&amp;p=32115#p32115"/>
 <title type="html"><![CDATA[Crackmes/Keygenmes • Re: TLoR KeygenMe #1]]></title>
 
 <category term="Crackmes/Keygenmes" scheme="forum/viewforum.php?f=21" label="Crackmes/Keygenmes"/>
@@ -131,7 +131,7 @@ Here it is bro, see attachment<p>Statistics: Posted by <a href="/forum/memberlis
 <updated>2013-04-16T11:41:47+00:00</updated>
 <published>2013-04-16T11:41:47+00:00</published>
 <id>forum/viewtopic.php?t=676&amp;p=32113#p32113</id>
-<link href="forum/viewtopic.php?t=676&amp;p=32113#p32113"/>
+<link href="/forum/viewtopic.php?t=676&amp;p=32113#p32113"/>
 <title type="html"><![CDATA[Crackmes/Keygenmes • Re: TLoR KeygenMe #1]]></title>
 
 <category term="Crackmes/Keygenmes" scheme="forum/viewforum.php?f=21" label="Crackmes/Keygenmes"/>
@@ -144,7 +144,7 @@ Here it is bro, see attachment<p>Statistics: Posted by <a href="/forum/memberlis
 <updated>2013-04-09T15:40:56+00:00</updated>
 <published>2013-04-09T15:40:56+00:00</published>
 <id>forum/viewtopic.php?t=28429&amp;p=31080#p31080</id>
-<link href="forum/viewtopic.php?t=28429&amp;p=31080#p31080"/>
+<link href="/forum/viewtopic.php?t=28429&amp;p=31080#p31080"/>
 <title type="html"><![CDATA[Welcome • Re: hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -157,7 +157,7 @@ Welcome, we are in a kind of hibernation right now but hope to be active again s
 <updated>2013-04-09T14:23:43+00:00</updated>
 <published>2013-04-09T14:23:43+00:00</published>
 <id>forum/viewtopic.php?t=28429&amp;p=31073#p31073</id>
-<link href="forum/viewtopic.php?t=28429&amp;p=31073#p31073"/>
+<link href="/forum/viewtopic.php?t=28429&amp;p=31073#p31073"/>
 <title type="html"><![CDATA[Welcome • hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -170,7 +170,7 @@ hi all just stumbled across this site. I love the challenges of programming and 
 <updated>2013-04-07T05:13:07+00:00</updated>
 <published>2013-04-07T05:13:07+00:00</published>
 <id>forum/viewtopic.php?t=27562&amp;p=30190#p30190</id>
-<link href="forum/viewtopic.php?t=27562&amp;p=30190#p30190"/>
+<link href="/forum/viewtopic.php?t=27562&amp;p=30190#p30190"/>
 <title type="html"><![CDATA[Questions and Answers • A quick Question]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -183,7 +183,7 @@ I apologize if this question has been posted earlier just wanted to ask that whe
 <updated>2013-04-03T23:21:19+00:00</updated>
 <published>2013-04-03T23:21:19+00:00</published>
 <id>forum/viewtopic.php?t=25872&amp;p=28425#p28425</id>
-<link href="forum/viewtopic.php?t=25872&amp;p=28425#p28425"/>
+<link href="/forum/viewtopic.php?t=25872&amp;p=28425#p28425"/>
 <title type="html"><![CDATA[Questions and Answers • Good keygen tuts]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -196,7 +196,7 @@ I'm not sure if this site is active at all anymore but I'm looking for some good
 <updated>2013-04-03T17:19:58+00:00</updated>
 <published>2013-04-03T17:19:58+00:00</published>
 <id>forum/viewtopic.php?t=25738&amp;p=28287#p28287</id>
-<link href="forum/viewtopic.php?t=25738&amp;p=28287#p28287"/>
+<link href="/forum/viewtopic.php?t=25738&amp;p=28287#p28287"/>
 <title type="html"><![CDATA[Questions and Answers • Packer identification]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>

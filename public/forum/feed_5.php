@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=20" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=20" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2013-04-26T16:12:54+00:00</updated>
 <published>2013-04-26T16:12:54+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=36929#p36929</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=36929#p36929"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=36929#p36929"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -27,7 +27,7 @@ never late to learn  <img src="forum/images/smilies/icon_mrgreen.gif" alt=":mrgr
 <updated>2013-03-05T12:55:37+00:00</updated>
 <published>2013-03-05T12:55:37+00:00</published>
 <id>forum/viewtopic.php?t=668&amp;p=17172#p17172</id>
-<link href="forum/viewtopic.php?t=668&amp;p=17172#p17172"/>
+<link href="/forum/viewtopic.php?t=668&amp;p=17172#p17172"/>
 <title type="html"><![CDATA[Challenges • Re: Second Challenge: Patchme1 by R4ndom]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -40,7 +40,7 @@ Hi People, I know that am Kind of Late But Here is my Patch.<br /><!-- m --><a c
 <updated>2012-09-30T08:46:25+00:00</updated>
 <published>2012-09-30T08:46:25+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2630#p2630</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2630#p2630"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2630#p2630"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -53,7 +53,7 @@ Here is my solution, although it is working as it should when i exit the program
 <updated>2012-09-29T00:46:44+00:00</updated>
 <published>2012-09-29T00:46:44+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2615#p2615</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2615#p2615"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2615#p2615"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -66,7 +66,7 @@ Here is my solution, although it is working as it should when i exit the program
 <updated>2012-09-28T14:45:25+00:00</updated>
 <published>2012-09-28T14:45:25+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2597#p2597</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2597#p2597"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2597#p2597"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -79,7 +79,7 @@ BINGO!!!<p>Statistics: Posted by <a href="/forum/memberlist.php?mode=viewprofile
 <updated>2012-09-28T13:08:15+00:00</updated>
 <published>2012-09-28T13:08:15+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2593#p2593</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2593#p2593"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2593#p2593"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -92,7 +92,7 @@ Saduff, thanks a lot for your solution......I was desperately looking for that c
 <updated>2012-09-28T13:04:15+00:00</updated>
 <published>2012-09-28T13:04:15+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2592#p2592</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2592#p2592"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2592#p2592"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -105,7 +105,7 @@ Okay, as you wish:<br /><!-- m --><a class="postlink" href="http://www.mediafire
 <updated>2012-09-27T23:30:24+00:00</updated>
 <published>2012-09-27T23:30:24+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2583#p2583</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2583#p2583"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2583#p2583"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -118,7 +118,7 @@ Okay, as you wish:<br /><!-- m --><a class="postlink" href="http://www.mediafire
 <updated>2012-09-27T23:25:33+00:00</updated>
 <published>2012-09-27T23:25:33+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2582#p2582</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2582#p2582"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2582#p2582"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -131,7 +131,7 @@ The solution is a self-keygen. It's not expected of a self-keygen for the app it
 <updated>2012-09-27T20:53:59+00:00</updated>
 <published>2012-09-27T20:53:59+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2581#p2581</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2581#p2581"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2581#p2581"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -144,7 +144,7 @@ XorKing: Congratulations. And the password is copied into the clipboard. Nice go
 <updated>2012-09-27T17:43:03+00:00</updated>
 <published>2012-09-27T17:43:03+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2577#p2577</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2577#p2577"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2577#p2577"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -157,7 +157,7 @@ My solution:<br /><!-- m --><a class="postlink" href="http://www.mediafire.com/?
 <updated>2012-09-27T15:58:54+00:00</updated>
 <published>2012-09-27T15:58:54+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2575#p2575</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2575#p2575"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2575#p2575"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -170,7 +170,7 @@ I am trying to make this more than just a &quot;tutorial download site&quot;, mo
 <updated>2012-09-27T14:52:18+00:00</updated>
 <published>2012-09-27T14:52:18+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2570#p2570</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2570#p2570"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2570#p2570"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -183,7 +183,7 @@ This was a fun challenge. I managed to figure it out and come up with a similar 
 <updated>2012-09-27T13:46:26+00:00</updated>
 <published>2012-09-27T13:46:26+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2567#p2567</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2567#p2567"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2567#p2567"/>
 <title type="html"><![CDATA[Challenges • Re: Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>
@@ -196,7 +196,7 @@ My solution, w/o copying to clipboard...  <img src="forum/images/smilies/icon_e_
 <updated>2012-09-27T11:34:26+00:00</updated>
 <published>2012-09-27T11:34:26+00:00</published>
 <id>forum/viewtopic.php?t=1071&amp;p=2561#p2561</id>
-<link href="forum/viewtopic.php?t=1071&amp;p=2561#p2561"/>
+<link href="/forum/viewtopic.php?t=1071&amp;p=2561#p2561"/>
 <title type="html"><![CDATA[Challenges • Seventh Challenge:- Crackme #4: Use a code cave]]></title>
 
 <category term="Challenges" scheme="forum/viewforum.php?f=20" label="Challenges"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=12&amp;t=44" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=12&amp;t=44" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2012-11-26T08:20:36+00:00</updated>
 <published>2012-11-26T08:20:36+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=3791#p3791</id>
-<link href="forum/viewtopic.php?t=44&amp;p=3791#p3791"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=3791#p3791"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=3791#p3791"><![CDATA[
@@ -26,7 +26,7 @@ All the tuts are posted on the blog, click top left corner &quot;go to blog&quot
 <updated>2012-11-26T06:29:28+00:00</updated>
 <published>2012-11-26T06:29:28+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=3786#p3786</id>
-<link href="forum/viewtopic.php?t=44&amp;p=3786#p3786"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=3786#p3786"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=3786#p3786"><![CDATA[
@@ -38,7 +38,7 @@ Where is Da tutorial ?<br /><br />I can see it ! <img src="forum/images/smilies/
 <updated>2012-10-02T00:38:56+00:00</updated>
 <published>2012-10-02T00:38:56+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=2651#p2651</id>
-<link href="forum/viewtopic.php?t=44&amp;p=2651#p2651"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=2651#p2651"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=2651#p2651"><![CDATA[
@@ -50,7 +50,7 @@ nice tutorial brro <img src="forum/images/smilies/icon_e_wink.gif" alt=";)" titl
 <updated>2012-08-13T18:50:27+00:00</updated>
 <published>2012-08-13T18:50:27+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=1019#p1019</id>
-<link href="forum/viewtopic.php?t=44&amp;p=1019#p1019"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=1019#p1019"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=1019#p1019"><![CDATA[
@@ -62,7 +62,7 @@ Hi Random<br />Nice tutorial, but there are an .dll file generated, and it must 
 <updated>2012-07-29T08:34:13+00:00</updated>
 <published>2012-07-29T08:34:13+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=816#p816</id>
-<link href="forum/viewtopic.php?t=44&amp;p=816#p816"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=816#p816"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=816#p816"><![CDATA[
@@ -74,7 +74,7 @@ Thanks for the fun tutorial <img src="forum/images/smilies/icon_e_smile.gif" alt
 <updated>2012-07-10T23:57:51+00:00</updated>
 <published>2012-07-10T23:57:51+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=202#p202</id>
-<link href="forum/viewtopic.php?t=44&amp;p=202#p202"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=202#p202"/>
 <title type="html"><![CDATA[Re: A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=202#p202"><![CDATA[
@@ -86,7 +86,7 @@ Oww, fun!<p>Statistics: Posted by <a href="/forum/memberlist.php?mode=viewprofil
 <updated>2012-07-10T23:28:44+00:00</updated>
 <published>2012-07-10T23:28:44+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=200#p200</id>
-<link href="forum/viewtopic.php?t=44&amp;p=200#p200"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=200#p200"/>
 <title type="html"><![CDATA[A new modifying binaries tutorial is out]]></title>
 
 <content type="html" xml:base="forum/viewtopic.php?t=44&amp;p=200#p200"><![CDATA[

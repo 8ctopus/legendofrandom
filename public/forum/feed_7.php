@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=16" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=16" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2013-04-17T23:30:53+00:00</updated>
 <published>2013-04-17T23:30:53+00:00</published>
 <id>forum/viewtopic.php?t=29534&amp;p=32264#p32264</id>
-<link href="forum/viewtopic.php?t=29534&amp;p=32264#p32264"/>
+<link href="/forum/viewtopic.php?t=29534&amp;p=32264#p32264"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Dongle Key- or Hasp key]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -27,7 +27,7 @@ also this same program uses a &quot;key utility&quot; where i need a &quot;site 
 <updated>2013-04-17T18:30:36+00:00</updated>
 <published>2013-04-17T18:30:36+00:00</published>
 <id>forum/viewtopic.php?t=29534&amp;p=32205#p32205</id>
-<link href="forum/viewtopic.php?t=29534&amp;p=32205#p32205"/>
+<link href="/forum/viewtopic.php?t=29534&amp;p=32205#p32205"/>
 <title type="html"><![CDATA[Questions and Answers • Dongle Key- or Hasp key]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -40,7 +40,7 @@ Im trying to crack an ollllddd usb dongle key thats blacklisted, tring to get it
 <updated>2013-04-07T05:13:07+00:00</updated>
 <published>2013-04-07T05:13:07+00:00</published>
 <id>forum/viewtopic.php?t=27562&amp;p=30190#p30190</id>
-<link href="forum/viewtopic.php?t=27562&amp;p=30190#p30190"/>
+<link href="/forum/viewtopic.php?t=27562&amp;p=30190#p30190"/>
 <title type="html"><![CDATA[Questions and Answers • A quick Question]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -53,7 +53,7 @@ I apologize if this question has been posted earlier just wanted to ask that whe
 <updated>2013-04-03T23:21:19+00:00</updated>
 <published>2013-04-03T23:21:19+00:00</published>
 <id>forum/viewtopic.php?t=25872&amp;p=28425#p28425</id>
-<link href="forum/viewtopic.php?t=25872&amp;p=28425#p28425"/>
+<link href="/forum/viewtopic.php?t=25872&amp;p=28425#p28425"/>
 <title type="html"><![CDATA[Questions and Answers • Good keygen tuts]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -66,7 +66,7 @@ I'm not sure if this site is active at all anymore but I'm looking for some good
 <updated>2013-04-03T17:19:58+00:00</updated>
 <published>2013-04-03T17:19:58+00:00</published>
 <id>forum/viewtopic.php?t=25738&amp;p=28287#p28287</id>
-<link href="forum/viewtopic.php?t=25738&amp;p=28287#p28287"/>
+<link href="/forum/viewtopic.php?t=25738&amp;p=28287#p28287"/>
 <title type="html"><![CDATA[Questions and Answers • Packer identification]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -79,7 +79,7 @@ Hello.<br />Not only I'm useless with unpacking, now I can't even identify what 
 <updated>2013-03-18T16:57:10+00:00</updated>
 <published>2013-03-18T16:57:10+00:00</published>
 <id>forum/viewtopic.php?t=16578&amp;p=21682#p21682</id>
-<link href="forum/viewtopic.php?t=16578&amp;p=21682#p21682"/>
+<link href="/forum/viewtopic.php?t=16578&amp;p=21682#p21682"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Getting to unlinked code?]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -92,7 +92,7 @@ tumbleweed.jpg<p>Statistics: Posted by <a href="/forum/memberlist.php?mode=viewp
 <updated>2013-03-10T22:54:46+00:00</updated>
 <published>2013-03-10T22:54:46+00:00</published>
 <id>forum/viewtopic.php?t=16578&amp;p=18743#p18743</id>
-<link href="forum/viewtopic.php?t=16578&amp;p=18743#p18743"/>
+<link href="/forum/viewtopic.php?t=16578&amp;p=18743#p18743"/>
 <title type="html"><![CDATA[Questions and Answers • Getting to unlinked code?]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -105,7 +105,7 @@ I have a really odd problem - I have a target that comes in two forms: evaluatio
 <updated>2013-02-23T11:29:55+00:00</updated>
 <published>2013-02-23T11:29:55+00:00</published>
 <id>forum/viewtopic.php?t=13036&amp;p=15126#p15126</id>
-<link href="forum/viewtopic.php?t=13036&amp;p=15126#p15126"/>
+<link href="/forum/viewtopic.php?t=13036&amp;p=15126#p15126"/>
 <title type="html"><![CDATA[Questions and Answers • How To Crack This]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -118,7 +118,7 @@ firstly i want to say this no crack request .. i just want know how to crack thi
 <updated>2013-02-19T21:48:02+00:00</updated>
 <published>2013-02-19T21:48:02+00:00</published>
 <id>forum/viewtopic.php?t=3611&amp;p=14368#p14368</id>
-<link href="forum/viewtopic.php?t=3611&amp;p=14368#p14368"/>
+<link href="/forum/viewtopic.php?t=3611&amp;p=14368#p14368"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Problem to unpack MEW SE v1.2]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -131,7 +131,7 @@ Many thanks bro<p>Statistics: Posted by <a href="/forum/memberlist.php?mode=view
 <updated>2013-02-08T07:11:08+00:00</updated>
 <published>2013-02-08T07:11:08+00:00</published>
 <id>forum/viewtopic.php?t=11404&amp;p=13500#p13500</id>
-<link href="forum/viewtopic.php?t=11404&amp;p=13500#p13500"/>
+<link href="/forum/viewtopic.php?t=11404&amp;p=13500#p13500"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Best hex editor]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -144,7 +144,7 @@ I use Hex Workshop, but any hex editor will do.<p>Statistics: Posted by <a href=
 <updated>2013-02-07T22:34:08+00:00</updated>
 <published>2013-02-07T22:34:08+00:00</published>
 <id>forum/viewtopic.php?t=11404&amp;p=13426#p13426</id>
-<link href="forum/viewtopic.php?t=11404&amp;p=13426#p13426"/>
+<link href="/forum/viewtopic.php?t=11404&amp;p=13426#p13426"/>
 <title type="html"><![CDATA[Questions and Answers • Best hex editor]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -157,7 +157,7 @@ Hey guys. I'm playing around with a binary that has lots of extra room by defaul
 <updated>2013-02-03T22:06:14+00:00</updated>
 <published>2013-02-03T22:06:14+00:00</published>
 <id>forum/viewtopic.php?t=10548&amp;p=12617#p12617</id>
-<link href="forum/viewtopic.php?t=10548&amp;p=12617#p12617"/>
+<link href="/forum/viewtopic.php?t=10548&amp;p=12617#p12617"/>
 <title type="html"><![CDATA[Questions and Answers • Re: R4ndoms ollydbg ??????/]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -170,7 +170,7 @@ sounds like your AV is hindering you, I just downloaded it to test and it was fi
 <updated>2013-02-03T19:39:19+00:00</updated>
 <published>2013-02-03T19:39:19+00:00</published>
 <id>forum/viewtopic.php?t=10548&amp;p=12555#p12555</id>
-<link href="forum/viewtopic.php?t=10548&amp;p=12555#p12555"/>
+<link href="/forum/viewtopic.php?t=10548&amp;p=12555#p12555"/>
 <title type="html"><![CDATA[Questions and Answers • R4ndoms ollydbg ??????/]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -183,7 +183,7 @@ does anyone know why r4ndoms ollydbg zip file is failing to download, itll downl
 <updated>2013-02-03T18:36:03+00:00</updated>
 <published>2013-02-03T18:36:03+00:00</published>
 <id>forum/viewtopic.php?t=10528&amp;p=12527#p12527</id>
-<link href="forum/viewtopic.php?t=10528&amp;p=12527#p12527"/>
+<link href="/forum/viewtopic.php?t=10528&amp;p=12527#p12527"/>
 <title type="html"><![CDATA[Questions and Answers • R4ndom's ollydbg version]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>
@@ -196,7 +196,7 @@ Im getting a download error when downloading R4ndoms_OllyDBG.zip, is there somet
 <updated>2013-01-17T01:29:03+00:00</updated>
 <published>2013-01-17T01:29:03+00:00</published>
 <id>forum/viewtopic.php?t=3611&amp;p=6210#p6210</id>
-<link href="forum/viewtopic.php?t=3611&amp;p=6210#p6210"/>
+<link href="/forum/viewtopic.php?t=3611&amp;p=6210#p6210"/>
 <title type="html"><![CDATA[Questions and Answers • Re: Problem to unpack MEW SE v1.2]]></title>
 
 <category term="Questions and Answers" scheme="forum/viewforum.php?f=16" label="Questions and Answers"/>

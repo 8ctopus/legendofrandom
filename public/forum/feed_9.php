@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=9" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=9" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2012-11-28T21:28:29+00:00</updated>
 <published>2012-11-28T21:28:29+00:00</published>
 <id>forum/viewtopic.php?t=16&amp;p=3869#p3869</id>
-<link href="forum/viewtopic.php?t=16&amp;p=3869#p3869"/>
+<link href="/forum/viewtopic.php?t=16&amp;p=3869#p3869"/>
 <title type="html"><![CDATA[Tools • Re: Programming tools]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -27,7 +27,7 @@ netbeans<br />visual studio 2008<br />notepad++<br />openwatcom<br />DevC++<p>St
 <updated>2012-11-05T20:47:27+00:00</updated>
 <published>2012-11-05T20:47:27+00:00</published>
 <id>forum/viewtopic.php?t=1534&amp;p=3277#p3277</id>
-<link href="forum/viewtopic.php?t=1534&amp;p=3277#p3277"/>
+<link href="/forum/viewtopic.php?t=1534&amp;p=3277#p3277"/>
 <title type="html"><![CDATA[Tools • Re: Debug 64bit executables with IDA]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -40,7 +40,7 @@ netbeans<br />visual studio 2008<br />notepad++<br />openwatcom<br />DevC++<p>St
 <updated>2012-11-05T14:54:04+00:00</updated>
 <published>2012-11-05T14:54:04+00:00</published>
 <id>forum/viewtopic.php?t=1534&amp;p=3260#p3260</id>
-<link href="forum/viewtopic.php?t=1534&amp;p=3260#p3260"/>
+<link href="/forum/viewtopic.php?t=1534&amp;p=3260#p3260"/>
 <title type="html"><![CDATA[Tools • Re: Debug 64bit executables with IDA]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -53,7 +53,7 @@ Ugdbg:<br /><!-- m --><a class="postlink" href="http://ugdbg.sourceforge.net/">h
 <updated>2012-11-05T13:32:38+00:00</updated>
 <published>2012-11-05T13:32:38+00:00</published>
 <id>forum/viewtopic.php?t=1534&amp;p=3258#p3258</id>
-<link href="forum/viewtopic.php?t=1534&amp;p=3258#p3258"/>
+<link href="/forum/viewtopic.php?t=1534&amp;p=3258#p3258"/>
 <title type="html"><![CDATA[Tools • Debug 64bit executables with IDA]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -66,7 +66,7 @@ Hello guys i need some help with IDA,since its the only debugger capable of debu
 <updated>2012-10-03T01:29:32+00:00</updated>
 <published>2012-10-03T01:29:32+00:00</published>
 <id>forum/viewtopic.php?t=16&amp;p=2676#p2676</id>
-<link href="forum/viewtopic.php?t=16&amp;p=2676#p2676"/>
+<link href="/forum/viewtopic.php?t=16&amp;p=2676#p2676"/>
 <title type="html"><![CDATA[Tools • Re: Programming tools]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -79,7 +79,7 @@ Hello guys i need some help with IDA,since its the only debugger capable of debu
 <updated>2012-10-02T23:26:40+00:00</updated>
 <published>2012-10-02T23:26:40+00:00</published>
 <id>forum/viewtopic.php?t=1123&amp;p=2675#p2675</id>
-<link href="forum/viewtopic.php?t=1123&amp;p=2675#p2675"/>
+<link href="/forum/viewtopic.php?t=1123&amp;p=2675#p2675"/>
 <title type="html"><![CDATA[Tools • Re: VMProtect tools for XorKing]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -92,7 +92,7 @@ Hello guys i need some help with IDA,since its the only debugger capable of debu
 <updated>2012-10-02T17:47:02+00:00</updated>
 <published>2012-10-02T17:47:02+00:00</published>
 <id>forum/viewtopic.php?t=1123&amp;p=2668#p2668</id>
-<link href="forum/viewtopic.php?t=1123&amp;p=2668#p2668"/>
+<link href="/forum/viewtopic.php?t=1123&amp;p=2668#p2668"/>
 <title type="html"><![CDATA[Tools • Re: VMProtect tools for XorKing]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -105,7 +105,7 @@ Thanks Random, I tried but i don`t think it is working and it is a unpacker, but
 <updated>2012-10-02T15:25:40+00:00</updated>
 <published>2012-10-02T15:25:40+00:00</published>
 <id>forum/viewtopic.php?t=1123&amp;p=2661#p2661</id>
-<link href="forum/viewtopic.php?t=1123&amp;p=2661#p2661"/>
+<link href="/forum/viewtopic.php?t=1123&amp;p=2661#p2661"/>
 <title type="html"><![CDATA[Tools • VMProtect tools for XorKing]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -118,7 +118,7 @@ Here are some unpackers for VMProtect.<p>Statistics: Posted by <a href="/forum/m
 <updated>2012-09-28T17:48:42+00:00</updated>
 <published>2012-09-28T17:48:42+00:00</published>
 <id>forum/viewtopic.php?t=1092&amp;p=2607#p2607</id>
-<link href="forum/viewtopic.php?t=1092&amp;p=2607#p2607"/>
+<link href="/forum/viewtopic.php?t=1092&amp;p=2607#p2607"/>
 <title type="html"><![CDATA[Tools • Re: Themida - Winlicense 1.x - 2.x Multi PRO Edition 1.2]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -131,7 +131,7 @@ you can test it on my request thread..if you want..^_^<p>Statistics: Posted by <
 <updated>2012-09-28T17:01:08+00:00</updated>
 <published>2012-09-28T17:01:08+00:00</published>
 <id>forum/viewtopic.php?t=1092&amp;p=2604#p2604</id>
-<link href="forum/viewtopic.php?t=1092&amp;p=2604#p2604"/>
+<link href="/forum/viewtopic.php?t=1092&amp;p=2604#p2604"/>
 <title type="html"><![CDATA[Tools • Re: Themida - Winlicense 1.x - 2.x Multi PRO Edition 1.2]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -144,7 +144,7 @@ To those who don't know, this is an Olly script to remove a version of Themida (
 <updated>2012-09-28T17:47:34+00:00</updated>
 <published>2012-09-28T15:38:14+00:00</published>
 <id>forum/viewtopic.php?t=1092&amp;p=2601#p2601</id>
-<link href="forum/viewtopic.php?t=1092&amp;p=2601#p2601"/>
+<link href="/forum/viewtopic.php?t=1092&amp;p=2601#p2601"/>
 <title type="html"><![CDATA[Tools • Themida - Winlicense 1.x - 2.x Multi PRO Edition 1.2]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -157,7 +157,7 @@ Themida - Winlicense 1.x - 2.x Multi PRO Edition 1.0<br />**********************
 <updated>2012-09-25T02:10:16+00:00</updated>
 <published>2012-09-25T02:10:16+00:00</published>
 <id>forum/viewtopic.php?t=1038&amp;p=2501#p2501</id>
-<link href="forum/viewtopic.php?t=1038&amp;p=2501#p2501"/>
+<link href="/forum/viewtopic.php?t=1038&amp;p=2501#p2501"/>
 <title type="html"><![CDATA[Tools • Re: ShellOp converter 0.1 - Shellcode Analysis assistant]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -170,7 +170,7 @@ Thank you<br />However, some bugs still occurred. Have to work harder to make it
 <updated>2012-09-24T14:58:47+00:00</updated>
 <published>2012-09-24T14:58:47+00:00</published>
 <id>forum/viewtopic.php?t=1038&amp;p=2483#p2483</id>
-<link href="forum/viewtopic.php?t=1038&amp;p=2483#p2483"/>
+<link href="/forum/viewtopic.php?t=1038&amp;p=2483#p2483"/>
 <title type="html"><![CDATA[Tools • Re: ShellOp converter 0.1 - Shellcode Analysis assistant]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -183,7 +183,7 @@ Very nice, Levis. I will post it on the tools page as well as blog about it.<p>S
 <updated>2012-09-24T13:49:34+00:00</updated>
 <published>2012-09-24T13:49:34+00:00</published>
 <id>forum/viewtopic.php?t=1038&amp;p=2480#p2480</id>
-<link href="forum/viewtopic.php?t=1038&amp;p=2480#p2480"/>
+<link href="/forum/viewtopic.php?t=1038&amp;p=2480#p2480"/>
 <title type="html"><![CDATA[Tools • ShellOp converter 0.1 - Shellcode Analysis assistant]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>
@@ -196,7 +196,7 @@ Dear all,<br />This's my small tool called &quot;ShellOp Converter&quot;, which 
 <updated>2012-09-18T19:36:08+00:00</updated>
 <published>2012-09-18T19:36:08+00:00</published>
 <id>forum/viewtopic.php?t=864&amp;p=2305#p2305</id>
-<link href="forum/viewtopic.php?t=864&amp;p=2305#p2305"/>
+<link href="/forum/viewtopic.php?t=864&amp;p=2305#p2305"/>
 <title type="html"><![CDATA[Tools • Re: EVLog]]></title>
 
 <category term="Tools" scheme="forum/viewforum.php?f=9" label="Tools"/>

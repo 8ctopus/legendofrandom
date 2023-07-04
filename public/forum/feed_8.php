@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=12" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=12" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2012-11-26T08:20:36+00:00</updated>
 <published>2012-11-26T08:20:36+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=3791#p3791</id>
-<link href="forum/viewtopic.php?t=44&amp;p=3791#p3791"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=3791#p3791"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: A new modifying binaries tutorial is out]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -27,7 +27,7 @@ All the tuts are posted on the blog, click top left corner &quot;go to blog&quot
 <updated>2012-11-26T06:35:29+00:00</updated>
 <published>2012-11-26T06:35:29+00:00</published>
 <id>forum/viewtopic.php?t=27&amp;p=3789#p3789</id>
-<link href="forum/viewtopic.php?t=27&amp;p=3789#p3789"/>
+<link href="/forum/viewtopic.php?t=27&amp;p=3789#p3789"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: ( Question ) make  website scanning]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -40,7 +40,7 @@ Why would anyone need a tutor how to make website scanning virus online ?<p>Stat
 <updated>2012-11-26T06:33:25+00:00</updated>
 <published>2012-11-26T06:33:25+00:00</published>
 <id>forum/viewtopic.php?t=29&amp;p=3787#p3787</id>
-<link href="forum/viewtopic.php?t=29&amp;p=3787#p3787"/>
+<link href="/forum/viewtopic.php?t=29&amp;p=3787#p3787"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: Mem-patcher]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -53,7 +53,7 @@ Hey razor8<br />Which C++ compiler are you using ? <img src="forum/images/smilie
 <updated>2012-11-26T06:29:28+00:00</updated>
 <published>2012-11-26T06:29:28+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=3786#p3786</id>
-<link href="forum/viewtopic.php?t=44&amp;p=3786#p3786"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=3786#p3786"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: A new modifying binaries tutorial is out]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -66,7 +66,7 @@ Where is Da tutorial ?<br /><br />I can see it ! <img src="forum/images/smilies/
 <updated>2012-11-13T09:38:01+00:00</updated>
 <published>2012-11-13T09:38:01+00:00</published>
 <id>forum/viewtopic.php?t=27&amp;p=3468#p3468</id>
-<link href="forum/viewtopic.php?t=27&amp;p=3468#p3468"/>
+<link href="/forum/viewtopic.php?t=27&amp;p=3468#p3468"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: ( Question ) make  website scanning]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -79,7 +79,7 @@ yea.. me too.. <img src="forum/images/smilies/icon_e_smile.gif" alt=":)" title="
 <updated>2012-10-02T00:38:56+00:00</updated>
 <published>2012-10-02T00:38:56+00:00</published>
 <id>forum/viewtopic.php?t=44&amp;p=2651#p2651</id>
-<link href="forum/viewtopic.php?t=44&amp;p=2651#p2651"/>
+<link href="/forum/viewtopic.php?t=44&amp;p=2651#p2651"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: A new modifying binaries tutorial is out]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -92,7 +92,7 @@ nice tutorial brro <img src="forum/images/smilies/icon_e_wink.gif" alt=";)" titl
 <updated>2012-09-24T15:06:17+00:00</updated>
 <published>2012-09-24T15:06:17+00:00</published>
 <id>forum/viewtopic.php?t=550&amp;p=2485#p2485</id>
-<link href="forum/viewtopic.php?t=550&amp;p=2485#p2485"/>
+<link href="/forum/viewtopic.php?t=550&amp;p=2485#p2485"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: Adding a new section to an exe.]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -105,7 +105,7 @@ If you still need some addition information, please see my latest tutorial on co
 <updated>2012-09-24T10:55:58+00:00</updated>
 <published>2012-09-24T10:55:58+00:00</published>
 <id>forum/viewtopic.php?t=550&amp;p=2478#p2478</id>
-<link href="forum/viewtopic.php?t=550&amp;p=2478#p2478"/>
+<link href="/forum/viewtopic.php?t=550&amp;p=2478#p2478"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: Adding a new section to an exe.]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -118,7 +118,7 @@ If you still need some addition information, please see my latest tutorial on co
 <updated>2012-09-24T10:44:40+00:00</updated>
 <published>2012-09-24T10:44:40+00:00</published>
 <id>forum/viewtopic.php?t=550&amp;p=2477#p2477</id>
-<link href="forum/viewtopic.php?t=550&amp;p=2477#p2477"/>
+<link href="/forum/viewtopic.php?t=550&amp;p=2477#p2477"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: Adding a new section to an exe.]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -131,7 +131,7 @@ If you still need some addition information, please see my latest tutorial on co
 <updated>2012-09-24T10:37:58+00:00</updated>
 <published>2012-09-24T10:37:58+00:00</published>
 <id>forum/viewtopic.php?t=21&amp;p=2476#p2476</id>
-<link href="forum/viewtopic.php?t=21&amp;p=2476#p2476"/>
+<link href="/forum/viewtopic.php?t=21&amp;p=2476#p2476"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: Finding A DLL Offset]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>
@@ -144,7 +144,7 @@ If you still need some addition information, please see my latest tutorial on co
 <updated>2012-09-15T16:38:46+00:00</updated>
 <published>2012-09-15T16:38:46+00:00</published>
 <id>forum/viewtopic.php?t=903&amp;p=2203#p2203</id>
-<link href="forum/viewtopic.php?t=903&amp;p=2203#p2203"/>
+<link href="/forum/viewtopic.php?t=903&amp;p=2203#p2203"/>
 <title type="html"><![CDATA[Modifying Binaries • Re: EVERYONE PLEASE READ BEFORE POSTING.]]></title>
 
 <category term="Modifying Binaries" scheme="forum/viewforum.php?f=12" label="Modifying Binaries"/>

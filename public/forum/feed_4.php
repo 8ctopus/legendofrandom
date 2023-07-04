@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=11" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=11" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2013-05-07T17:13:41+00:00</updated>
 <published>2013-05-07T17:13:41+00:00</published>
 <id>forum/viewtopic.php?t=36929&amp;p=39728#p39728</id>
-<link href="forum/viewtopic.php?t=36929&amp;p=39728#p39728"/>
+<link href="/forum/viewtopic.php?t=36929&amp;p=39728#p39728"/>
 <title type="html"><![CDATA[Welcome • Hi]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -27,7 +27,7 @@ Ik stumbled upon this site while searching for anti-debugging tricks. I'm dealin
 <updated>2013-04-09T15:40:56+00:00</updated>
 <published>2013-04-09T15:40:56+00:00</published>
 <id>forum/viewtopic.php?t=28429&amp;p=31080#p31080</id>
-<link href="forum/viewtopic.php?t=28429&amp;p=31080#p31080"/>
+<link href="/forum/viewtopic.php?t=28429&amp;p=31080#p31080"/>
 <title type="html"><![CDATA[Welcome • Re: hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -40,7 +40,7 @@ Welcome, we are in a kind of hibernation right now but hope to be active again s
 <updated>2013-04-09T14:23:43+00:00</updated>
 <published>2013-04-09T14:23:43+00:00</published>
 <id>forum/viewtopic.php?t=28429&amp;p=31073#p31073</id>
-<link href="forum/viewtopic.php?t=28429&amp;p=31073#p31073"/>
+<link href="/forum/viewtopic.php?t=28429&amp;p=31073#p31073"/>
 <title type="html"><![CDATA[Welcome • hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -53,7 +53,7 @@ hi all just stumbled across this site. I love the challenges of programming and 
 <updated>2013-03-28T20:22:15+00:00</updated>
 <published>2013-03-28T20:22:15+00:00</published>
 <id>forum/viewtopic.php?t=23544&amp;p=26068#p26068</id>
-<link href="forum/viewtopic.php?t=23544&amp;p=26068#p26068"/>
+<link href="/forum/viewtopic.php?t=23544&amp;p=26068#p26068"/>
 <title type="html"><![CDATA[Welcome • Should I say Hello?]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -66,7 +66,7 @@ First read the tutorial, curious to know more.<br />A great place to share.<br /
 <updated>2013-02-08T02:38:44+00:00</updated>
 <published>2013-02-08T02:38:44+00:00</published>
 <id>forum/viewtopic.php?t=11411&amp;p=13454#p13454</id>
-<link href="forum/viewtopic.php?t=11411&amp;p=13454#p13454"/>
+<link href="/forum/viewtopic.php?t=11411&amp;p=13454#p13454"/>
 <title type="html"><![CDATA[Welcome • Re: RCR say's Hello!]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -79,7 +79,7 @@ Welcome aboard, enjoy your stay. <img src="forum/images/smilies/icon_razz.gif" a
 <updated>2013-02-07T22:52:58+00:00</updated>
 <published>2013-02-07T22:52:58+00:00</published>
 <id>forum/viewtopic.php?t=11411&amp;p=13433#p13433</id>
-<link href="forum/viewtopic.php?t=11411&amp;p=13433#p13433"/>
+<link href="/forum/viewtopic.php?t=11411&amp;p=13433#p13433"/>
 <title type="html"><![CDATA[Welcome • RCR say's Hello!]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -92,7 +92,7 @@ Hello everyone,<br /><br />Hope to learn something useful  and more than that to
 <updated>2013-02-06T20:46:49+00:00</updated>
 <published>2013-02-06T20:46:49+00:00</published>
 <id>forum/viewtopic.php?t=11178&amp;p=13197#p13197</id>
-<link href="forum/viewtopic.php?t=11178&amp;p=13197#p13197"/>
+<link href="/forum/viewtopic.php?t=11178&amp;p=13197#p13197"/>
 <title type="html"><![CDATA[Welcome • Hi]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -105,7 +105,7 @@ Hi,<br /><br />my quest starting from &quot;Disabling ALT+CTR+DEL&quot; <br />fr
 <updated>2012-12-22T06:42:23+00:00</updated>
 <published>2012-12-22T06:42:23+00:00</published>
 <id>forum/viewtopic.php?t=2833&amp;p=4723#p4723</id>
-<link href="forum/viewtopic.php?t=2833&amp;p=4723#p4723"/>
+<link href="/forum/viewtopic.php?t=2833&amp;p=4723#p4723"/>
 <title type="html"><![CDATA[Welcome • Re: Hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -118,7 +118,7 @@ Welcome aboard, enjoy your trip.<p>Statistics: Posted by <a href="/forum/memberl
 <updated>2012-12-22T03:03:15+00:00</updated>
 <published>2012-12-22T03:03:15+00:00</published>
 <id>forum/viewtopic.php?t=2833&amp;p=4718#p4718</id>
-<link href="forum/viewtopic.php?t=2833&amp;p=4718#p4718"/>
+<link href="/forum/viewtopic.php?t=2833&amp;p=4718#p4718"/>
 <title type="html"><![CDATA[Welcome • Hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -131,7 +131,7 @@ Hello there, I am just a newbie on this and i hope to become in a good RE in my 
 <updated>2012-12-20T14:29:48+00:00</updated>
 <published>2012-12-20T14:29:48+00:00</published>
 <id>forum/viewtopic.php?t=2801&amp;p=4682#p4682</id>
-<link href="forum/viewtopic.php?t=2801&amp;p=4682#p4682"/>
+<link href="/forum/viewtopic.php?t=2801&amp;p=4682#p4682"/>
 <title type="html"><![CDATA[Welcome • hullo]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -144,7 +144,7 @@ just a quick howdy from the seattle area.<p>Statistics: Posted by <a href="/foru
 <updated>2012-12-03T22:25:00+00:00</updated>
 <published>2012-12-03T22:25:00+00:00</published>
 <id>forum/viewtopic.php?t=2165&amp;p=4012#p4012</id>
-<link href="forum/viewtopic.php?t=2165&amp;p=4012#p4012"/>
+<link href="/forum/viewtopic.php?t=2165&amp;p=4012#p4012"/>
 <title type="html"><![CDATA[Welcome • Re: Hello :)]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -157,7 +157,7 @@ Welcome, may your journey be a pleasant one   <img src="forum/images/smilies/ico
 <updated>2012-12-03T18:15:37+00:00</updated>
 <published>2012-12-03T18:15:37+00:00</published>
 <id>forum/viewtopic.php?t=2165&amp;p=4004#p4004</id>
-<link href="forum/viewtopic.php?t=2165&amp;p=4004#p4004"/>
+<link href="/forum/viewtopic.php?t=2165&amp;p=4004#p4004"/>
 <title type="html"><![CDATA[Welcome • Hello :)]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -170,7 +170,7 @@ Hi to everyone <img src="forum/images/smilies/icon_e_smile.gif" alt=":)" title="
 <updated>2012-11-30T00:02:58+00:00</updated>
 <published>2012-11-30T00:02:58+00:00</published>
 <id>forum/viewtopic.php?t=2071&amp;p=3897#p3897</id>
-<link href="forum/viewtopic.php?t=2071&amp;p=3897#p3897"/>
+<link href="/forum/viewtopic.php?t=2071&amp;p=3897#p3897"/>
 <title type="html"><![CDATA[Welcome • Re: hello :D]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -183,7 +183,7 @@ Welcome, hope you enjoy your time here. <img src="forum/images/smilies/icon_mrgr
 <updated>2012-11-29T22:55:00+00:00</updated>
 <published>2012-11-29T22:55:00+00:00</published>
 <id>forum/viewtopic.php?t=2071&amp;p=3893#p3893</id>
-<link href="forum/viewtopic.php?t=2071&amp;p=3893#p3893"/>
+<link href="/forum/viewtopic.php?t=2071&amp;p=3893#p3893"/>
 <title type="html"><![CDATA[Welcome • hello :D]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>
@@ -196,7 +196,7 @@ hi <img src="forum/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" />   
 <updated>2012-11-25T17:45:38+00:00</updated>
 <published>2012-11-25T17:45:38+00:00</published>
 <id>forum/viewtopic.php?t=1704&amp;p=3749#p3749</id>
-<link href="forum/viewtopic.php?t=1704&amp;p=3749#p3749"/>
+<link href="/forum/viewtopic.php?t=1704&amp;p=3749#p3749"/>
 <title type="html"><![CDATA[Welcome • Re: Hello]]></title>
 
 <category term="Welcome" scheme="forum/viewforum.php?f=11" label="Welcome"/>

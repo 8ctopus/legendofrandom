@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
-<link rel="self" type="application/atom+xml" href="forum/feed.php?f=2" />
+<link rel="self" type="application/atom+xml" href="/forum/feed.php?f=2" />
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
@@ -14,7 +14,7 @@
 <updated>2013-05-12T19:20:25+00:00</updated>
 <published>2013-05-12T19:20:25+00:00</published>
 <id>forum/viewtopic.php?t=772&amp;p=42488#p42488</id>
-<link href="forum/viewtopic.php?t=772&amp;p=42488#p42488"/>
+<link href="/forum/viewtopic.php?t=772&amp;p=42488#p42488"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Tutorial 16A Question]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -27,7 +27,7 @@ Question 1 was never really answered, so I'd like to give it a go. Sorry for the
 <updated>2013-05-07T17:20:08+00:00</updated>
 <published>2013-05-07T17:20:08+00:00</published>
 <id>forum/viewtopic.php?t=36930&amp;p=39729#p39729</id>
-<link href="forum/viewtopic.php?t=36930&amp;p=39729#p39729"/>
+<link href="/forum/viewtopic.php?t=36930&amp;p=39729#p39729"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Avast won't let me download tutorial 22]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -40,7 +40,7 @@ it complains about Win32:Malware-gen in crackme.exe. Is this a known problem? I 
 <updated>2013-02-04T00:30:03+00:00</updated>
 <published>2013-02-04T00:30:03+00:00</published>
 <id>forum/viewtopic.php?t=10600&amp;p=12643#p12643</id>
-<link href="forum/viewtopic.php?t=10600&amp;p=12643#p12643"/>
+<link href="/forum/viewtopic.php?t=10600&amp;p=12643#p12643"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Need help Tutorial 13]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -53,7 +53,7 @@ I checked this with a clean Olly, no problems-no plugins needed. The only anti-d
 <updated>2013-02-03T23:05:41+00:00</updated>
 <published>2013-02-03T23:05:41+00:00</published>
 <id>forum/viewtopic.php?t=10600&amp;p=12624#p12624</id>
-<link href="forum/viewtopic.php?t=10600&amp;p=12624#p12624"/>
+<link href="/forum/viewtopic.php?t=10600&amp;p=12624#p12624"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Need help Tutorial 13]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -66,7 +66,7 @@ nwokiller, thanks for quick reply, let me ask you this, do you know if r4ndom us
 <updated>2013-02-03T22:00:10+00:00</updated>
 <published>2013-02-03T22:00:10+00:00</published>
 <id>forum/viewtopic.php?t=10600&amp;p=12613#p12613</id>
-<link href="forum/viewtopic.php?t=10600&amp;p=12613#p12613"/>
+<link href="/forum/viewtopic.php?t=10600&amp;p=12613#p12613"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Need help Tutorial 13]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -79,7 +79,7 @@ In regard to your programs opening at nt.dll, go to olly's options tab=&gt; debu
 <updated>2013-02-03T21:40:10+00:00</updated>
 <published>2013-02-03T21:40:10+00:00</published>
 <id>forum/viewtopic.php?t=10600&amp;p=12607#p12607</id>
-<link href="forum/viewtopic.php?t=10600&amp;p=12607#p12607"/>
+<link href="/forum/viewtopic.php?t=10600&amp;p=12607#p12607"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Need help Tutorial 13]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -92,7 +92,7 @@ First and foremost i have to make it clear that i attended class faithfully from
 <updated>2013-02-02T10:56:34+00:00</updated>
 <published>2013-02-02T10:56:34+00:00</published>
 <id>forum/viewtopic.php?t=9745&amp;p=12009#p12009</id>
-<link href="forum/viewtopic.php?t=9745&amp;p=12009#p12009"/>
+<link href="/forum/viewtopic.php?t=9745&amp;p=12009#p12009"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Tutorial #3 please help]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -105,7 +105,7 @@ it's a nooby question but thanks <img src="forum/images/smilies/icon_e_smile.gif
 <updated>2013-02-02T01:07:58+00:00</updated>
 <published>2013-02-02T01:07:58+00:00</published>
 <id>forum/viewtopic.php?t=9745&amp;p=11899#p11899</id>
-<link href="forum/viewtopic.php?t=9745&amp;p=11899#p11899"/>
+<link href="/forum/viewtopic.php?t=9745&amp;p=11899#p11899"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Tutorial #3 please help]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -118,7 +118,7 @@ Right click under the 'Hex dump' it probably says 'Disassemble', make it 'Hex -&
 <updated>2013-02-01T17:37:41+00:00</updated>
 <published>2013-02-01T17:37:41+00:00</published>
 <id>forum/viewtopic.php?t=9745&amp;p=11733#p11733</id>
-<link href="forum/viewtopic.php?t=9745&amp;p=11733#p11733"/>
+<link href="/forum/viewtopic.php?t=9745&amp;p=11733#p11733"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Tutorial #3 please help]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -131,7 +131,7 @@ sir, something wrong with my hex dump it didn’t show same as yours… instead 
 <updated>2013-01-24T02:14:57+00:00</updated>
 <published>2013-01-24T02:14:57+00:00</published>
 <id>forum/viewtopic.php?t=695&amp;p=8028#p8028</id>
-<link href="forum/viewtopic.php?t=695&amp;p=8028#p8028"/>
+<link href="/forum/viewtopic.php?t=695&amp;p=8028#p8028"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Tutorial 4 Stuck in a Loop no 'local' name]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -144,7 +144,7 @@ To solve the 'color issue', right click -&gt; Appearance -&gt; Higlighting -&gt;
 <updated>2012-11-14T01:34:37+00:00</updated>
 <published>2012-11-14T01:34:37+00:00</published>
 <id>forum/viewtopic.php?t=1658&amp;p=3484#p3484</id>
-<link href="forum/viewtopic.php?t=1658&amp;p=3484#p3484"/>
+<link href="/forum/viewtopic.php?t=1658&amp;p=3484#p3484"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Help understanding memory modification]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -157,7 +157,7 @@ To solve the 'color issue', right click -&gt; Appearance -&gt; Higlighting -&gt;
 <updated>2012-11-13T23:16:06+00:00</updated>
 <published>2012-11-13T23:16:06+00:00</published>
 <id>forum/viewtopic.php?t=1658&amp;p=3483#p3483</id>
-<link href="forum/viewtopic.php?t=1658&amp;p=3483#p3483"/>
+<link href="/forum/viewtopic.php?t=1658&amp;p=3483#p3483"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Help understanding memory modification]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -170,7 +170,7 @@ What OS are you using, if you're on Vista/7 then it's possible the program is us
 <updated>2012-11-13T20:27:36+00:00</updated>
 <published>2012-11-13T20:27:36+00:00</published>
 <id>forum/viewtopic.php?t=1658&amp;p=3479#p3479</id>
-<link href="forum/viewtopic.php?t=1658&amp;p=3479#p3479"/>
+<link href="/forum/viewtopic.php?t=1658&amp;p=3479#p3479"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Help understanding memory modification]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -183,7 +183,7 @@ What OS are you using, if you're on Vista/7 then it's possible the program is us
 <updated>2012-11-13T14:24:14+00:00</updated>
 <published>2012-11-13T14:24:14+00:00</published>
 <id>forum/viewtopic.php?t=876&amp;p=3472#p3472</id>
-<link href="forum/viewtopic.php?t=876&amp;p=3472#p3472"/>
+<link href="/forum/viewtopic.php?t=876&amp;p=3472#p3472"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: Please tell me what you think...]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>
@@ -196,7 +196,7 @@ i agree with kdma.. please provide tuts about reversing the mmorpg applications 
 <updated>2012-11-13T05:11:47+00:00</updated>
 <published>2012-11-13T05:11:47+00:00</published>
 <id>forum/viewtopic.php?t=1687&amp;p=3464#p3464</id>
-<link href="forum/viewtopic.php?t=1687&amp;p=3464#p3464"/>
+<link href="/forum/viewtopic.php?t=1687&amp;p=3464#p3464"/>
 <title type="html"><![CDATA[R4ndom's Beginner Guide to Reverse Engineering • Re: about OEP and unpacking tuts]]></title>
 
 <category term="R4ndom's Beginner Guide to Reverse Engineering" scheme="forum/viewforum.php?f=2" label="R4ndom's Beginner Guide to Reverse Engineering"/>

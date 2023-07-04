@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbb914762313f4cf62c12eb4e861f0ea",
+    "content-hash": "c95919e37d56effa537d3db92c2f5521",
     "packages": [
+        {
+            "name": "8ctopus/nano-ip",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/8ctopus/nano-ip.git",
+                "reference": "3680be4684efa5263de54bc7ed8d7fb6645d7207"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/8ctopus/nano-ip/zipball/3680be4684efa5263de54bc7ed8d7fb6645d7207",
+                "reference": "3680be4684efa5263de54bc7ed8d7fb6645d7207",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "phpmd/phpmd": "^2.13",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpunit": "^9.5|^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Oct8pus\\NanoIP\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "8ctopus",
+                    "email": "hello@octopuslabs.io"
+                }
+            ],
+            "description": "experimental ip address library",
+            "homepage": "https://github.com/8ctopus/nano-ip",
+            "keywords": [
+                "cidr",
+                "ipv4",
+                "range check"
+            ],
+            "support": {
+                "issues": "https://github.com/8ctopus/nano-ip/issues",
+                "source": "https://github.com/8ctopus/nano-ip/tree/0.1.1"
+            },
+            "time": "2023-06-27T10:23:35+00:00"
+        },
         {
             "name": "8ctopus/nano-router",
             "version": "9.0.1",

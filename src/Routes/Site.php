@@ -89,7 +89,7 @@ class Site extends Routes
 
             $source = file_get_contents($file);
 
-            $source = str_replace('</head>', $this->addTracking('G-EQKHHME6YK') . '</head>', $source);
+            $source = str_replace('</head>', $this->tracking('G-EQKHHME6YK') . '</head>', $source);
 
             $stream->write($source);
 
@@ -99,7 +99,7 @@ class Site extends Routes
         return $this;
     }
 
-    private function addTracking(string $tag) : string
+    protected function tracking(string $tag) : string
     {
         return <<<HTML
         <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>

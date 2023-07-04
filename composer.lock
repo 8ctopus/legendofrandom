@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b766ae2db16a07a6fff1d278a739394",
+    "content-hash": "23e0f389b10d9f4e21927e113904638c",
     "packages": [
         {
             "name": "8ctopus/nano-router",
@@ -56,6 +56,58 @@
                 "source": "https://github.com/8ctopus/nano-router/tree/1.0.3"
             },
             "time": "2023-05-16T14:40:32+00:00"
+        },
+        {
+            "name": "8ctopus/nano-timer",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/8ctopus/nano-timer.git",
+                "reference": "e19e0e8face4f803cf36b897ff94cf7ed5db4535"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/8ctopus/nano-timer/zipball/e19e0e8face4f803cf36b897ff94cf7ed5db4535",
+                "reference": "e19e0e8face4f803cf36b897ff94cf7ed5db4535",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "phpmd/phpmd": "^2.13",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpunit": "^9.5|^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Oct8pus\\NanoTimer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "8ctopus",
+                    "email": "hello@octopuslabs.io"
+                }
+            ],
+            "description": "Yet another php timer: measure time between events, log only requests slower than a given threshold, automatically log when the destructor is called and measure peak memory use",
+            "homepage": "https://github.com/8ctopus/nano-timer",
+            "keywords": [
+                "performance analysis",
+                "profiler",
+                "timer"
+            ],
+            "support": {
+                "issues": "https://github.com/8ctopus/nano-timer/issues",
+                "source": "https://github.com/8ctopus/nano-timer/tree/1.0.7"
+            },
+            "time": "2023-06-12T05:19:33+00:00"
         },
         {
             "name": "httpsoft/http-emitter",

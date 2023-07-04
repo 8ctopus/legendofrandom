@@ -8,7 +8,8 @@
     "8ctopus/nano-router": "^1.0",
     "httpsoft/http-message": "^1.1",
     "httpsoft/http-server-request": "^1.1",
-    "httpsoft/http-emitter": "^1.1"
+    "httpsoft/http-emitter": "^1.1",
+    "8ctopus/nano-timer": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0",

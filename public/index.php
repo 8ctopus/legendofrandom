@@ -7,16 +7,16 @@ use Oct8pus\NanoRouter\Response;
 function tracking(string $tag) : string
 {
     return <<<HTML
-        <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
+    <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-          gtag('js', new Date());
-          gtag('config', '{$tag}');
-        </script>
+      gtag('js', new Date());
+      gtag('config', '{$tag}');
+    </script>
 
     HTML;
 }

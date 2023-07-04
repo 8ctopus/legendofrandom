@@ -7,6 +7,9 @@ namespace Legend\Routes;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\Stream;
 use Legend\Helper;
+use Legend\Robots;
+use Legend\Sitemap;
+use Legend\TrafficAdvice;
 use Noodlehaus\Config;
 use Oct8pus\NanoRouter\NanoRouter;
 use Psr\Http\Message\ResponseInterface;
@@ -33,6 +36,31 @@ class Site extends Routes
     public function addRoutes() : self
     {
         parent::addRoutes();
+
+        $this->router->addRoute('GET', '/.well-known/traffic-advice', function () : ResponseInterface {
+            return (new TrafficAdvice())
+                ->run();
+        });
+
+        $this->router->addRoute('GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
+            return (new Robots($request))
+                ->run();
+        });
+
+        $this->router->addRoute('GET', '/sitemap.xml', function () : ResponseInterface {
+            return (new Sitemap())
+                ->run();
+        });
+
+        $this->router->addRoute('GET', '/.well-known/security.txt', function () : ResponseInterface {
+            $stream = new Stream();
+            $stream->write(<<<'TEXT'
+            Contact: hello@octopuslabs.io
+
+            TEXT);
+
+            return new Response(200, ['Content-Type' => 'text/plain'], $stream);
+        });
 
         $this->router->addRouteRegex('GET', '~^.*$~', function (ServerRequestInterface $request) : ResponseInterface {
             $path = $request->getUri()->getPath();
@@ -67,43 +95,6 @@ class Site extends Routes
 
             return new Response(200, ['content-type' => 'text/html'], $stream);
         });
-
-/*
-        $this->router->addRoute('GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
-            return (new Robots($request))
-                ->run();
-        });
-
-        $this->router->addMiddleware('GET', '~^/robots\.txt$~', 'pre', function (ServerRequestInterface $request) : ?ResponseInterface {
-            return (new RedirectHost($request, $this->config->get('host'), $this->config->get('host')))
-                ->run();
-        });
-
-        $this->router->addRoute('GET', '/sitemap.xml', function () : ResponseInterface {
-            return (new Sitemap())
-                ->run();
-        });
-
-        $this->router->addMiddleware('GET', '~^/sitemap\.xml$~', 'pre', function (ServerRequestInterface $request) : ?ResponseInterface {
-            return (new RedirectHost($request, $this->config->get('host'), $this->config->get('host')))
-                ->run();
-        });
-
-        $this->router->addRoute('GET', '/.well-known/traffic-advice', function () : ResponseInterface {
-            return (new TrafficAdvice())
-                ->run();
-        });
-
-        $this->router->addRoute('GET', '/.well-known/security.txt', function () : ResponseInterface {
-            $stream = new Stream();
-            $stream->write(<<<'TEXT'
-            Contact: hello@octopuslabs.io
-
-            TEXT);
-
-            return new Response(200, ['Content-Type' => 'text/plain'], $stream);
-        });
-*/
 
         return $this;
     }

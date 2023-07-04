@@ -23,7 +23,11 @@ RewriteRule ^ - [L]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
-# redirect all not existing files to router
+# redirect homepage to router
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^ router.php [END]
+
+# redirect html and php to router
 RewriteCond %{REQUEST_FILENAME} \.(html?|php)$
-RewriteCond %{REQUEST_FILENAME} !index.php$
-RewriteRule ^ /index.php [L]
+RewriteRule ^ router.php [END]
+

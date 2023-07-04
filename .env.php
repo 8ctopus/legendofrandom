@@ -9,6 +9,8 @@ return [
         'throttleThreshold' => 150,
         'whitelist' => [
             '127.0.0.1',
+            // docker
+            '172.17.0.1',
             // david
             '94.57.49.68',
         ],

@@ -13,7 +13,7 @@ class Helper
      */
     public static function rootDir() : string
     {
-        return realpath(str_replace('\\', '/', __DIR__ . '/../')) . '/';
+        return realpath(str_replace('\\', '/', __DIR__ . '/../'));
     }
 
     /**
@@ -23,7 +23,7 @@ class Helper
      */
     public static function publicDir() : string
     {
-        return self::rootDir() . 'public/';
+        return self::rootDir() . '/public';
     }
 
     /**
@@ -33,7 +33,7 @@ class Helper
      */
     public static function storageDir() : string
     {
-        return self::rootDir() . '../storage/';
+        return self::rootDir() . '../storage';
     }
 
     /**

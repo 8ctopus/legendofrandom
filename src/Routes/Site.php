@@ -34,34 +34,30 @@ class Site extends Routes
     {
         parent::addRoutes();
 
-        // deal with index pages
-        $this->router->addRouteRegex('GET', '~^([/a-zA-Z0-9\-]+)*(index.html?)?$~', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRouteRegex('GET', '~^.*$~', function (ServerRequestInterface $request) : ResponseInterface {
             $path = $request->getUri()->getPath();
 
-            if (is_dir(Helper::publicDir() . $path)) {
-                $path = $this->findFile($path);
-            } else {
-                $path = Helper::publicDir() . $path;
+            $file = Helper::publicDir() . $path;
+
+            if (is_dir($file)) {
+                $options = [
+                    'index.html',
+                    'index.htm',
+                    'index.php',
+                ];
+
+                foreach ($options as $option) {
+                    if (file_exists($file . $option)) {
+                        $file = $file . $option;
+                    }
+                }
+            } elseif (!file_exists($file)) {
+                return new Response(404);
             }
 
             $stream = new Stream();
 
-            $source = file_get_contents($path);
-
-            $source = str_replace('</head>', $this->addTracking('G-EQKHHME6YK') . '</head>', $source);
-
-            $stream->write($source);
-
-            return new Response(200, ['content-type' => 'text/html'], $stream);
-        });
-
-        // deal with other pages
-        $this->router->addRouteRegex('GET', '~(/[a-zA-Z0-9/\-]*\.(htm|html|php)$)~', function (ServerRequestInterface $request) : ResponseInterface {
-            $path = Helper::publicDir() . $request->getUri()->getPath();
-
-            $stream = new Stream();
-
-            $source = file_get_contents($path);
+            $source = file_get_contents($file);
 
             $source = str_replace('</head>', $this->addTracking('G-EQKHHME6YK') . '</head>', $source);
 
@@ -125,24 +121,5 @@ class Site extends Routes
         </script>
 
         HTML;
-    }
-
-    private function findFile(string $dir) : string
-    {
-        $options = [
-            'index.html',
-            'index.htm',
-            'index.php',
-        ];
-
-        foreach ($options as $option) {
-            $file = Helper::publicDir() . $dir . $option;
-
-            if (file_exists($file)) {
-                return $option;
-            }
-        }
-
-        return '';
     }
 }

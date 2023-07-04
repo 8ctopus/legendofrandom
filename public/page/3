@@ -587,12 +587,6 @@ jQuery(document).ready(function(){
     | Powered by <a href="http://wordpress.org/">WordPress</a>  
 </div>
 
-<script type='text/javascript'>
-/* <![CDATA[ */
-var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YToyOntzOjEyOiJjb250ZW50X3R5cGUiO3M6MTA6ImhvbWUscGFnZWQiO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjt9.aa75f67a12a2e1b2e66a64e8f06aef80"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='../wp-content/plugins/wp-slimstat/wp-slimstatf0c3.js?ver=2.9.4'></script>
 
 </body>
 

@@ -720,12 +720,6 @@ jQuery(document).ready(function(){
     | Powered by <a href="http://wordpress.org/">WordPress</a>  
 </div>
 
-<script type='text/javascript'>
-/* <![CDATA[ */
-var SlimStatParams = {"ajaxurl":"http:\/\/thelegendofrandom.com\/blog\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czoxOiIxIjtzOjEwOiJjb250ZW50X2lkIjtpOjI5NjE7czo2OiJhdXRob3IiO3M6NjoiUmFuZG9tIjt9.e0f31313efdb9ad79e72929ebff5b76c"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/wp-slimstat/wp-slimstat.js?ver=2.9.4'></script>
 
 </body>
 

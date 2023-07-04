@@ -4,28 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23e0f389b10d9f4e21927e113904638c",
+    "content-hash": "380570293aafd7b5a98028b6aa563f1c",
     "packages": [
         {
             "name": "8ctopus/nano-router",
-            "version": "1.0.3",
+            "version": "9.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/8ctopus/nano-router.git",
-                "reference": "2d002b3f5b6f27bc76154d135a079b556d6a1691"
+                "reference": "2fcf0b9d89409d24ee787b8887301900274e75b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/2d002b3f5b6f27bc76154d135a079b556d6a1691",
-                "reference": "2d002b3f5b6f27bc76154d135a079b556d6a1691",
+                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/2fcf0b9d89409d24ee787b8887301900274e75b7",
+                "reference": "2fcf0b9d89409d24ee787b8887301900274e75b7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.1",
+                "psr/http-message": "^1.0|^2.0"
             },
             "require-dev": {
+                "8ctopus/nano-timer": "^1.0",
                 "filp/whoops": "^2.14",
                 "friendsofphp/php-cs-fixer": "^3.8",
+                "httpsoft/http-emitter": "^1.0",
+                "httpsoft/http-message": "^1.1",
+                "httpsoft/http-server-request": "^1.0",
                 "phpmd/phpmd": "^2.13",
                 "phpstan/phpstan": "^1.9",
                 "phpunit/phpunit": "^9.5|^10.0"
@@ -46,16 +51,18 @@
                     "email": "hello@octopuslabs.io"
                 }
             ],
-            "description": "An experimental php router.",
+            "description": "An experimental PSR-7, PSR-17 router",
             "homepage": "https://github.com/8ctopus/nano-router",
             "keywords": [
+                "psr-17",
+                "psr-7",
                 "router"
             ],
             "support": {
                 "issues": "https://github.com/8ctopus/nano-router/issues",
-                "source": "https://github.com/8ctopus/nano-router/tree/1.0.3"
+                "source": "https://github.com/8ctopus/nano-router/tree/9.0.1"
             },
-            "time": "2023-05-16T14:40:32+00:00"
+            "time": "2023-06-27T11:05:57+00:00"
         },
         {
             "name": "8ctopus/nano-timer",

@@ -186,7 +186,7 @@ jQuery(document).ready(function(){
 		     <li class="pingback even thread-even depth-1" id="li-comment-5395">
      <div id="comment-5395">
 			<div class="commentbody">
-			<cite><a href='archives/2975' rel='external nofollow' class='url'>What Are These Strange Posts? &laquo; The Legend Of Random</a> </cite> 
+			<cite><a href="archives/2975" rel='external nofollow' class='url'>What Are These Strange Posts? &laquo; The Legend Of Random</a> </cite>
 						<br />
 			<small class="commentmetadata"><a href="#comment-5395" title="">October 12th, 2012 on 5:33 pm</a>  </small>
 

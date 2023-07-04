@@ -23,4 +23,8 @@ return [
         'views' => __DIR__ . '/views',
         'cache' => __DIR__ . '/../storage/twig',
     ],
+    'authentication' => [
+        'password' => __DIR__ . '/../../auth/.htpasswd',
+        'group' => __DIR__ . '/../../auth/.htgroup',
+    ],
 ];

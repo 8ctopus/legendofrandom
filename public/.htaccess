@@ -27,7 +27,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteCond %{REQUEST_URI} ^/$
 RewriteRule ^ router.php [END]
 
-# redirect html and php to router
-RewriteCond %{REQUEST_FILENAME} \.(html?|php)$
+# redirect htm, html and php to router
+RewriteCond %{REQUEST_URI} \.(html?|php)$ [OR]
+RewriteCond %{REQUEST_URI} /$
 RewriteRule ^ router.php [END]
 

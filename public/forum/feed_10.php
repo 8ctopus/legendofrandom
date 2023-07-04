@@ -4,7 +4,7 @@
 
 <title>TheLegendOfRandom.com</title>
 <subtitle>Reverse Engineering and Programming</subtitle>
-<link href="forum/index.php" />
+<link href="/forum/" />
 <updated>2012-11-26T08:20:36+00:00</updated>
 
 <author><name><![CDATA[TheLegendOfRandom.com]]></name></author>

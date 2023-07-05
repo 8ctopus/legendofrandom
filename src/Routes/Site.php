@@ -89,7 +89,11 @@ class Site extends Routes
 
             $source = file_get_contents($file);
 
+            // add google tracking
             $source = str_replace('</head>', $this->tracking('G-EQKHHME6YK') . '</head>', $source);
+
+            // add banner
+            $source = str_replace('<body>', '<body>' . $this->banner(), $source);
 
             $stream->write($source);
 
@@ -112,6 +116,16 @@ class Site extends Routes
           gtag('js', new Date());
           gtag('config', '{$tag}');
         </script>
+
+        HTML;
+    }
+
+    protected function banner() : string
+    {
+        return <<<HTML
+        <div style="vertical-align: top; text-align: center; background: blue; color: white">
+            <h6> This is static copy of The Legend of Random as it was on Thu, 19 Sep 2013. Some of the links are not functional </h6>
+        </div>
 
         HTML;
     }

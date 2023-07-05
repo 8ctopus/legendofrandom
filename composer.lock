@@ -118,16 +118,16 @@
         },
         {
             "name": "8ctopus/nano-timer",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/8ctopus/nano-timer.git",
-                "reference": "e19e0e8face4f803cf36b897ff94cf7ed5db4535"
+                "reference": "c83a941c05205bb5137be0e5d40040a0b0b34117"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/8ctopus/nano-timer/zipball/e19e0e8face4f803cf36b897ff94cf7ed5db4535",
-                "reference": "e19e0e8face4f803cf36b897ff94cf7ed5db4535",
+                "url": "https://api.github.com/repos/8ctopus/nano-timer/zipball/c83a941c05205bb5137be0e5d40040a0b0b34117",
+                "reference": "c83a941c05205bb5137be0e5d40040a0b0b34117",
                 "shasum": ""
             },
             "require": {
@@ -164,9 +164,9 @@
             ],
             "support": {
                 "issues": "https://github.com/8ctopus/nano-timer/issues",
-                "source": "https://github.com/8ctopus/nano-timer/tree/1.0.7"
+                "source": "https://github.com/8ctopus/nano-timer/tree/1.0.8"
             },
-            "time": "2023-06-12T05:19:33+00:00"
+            "time": "2023-07-05T06:44:04+00:00"
         },
         {
             "name": "hassankhan/config",

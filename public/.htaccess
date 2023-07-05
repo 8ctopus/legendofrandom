@@ -25,4 +25,3 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
 RewriteCond %{REQUEST_URI} !\.(exe|zip|7z|rar|pdf|png|jpg|jpeg|ico|js|gif|css|)$
 RewriteRule ^ router.php [END]
-

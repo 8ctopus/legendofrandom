@@ -24,11 +24,11 @@
     }
   },
   "autoload-dev": {
-      "psr-4": {
-          "Tests\\": "tests/"
-      }
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   },
   "scripts": {
-      "test": "phpunit --coverage-html=coverage"
+    "test": "phpunit --coverage-html=coverage"
   }
 }

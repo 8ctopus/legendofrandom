@@ -123,8 +123,8 @@ class Site extends Routes
     protected function banner() : string
     {
         return <<<HTML
-        <div style="vertical-align: top; text-align: center; background: blue; color: white">
-            <h6> This is static copy of The Legend of Random as it was on Thu, 19 Sep 2013. Some of the links are not functional </h6>
+        <div style="position: fixed; left: 0; top: 0; width: 100%; padding: 0.8rem; text-align: center; background: #343481; color: white;">
+            This is static copy of The Legend of Random as it was on Thu, 19 Sep 2013. Some of the links are not functional. <a href="https://github.com/8ctopus/legendofrandom.git">View the source code on GitHub</a>.
         </div>
 
         HTML;

@@ -17,11 +17,11 @@ RewriteEngine on
 
 # do not rewrite let's encrypt
 RewriteCond %{REQUEST_URI} ^/\.well-known/acme-challenge/
-RewriteRule ^ - [L]
+RewriteRule ^ - [END]
 
 # redirect to https
 RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+RewriteRule ^ https://%legend.octopuslabs.io%{REQUEST_URI} [R,END]
 
 RewriteCond %{REQUEST_URI} !\.(exe|zip|7z|rar|pdf|png|jpg|jpeg|ico|js|gif|css|)$
 RewriteRule ^ router.php [END]

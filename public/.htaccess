@@ -1,6 +1,6 @@
+# One month for most static assets
 Header set Cache-Control "max-age=2620000, public"
 
-# One month for most static assets
 <filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
     Header set Cache-Control "max-age=2608000, public"
 </filesMatch>
@@ -23,5 +23,6 @@ RewriteRule ^ - [END]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%legend.octopuslabs.io%{REQUEST_URI} [R,END]
 
+# redirect traffic to router
 RewriteCond %{REQUEST_URI} !\.(exe|zip|7z|rar|pdf|png|jpg|jpeg|ico|js|gif|css|)$
 RewriteRule ^ router.php [END]

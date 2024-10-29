@@ -26,10 +26,10 @@ class Https
     {
         $uri = $this->request->getUri();
 
-        if ($uri->getScheme() !== 'https') {
-            return new Response(301, ['location' => (string) $uri->withScheme('https')]);
+        if ($uri->getScheme() === 'https') {
+            return null;
         }
 
-        return null;
+        return new Response(301, ['location' => (string) $uri->withScheme('https')]);
     }
 }

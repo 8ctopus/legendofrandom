@@ -1,6 +1,6 @@
 # composer
 /vendor/
 
-# phpunit
-/coverage/
+# tests
 /.phpunit.cache/
+/coverage/

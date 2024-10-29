@@ -11,13 +11,10 @@ use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
 use Noodlehaus\Config;
 use Oct8pus\NanoRouter\NanoRouter;
+use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Routes\RoutesTestCase;
 
-/**
- * @internal
- *
- * @covers \Legend\Routes\Site
- */
+#[CoversClass(SiteBase::class)]
 final class SiteTest extends RoutesTestCase
 {
     private static NanoRouter $router;

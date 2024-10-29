@@ -3,4 +3,4 @@
 
 # phpunit
 /coverage/
-/.phpunit.result.cache
+/.phpunit.cache/

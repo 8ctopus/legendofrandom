@@ -11,8 +11,11 @@ use Legend\Middleware\HttpAuthenticate;
 use Legend\Middleware\Https;
 use Noodlehaus\Config;
 use Oct8pus\NanoIP\Range;
+use Oct8pus\NanoRouter\MiddlewareType;
 use Oct8pus\NanoRouter\NanoRouter;
+use Oct8pus\NanoRouter\Route;
 use Oct8pus\NanoRouter\RouteException;
+use Oct8pus\NanoRouter\RouteType;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
@@ -42,13 +45,13 @@ class Routes
     public function addRoutes() : self
     {
         // route statistics viewer
-        $this->router->addRouteStartsWith(['GET', 'POST'], '/plugins/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::StartsWith, ['GET', 'POST'], '/plugins/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
             return (new RouteStatistics($request, $this->config->get('router.file'), $this->config->get('twig.views'), $this->config->get('twig.cache')))
                 ->run();
-        });
+        }));
 
         // route statistics middleware
-        $this->router->addMiddleware(['GET', 'POST'], '~^/plugins/route-stats/~', 'pre', function (ServerRequestInterface $request) : ?ResponseInterface {
+        $this->router->addMiddleware(['GET', 'POST'], '~^/plugins/route-stats/~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $response = (new Https($request))
                 ->run();
 
@@ -61,7 +64,7 @@ class Routes
         });
 
         // throttle, whitelist and ban middleware
-        $this->router->addMiddleware('*', '~.*~', 'pre', function (ServerRequestInterface $request) : ?ResponseInterface {
+        $this->router->addMiddleware('*', '~.*~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $ip = $request->getServerParams()['REMOTE_ADDR'];
 
             $range = new Range($this->config->get('router.banned'));

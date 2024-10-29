@@ -12,6 +12,8 @@ use Legend\Sitemap;
 use Legend\TrafficAdvice;
 use Noodlehaus\Config;
 use Oct8pus\NanoRouter\NanoRouter;
+use Oct8pus\NanoRouter\Route;
+use Oct8pus\NanoRouter\RouteType;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -37,22 +39,22 @@ class Site extends Routes
     {
         parent::addRoutes();
 
-        $this->router->addRoute('GET', '/.well-known/traffic-advice', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/traffic-advice', function () : ResponseInterface {
             return (new TrafficAdvice())
                 ->run();
-        });
+        }));
 
-        $this->router->addRoute('GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
             return (new Robots($request))
                 ->run();
-        });
+        }));
 
-        $this->router->addRoute('GET', '/sitemap.xml', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/sitemap.xml', function () : ResponseInterface {
             return (new Sitemap())
                 ->run();
-        });
+        }));
 
-        $this->router->addRoute('GET', '/.well-known/security.txt', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/security.txt', function () : ResponseInterface {
             $stream = new Stream();
             $stream->write(<<<'TEXT'
             Contact: hello@octopuslabs.io
@@ -60,9 +62,9 @@ class Site extends Routes
             TEXT);
 
             return new Response(200, ['Content-Type' => 'text/plain'], $stream);
-        });
+        }));
 
-        $this->router->addRouteRegex('GET', '~^.*$~', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Regex, 'GET', '~^.*$~', function (ServerRequestInterface $request) : ResponseInterface {
             $path = $request->getUri()->getPath();
 
             $file = Helper::publicDir() . $path;
@@ -98,11 +100,18 @@ class Site extends Routes
             $stream->write($source);
 
             return new Response(200, ['content-type' => 'text/html'], $stream);
-        });
+        }));
 
         return $this;
     }
 
+    /**
+     * Add google analytics tracking
+     *
+     * @param  string $tag
+     *
+     * @return string
+     */
     protected function tracking(string $tag) : string
     {
         return <<<HTML
@@ -120,6 +129,11 @@ class Site extends Routes
         HTML;
     }
 
+    /**
+     * Add github banner
+     *
+     * @return string
+     */
     public static function banner() : string
     {
         return <<<HTML

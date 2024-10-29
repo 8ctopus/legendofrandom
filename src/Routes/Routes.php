@@ -44,12 +44,12 @@ class Routes
      */
     public function addRoutes() : self
     {
-        $this->router->addRoute(new Route(RouteType::StartsWith, ['GET', 'POST'], '/plugins/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::StartsWith, ['GET', 'POST'], '/dashboard/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
             return (new RouteStatistics($request, $this->config->get('router.file'), $this->config->get('twig.views'), $this->config->get('twig.cache')))
                 ->run();
         }));
 
-        $this->router->addMiddleware(['GET', 'POST'], '~^/plugins/route-stats/~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
+        $this->router->addMiddleware(['GET', 'POST'], '~^/dashboard/route-stats/~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $response = (new Https($request))
                 ->run();
 

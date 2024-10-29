@@ -39,11 +39,6 @@ class Site extends Routes
     {
         parent::addRoutes();
 
-        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/traffic-advice', function () : ResponseInterface {
-            return (new TrafficAdvice())
-                ->run();
-        }));
-
         $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
             return (new Robots($request))
                 ->run();
@@ -62,6 +57,11 @@ class Site extends Routes
             TEXT);
 
             return new Response(200, ['Content-Type' => 'text/plain'], $stream);
+        }));
+
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/traffic-advice', function () : ResponseInterface {
+            return (new TrafficAdvice())
+                ->run();
         }));
 
         $this->router->addRoute(new Route(RouteType::Regex, 'GET', '~^.*$~', function (ServerRequestInterface $request) : ResponseInterface {

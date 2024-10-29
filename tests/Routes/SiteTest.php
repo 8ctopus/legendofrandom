@@ -74,13 +74,12 @@ final class SiteTest extends RoutesTestCase
 
             self::assertSame(200, $response->getStatusCode());
 
-            if (file_exists(Helper::publicDir() . $page . '/index.html')) {
-                $file = Helper::publicDir() . $page . '/index.html';
-            } else {
-                $file = Helper::publicDir() . $page . '/index.htm';
-            }
+            $page = Helper::publicDir() . $page;
 
-            self::assertStringEqualsFile($file, (string) $response->getBody());
+            $file = file_exists($page . '/index.html') ? $page . '/index.html' : $page . '/index.htm';
+
+            $body = str_replace(SiteBase::banner(), '', (string) $response->getBody());
+            self::assertStringEqualsFile($file, $body);
         }
 
         $pages = [
@@ -102,7 +101,9 @@ final class SiteTest extends RoutesTestCase
                 ->resolve($request);
 
             self::assertSame(200, $response->getStatusCode());
-            self::assertStringEqualsFile(Helper::publicDir() . $page, (string) $response->getBody());
+
+            $body = str_replace(SiteBase::banner(), '', (string) $response->getBody());
+            self::assertStringEqualsFile(Helper::publicDir() . $page, $body);
         }
     }
 

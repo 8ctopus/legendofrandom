@@ -93,7 +93,7 @@ class Site extends Routes
             $source = str_replace('</head>', $this->tracking('G-EQKHHME6YK') . '</head>', $source);
 
             // add banner
-            $source = str_replace('<body>', '<body>' . $this->banner(), $source);
+            $source = str_replace('<body>', '<body>' . self::banner(), $source);
 
             $stream->write($source);
 
@@ -120,7 +120,7 @@ class Site extends Routes
         HTML;
     }
 
-    protected function banner() : string
+    public static function banner() : string
     {
         return <<<HTML
         <div style="position: fixed; left: 0; top: 0; width: 100%; padding: 0.8rem; text-align: center; background: #343481; color: white;">

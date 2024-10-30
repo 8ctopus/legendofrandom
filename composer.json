@@ -5,7 +5,7 @@
     "license": "MIT",
     "homepage": "https://legend.octopuslabs.io/",
     "require": {
-        "php": "^8.3",
+        "php": "^8.2",
         "8ctopus/nano-router": "^13.0",
         "httpsoft/http-message": "^1.1",
         "httpsoft/http-server-request": "^1.1",
@@ -37,7 +37,7 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "8.3"
+            "php": "8.2"
         }
     },
     "autoload": {

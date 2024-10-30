@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "775789cb614b8c3100c466f1777cbccc",
+    "content-hash": "c91140952fba4a491585bbb6ae5f8446",
     "packages": [
         {
             "name": "8ctopus/nano-ip",
@@ -3086,11 +3086,11 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.3"
+        "php": "^8.2"
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "8.3"
+        "php": "8.2"
     },
     "plugin-api-version": "2.3.0"
 }

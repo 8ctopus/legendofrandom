@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b790eca6bb956634301ca99678022e84",
+    "content-hash": "775789cb614b8c3100c466f1777cbccc",
     "packages": [
         {
             "name": "8ctopus/nano-ip",
@@ -169,68 +169,6 @@
                 "source": "https://github.com/8ctopus/nano-timer/tree/4.1.0"
             },
             "time": "2024-08-01T11:59:54+00:00"
-        },
-        {
-            "name": "hassankhan/config",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hassankhan/config.git",
-                "reference": "8e1c07f4fdc2b986b8a781f0dcba155af2a579b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hassankhan/config/zipball/8e1c07f4fdc2b986b8a781f0dcba155af2a579b6",
-                "reference": "8e1c07f4fdc2b986b8a781f0dcba155af2a579b6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5",
-                "scrutinizer/ocular": "^1.9",
-                "squizlabs/php_codesniffer": "^3.6",
-                "symfony/yaml": "^5.4"
-            },
-            "suggest": {
-                "symfony/yaml": "^5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Noodlehaus\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hassan Khan",
-                    "homepage": "http://hassankhan.me/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Lightweight configuration file loader that supports PHP, INI, XML, JSON, and YAML files",
-            "homepage": "http://hassankhan.me/config/",
-            "keywords": [
-                "config",
-                "configuration",
-                "ini",
-                "json",
-                "microphp",
-                "unframework",
-                "xml",
-                "yaml",
-                "yml"
-            ],
-            "support": {
-                "issues": "https://github.com/hassankhan/config/issues",
-                "source": "https://github.com/hassankhan/config/tree/3.1.0"
-            },
-            "time": "2022-12-20T19:48:37+00:00"
         },
         {
             "name": "httpsoft/http-emitter",
@@ -1338,12 +1276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "622ede44e079ad5c341a40013ef0e16fab2902ab"
+                "reference": "f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/622ede44e079ad5c341a40013ef0e16fab2902ab",
-                "reference": "622ede44e079ad5c341a40013ef0e16fab2902ab",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb",
+                "reference": "f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb",
                 "shasum": ""
             },
             "conflict": {
@@ -1521,7 +1459,7 @@
                 "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
                 "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
-                "ezyang/htmlpurifier": "<4.1.1",
+                "ezyang/htmlpurifier": "<=4.2",
                 "facade/ignition": "<1.16.15|>=2,<2.4.2|>=2.5,<2.5.2",
                 "facturascripts/facturascripts": "<=2022.08",
                 "fastly/magento2": "<1.2.26",
@@ -2164,7 +2102,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-28T19:04:33+00:00"
+            "time": "2024-10-29T22:05:01+00:00"
         },
         {
             "name": "sebastian/cli-parser",

@@ -108,7 +108,7 @@ class Routes
     }
 
     /**
-     * Handle route exceptions
+     * Handle route exception
      *
      * @param RouteException $exception
      *
@@ -131,7 +131,7 @@ class Routes
     }
 
     /**
-     * Handle exceptions
+     * Handle exception
      *
      * @param Throwable $exception
      *
@@ -147,12 +147,26 @@ class Routes
 
         $code = $exception->getCode();
 
-        Helper::errorLog($where ?? '', "[{$code}] {$exception->getMessage()}", false);
+        // PDOExceptions code can be string
+        if (is_string($code)) {
+            $code = (int) $code;
+        }
+
+        $message = "[{$code}] {$exception->getMessage()}";
+
+        Helper::errorLog($where ?? '', $message, false);
 
         if ($code < 200 || $code > 500) {
             $code = 500;
         }
 
-        return new Response($code);
+        if (Helper::production()) {
+            return new Response($code);
+        }
+
+        $stream = new Stream();
+        $stream->write($message);
+
+        return new Response($code, ['content-type' => 'text/plain'], $stream);
     }
 }

@@ -21,7 +21,7 @@ class Index
     public function run() : ResponseInterface
     {
         $stream = $this->renderToStream('Dashboard/Index.twig', [
-            'country' => 'legend',
+            'country' => Helper::country(),
             'host' => Helper::host(),
         ]);
 

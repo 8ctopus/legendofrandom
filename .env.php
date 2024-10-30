@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Legend;
 
+use Legend\Helper;
+
 return [
     'authentication' => [
         'password' => Helper::rootDir() . '/../../auth/.htpasswd',

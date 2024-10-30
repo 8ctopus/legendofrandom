@@ -7,7 +7,7 @@ namespace Tests\Routes;
 use Legend\Routes\Routes;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
-use Noodlehaus\Config;
+use Legend\Helper;
 use Oct8pus\NanoRouter\NanoRouter;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Routes\RoutesTestCase;
@@ -16,18 +16,15 @@ use Tests\Routes\RoutesTestCase;
 final class RoutesTest extends RoutesTestCase
 {
     private static NanoRouter $router;
-    private static Config $config;
     private static string $domain;
 
     public static function setUpBeforeClass() : void
     {
-        self::$config = Config::load(__DIR__ . '/../../.env.php');
-
-        self::$domain = 'https://' . self::$config->get('host');
+        self::$domain = Helper::protocolHost();
 
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, false, false);
 
-        (new Routes($router, self::$config))
+        (new Routes($router, null))
             ->addRoutes();
 
         self::$router = $router;
@@ -37,7 +34,7 @@ final class RoutesTest extends RoutesTestCase
     {
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, false, false);
 
-        (new Routes($router, self::$config))
+        (new Routes($router, null))
             ->addRoutes();
 
         self::assertTrue(true);
@@ -45,7 +42,7 @@ final class RoutesTest extends RoutesTestCase
 
     public function testRouteStatsRequireAuth() : void
     {
-        $uri = self::$domain . '/plugins/route-stats/';
+        $uri = self::$domain . '/dashboard/route-stats/';
 
         $request = self::mockRequest('GET', $uri, [
             'payload' => '{}',
@@ -58,7 +55,7 @@ final class RoutesTest extends RoutesTestCase
 
     public function testRouteStatsRequireHttps() : void
     {
-        $uri = self::$domain . '/plugins/route-stats/';
+        $uri = self::$domain . '/dashboard/route-stats/';
 
         $request = self::mockRequest('GET', str_replace('https', 'http', $uri), [
             'payload' => '{}',

@@ -9,7 +9,6 @@ use Legend\Routes\Routes;
 use Legend\Routes\Site as SiteBase;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
-use Noodlehaus\Config;
 use Oct8pus\NanoRouter\NanoRouter;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Routes\RoutesTestCase;
@@ -18,18 +17,15 @@ use Tests\Routes\RoutesTestCase;
 final class SiteTest extends RoutesTestCase
 {
     private static NanoRouter $router;
-    private static Config $config;
     private static string $domain;
 
     public static function setUpBeforeClass() : void
     {
-        self::$config = Config::load(__DIR__ . '/../../.env.php');
-
-        self::$domain = 'https://' . self::$config->get('host');
+        self::$domain = Helper::protocolHost();
 
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::routeExceptionHandler(...), Routes::exceptionHandler(...));
 
-        (new Site($router, self::$config))
+        (new Site($router, null))
             ->addRoutes();
 
         self::$router = $router;
@@ -37,11 +33,9 @@ final class SiteTest extends RoutesTestCase
 
     public function testAddRoutes() : void
     {
-        $config = Config::load(__DIR__ . '/../../.env.php');
-
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::routeExceptionHandler(...), Routes::exceptionHandler(...));
 
-        (new Site($router, $config))
+        (new Site($router, null))
             ->addRoutes();
 
         self::assertTrue(true);

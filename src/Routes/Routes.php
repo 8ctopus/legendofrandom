@@ -72,6 +72,11 @@ class Routes
         $this->router->addMiddleware('*', '~.*~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $ip = $request->getServerParams()['REMOTE_ADDR'];
 
+            // FIX ME - docker ip v6
+            if ($ip === '::1') {
+                return null;
+            }
+
             $range = new Range($this->env['router.banned']);
 
             if ($range->contains($ip)) {

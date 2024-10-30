@@ -1,35 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Legend;
+
 return [
-    'documentRoot' => __DIR__,
-    'host' => 'legend.octopuslabs.io',
+    'authentication' => [
+        'password' => Helper::rootDir() . '/../../auth/.htpasswd',
+        'group' => Helper::rootDir() . '/../../auth/.htgroup',
+        'require' => 'LV_users',
+    ],
     'router' => [
-        'statsEnabled' => true,
-        'file' => __DIR__ . '/../storage/route-stats.db',
-        // maximum requests per hour
-        'throttleThreshold' => 150,
-        'whitelist' => [
-            '127.0.0.1',
-            // docker
-            '172.17.0.1',
-            // 8ctopus
-            '176.204.21.189',
-            // togh
-            '223.205.25.25',
-        ],
         'banned' => [
         ],
-    ],
-    'timer' => [
-        // logging to error log threshold
-        'threshold' => 50,
-    ],
-    'twig' => [
-        'views' => __DIR__ . '/views',
-        'cache' => __DIR__ . '/../storage/twig',
-    ],
-    'authentication' => [
-        'password' => __DIR__ . '/../../auth/.htpasswd',
-        'group' => __DIR__ . '/../../auth/.htgroup',
+        'statsEnabled' => true,
+        'statsFile' => Helper::storageDir() . '/route-stats.db',
+        // maximum requests per hour
+        'throttleThreshold' => 100,
+        // log requests slower than threshold to error log (ms)
+        'timerThreshold' => 100,
+        'whitelist' => [
+            '127.0.0.1',
+        ],
     ],
 ];

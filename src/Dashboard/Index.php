@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Legend\Dashboard;
+
+use Legend\Traits\Twig;
+use HttpSoft\Message\Response;
+use Legend\Helper;
+use Psr\Http\Message\ResponseInterface;
+
+class Index
+{
+    use Twig;
+
+    /**
+     * Run
+     *
+     * @return ResponseInterface
+     */
+    public function run() : ResponseInterface
+    {
+        $stream = $this->renderToStream('Dashboard/Index.twig', [
+            'country' => 'legend',
+            'host' => Helper::host(),
+        ]);
+
+        $headers = [
+            'cache-control' => 'no-store',
+            'content-type' => 'text/html',
+        ];
+
+        return new Response(200, $headers, $stream);
+    }
+}

@@ -13,7 +13,7 @@ class Helper
      */
     public static function rootDir() : string
     {
-        return realpath(str_replace('\\', '/', __DIR__ . '/../'));
+        return str_replace('\\', '/', dirname(__DIR__, 1));
     }
 
     /**
@@ -33,21 +33,37 @@ class Helper
      */
     public static function storageDir() : string
     {
-        return self::rootDir() . '../storage';
+        return self::rootDir() . '/../storage';
     }
 
     /**
-     * Check if running in development environment (docker or local)
+     * Get views directory
      *
-     * @return bool
+     * @return string
      */
-    public static function isDevelopment() : bool
+    public static function viewsDir() : string
     {
-        if (self::isPhpunit()) {
-            return true;
-        }
+        return self::rootDir() . '/views';
+    }
 
-        return in_array(gethostname(), ['en-web', 'Kokosikos', 'studio'], true);
+    /**
+     * Get system temporary dir
+     *
+     * @return string
+     */
+    public static function tmpDir() : string
+    {
+        return str_replace('\\', '/', sys_get_temp_dir());
+    }
+
+    /**
+     * Get cache directory
+     *
+     * @return string
+     */
+    public static function cacheDir() : string
+    {
+        return self::rootDir() . '/../cache';
     }
 
     /**
@@ -55,21 +71,15 @@ class Helper
      *
      * @param string $class
      * @param string $str
-     * @param bool suppress
+     * @param bool   $suppress
      *
      * @return void
      */
     public static function errorLog(string $class, string $str, bool $suppress = false) : void
     {
-        $position = strrpos($class, '\\');
+        $str = self::className($class) . ' - ' . $str;
 
-        if ($position !== false) {
-            $class = substr($class, $position + 1);
-        }
-
-        $str = $class . ' - ' . $str;
-
-        if (static::isPhpunit()) {
+        if (self::phpunit()) {
             if (!$suppress) {
                 echo $str;
             }
@@ -79,19 +89,33 @@ class Helper
     }
 
     /**
-     * Check if phpunit is running
+     * Get class without namespace
      *
-     * @return bool
+     * @param string $class
+     *
+     * @return string
      */
-    public static function isPhpunit() : bool
+    public static function className(string $class) : string
     {
-        $argv = $_SERVER['argv'] ?? null;
+        $position = strrpos($class, '\\');
 
-        if (!$argv || !array_key_exists(0, $argv)) {
-            return false;
+        if ($position !== false) {
+            $class = substr($class, $position + 1);
         }
 
-        return str_ends_with($argv[0], 'phpunit');
+        return $class;
+    }
+
+    /**
+     * Get country from request uri
+     *
+     * @return string
+     *
+     * @throws Exception when domain is not known
+     */
+    public static function country() : string
+    {
+        return 'legend';
     }
 
     /**
@@ -107,14 +131,53 @@ class Helper
     /**
      * Get protocol and host
      *
-     * @param bool        $https
+     * @param bool    $https
+     * @param ?string $country
      *
      * @return string
      */
-    public static function protocolHost(bool $https = true) : string
+    public static function protocolHost(bool $https = true, ?string $country = null) : string
     {
-        $protocol = $https ? 'https://' : 'http://';
+        return ($https ? 'https://' : 'http://') . self::host($country);
+    }
 
-        return $protocol . self::host();
+    /**
+     * Check if production
+     *
+     * @return bool
+     */
+    public static function production() : bool
+    {
+        if (!in_array(gethostname(), ['octopuslabs.io'], true)) {
+            return false;
+        }
+
+        return !self::phpunit();
+    }
+
+    /**
+     * Check if sandbox
+     *
+     * @return bool
+     */
+    public static function sandbox() : bool
+    {
+        return !self::production();
+    }
+
+    /**
+     * Check if phpunit is running
+     *
+     * @return bool
+     */
+    public static function phpunit() : bool
+    {
+        $argv = $_SERVER['argv'] ?? null;
+
+        if (!$argv || !array_key_exists(0, $argv)) {
+            return false;
+        }
+
+        return str_ends_with($argv[0], 'phpunit');
     }
 }

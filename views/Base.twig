@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" crossorigin="anonymous" integrity="b0e7671adf208f5b56ed041adde521d3ba980ee1bcdacea0202169284be7024a">
+{% if favicon is defined %}
+<link rel="shortcut icon" href="{{ protocolHost }}{{ favicon }}">
+{% endif %}
+<style type="text/css">
+
+:root {
+  font-family: sans-serif;
+  white-space: nowrap;
+  --pico-form-element-spacing-horizontal: .5rem;
+  --pico-form-element-spacing-vertical: .25rem;
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --pico-font-size: 18px;
+  }
+}
+
+a {
+  --pico-text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --typography-spacing-vertical: 1rem;
+  font-weight: 600;
+}
+
+article {
+  white-space: normal;
+}
+
+button {
+  width: unset;
+}
+
+table {
+  --line-height: 0.8;
+}
+
+table[role=grid] tbody tr:hover {
+  filter: brightness(1.5);
+}
+
+table[role=grid] tbody tr:hover:nth-child(odd) {
+  filter: brightness(1.5);
+}
+
+:not(thead,tfoot) > * > td {
+  font-size: 0.875em;
+}
+
+tfoot td, tfoot th, thead td, thead th {
+  --pico-font-weight: 400;
+}
+
+form input,
+form label {
+  font-size: 0.875em;
+}
+
+ul,
+pre {
+  margin-top: 1rem;
+}
+
+input[type=search] {
+  border-radius: 5px;
+}
+
+div.navigation-background {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 1rem;
+
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+div.navigation-background a {
+  text-decoration: none;
+}
+
+div.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1rem 0;
+}
+
+div.navigation > div > * {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+div.container, div.container-fluid {
+  padding-top: 1rem;
+}
+
+span.title {
+  font-weight: bold;
+}
+
+span.production {
+  color: lime;
+}
+
+span.sandbox {
+  color: red;
+}
+
+div.back > a {
+  margin-left: 1rem;
+}
+
+</style>
+{% block css %}
+{% endblock %}
+<script type="module">
+
+import {getCookie, setCookie} from '/js/cookie.js';
+
+const cookieName = 'refresh';
+let timerId;
+
+document.addEventListener('DOMContentLoaded', function () {
+  const checkbox = document.querySelector('input[type=checkbox]#refresh');
+
+  if (!checkbox) {
+    return;
+  }
+
+  checkbox.addEventListener('click', (event) => {
+    if (event.target.checked) {
+      timerId = setTimeout(refreshPage, 5000);
+    } else {
+      clearTimeout(timerId);
+    }
+
+    setCookie(cookieName, event.target.checked, {secure: true});
+  });
+
+  const refresh = getCookie(cookieName);
+
+  console.log('cookie state ' + refresh);
+
+  if (refresh === "true") {
+    checkbox.click();
+  }
+});
+
+function refreshPage() {
+  window.location.reload();
+}
+
+</script>
+{% block head %}
+{% endblock %}
+</head>
+<body>
+{% if noNav is not defined %}
+<div class="navigation-background">
+  <div class="back">
+{% if sandbox %}
+    <span class="sandbox">Sandbox</span>
+{% else %}
+    <span class="production">LIVE</span>
+{% endif %}
+    <a href="/dashboard/">home</a>
+  </div>
+  <div class="navigation container">
+    <div class="left">
+      <span class="title">{{ title }}</span>
+    </div>
+    <div class="middle">
+{% if navigation is defined %}
+      {{ navigation }}
+{% endif %}
+    </div>
+  </div>
+  <div class="right">
+{% if refresh is defined %}
+    <label>
+      <input id="refresh" type="checkbox" role="switch" />
+      auto-refresh (5s)
+    </label>
+{% endif %}
+  </div>
+</div>
+{% endif %}
+{% block body %}
+{% endblock %}
+</body>
+</html>

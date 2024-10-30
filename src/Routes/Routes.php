@@ -5,11 +5,14 @@ declare(strict_types=1);
 namespace Legend\Routes;
 
 use HttpSoft\Message\Response;
+use HttpSoft\Message\Stream;
+use Legend\Dashboard\Index;
+use Legend\Dashboard\RouteStatisticsViewer;
+use Legend\Env;
 use Legend\Helper;
 use Legend\RouteStatistics;
-use Legend\Middleware\HttpAuthenticate;
+use Legend\Middleware\HttpBasicAuth;
 use Legend\Middleware\Https;
-use Noodlehaus\Config;
 use Oct8pus\NanoIP\Range;
 use Oct8pus\NanoRouter\MiddlewareType;
 use Oct8pus\NanoRouter\NanoRouter;
@@ -22,19 +25,18 @@ use Throwable;
 
 class Routes
 {
-    protected NanoRouter $router;
-    protected Config $config;
+    protected readonly NanoRouter $router;
+    protected readonly Env $env;
 
     /**
      * Constructor
      *
      * @param NanoRouter $router
-     * @param Config     $config
      */
-    public function __construct(NanoRouter $router, Config $config)
+    public function __construct(NanoRouter $router)
     {
         $this->router = $router;
-        $this->config = $config;
+        $this->env = Env::instance();
     }
 
     /**
@@ -44,12 +46,12 @@ class Routes
      */
     public function addRoutes() : self
     {
-        $this->router->addRoute(new Route(RouteType::StartsWith, ['GET', 'POST'], '/dashboard/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
-            return (new RouteStatistics($request, $this->config->get('router.file'), $this->config->get('twig.views'), $this->config->get('twig.cache')))
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/dashboard/', static function () : ResponseInterface {
+            return (new Index())
                 ->run();
         }));
 
-        $this->router->addMiddleware(['GET', 'POST'], '~^/dashboard/route-stats/~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
+        $this->router->addMiddleware(['GET', 'POST'], '~^/dashboard/~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $response = (new Https($request))
                 ->run();
 
@@ -57,35 +59,40 @@ class Routes
                 return $response;
             }
 
-            return (new HttpAuthenticate($request, $this->config->get('authentication.password'), $this->config->get('authentication.group'), 'LV_users'))
+            return (new HttpBasicAuth($request, $this->env['authentication.password'], $this->env['authentication.group'], $this->env['authentication.require']))
                 ->run();
         });
+
+        $this->router->addRoute(new Route(RouteType::StartsWith, ['GET', 'POST'], '/dashboard/route-stats/', function (ServerRequestInterface $request) : ResponseInterface {
+            return (new RouteStatisticsViewer($request, $this->env['router.statsFile']))
+                ->run();
+        }));
 
         // throttle, whitelist and ban middleware
         $this->router->addMiddleware('*', '~.*~', MiddlewareType::Pre, function (ServerRequestInterface $request) : ?ResponseInterface {
             $ip = $request->getServerParams()['REMOTE_ADDR'];
 
-            $range = new Range($this->config->get('router.banned'));
+            $range = new Range($this->env['router.banned']);
 
             if ($range->contains($ip)) {
                 throw new RouteException('banned', 403);
             }
 
             // ignore whitelisted ips
-            $range = new Range($this->config->get('router.whitelist'));
+            $range = new Range($this->env['router.whitelist']);
 
             if ($range->contains($ip)) {
                 return null;
             }
 
-            if (!$this->config->get('router.statsEnabled')) {
+            if (!$this->env['router.statsEnabled']) {
                 return null;
             }
 
-            $count = (new RouteStatistics($request, $this->config->get('router.file'), '', ''))
+            $count = (new RouteStatistics($this->env['router.statsFile']))
                 ->count($ip);
 
-            if ($count > $this->config->get('router.throttleThreshold')) {
+            if ($count > $this->env['router.throttleThreshold']) {
                 throw new RouteException('too many requests', 429);
             }
 

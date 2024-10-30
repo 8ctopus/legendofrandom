@@ -1,0 +1,10 @@
+{% set title = country ~ " dashboard" %}
+{% extends "Base.twig" %}
+{% block body %}
+<div class="container">
+  <h2> Server </h2>
+  <ul>
+    <li> <a href="https://{{ host }}/dashboard/route-stats/">route statistics</a> </li>
+  </ul>
+</div>
+{% endblock %}

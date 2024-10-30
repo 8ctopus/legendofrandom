@@ -1,0 +1,32 @@
+{% if search == true %}
+<input type="search" data-table="{{ id }}" placeholder="Search..." />
+{% endif %}
+
+{% set columns = table|first %}
+
+<table id="{{ id }}" class="striped" role="grid">
+{% if columns|length > 0 %}
+  <thead>
+    <tr>
+{# <th scope="col">#</th> #}
+{% for title in columns|keys %}
+      <th name="{{ title }}" scope="col">{{ title }}</th>
+{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+{% for row in table %}
+    <tr>
+{# <th scope="row">1</th> #}
+{% for cell in row %}
+      <td>{{ cell }}</td>
+{% endfor %}
+    </tr>
+{% endfor %}
+  </tbody>
+{% else %}
+  <tr>
+    <td>no data</td>
+  </tr>
+{% endif %}
+</table>

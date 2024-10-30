@@ -1,0 +1,239 @@
+{% set title = "traffic" %}
+{% set refresh = true %}
+{% set navigation %}
+  <a href="#table4Xx">4xx</a>
+  <a href="#tableLatest">latest</a>
+  <span>You are viewing {{ host }}</span>
+  <a id="truncateStats" href="#">truncate stats</a>
+  <span data-tooltip="The pages that are cached by W3 total cache are not shown. (cached pages skip php). Store and gateway pages are not shown (do not go through the router). /wp/ pages are not shown (do not go through the router)">Note</span>
+{% endset %}
+{% extends "Base.twig" %}
+{% block css %}
+<style type="text/css">
+
+div.container-fluid {
+  line-height: 1rem;
+}
+
+td.status2xx {
+  color: lime;
+}
+
+td.status3xx {
+  color: yellow;
+}
+
+td.status4xx {
+  color: orange;
+}
+
+td.status5xx {
+  color: red;
+}
+
+td.slow {
+  color: yellow;
+}
+
+td.whitelist:after {
+  font-family: boxicons !important;
+  font-weight: 400;
+  line-height: 1;
+  text-rendering: auto;
+  color: aqua;
+  content: "\ea41";
+}
+
+div.grid {
+  margin-top: 1rem;
+}
+
+</style>
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<script type="module">
+
+import {filterTables} from '/js/filterTables.js';
+import {setCookie} from '/js/cookie.js';
+
+// send timezone to backend
+const offset = new Date().getTimezoneOffset();
+//const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+
+setCookie('timezone', offset, {secure: true, 'max-age': 3600});
+
+document.addEventListener('DOMContentLoaded', function () {
+  colorColumn('#tableErrors', 'status');
+  colorColumn('#tablePageViews', 'status');
+  colorColumn('#table4Xx', 'status');
+  colorColumn('#tableLatest', 'status');
+
+  colorSlow('#tablePageViews', 'AVG time');
+  colorSlow('#tableLatest', 'time');
+
+  tagIps('#tableIps', 'ip');
+
+  filterTables('input[type=search]');
+
+  // add truncate stats
+  document.querySelector('a#truncateStats').addEventListener('click', function truncateStats() {
+    const url = '{{ truncate }}';
+
+    fetch(url, {
+      method: 'POST',
+    }).then(function(response) {
+      if (response.status !== 200) {
+        console.error('error: ' + response.status);
+        return;
+      }
+
+      setTimeout(fn => { location.reload() }, 2000);
+    }).catch(function(error) {
+      console.error('fetch error: ', error);
+    });
+  });
+});
+
+/**
+ * Color table column
+ *
+ * @param  {string} table
+ * @param  {string} column
+ *
+ * @return {void}
+ */
+function colorColumn(table, column) {
+  // find column
+  const th = document.querySelector(`${table} th[name='${column}']`);
+
+  if (!th) {
+    return;
+  }
+
+  // find column index
+  const index = [...th.parentElement.children].indexOf(th) + 1;
+
+  // selector for all cells in column
+  const selector = `${table} tbody td:nth-child(${index})`;
+
+  const cells = document.querySelectorAll(selector);
+  const length = cells.length;
+
+  for (let i = 0; i < length; i++) {
+    const status = parseInt(cells[i].innerHTML);
+    let className;
+
+    if (status < 200) {
+        continue;
+    } else if (status < 300) {
+        className = 'status2xx';
+    } else if (status < 400) {
+        className = 'status3xx';
+    } else if (status < 500) {
+        className = 'status4xx';
+    } else {
+        className = 'status5xx';
+    }
+
+    cells[i].className = className;
+  }
+}
+
+/**
+ * Color slow requests
+ *
+ * @param string table
+ * @param string column
+ *
+ * @return void
+ */
+function colorSlow(table, column) {
+  // find column
+  const th = document.querySelector(`${table} th[name='${column}']`);
+
+  if (!th) {
+    return;
+  }
+
+  // find column index
+  const index = [...th.parentElement.children].indexOf(th) + 1;
+
+  // selector for all cells in column
+  const selector = `${table} tbody td:nth-child(${index})`;
+
+  const cells = document.querySelectorAll(selector);
+  const length = cells.length;
+
+  for (let i = 0; i < length; i++) {
+    const value = parseInt(cells[i].innerHTML);
+
+    if (value < {{ timerThreshold }}) {
+        continue;
+    }
+
+    cells[i].className = 'slow';
+  }
+}
+
+/**
+ * Tag whitelisted ips
+ *
+ * @param string table
+ * @param string column
+ *
+ * @return void
+ */
+function tagIps(table, column) {
+  // find column
+  const th = document.querySelector(`${table} th[name='${column}']`);
+
+  if (!th) {
+    return;
+  }
+
+  // find column index
+  const index = [...th.parentElement.children].indexOf(th) + 1;
+
+  // selector for all cells in column
+  const selector = `${table} tbody td:nth-child(${index})`;
+
+  const cells = document.querySelectorAll(selector);
+  const length = cells.length;
+  const whitelist = [{{ whitelist|raw }}];
+
+  for (let i = 0; i < length; i++) {
+    const ip = cells[i].innerHTML;
+
+    if (!whitelist.includes(ip)) {
+        continue;
+    }
+
+    cells[i].className = 'whitelist';
+  }
+}
+
+</script>
+{% endblock %}
+{% block body %}
+<div class="container-fluid">
+  <div class="grid">
+{% for title, table in tablesSmall %}
+{% set tableId = "table#{title|title|replace({ ' ': '' })}" %}
+  <div>
+    <h6> {{ title }} </h6>
+{{ include("Table.twig", {table: table, id: tableId, search: false}, with_context = false) }}
+  </div>
+{% endfor %}
+  </div>
+
+{% for title, table in tables %}
+{% set tableId = "table#{title|title|replace({ ' ': '' })}" %}
+  <div>
+    <h6> {{ title }} </h6>
+{{ include("Table.twig", {table: table, id: tableId, search: true}, with_context = false) }}
+  </div>
+{% endfor %}
+  <pre>{{ performance }}</pre>
+</div>
+{% endblock %}

@@ -4,20 +4,24 @@ declare(strict_types=1);
 
 namespace Legend\Middleware;
 
+use Legend\Helper;
 use HttpSoft\Message\Response;
 use Oct8pus\NanoRouter\RouteException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-class HttpAuthenticate
+class HttpBasicAuth
 {
-    private readonly ServerRequestInterface $request;
-    private readonly string $passFile;
-    private readonly string $groupFile;
-    private readonly string $userGroup;
+    protected readonly ServerRequestInterface $request;
+    protected readonly string $passFile;
+    protected readonly string $groupFile;
+    protected readonly string $userGroup;
+    protected readonly string $user;
 
-    private readonly array $passwords;
-    private readonly array $groups;
+    protected readonly array $passwords;
+    protected readonly array $groups;
+
+    protected readonly array $userGroups;
 
     /**
      * Constructor
@@ -33,6 +37,9 @@ class HttpAuthenticate
         $this->passFile = $passFile;
         $this->groupFile = $groupFile;
         $this->userGroup = $userGroup;
+
+        $this->loadPasswordFile();
+        $this->loadGroupFile();
     }
 
     /**
@@ -50,43 +57,71 @@ class HttpAuthenticate
         }
 
         // get login and password
-        $user = $this->request->getServerParams()['PHP_AUTH_USER'] ?? null;
-        $pass = $this->request->getServerParams()['PHP_AUTH_PW'] ?? null;
+        $server = $this->request->getServerParams();
+
+        $user = $server['PHP_AUTH_USER'] ?? null;
+        $pass = $server['PHP_AUTH_PW'] ?? null;
 
         if (!isset($user, $pass)) {
             return new Response(401, ['WWW-Authenticate' => 'Basic']);
         }
 
-        $this->loadPasswordFile();
+        $user = trim($user);
+        $pass = trim($pass);
 
         // check if user exists
         if (!array_key_exists($user, $this->passwords)) {
-            throw new RouteException("no such user - {$user}", 403);
+            //throw new RouteException("no such user - {$user}", 403);
+            Helper::errorLog(self::class, "no such user - {$user}", false);
+            return new Response(401, ['WWW-Authenticate' => 'Basic']);
         }
 
         if (!$this->validatePassword($user, $pass)) {
-            throw new RouteException("invalid password - {$user}", 403);
+            //throw new RouteException("invalid password - {$user}", 403);
+            Helper::errorLog(self::class, "invalid password - {$user}", false);
+            return new Response(401, ['WWW-Authenticate' => 'Basic']);
         }
 
-        $this->loadGroupFile();
+        if (!$this->validateGroup($user)) {
+            return new Response(403);
+        }
 
-        // get user groups
+        $this->user = $user;
+
+        return null;
+    }
+
+    /**
+     * Validate user group
+     *
+     * @param string $user
+     *
+     * @return bool
+     *
+     * @throws RouteException
+     */
+    protected function validateGroup(string $user) : bool
+    {
         if (!array_key_exists($user, $this->groups)) {
-            throw new RouteException('user has no groups', 403);
+            Helper::errorLog(self::class, "user has no groups set - {$user}", false);
+            return false;
         }
 
-        $userGroups = $this->groups[$user];
+        if (!isset($this->userGroups)) {
+            $this->userGroups = $this->groups[$user];
+        }
 
         // authorized if there is no group mentionned
         if ($this->userGroup === '') {
-            return null;
+            return true;
         }
 
-        if (!in_array($this->userGroup, $userGroups, true)) {
-            throw new RouteException('user not in group', 403);
+        if (!in_array($this->userGroup, $this->userGroups, true)) {
+            Helper::errorLog(self::class, "user {$user} not in group {$this->userGroup}", false);
+            return false;
         }
 
-        return null;
+        return true;
     }
 
     /**

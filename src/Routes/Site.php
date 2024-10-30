@@ -10,24 +10,28 @@ use Legend\Helper;
 use Legend\Robots;
 use Legend\Sitemap;
 use Legend\TrafficAdvice;
-use Noodlehaus\Config;
 use Oct8pus\NanoRouter\NanoRouter;
 use Oct8pus\NanoRouter\Route;
 use Oct8pus\NanoRouter\RouteType;
+use Oct8pus\NanoTimer\NanoTimer;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class Site extends Routes
 {
+    //private readonly ?NanoTimer $timer;
+
     /**
      * Constructor
      *
      * @param NanoRouter $router
-     * @param Config     $config
+     * @param ?NanoTimer $timer
      */
-    public function __construct(NanoRouter $router, Config $config)
+    public function __construct(NanoRouter $router, ?NanoTimer $timer)
     {
-        parent::__construct($router, $config);
+        //$this->timer = $timer;
+
+        parent::__construct($router);
     }
 
     /**

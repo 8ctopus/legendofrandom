@@ -27,6 +27,4 @@
       <directory>src</directory>
     </include>
   </source>
-  <php>
-  </php>
 </phpunit>

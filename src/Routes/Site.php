@@ -118,6 +118,8 @@ class Site extends Routes
      */
     protected function tracking(string $tag) : string
     {
+        return '';
+
         return <<<HTML
         <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>
         <script>

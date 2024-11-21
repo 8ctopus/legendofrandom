@@ -11,7 +11,7 @@ use Oct8pus\NanoRouter\RouteException;
 use Psr\Http\Message\ResponseInterface;
 use Throwable;
 
-class RouterException
+class ExceptionViewer
 {
     use Twig;
 
@@ -54,7 +54,7 @@ class RouterException
             return null;
         }
 
-        $stream = self::renderToStream('RouterException.twig', [
+        $stream = self::renderToStream('ExceptionViewer.twig', [
             'title' => "error {$code}",
             'error' => "error {$code}",
             'message' => Helper::production() ? '' : $this->exception->getMessage(),

@@ -9,7 +9,7 @@ use Legend\Dashboard\RouteStatisticsViewer;
 use Legend\Env;
 use Legend\Middleware\HttpBasicAuth;
 use Legend\Middleware\Https;
-use Legend\Routes\RouterException;
+use Legend\Routes\ExceptionViewer;
 use Legend\Routes\RouteStatistics;
 use Oct8pus\NanoIP\Range;
 use Oct8pus\NanoRouter\MiddlewareType;
@@ -119,7 +119,7 @@ class Routes
      */
     public static function handleRouteException(RouteException $exception, ServerRequestInterface $request) : ?ResponseInterface
     {
-        return (new RouterException($exception, $request))
+        return (new ExceptionViewer($exception, $request))
             ->run();
     }
 
@@ -133,7 +133,7 @@ class Routes
      */
     public static function handleException(Throwable $exception, ServerRequestInterface $request) : ?ResponseInterface
     {
-        return (new RouterException($exception, $request))
+        return (new ExceptionViewer($exception, $request))
             ->run();
     }
 }

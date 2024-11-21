@@ -23,7 +23,7 @@ final class SiteTest extends RoutesTestCase
     {
         self::$domain = Helper::protocolHost();
 
-        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::routeExceptionHandler(...), Routes::exceptionHandler(...));
+        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
 
         (new Site($router, null))
             ->addRoutes();
@@ -33,7 +33,7 @@ final class SiteTest extends RoutesTestCase
 
     public function testAddRoutes() : void
     {
-        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::routeExceptionHandler(...), Routes::exceptionHandler(...));
+        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
 
         (new Site($router, null))
             ->addRoutes();

@@ -27,7 +27,7 @@ $timer
     ->logSlowerThan($env['router.timerThreshold'])
     ->logMemoryPeakUse();
 
-$router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::routeExceptionHandler(...), Routes::exceptionHandler(...));
+$router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
 //$timer->measure('router');
 
 $serverRequest = ServerRequestCreator::createFromGlobals($_SERVER, $_FILES, $_COOKIE, $_GET, $_POST);

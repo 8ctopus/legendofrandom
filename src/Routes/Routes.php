@@ -114,7 +114,7 @@ class Routes
      *
      * @return void
      */
-    public static function routeExceptionHandler(RouteException $exception) : void
+    public static function handleRouteException(RouteException $exception) : void
     {
         if ($exception->getCode() === 429 && rand(0, 100) !== 0) {
             // do not log all hammering in order to keep clean apache logs
@@ -137,7 +137,7 @@ class Routes
      *
      * @return ?ResponseInterface
      */
-    public static function exceptionHandler(Throwable $exception) : ?ResponseInterface
+    public static function handleException(Throwable $exception) : ?ResponseInterface
     {
         $trace = $exception->getTrace();
 

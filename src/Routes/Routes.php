@@ -111,32 +111,4 @@ class Routes
 
         return $this;
     }
-
-    /**
-     * Handle route exception
-     *
-     * @param RouteException         $exception
-     * @param ServerRequestInterface $request
-     *
-     * @return ?ResponseInterface
-     */
-    public static function handleRouteException(RouteException $exception, ServerRequestInterface $request) : ?ResponseInterface
-    {
-        return (new ExceptionViewer($exception, $request))
-            ->run();
-    }
-
-    /**
-     * Handle exception
-     *
-     * @param Throwable              $exception
-     * @param ServerRequestInterface $request
-     *
-     * @return ?ResponseInterface
-     */
-    public static function handleException(Throwable $exception, ServerRequestInterface $request) : ?ResponseInterface
-    {
-        return (new ExceptionViewer($exception, $request))
-            ->run();
-    }
 }

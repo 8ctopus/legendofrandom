@@ -7,7 +7,7 @@ namespace Tests\Routes;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
 use Legend\Helper;
-use Legend\Routes\Routes;
+use Legend\Routes\ExceptionViewer;
 use Legend\Routes\Site as SiteBase;
 use Oct8pus\NanoRouter\NanoRouter;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -23,7 +23,7 @@ final class SiteTest extends RoutesTestCase
     {
         self::$domain = Helper::protocolHost();
 
-        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
+        $router = new NanoRouter(Response::class, ServerRequestFactory::class, ExceptionViewer::handle(...), ExceptionViewer::handle(...));
 
         (new Site($router, null, null))
             ->addRoutes();
@@ -33,7 +33,7 @@ final class SiteTest extends RoutesTestCase
 
     public function testAddRoutes() : void
     {
-        $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
+        $router = new NanoRouter(Response::class, ServerRequestFactory::class, ExceptionViewer::handle(...), ExceptionViewer::handle(...));
 
         (new Site($router, null, null))
             ->addRoutes();

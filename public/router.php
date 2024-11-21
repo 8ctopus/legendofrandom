@@ -8,7 +8,7 @@ use HttpSoft\Emitter\SapiEmitter;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
 use HttpSoft\ServerRequest\ServerRequestCreator;
-use Legend\Routes\Routes;
+use Legend\Routes\ExceptionViewer;
 use Legend\Routes\RouteStatistics;
 use Legend\Routes\Site;
 use Oct8pus\NanoRouter\NanoRouter;
@@ -28,7 +28,7 @@ $timer
     ->logSlowerThan($env['router.timerThreshold'])
     ->logMemoryPeakUse();
 
-$router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
+$router = new NanoRouter(Response::class, ServerRequestFactory::class, ExceptionViewer::handle(...), ExceptionViewer::handle(...));
 //$timer->measure('router');
 
 $serverRequest = ServerRequestCreator::createFromGlobals($_SERVER, $_FILES, $_COOKIE, $_GET, $_POST);

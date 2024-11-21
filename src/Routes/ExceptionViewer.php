@@ -9,6 +9,7 @@ use Legend\Helper;
 use Legend\Traits\Twig;
 use Oct8pus\NanoRouter\RouteException;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
 class ExceptionViewer
@@ -16,6 +17,20 @@ class ExceptionViewer
     use Twig;
 
     private readonly Throwable $exception;
+
+    /**
+     * Handle exception
+     *
+     * @param RouteException         $exception
+     * @param ServerRequestInterface $request
+     *
+     * @return ?ResponseInterface
+     */
+    public static function handle(RouteException $exception, ServerRequestInterface $request) : ?ResponseInterface
+    {
+        return (new ExceptionViewer($exception, $request))
+            ->run();
+    }
 
     public function __construct(Throwable $exception)
     {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ include("Css.twig") }}
+<style type="text/css">
+
+body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body > main {
+  margin: auto 0;
+}
+
+</style>
+</head>
+<body>
+  <main>
+    <h2>{{ error }}</h2>
+    <p>{{ message }}</p>
+    <pre>{{ trace }}</pre>
+  </main>
+</body>
+</html>

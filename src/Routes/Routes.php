@@ -12,6 +12,7 @@ use Legend\Env;
 use Legend\Helper;
 use Legend\Middleware\HttpBasicAuth;
 use Legend\Middleware\Https;
+use Legend\Routes\RouterException;
 use Legend\RouteStatistics;
 use Oct8pus\NanoIP\Range;
 use Oct8pus\NanoRouter\MiddlewareType;
@@ -106,63 +107,28 @@ class Routes
     /**
      * Handle route exception
      *
-     * @param RouteException $exception
+     * @param RouteException         $exception
+     * @param ServerRequestInterface $request
      *
-     * @return void
+     * @return ?ResponseInterface
      */
-    public static function handleRouteException(RouteException $exception) : void
+    public static function handleRouteException(RouteException $exception, ServerRequestInterface $request) : ?ResponseInterface
     {
-        if ($exception->getCode() === 429 && rand(0, 100) !== 0) {
-            // do not log all hammering in order to keep clean apache logs
-            return;
-        }
-
-        $trace = $exception->getTrace();
-
-        if (count($trace)) {
-            $where = array_key_exists('class', $trace[0]) ? $trace[0]['class'] : $trace[0]['function'];
-        }
-
-        Helper::errorLog($where ?? '', "[{$exception->getCode()}] {$exception->getMessage()}", false);
+        return (new RouterException($exception, $request))
+            ->run();
     }
 
     /**
      * Handle exception
      *
-     * @param Throwable $exception
+     * @param Throwable              $exception
+     * @param ServerRequestInterface $request
      *
      * @return ?ResponseInterface
      */
-    public static function handleException(Throwable $exception) : ?ResponseInterface
+    public static function handleException(Throwable $exception, ServerRequestInterface $request) : ?ResponseInterface
     {
-        $trace = $exception->getTrace();
-
-        if (count($trace)) {
-            $where = array_key_exists('class', $trace[0]) ? $trace[0]['class'] : $trace[0]['function'];
-        }
-
-        $code = $exception->getCode();
-
-        // PDOExceptions code can be string
-        if (is_string($code)) {
-            $code = (int) $code;
-        }
-
-        $message = "[{$code}] {$exception->getMessage()}";
-
-        Helper::errorLog($where ?? '', $message, false);
-
-        if ($code < 200 || $code > 500) {
-            $code = 500;
-        }
-
-        if (Helper::production()) {
-            return new Response($code);
-        }
-
-        $stream = new Stream();
-        $stream->write($message);
-
-        return new Response($code, ['Content-Type' => 'text/plain'], $stream);
+        return (new RouterException($exception, $request))
+            ->run();
     }
 }

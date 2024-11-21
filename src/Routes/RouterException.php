@@ -58,7 +58,7 @@ class RouterException
             'title' => "error {$code}",
             'error' => "error {$code}",
             'message' => Helper::production() ? '' : $this->exception->getMessage(),
-            'trace' => Helper::production() ? '' : json_encode($trace, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            'trace' => Helper::production() ? '' : $this->exception->getTraceAsString(),
         ]);
 
         return new Response($code, ['Content-Type' => 'text/html'], $stream);

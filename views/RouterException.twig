@@ -17,12 +17,15 @@ body > main {
   margin: auto 0;
 }
 
+h2 {
+  text-align: center;
+}
+
 </style>
 </head>
 <body>
   <main>
-    <h2>{{ error }}</h2>
-    <p>{{ message }}</p>
+    <h2>{{ error }} {{ message }}</h2>
     <pre>{{ trace }}</pre>
   </main>
 </body>

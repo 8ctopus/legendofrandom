@@ -1,18 +1,3 @@
-# One month for most static assets
-Header set Cache-Control "max-age=2620000, public"
-
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-    Header set Cache-Control "max-age=2608000, public"
-</filesMatch>
-
-<filesMatch ".html">
-    Header set Cache-Control "max-age=2625001, public"
-</filesMatch>
-
-<filesMatch ".txt">
-    Header set Cache-Control "max-age=2623000, public"
-</filesMatch>
-
 RewriteEngine on
 
 # do not rewrite let's encrypt
@@ -26,3 +11,52 @@ RewriteRule ^ https://%legend.octopuslabs.io%{REQUEST_URI} [R,END]
 # redirect traffic to router
 RewriteCond %{REQUEST_URI} !\.(exe|zip|7z|rar|pdf|png|jpg|jpeg|ico|js|gif|css|)$
 RewriteRule ^ router.php [END]
+
+################################################################################################
+# add browser caching and compression
+################################################################################################
+AddType text/css .css
+AddType application/x-javascript .js
+AddType video/avi .avi
+AddType image/bmp .bmp
+AddType image/gif .gif
+AddType application/x-gzip .gz .gzip
+AddType image/x-icon .ico
+AddType image/jpeg .jpg .jpeg .jpe
+AddType image/webp .webp
+AddType audio/mpeg .mp3 .m4a
+AddType video/mp4 .mp4 .m4v
+AddType application/pdf .pdf
+AddType image/png .png
+AddType image/svg+xml .svg .svgz
+AddType image/tiff .tif .tiff
+AddType application/zip .zip
+
+ExpiresActive on
+ExpiresDefault "access plus 1 year"
+
+# compression by type
+AddOutputFilterByType DEFLATE text/css application/x-javascript text/html text/richtext text/plain text/xsd text/xsl text/xml image/bmp image/x-icon application/json audio/ogg application/pdf image/svg+xml image/tiff audio/wav
+
+# compression by extension
+AddOutputFilter DEFLATE js css htm html xml
+
+# cache invalidation
+<FilesMatch "\.(css|js)$">
+    FileETag MTime Size
+    Header unset Set-Cookie
+</FilesMatch>
+<FilesMatch "\.(html|htm|txt|xsd|xsl|xml)$">
+    FileETag MTime Size
+</FilesMatch>
+<FilesMatch "\.(wmv|avi|bmp|doc|docx|exe|gif|gz|gzip|ico|jpg|jpeg|webp|json|mov|mp3|m4a|mp4|m4v|mpeg|pdf|png|svg|tar|tif|tiff|ttf|wav|wma|xls|xlsx|zip)$">
+    FileETag MTime Size
+    Header unset Set-Cookie
+</FilesMatch>
+<FilesMatch "\.(bmp|doc|docx|exe|ico|json|pdf|svg|tif|tiff|ttf|wav|xls|xlsx)$">
+    Header unset Last-Modified
+</FilesMatch>
+################################################################################################
+
+# do not send referer to link clicked if connection is downgraded to http
+Header set Referrer-Policy "no-referrer-when-downgrade"

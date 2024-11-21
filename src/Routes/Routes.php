@@ -25,6 +25,7 @@ class Routes
 {
     protected readonly NanoRouter $router;
     protected readonly Env $env;
+    public readonly RouteStatistics $stats;
 
     /**
      * Constructor
@@ -35,6 +36,10 @@ class Routes
     {
         $this->router = $router;
         $this->env = Env::instance();
+
+        if ($this->env['router.statsEnabled']) {
+            $this->stats = new RouteStatistics($this->env['router.statsFile']);
+        }
     }
 
     /**
@@ -84,15 +89,18 @@ class Routes
             // ignore whitelisted ips
             $range = new Range($this->env['router.whitelist']);
 
-            if ($range->contains($ip) || !$this->env['router.statsEnabled']) {
+            if ($range->contains($ip)) {
                 return null;
             }
 
-            $count = (new RouteStatistics($this->env['router.statsFile']))
-                ->count($ip);
+            $count = $this->stats->count($ip);
 
             if ($count > $this->env['router.throttleThreshold']) {
                 throw new RouteException('too many requests', 429);
+            }
+
+            if ($count >= $this->env['router.scanThreshold'] && $this->stats->scan($ip) >= $this->env['router.scanScore']) {
+                throw new RouteException('vulnerability scanner', 429);
             }
 
             return null;

@@ -45,17 +45,13 @@ class RouteStatisticsViewer extends RouteStatistics
 
         switch ($path) {
             case 'route-stats':
-                return $this->show();
+                $params = $this->request->getQueryParams();
+                $ip = $params['ip'] ?? null;
+
+                return $ip ? $this->filter($ip) : $this->show();
 
             case 'truncate':
-                $sql = <<<'SQL'
-                DELETE FROM `stats`
-                SQL;
-
-                $query = $this->db->prepare($sql);
-                $query->execute();
-
-                return new Response(200);
+                return $this->truncate();
 
             default:
                 throw new RouteException("unknown route - {$path}", 400);
@@ -74,7 +70,6 @@ class RouteStatisticsViewer extends RouteStatistics
         $timezone = sprintf('+%02d:%02d', $offsetHours, $offsetMinutes);
 
         $timer = new NanoTimer();
-
         $timer->logMemoryPeakUse();
 
         $queries = [
@@ -260,5 +255,94 @@ class RouteStatisticsViewer extends RouteStatistics
         ];
 
         return new Response(200, $headers, $stream);
+    }
+
+    private function filter(string $ip) : ResponseInterface
+    {
+        // get browser timezone using cookie
+        $cookies = $this->request->getCookieParams();
+
+        $offset = array_key_exists('timezone', $cookies) ? (int) $cookies['timezone'] : 0;
+        $offsetHours = round($offset / 60 * -1, 0, PHP_ROUND_HALF_DOWN);
+        $offsetMinutes = $offset % 60;
+
+        $timezone = sprintf('+%02d:%02d', $offsetHours, $offsetMinutes);
+
+        $timer = new NanoTimer();
+        $timer->logMemoryPeakUse();
+
+        $queries = [
+            'latest' => <<<SQL
+            SELECT
+                DATETIME(`date`, '{$timezone}') AS 'date',
+                `ip`,
+                SUBSTR(`uri`, 1, 150) AS 'path',
+                `method`,
+                `status`,
+                `time`
+            FROM
+                `stats`
+            WHERE
+                `ip` = :ip
+            ORDER BY
+                `date` DESC
+            LIMIT 1000
+            SQL,
+        ];
+
+        $tables = [];
+
+        foreach ($queries as $title => $sql) {
+            $query = $this->db->prepare($sql);
+            $query->execute([
+                'ip' => $ip,
+            ]);
+
+            $tables[$title] = $query->fetchAll();
+            $timer->measure($title);
+        }
+
+        $host = $this->request->getUri()->getHost();
+        $uri = (string) $this->request->getUri();
+
+        if (str_starts_with($host, 'ch2')) {
+            $serverName = 'us2';
+            $serverUri = str_replace('ch2', 'us2', $uri);
+        } else {
+            $serverName = 'ch2';
+            $serverUri = str_replace('us2', 'ch2', $uri);
+        }
+
+        $env = Env::instance();
+
+        $stream = $this->renderToStream('Dashboard/RouteStatisticsViewer.twig', [
+            'host' => $host,
+            'truncate' => $this->request->getUri()->getPath() . 'truncate',
+            'serverName' => $serverName,
+            'serverUri' => $serverUri,
+            'tables' => $tables,
+            'performance' => $timer->table(),
+            'timerThreshold' => $env['router.timerThreshold'],
+            'whitelist' => "'" . implode("','", $env['router.whitelist']) . "'",
+        ]);
+
+        $headers = [
+            'Content-Type' => 'text/html',
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+        ];
+
+        return new Response(200, $headers, $stream);
+    }
+
+    private function truncate() : ResponseInterface
+    {
+        $sql = <<<'SQL'
+        DELETE FROM `stats`
+        SQL;
+
+        $query = $this->db->prepare($sql);
+        $query->execute();
+
+        return new Response(200);
     }
 }

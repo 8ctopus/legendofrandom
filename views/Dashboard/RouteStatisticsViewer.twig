@@ -217,6 +217,7 @@ function tagIps(table, column) {
 {% endblock %}
 {% block body %}
 <div class="container-fluid">
+{% if tablesSmall is defined %}
   <div class="grid">
 {% for title, table in tablesSmall %}
 {% set tableId = "table#{title|title|replace({ ' ': '' })}" %}
@@ -226,6 +227,7 @@ function tagIps(table, column) {
   </div>
 {% endfor %}
   </div>
+{% endif %}
 
 {% for title, table in tables %}
 {% set tableId = "table#{title|title|replace({ ' ': '' })}" %}

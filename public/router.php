@@ -34,7 +34,7 @@ $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::h
 $serverRequest = ServerRequestCreator::createFromGlobals($_SERVER, $_FILES, $_COOKIE, $_GET, $_POST);
 //$timer->measure('request');
 
-(new Site($router, $timer))
+$routes = (new Site($router, $timer))
     ->addRoutes();
 
 //$timer->measure('add routes');
@@ -55,7 +55,4 @@ $timer
     //->measure('emit')
     ->autoLog(true);
 
-if ($env['router.statsEnabled']) {
-    (new RouteStatistics($env['router.statsFile']))
-        ->add($path, $serverRequest->getMethod(), $response->getStatusCode(), (int) round((hrtime(true) - $startTime) / 1000000, 0, PHP_ROUND_HALF_UP), $serverRequest->getServerParams()['REMOTE_ADDR']);
-}
+$routes->stats?->add($path, $serverRequest->getMethod(), $response->getStatusCode(), (int) round((hrtime(true) - $startTime) / 1000000, 0, PHP_ROUND_HALF_UP), $serverRequest->getServerParams()['REMOTE_ADDR']);

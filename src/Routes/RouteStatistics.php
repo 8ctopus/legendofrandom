@@ -105,6 +105,72 @@ class RouteStatistics
         }
     }
 
+    public function scan(string $ip) : int
+    {
+        $score = 0;
+
+        $suspicious = [
+            '/.env',
+            '/backup',
+            '/bc',
+            '/bk',
+            '/home',
+            '/main',
+            '/new',
+            '/old',
+            '/wordpress',
+            '/wp',
+            '/admin.php',
+            '/autoload_classmap.php',
+            '/install.php',
+            '/info.php',
+        ];
+
+        // catch exceptions to avoid route to fail
+        try {
+            $sql = <<<'SQL'
+            SELECT
+                `uri`,
+                `method`,
+                `status`
+            FROM
+                `stats`
+            WHERE
+                `ip` = :ip
+            ORDER BY
+                `date` DESC
+            LIMIT 50
+            SQL;
+
+            $query = $this->db->prepare($sql);
+            $query->execute([
+                ':ip' => $ip,
+            ]);
+
+            $rows = $query->fetchAll();
+
+            foreach ($rows as $row) {
+                if (in_array($row['uri'], $suspicious, true)) {
+                    $score += 5;
+                }
+
+                if ($row['status'] === 404) {
+                    $score += 2;
+                }
+
+                /*
+                if ($row['method'] !== 'GET') {
+                    ++$score;
+                }
+                */
+            }
+        } catch (PDOException) {
+            Helper::errorLog(self::class, 'PDOException', false);
+        }
+
+        return $score;
+    }
+
     /**
      * Migrations
      *

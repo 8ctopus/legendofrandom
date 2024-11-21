@@ -21,8 +21,6 @@ class Env implements ArrayAccess
      * Get instance
      *
      * @return self
-     *
-     * @throws Exception
      */
     public static function instance() : self
     {

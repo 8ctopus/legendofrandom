@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <title>{{ title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" crossorigin="anonymous" integrity="b0e7671adf208f5b56ed041adde521d3ba980ee1bcdacea0202169284be7024a">
 {% if favicon is defined %}
 <link rel="shortcut icon" href="{{ protocolHost }}{{ favicon }}">
 {% endif %}
+{{ include("Css.twig") }}
 <style type="text/css">
 
 :root {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   checkbox.addEventListener('click', (event) => {
     if (event.target.checked) {
-      timerId = setTimeout(refreshPage, 5000);
+      timerId = setTimeout(refreshPage, 15000);
     } else {
       clearTimeout(timerId);
     }
@@ -192,7 +192,7 @@ function refreshPage() {
 {% if refresh is defined %}
     <label>
       <input id="refresh" type="checkbox" role="switch" />
-      auto-refresh (5s)
+      auto-refresh (15s)
     </label>
 {% endif %}
     <a href="https://octopuslabs.io/dashboard/">octopus labs</a>

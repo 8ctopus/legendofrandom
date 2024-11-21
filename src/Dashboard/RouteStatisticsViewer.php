@@ -11,16 +11,12 @@ use Legend\RouteStatistics;
 use Legend\Traits\Twig;
 use Oct8pus\NanoRouter\RouteException;
 use Oct8pus\NanoTimer\NanoTimer;
-use PDO;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class RouteStatisticsViewer extends RouteStatistics
 {
     use Twig;
-
-    // here to suppress intelephense warnings
-    protected readonly PDO $db;
 
     private readonly ServerRequestInterface $request;
 
@@ -258,6 +254,11 @@ class RouteStatisticsViewer extends RouteStatistics
             'whitelist' => "'" . implode("','", $env['router.whitelist']) . "'",
         ]);
 
-        return new Response(200, ['Content-Type' => 'text/html'], $stream);
+        $headers = [
+            'Content-Type' => 'text/html',
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+        ];
+
+        return new Response(200, $headers, $stream);
     }
 }

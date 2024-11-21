@@ -26,8 +26,8 @@ class Index
         ]);
 
         $headers = [
-            'cache-control' => 'no-store',
             'Content-Type' => 'text/html',
+            'Cache-Control' => 'no-store',
         ];
 
         return new Response(200, $headers, $stream);

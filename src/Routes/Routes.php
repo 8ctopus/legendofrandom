@@ -86,11 +86,7 @@ class Routes
             // ignore whitelisted ips
             $range = new Range($this->env['router.whitelist']);
 
-            if ($range->contains($ip)) {
-                return null;
-            }
-
-            if (!$this->env['router.statsEnabled']) {
+            if ($range->contains($ip) || !$this->env['router.statsEnabled']) {
                 return null;
             }
 

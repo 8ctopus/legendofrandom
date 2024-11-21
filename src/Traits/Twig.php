@@ -82,13 +82,13 @@ trait Twig
             return $this->environment;
         }
 
-        $namespaces = [
-            '__main__' => '',
-        ];
+        $namespaces = [];
 
         if (!empty($dir)) {
             $namespaces[$dir] = $dir;
         }
+
+        $namespaces['__main__'] = '';
 
         $loader = new FilesystemLoader($namespaces, Helper::viewsDir());
 

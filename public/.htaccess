@@ -13,8 +13,7 @@ RewriteCond %{REQUEST_URI} \.(html?|js|css|exe|zip|7z|rar|pdf|png|jpe?g|gif|ico|
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [END]
 
-# redirect traffic to router
-RewriteCond %{REQUEST_URI} !\.(exe|zip|7z|rar|pdf|png|jpg|jpeg|ico|js|gif|css|)$
+# send all the rest to router
 RewriteRule ^ router.php [END]
 
 ################################################################################################

@@ -20,19 +20,18 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class Site extends Routes
 {
-    private readonly ?NanoTimer $timer;
-
     /**
      * Constructor
      *
      * @param NanoRouter $router
+     * @param ?RouteStatistics $stats
      * @param ?NanoTimer $timer
      */
-    public function __construct(NanoRouter $router, ?NanoTimer $timer)
+    public function __construct(NanoRouter $router, ?RouteStatistics $stats, ?NanoTimer $timer)
     {
-        $this->timer = $timer;
+        parent::__construct($router, $stats);
 
-        parent::__construct($router);
+        $timer = $timer;
     }
 
     /**

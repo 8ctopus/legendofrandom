@@ -25,21 +25,20 @@ class Routes
 {
     protected readonly NanoRouter $router;
     protected readonly Env $env;
-    public readonly RouteStatistics $stats;
+    protected readonly ?RouteStatistics $stats;
 
     /**
      * Constructor
      *
      * @param NanoRouter $router
+     * @param ?RouteStatistics $stats
      */
-    public function __construct(NanoRouter $router)
+    public function __construct(NanoRouter $router, ?RouteStatistics $stats)
     {
         $this->router = $router;
-        $this->env = Env::instance();
+        $this->stats = $stats;
 
-        if ($this->env['router.statsEnabled']) {
-            $this->stats = new RouteStatistics($this->env['router.statsFile']);
-        }
+        $this->env = Env::instance();
     }
 
     /**
@@ -90,6 +89,10 @@ class Routes
             $range = new Range($this->env['router.whitelist']);
 
             if ($range->contains($ip)) {
+                return null;
+            }
+
+            if (!isset($this->stats)) {
                 return null;
             }
 

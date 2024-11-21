@@ -155,7 +155,9 @@ class RouteStatistics
                     $score += 5;
                 }
 
-                if ($row['status'] === 404) {
+                if ($row['status'] === 200) {
+                    $score -= 3;
+                } elseif ($row['status'] === 404 || $row['status'] === 429) {
                     $score += 2;
                 }
 

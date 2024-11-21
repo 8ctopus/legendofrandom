@@ -25,7 +25,7 @@ final class SiteTest extends RoutesTestCase
 
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
 
-        (new Site($router, null))
+        (new Site($router, null, null))
             ->addRoutes();
 
         self::$router = $router;
@@ -35,7 +35,7 @@ final class SiteTest extends RoutesTestCase
     {
         $router = new NanoRouter(Response::class, ServerRequestFactory::class, Routes::handleRouteException(...), Routes::handleException(...));
 
-        (new Site($router, null))
+        (new Site($router, null, null))
             ->addRoutes();
 
         self::assertTrue(true);

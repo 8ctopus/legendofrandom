@@ -50,7 +50,7 @@ class ExceptionViewer
             Helper::errorLog($where ?? '', $message, false);
         }
 
-        if (!in_array($code, [400, 401, 404, 405, 500], true)) {
+        if (!in_array($code, [400, 401, 404, 405, 429, 500], true)) {
             return null;
         }
 

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Routes;
 
+use HttpSoft\Message\Response;
+use HttpSoft\Message\ServerRequestFactory;
 use Legend\Helper;
 use Legend\Routes\Routes;
 use Legend\Routes\Site as SiteBase;
-use HttpSoft\Message\Response;
-use HttpSoft\Message\ServerRequestFactory;
 use Oct8pus\NanoRouter\NanoRouter;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Routes\RoutesTestCase;
@@ -103,7 +103,7 @@ final class SiteTest extends RoutesTestCase
         $request = self::mockRequest('GET', self::$domain . '/robots.txt');
         $response = self::$router->resolve($request);
 
-        $body = <<<BODY
+        $body = <<<'BODY'
         User-agent: *
         Sitemap: https://legend.octopuslabs.io/sitemap.xml
 

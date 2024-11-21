@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Legend\Traits;
 
-use Legend\Helper;
 use HttpSoft\Message\Stream;
+use Legend\Helper;
 use Psr\Http\Message\StreamInterface;
 use Twig\Environment;
 use Twig\Extra\Intl\IntlExtension;

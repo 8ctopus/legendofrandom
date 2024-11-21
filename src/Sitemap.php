@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Legend;
 
-use Legend\Helper;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\Stream;
+use Legend\Helper;
 use Oct8pus\NanoRouter\RouteException;
 use Psr\Http\Message\ResponseInterface;
 

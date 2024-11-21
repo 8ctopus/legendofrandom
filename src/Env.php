@@ -9,9 +9,13 @@ use Exception;
 
 class Env implements ArrayAccess
 {
+    protected array $env;
     private static ?self $instance = null;
 
-    protected array $env;
+    private function __construct()
+    {
+        $this->env = require Helper::rootDir() . '/.env.php';
+    }
 
     /**
      * Get instance
@@ -27,11 +31,6 @@ class Env implements ArrayAccess
         }
 
         return self::$instance;
-    }
-
-    private function __construct()
-    {
-        $this->env = require Helper::rootDir() . '/.env.php';
     }
 
     public function offsetExists(mixed $offset) : bool

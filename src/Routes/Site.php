@@ -110,16 +110,30 @@ class Site extends Routes
     }
 
     /**
+     * Add github banner
+     *
+     * @return string
+     */
+    public static function banner() : string
+    {
+        return <<<'HTML'
+        <div style="position: fixed; left: 0; top: 0; width: 100%; padding: 0.8rem; text-align: center; background: #343481; color: white;">
+            This is static copy of The Legend of Random as it was on Thu, 19 Sep 2013. Some of the links are not functional. <a href="https://github.com/8ctopus/legendofrandom">View the source code on GitHub</a>.
+        </div>
+
+        HTML;
+    }
+
+    /**
      * Add google analytics tracking
      *
-     * @param  string $tag
+     * @param string $tag
      *
      * @return string
      */
     protected function tracking(string $tag) : string
     {
         return '';
-
         return <<<HTML
         <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>
         <script>
@@ -131,21 +145,6 @@ class Site extends Routes
           gtag('js', new Date());
           gtag('config', '{$tag}');
         </script>
-
-        HTML;
-    }
-
-    /**
-     * Add github banner
-     *
-     * @return string
-     */
-    public static function banner() : string
-    {
-        return <<<HTML
-        <div style="position: fixed; left: 0; top: 0; width: 100%; padding: 0.8rem; text-align: center; background: #343481; color: white;">
-            This is static copy of The Legend of Random as it was on Thu, 19 Sep 2013. Some of the links are not functional. <a href="https://github.com/8ctopus/legendofrandom">View the source code on GitHub</a>.
-        </div>
 
         HTML;
     }

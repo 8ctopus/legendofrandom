@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Legend\Dashboard;
 
-use Legend\RouteStatistics;
-use Legend\Traits\Twig;
 use DateTime;
 use HttpSoft\Message\Response;
 use Legend\Env;
+use Legend\RouteStatistics;
+use Legend\Traits\Twig;
 use Oct8pus\NanoRouter\RouteException;
 use Oct8pus\NanoTimer\NanoTimer;
 use PDO;

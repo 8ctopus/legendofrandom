@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Legend\Middleware;
 
-use Legend\Helper;
 use HttpSoft\Message\Response;
+use Legend\Helper;
 use Oct8pus\NanoRouter\RouteException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

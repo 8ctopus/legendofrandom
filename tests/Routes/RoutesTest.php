@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Routes;
 
-use Legend\Routes\Routes;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequestFactory;
 use Legend\Helper;
+use Legend\Routes\Routes;
 use Oct8pus\NanoRouter\NanoRouter;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Routes\RoutesTestCase;

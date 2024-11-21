@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Legend\Traits;
 
-use Legend\Helper;
 use Exception;
+use Legend\Helper;
 use PDO;
 
 trait DatabaseSqlite

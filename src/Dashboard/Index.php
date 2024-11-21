@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Legend\Dashboard;
 
-use Legend\Traits\Twig;
 use HttpSoft\Message\Response;
 use Legend\Helper;
+use Legend\Traits\Twig;
 use Psr\Http\Message\ResponseInterface;
 
 class Index

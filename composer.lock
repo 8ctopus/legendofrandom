@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ecd64184bac05e0f79b285e4cf960b3f",
+    "content-hash": "a50e1cf99706ac6e0175b8c6fc07983a",
     "packages": [
         {
             "name": "8ctopus/nano-ip",
@@ -60,16 +60,16 @@
         },
         {
             "name": "8ctopus/nano-router",
-            "version": "13.1.1",
+            "version": "14.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/8ctopus/nano-router.git",
-                "reference": "576854f7b919f60ac6317a911e27eecb9bd4255f"
+                "reference": "979fea404ff28f0790d93aab5d98b96af2038eae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/576854f7b919f60ac6317a911e27eecb9bd4255f",
-                "reference": "576854f7b919f60ac6317a911e27eecb9bd4255f",
+                "url": "https://api.github.com/repos/8ctopus/nano-router/zipball/979fea404ff28f0790d93aab5d98b96af2038eae",
+                "reference": "979fea404ff28f0790d93aab5d98b96af2038eae",
                 "shasum": ""
             },
             "require": {
@@ -112,9 +112,9 @@
             ],
             "support": {
                 "issues": "https://github.com/8ctopus/nano-router/issues",
-                "source": "https://github.com/8ctopus/nano-router/tree/13.1.1"
+                "source": "https://github.com/8ctopus/nano-router/tree/14.0.0"
             },
-            "time": "2024-11-14T13:02:12+00:00"
+            "time": "2024-11-15T12:57:08+00:00"
         },
         {
             "name": "8ctopus/nano-timer",

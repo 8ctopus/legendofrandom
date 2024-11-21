@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Legend;
+namespace Legend\Routes;
 
 use Legend\Helper;
 use Legend\Traits\DatabaseSqlite;

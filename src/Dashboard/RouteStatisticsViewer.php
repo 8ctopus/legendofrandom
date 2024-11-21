@@ -7,7 +7,7 @@ namespace Legend\Dashboard;
 use DateTime;
 use HttpSoft\Message\Response;
 use Legend\Env;
-use Legend\RouteStatistics;
+use Legend\Routes\RouteStatistics;
 use Legend\Traits\Twig;
 use Oct8pus\NanoRouter\RouteException;
 use Oct8pus\NanoTimer\NanoTimer;

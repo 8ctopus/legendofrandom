@@ -4,16 +4,13 @@ declare(strict_types=1);
 
 namespace Legend\Routes;
 
-use HttpSoft\Message\Response;
-use HttpSoft\Message\Stream;
 use Legend\Dashboard\Index;
 use Legend\Dashboard\RouteStatisticsViewer;
 use Legend\Env;
-use Legend\Helper;
 use Legend\Middleware\HttpBasicAuth;
 use Legend\Middleware\Https;
 use Legend\Routes\RouterException;
-use Legend\RouteStatistics;
+use Legend\Routes\RouteStatistics;
 use Oct8pus\NanoIP\Range;
 use Oct8pus\NanoRouter\MiddlewareType;
 use Oct8pus\NanoRouter\NanoRouter;

@@ -43,17 +43,17 @@ class Site extends Routes
     {
         parent::addRoutes();
 
-        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/robots.txt', function (ServerRequestInterface $request) : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/robots.txt', static function (ServerRequestInterface $request) : ResponseInterface {
             return (new Robots($request))
                 ->run();
         }));
 
-        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/sitemap.xml', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/sitemap.xml', static function () : ResponseInterface {
             return (new Sitemap())
                 ->run();
         }));
 
-        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/security.txt', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/security.txt', static function () : ResponseInterface {
             $stream = new Stream();
             $stream->write(<<<'TEXT'
             Contact: hello@octopuslabs.io
@@ -63,7 +63,7 @@ class Site extends Routes
             return new Response(200, ['Content-Type' => 'text/plain'], $stream);
         }));
 
-        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/traffic-advice', function () : ResponseInterface {
+        $this->router->addRoute(new Route(RouteType::Exact, 'GET', '/.well-known/traffic-advice', static function () : ResponseInterface {
             return (new TrafficAdvice())
                 ->run();
         }));
@@ -82,7 +82,7 @@ class Site extends Routes
 
                 foreach ($options as $option) {
                     if (file_exists($file . $option)) {
-                        $file = $file . $option;
+                        $file .= $option;
                     }
                 }
             }

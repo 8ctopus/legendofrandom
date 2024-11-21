@@ -12,6 +12,7 @@ use Legend\Sitemap;
 use Legend\TrafficAdvice;
 use Oct8pus\NanoRouter\NanoRouter;
 use Oct8pus\NanoRouter\Route;
+use Oct8pus\NanoRouter\RouteException;
 use Oct8pus\NanoRouter\RouteType;
 use Oct8pus\NanoTimer\NanoTimer;
 use Psr\Http\Message\ResponseInterface;
@@ -88,7 +89,7 @@ class Site extends Routes
             }
 
             if (!file_exists($file) || is_dir($file)) {
-                return new Response(404);
+                throw new RouteException('file not found', 404);
             }
 
             $stream = new Stream();

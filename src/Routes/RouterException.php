@@ -37,17 +37,16 @@ class RouterException
             }
         }
 
-        $message = "[{$code}] {$this->exception->getMessage()}";
-
         $trace = $this->exception->getTrace();
 
-        if (count($trace)) {
-            $where = array_key_exists('class', $trace[0]) ? $trace[0]['class'] : $trace[0]['function'];
-        }
+        if ($code !== 404 && !($code === 429 && rand(0, 100) !== 0)) {
+            $message = "[{$code}] {$this->exception->getMessage()}";
 
-        if ($code === 404 || ($code === 429 && rand(0, 100) !== 0)) {
             // do not log all hammering in order to keep clean apache logs
-        } else {
+            if (count($trace)) {
+                $where = array_key_exists('class', $trace[0]) ? $trace[0]['class'] : $trace[0]['function'];
+            }
+
             Helper::errorLog($where ?? '', $message, false);
         }
 

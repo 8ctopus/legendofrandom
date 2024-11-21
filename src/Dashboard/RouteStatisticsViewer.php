@@ -258,6 +258,6 @@ class RouteStatisticsViewer extends RouteStatistics
             'whitelist' => "'" . implode("','", $env['router.whitelist']) . "'",
         ]);
 
-        return new Response(200, ['content-type' => 'text/html'], $stream);
+        return new Response(200, ['Content-Type' => 'text/html'], $stream);
     }
 }

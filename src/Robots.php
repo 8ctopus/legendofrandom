@@ -25,7 +25,7 @@ class Robots
 
         $stream->write($this->content());
 
-        return new Response(200, ['content-type' => 'text/plain'], $stream);
+        return new Response(200, ['Content-Type' => 'text/plain'], $stream);
     }
 
     protected function content() : string

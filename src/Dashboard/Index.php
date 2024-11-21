@@ -27,7 +27,7 @@ class Index
 
         $headers = [
             'cache-control' => 'no-store',
-            'content-type' => 'text/html',
+            'Content-Type' => 'text/html',
         ];
 
         return new Response(200, $headers, $stream);

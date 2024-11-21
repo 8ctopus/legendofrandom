@@ -39,6 +39,6 @@ class Sitemap
 
         XML);
 
-        return new Response(200, ['content-type' => 'application/xml'], $stream);
+        return new Response(200, ['Content-Type' => 'application/xml'], $stream);
     }
 }

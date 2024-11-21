@@ -32,6 +32,6 @@ class TrafficAdvice
 
         JSON);
 
-        return new Response(200, ['content-type' => 'application/json'], $stream);
+        return new Response(200, ['Content-Type' => 'application/json'], $stream);
     }
 }

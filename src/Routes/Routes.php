@@ -167,6 +167,6 @@ class Routes
         $stream = new Stream();
         $stream->write($message);
 
-        return new Response($code, ['content-type' => 'text/plain'], $stream);
+        return new Response($code, ['Content-Type' => 'text/plain'], $stream);
     }
 }

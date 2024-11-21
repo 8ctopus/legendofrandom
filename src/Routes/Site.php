@@ -103,7 +103,7 @@ class Site extends Routes
 
             $stream->write($source);
 
-            return new Response(200, ['content-type' => 'text/html'], $stream);
+            return new Response(200, ['Content-Type' => 'text/html'], $stream);
         }));
 
         return $this;

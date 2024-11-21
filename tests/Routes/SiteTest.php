@@ -110,7 +110,7 @@ final class SiteTest extends RoutesTestCase
         BODY;
 
         self::assertSame(200, $response->getStatusCode());
-        self::assertSame('text/plain', $response->getHeaderLine('content-type'));
+        self::assertSame('text/plain', $response->getHeaderLine('Content-Type'));
         self::assertSame($body, (string) $response->getBody());
     }
 
@@ -120,7 +120,7 @@ final class SiteTest extends RoutesTestCase
         $response = self::$router->resolve($request);
 
         self::assertSame(200, $response->getStatusCode());
-        self::assertSame('application/xml', $response->getHeaderLine('content-type'));
+        self::assertSame('application/xml', $response->getHeaderLine('Content-Type'));
         self::assertNotEmpty((string) $response->getBody());
     }
 }

@@ -124,6 +124,7 @@ class RouteStatistics
             '/autoload_classmap.php',
             '/install.php',
             '/info.php',
+            '/wp-login.php',
         ];
 
         // catch exceptions to avoid route to fail

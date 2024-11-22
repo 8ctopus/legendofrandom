@@ -111,20 +111,59 @@ class RouteStatistics
 
         $suspicious = [
             '/.env',
-            '/backup',
-            '/bc',
-            '/bk',
-            '/home',
-            '/main',
-            '/new',
-            '/old',
-            '/wordpress',
-            '/wp',
+            '/.env.js',
+            '/.env.php',
+            '/.env.save',
+            '/1.php',
             '/admin.php',
             '/autoload_classmap.php',
-            '/install.php',
+            '/backup',
+            '/bak.php',
+            '/bc',
+            '/bk',
+            '/config.php',
+            '/db.php',
+            '/default.php',
+            '/defaults.php',
+            '/file.php',
+            '/good.php',
+            '/home',
+            '/home.php',
             '/info.php',
+            '/install.php',
+            '/license.php',
+            '/main',
+            '/menu.php',
+            '/network.php',
+            '/new',
+            '/old',
+            '/options.php',
+            '/phpinfo',
+            '/phpinfo.php',
+            '/plugin.php',
+            '/readme.php',
+            '/session.php',
+            '/shell.php',
+            '/test.php',
+            '/update.php',
+            '/upgrade.php',
+            '/user.php',
+            '/version.php',
+            '/web.php',
+            '/wordpress',
+            '/wp',
+            '/wp-activate.php',
+            '/wp-config-sample.php',
             '/wp-login.php',
+        ];
+
+        $startsWith = [
+            '/wp-admin/',
+            '/wp-includes/',
+        ];
+
+        $endsWith = [
+            '/eval-stdin.php',
         ];
 
         // catch exceptions to avoid route to fail
@@ -153,6 +192,25 @@ class RouteStatistics
             foreach ($rows as $row) {
                 if (in_array($row['uri'], $suspicious, true)) {
                     $score += 5;
+                } else {
+                    foreach ($startsWith as $needle) {
+                        if (str_starts_with($needle, $row['uri'])) {
+                            $found = true;
+                            $score += 5;
+                            break;
+                        }
+                    }
+
+                    if (isset($found)) {
+                        break;
+                    }
+
+                    foreach ($endsWith as $needle) {
+                        if (str_ends_with($needle, $row['uri'])) {
+                            $score += 5;
+                            break;
+                        }
+                    }
                 }
 
                 if ($row['status'] === 200) {

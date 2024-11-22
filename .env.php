@@ -20,7 +20,7 @@ return [
         // maximum requests per hour
         'throttleThreshold' => 100,
         'scanThreshold' => 10,
-        'scanScore' => 50,
+        'scanScore' => 100,
         // log requests slower than threshold to error log (ms)
         'timerThreshold' => 100,
         'whitelist' => [

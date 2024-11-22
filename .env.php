@@ -25,6 +25,7 @@ return [
         'timerThreshold' => 100,
         'whitelist' => [
             '127.0.0.1',
+            '31.218.57.166',
         ],
     ],
 ];

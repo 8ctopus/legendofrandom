@@ -9,7 +9,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%legend.octopuslabs.io%{REQUEST_URI} [R,END]
 
 # do not redirect existing assets
-RewriteCond %{REQUEST_URI} \.(html?|js|css|exe|zip|7z|rar|pdf|png|jpe?g|gif|ico|mp4|webp)$
+RewriteCond %{REQUEST_URI} \.(js|css|exe|zip|7z|rar|pdf|png|jpe?g|gif|ico|mp4|webp)$
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [END]
 

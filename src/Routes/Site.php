@@ -91,16 +91,15 @@ class Site extends Routes
                 throw new RouteException('file not found', 404);
             }
 
-            $stream = new Stream();
-
             $source = file_get_contents($file);
 
             // add google tracking
-            $source = str_replace('</head>', $this->tracking('G-EQKHHME6YK') . '</head>', $source);
+            //$source = str_replace('</head>', $this->tracking('G-EQKHHME6YK') . '</head>', $source);
 
             // add banner
             $source = str_replace('<body>', '<body>' . self::banner(), $source);
 
+            $stream = new Stream();
             $stream->write($source);
 
             return new Response(200, ['Content-Type' => 'text/html'], $stream);
@@ -133,7 +132,6 @@ class Site extends Routes
      */
     protected function tracking(string $tag) : string
     {
-        return '';
         return <<<HTML
         <script async src="https://www.googletagmanager.com/gtag/js?id={$tag}"></script>
         <script>

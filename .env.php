@@ -20,12 +20,11 @@ return [
         // maximum requests per hour
         'throttleThreshold' => 100,
         'scanThreshold' => 10,
-        'scanScore' => 100,
+        'scanScore' => 4,
         // log requests slower than threshold to error log (ms)
         'timerThreshold' => 100,
         'whitelist' => [
             '127.0.0.1',
-            '31.218.57.166',
         ],
     ],
 ];

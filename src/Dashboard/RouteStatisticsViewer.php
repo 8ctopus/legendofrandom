@@ -51,7 +51,8 @@ class RouteStatisticsViewer extends RouteStatistics
                 return $ip ? $this->filter($ip) : $this->show();
 
             case 'truncate':
-                return $this->truncate();
+                $this->truncate();
+                return new Response(200);
 
             default:
                 throw new RouteException("unknown route - {$path}", 400);
@@ -332,17 +333,5 @@ class RouteStatisticsViewer extends RouteStatistics
         ];
 
         return new Response(200, $headers, $stream);
-    }
-
-    private function truncate() : ResponseInterface
-    {
-        $sql = <<<'SQL'
-        DELETE FROM `stats`
-        SQL;
-
-        $query = $this->db->prepare($sql);
-        $query->execute();
-
-        return new Response(200);
     }
 }

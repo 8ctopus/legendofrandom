@@ -21,14 +21,14 @@ class ExceptionViewer
     /**
      * Handle exception
      *
-     * @param RouteException         $exception
+     * @param Throwable              $exception
      * @param ServerRequestInterface $request
      *
      * @return ?ResponseInterface
      */
-    public static function handle(RouteException $exception, ServerRequestInterface $request) : ?ResponseInterface
+    public static function handle(Throwable $exception, ServerRequestInterface $request) : ?ResponseInterface
     {
-        return (new ExceptionViewer($exception, $request))
+        return (new self($exception, $request))
             ->run();
     }
 

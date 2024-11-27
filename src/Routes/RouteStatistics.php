@@ -105,43 +105,50 @@ class RouteStatistics
         }
     }
 
-    public function scan(string $ip) : int
+    /**
+     * Check for OAT-014 vulnerability scanning
+     *
+     * @param  string $ip
+     *
+     * @return float
+     *
+     * @note minimum score is -3 max score is +7
+     */
+    public function scan(string $ip) : float
     {
         $score = 0;
 
-        $suspicious = [
+        $endsWith = [
             '/.env',
             '/.env.js',
+            '/.env.local',
             '/.env.php',
+            '/.env.production',
             '/.env.save',
-            '/1.php',
+            '/.env.staging',
+            '/.git',
+            '/.gitlab',
             '/admin.php',
             '/autoload_classmap.php',
             '/backup',
             '/bak.php',
-            '/bc',
-            '/bk',
+            '/config.bak',
+            '/config.old',
             '/config.php',
+            '/config.php~',
             '/db.php',
             '/default.php',
             '/defaults.php',
-            '/file.php',
-            '/good.php',
-            '/home',
+            '/eval-stdin.php',
             '/home.php',
             '/info.php',
             '/install.php',
-            '/license.php',
-            '/main',
             '/menu.php',
-            '/network.php',
             '/new',
             '/old',
-            '/options.php',
             '/phpinfo',
             '/phpinfo.php',
             '/plugin.php',
-            '/readme.php',
             '/session.php',
             '/shell.php',
             '/test.php',
@@ -151,25 +158,31 @@ class RouteStatistics
             '/version.php',
             '/web.php',
             '/wordpress',
-            '/wp',
             '/wp-activate.php',
             '/wp-config-sample.php',
+            '/wp-config.bak',
+            '/wp-config.local.php',
+            '/wp-config.txt',
             '/wp-login.php',
-        ];
-
-        $startsWith = [
-            '/wp-admin/',
-            '/wp-includes/',
-        ];
-
-        $endsWith = [
-            '/eval-stdin.php',
+            //'/1.php',
+            //'/bc',
+            //'/bk',
+            //'/file.php',
+            //'/good.php',
+            //'/home',
+            //'/license.php',
+            //'/main',
+            //'/network.php',
+            //'/options.php',
+            //'/readme.php',
+            //'/wp',
         ];
 
         // catch exceptions to avoid route to fail
         try {
             $sql = <<<'SQL'
             SELECT
+                COUNT(*) AS `count`,
                 `uri`,
                 `method`,
                 `status`
@@ -190,46 +203,50 @@ class RouteStatistics
             $rows = $query->fetchAll();
 
             foreach ($rows as $row) {
-                if (in_array($row['uri'], $suspicious, true)) {
-                    $score += 5;
-                } else {
-                    foreach ($startsWith as $needle) {
-                        if (str_starts_with($needle, $row['uri'])) {
-                            $found = true;
-                            $score += 5;
-                            break;
-                        }
-                    }
-
-                    if (isset($found)) {
-                        break;
-                    }
-
-                    foreach ($endsWith as $needle) {
-                        if (str_ends_with($needle, $row['uri'])) {
-                            $score += 5;
-                            break;
-                        }
-                    }
+                if (!isset($count)) {
+                    $count = $row['count'];
                 }
 
                 if ($row['status'] === 200) {
                     $score -= 3;
-                } elseif ($row['status'] === 404 || $row['status'] === 429) {
+
+                    // none of the suspicious pattern should exist on the server, so we can ignore the loops below
+                    continue;
+                }
+
+                if ($row['status'] >= 400) {
                     $score += 2;
                 }
 
                 /*
                 if ($row['method'] !== 'GET') {
-                    ++$score;
+                    $score += 1;
                 }
                 */
+
+                foreach ($endsWith as $needle) {
+                    if (str_ends_with($needle, $row['uri'])) {
+                        $score += 5;
+                        break;
+                    }
+                }
             }
+
+            $score /= $count;
         } catch (PDOException) {
             Helper::errorLog(self::class, 'PDOException', false);
         }
 
         return $score;
+    }
+
+    public function truncate() : void
+    {
+        $sql = <<<SQL
+        DELETE FROM `stats`
+        SQL;
+
+        $this->db->exec($sql);
     }
 
     /**

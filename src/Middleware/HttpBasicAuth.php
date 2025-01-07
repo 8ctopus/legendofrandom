@@ -144,7 +144,7 @@ class HttpBasicAuth
         $salt = substr($saltAndHash, 0, $pos + 1);
 
         // compare passwords
-        return crypt($password, $salt) === $saltAndHash;
+        return hash_equals(crypt($password, $salt), $saltAndHash);
     }
 
     /**

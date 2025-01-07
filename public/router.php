@@ -34,9 +34,7 @@ $router = new NanoRouter(Response::class, ServerRequestFactory::class, Exception
 $serverRequest = ServerRequestCreator::createFromGlobals($_SERVER, $_FILES, $_COOKIE, $_GET, $_POST);
 //$timer->measure('request');
 
-if ($env['router.statsEnabled']) {
-    $stats = new RouteStatistics($env['router.statsFile']);
-}
+$stats = $env['router.statsEnabled'] ? new RouteStatistics($env['router.statsFile']) : null;
 //$timer->measure('stats');
 
 (new Site($router, $stats, $timer))

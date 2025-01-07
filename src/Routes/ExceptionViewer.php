@@ -18,6 +18,11 @@ class ExceptionViewer
 
     private readonly Throwable $exception;
 
+    public function __construct(Throwable $exception)
+    {
+        $this->exception = $exception;
+    }
+
     /**
      * Handle exception
      *
@@ -30,11 +35,6 @@ class ExceptionViewer
     {
         return (new self($exception, $request))
             ->run();
-    }
-
-    public function __construct(Throwable $exception)
-    {
-        $this->exception = $exception;
     }
 
     public function run() : ?ResponseInterface

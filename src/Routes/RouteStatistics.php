@@ -59,11 +59,11 @@ class RouteStatistics
 
             $query = $this->db->prepare($sql);
             $query->execute([
-                ':uri' => urldecode($uri),
-                ':method' => $method,
-                ':status' => $code,
-                ':time' => $time,
-                ':ip' => $ip,
+                'uri' => urldecode($uri),
+                'method' => $method,
+                'status' => $code,
+                'time' => $time,
+                'ip' => $ip,
             ]);
         } catch (PDOException) {
             Helper::errorLog(self::class, 'PDOException', false);
@@ -73,7 +73,7 @@ class RouteStatistics
     }
 
     /**
-     * Count requests from ip within time interval
+     * Count requests from ip within 1 hour time interval
      *
      * @param string $ip
      *
@@ -95,7 +95,7 @@ class RouteStatistics
 
             $query = $this->db->prepare($sql);
             $query->execute([
-                ':ip' => $ip,
+                'ip' => $ip,
             ]);
 
             return $query->fetchColumn(0);
@@ -108,72 +108,151 @@ class RouteStatistics
     /**
      * Check for OAT-014 vulnerability scanning
      *
-     * @param  string $ip
+     * @param string $ip
      *
      * @return float
      *
-     * @note minimum score is -3 max score is +7
+     * @note minimum score is -3 max score is +10
+     * all 404 results gives +2 scores
      */
     public function scan(string $ip) : float
     {
         $score = 0;
 
         $endsWith = [
+            '/.aws/credentials',
             '/.env',
+            '/.env.backup',
+            '/.env.bak',
+            '/.env.example',
             '/.env.js',
             '/.env.local',
+            '/.env.old',
             '/.env.php',
             '/.env.production',
             '/.env.save',
+            '/.env.stage',
             '/.env.staging',
+            '/.env_example',
+            '/.env_sample',
             '/.git',
+            '/.git/config',
             '/.gitlab',
+            '/about.php',
+            '/access.php',
+            '/admin',
             '/admin.php',
+            '/application.properties',
             '/autoload_classmap.php',
+            '/aws-secret.yaml',
+            '/aws.yml',
             '/backup',
+            '/backup.php',
+            '/backup/',
             '/bak.php',
+            '/bypass.php',
+            '/cmd.php',
+            '/conf.js',
+            '/conf.json',
+            '/config',
             '/config.bak',
+            '/config.env',
+            '/config.js',
+            '/config.json',
             '/config.old',
             '/config.php',
             '/config.php~',
+            '/constants.js',
+            '/database.js',
             '/db.php',
             '/default.php',
             '/defaults.php',
+            '/email_service.py',
             '/eval-stdin.php',
+            '/evil.php',
+            '/file.php',
+            '/filemanager.php',
+            '/forgot_password',
+            '/function.php',
+            '/getConfig',
+            '/hehe.php',
             '/home.php',
             '/include.php',
+            '/includes.php',
+            '/index.html',
+            '/index.php',
             '/info.php',
+            '/init.php',
             '/install.php',
+            '/ismustmobile',
+            '/laravel.log',
+            '/license.txt',
+            '/load.php',
+            '/login',
+            '/login.html',
+            '/main.js',
+            '/manager.php',
             '/menu.php',
+            '/minishell.php',
+            '/network.php',
             '/new',
+            '/new/',
+            '/nodemailer.js',
             '/old',
+            '/old/',
+            '/owncloud',
             '/phpinfo',
             '/phpinfo.php',
+            '/platform',
             '/plugin.php',
+            '/r00t.php',
+            '/register',
+            '/root.php',
+            '/s3cmd.ini',
+            '/search.php',
+            '/security.php',
+            '/server-info',
+            '/server-info.php',
+            '/server-status',
+            '/server.js',
             '/session.php',
+            '/settings.py',
             '/shell.php',
+            '/signup',
+            '/status.php',
+            '/sys.php',
+            '/temp/',
             '/test.php',
+            '/test/',
+            '/tinyfilemanager.php',
             '/update.php',
+            '/upfile.php',
             '/upgrade.php',
+            '/upload.php',
             '/uploader.php',
             '/user.php',
+            '/var.php',
             '/version.php',
+            '/vuln.php',
             '/web.php',
+            '/webadmin.php',
             '/wordpress',
             '/wp-activate.php',
             '/wp-config-sample.php',
             '/wp-config.bak',
             '/wp-config.local.php',
+            '/wp-config.php.bak',
             '/wp-config.txt',
             '/wp-info.php',
+            '/wp-json',
             '/wp-login.php',
+            '/xleet-shell.php',
         ];
 
         // catch exceptions to avoid route to fail
         try {
             $sql = <<<'SQL'
             SELECT
-                COUNT(*) AS `count`,
                 `uri`,
                 `method`,
                 `status`
@@ -182,26 +261,24 @@ class RouteStatistics
             WHERE
                 `ip` = :ip
             ORDER BY
-                `date` DESC
+                `rowid` DESC
             LIMIT 50
             SQL;
 
             $query = $this->db->prepare($sql);
             $query->execute([
-                ':ip' => $ip,
+                'ip' => $ip,
             ]);
 
             $rows = $query->fetchAll();
 
-            foreach ($rows as $row) {
-                if (!isset($count)) {
-                    $count = $row['count'];
-                }
+            $count = count($rows);
 
+            foreach ($rows as $row) {
                 if ($row['status'] === 200) {
                     $score -= 3;
 
-                    // none of the suspicious pattern should exist on the server, so we can ignore the loops below
+                    // none of the suspicious patterns should exist on the server, so we can continue
                     continue;
                 }
 
@@ -209,15 +286,9 @@ class RouteStatistics
                     $score += 2;
                 }
 
-                /*
-                if ($row['method'] !== 'GET') {
-                    $score += 1;
-                }
-                */
-
                 foreach ($endsWith as $needle) {
                     if (str_ends_with($needle, $row['uri'])) {
-                        $score += 5;
+                        $score += 8;
                         break;
                     }
                 }
@@ -233,8 +304,9 @@ class RouteStatistics
 
     public function truncate() : void
     {
-        $sql = <<<SQL
-        DELETE FROM `stats`
+        $sql = <<<'SQL'
+        DELETE FROM `stats`;
+        VACUUM;
         SQL;
 
         $this->db->exec($sql);

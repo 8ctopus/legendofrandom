@@ -11,6 +11,8 @@
         "httpsoft/http-emitter": "^1.1",
         "httpsoft/http-message": "^1.1",
         "httpsoft/http-server-request": "^1.1",
+        "league/iso3166": "^4.3",
+        "maxmind-db/reader": "^1.12",
         "twig/twig": "^3.6",
         "8ctopus/nano-ip": "^0.1.1"
     },

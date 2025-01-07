@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a14a8ffb6c689924e08ed4629b40ace1",
+    "content-hash": "76c8a80d274d4ed88c6ef8b6770e9fc7",
     "packages": [
         {
             "name": "8ctopus/nano-ip",
@@ -354,6 +354,136 @@
                 "source": "https://github.com/httpsoft/http-server-request"
             },
             "time": "2024-11-25T06:32:39+00:00"
+        },
+        {
+            "name": "league/iso3166",
+            "version": "4.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alcohol/iso3166.git",
+                "reference": "5133fed7d54728222f4058702487dccedda20472"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alcohol/iso3166/zipball/5133fed7d54728222f4058702487dccedda20472",
+                "reference": "5133fed7d54728222f4058702487dccedda20472",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.12.6",
+                "phpstan/phpstan-deprecation-rules": "^1.2.1",
+                "phpstan/phpstan-strict-rules": "^1.6.1",
+                "phpunit/phpunit": "^9.6.21"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\ISO3166\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com"
+                }
+            ],
+            "description": "ISO 3166-1 PHP Library",
+            "homepage": "https://github.com/alcohol/iso3166",
+            "keywords": [
+                "3166",
+                "3166-1",
+                "ISO 3166",
+                "countries",
+                "iso",
+                "library"
+            ],
+            "support": {
+                "issues": "https://github.com/alcohol/iso3166/issues",
+                "source": "https://github.com/alcohol/iso3166"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/alcohol",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-10T07:39:24+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90",
+                "reference": "5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "conflict": {
+                "ext-maxminddb": "<1.11.1 || >=2.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": ">=8.0.0,<10.0.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "suggest": {
+                "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Db\\": "src/MaxMind/Db"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind DB Reader API",
+            "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+            "keywords": [
+                "database",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "issues": "https://github.com/maxmind/MaxMind-DB-Reader-php/issues",
+                "source": "https://github.com/maxmind/MaxMind-DB-Reader-php/tree/v1.12.0"
+            },
+            "time": "2024-11-14T22:43:47+00:00"
         },
         {
             "name": "psr/http-factory",

@@ -5,7 +5,7 @@
   <a href="#tableLatest">latest</a>
   <span>You are viewing {{ host }}</span>
   <a id="truncateStats" href="#">truncate stats</a>
-  <span data-tooltip="The pages that are cached by W3 total cache are not shown. (cached pages skip php). Store and gateway pages are not shown (do not go through the router). /wp/ pages are not shown (do not go through the router)">Note</span>
+  <span data-placement="bottom" data-tooltip="The pages that are cached by W3 total cache are not shown. (cached pages skip php). Store and gateway pages are not shown (do not go through the router). /wp/ pages are not shown (do not go through the router)">Note</span>
 {% endset %}
 {% extends "Base.twig" %}
 {% block css %}
@@ -35,17 +35,12 @@ td.slow {
   color: yellow;
 }
 
-td.whitelist:after {
-  font-family: boxicons !important;
-  font-weight: 400;
-  line-height: 1;
-  text-rendering: auto;
-  color: aqua;
-  content: "\ea41";
-}
-
 div.grid {
   margin-top: 1rem;
+}
+
+mark {
+  margin-left: 1rem;
 }
 
 </style>
@@ -65,13 +60,14 @@ setCookie('timezone', offset, {secure: true, 'max-age': 3600});
 
 document.addEventListener('DOMContentLoaded', function () {
   colorColumn('#tableErrors', 'status');
-  colorColumn('#tablePageViews', 'status');
+  colorColumn('#tableMostPopular', 'status');
   colorColumn('#table4Xx', 'status');
   colorColumn('#tableLatest', 'status');
 
-  colorSlow('#tablePageViews', 'AVG time');
+  colorSlow('#tableMostPopular', 'AVG time');
   colorSlow('#tableLatest', 'time');
 
+  addIpLinks('#tableIps', 'ip');
   tagIps('#tableIps', 'ip');
 
   filterTables('input[type=search]');
@@ -118,14 +114,13 @@ function colorColumn(table, column) {
   const selector = `${table} tbody td:nth-child(${index})`;
 
   const cells = document.querySelectorAll(selector);
-  const length = cells.length;
 
-  for (let i = 0; i < length; i++) {
-    const status = parseInt(cells[i].innerHTML);
+  cells.forEach(function (cell) {
+    const status = parseInt(cell.textContent);
     let className;
 
     if (status < 200) {
-        continue;
+        return;
     } else if (status < 300) {
         className = 'status2xx';
     } else if (status < 400) {
@@ -136,8 +131,8 @@ function colorColumn(table, column) {
         className = 'status5xx';
     }
 
-    cells[i].className = className;
-  }
+    cell.className = className;
+  });
 }
 
 /**
@@ -163,17 +158,16 @@ function colorSlow(table, column) {
   const selector = `${table} tbody td:nth-child(${index})`;
 
   const cells = document.querySelectorAll(selector);
-  const length = cells.length;
 
-  for (let i = 0; i < length; i++) {
-    const value = parseInt(cells[i].innerHTML);
+  cells.forEach(function (cell) {
+    const value = parseInt(cell.textContent);
 
     if (value < {{ timerThreshold }}) {
-        continue;
+        return;
     }
 
-    cells[i].className = 'slow';
-  }
+    cell.className = 'slow';
+  });
 }
 
 /**
@@ -199,18 +193,62 @@ function tagIps(table, column) {
   const selector = `${table} tbody td:nth-child(${index})`;
 
   const cells = document.querySelectorAll(selector);
-  const length = cells.length;
-  const whitelist = [{{ whitelist|raw }}];
+  const whitelist = {{ whitelist|raw }};
 
-  for (let i = 0; i < length; i++) {
-    const ip = cells[i].innerHTML;
+  cells.forEach(function (cell) {
+    const key = Object.keys(whitelist).find(key => whitelist[key] === cell.textContent);
 
-    if (!whitelist.includes(ip)) {
-        continue;
+    if (key === undefined) {
+      return;
     }
 
-    cells[i].className = 'whitelist';
+    const parent = cell.parentElement;
+
+    const newNode = document.createElement('mark');
+
+    const textNode = document.createTextNode(key);
+    newNode.appendChild(textNode);
+
+    cell.appendChild(newNode);
+    //cell.className = 'whitelist';
+  });
+}
+
+function addIpLinks(table, column) {
+  // find column
+  const th = document.querySelector(`${table} th[name='${column}']`);
+
+  if (!th) {
+    return;
   }
+
+  // find column index
+  const index = [...th.parentElement.children].indexOf(th) + 1;
+
+  // selector for all cells in column
+  const selector = `${table} tbody td:nth-child(${index})`;
+
+  const cells = document.querySelectorAll(selector);
+
+  cells.forEach(function (cell) {
+    const ip = cell.textContent;
+
+{% if ip is defined %}
+    if (ip === '{{ ip }}') {
+      return;
+    }
+{% endif %}
+
+    cell.removeChild(cell.firstChild);
+
+    const newNode = document.createElement('a');
+    newNode.setAttribute('href', '?ip=' + ip);
+
+    const textNode = document.createTextNode(ip);
+    newNode.appendChild(textNode);
+
+    cell.appendChild(newNode);
+  });
 }
 
 </script>

@@ -7,6 +7,7 @@ namespace Legend\Dashboard;
 use DateTime;
 use HttpSoft\Message\Response;
 use Legend\Env;
+use Legend\IPLocation\Location;
 use Legend\Routes\RouteStatistics;
 use Legend\Traits\Twig;
 use Oct8pus\NanoRouter\RouteException;
@@ -19,6 +20,7 @@ class RouteStatisticsViewer extends RouteStatistics
     use Twig;
 
     private readonly ServerRequestInterface $request;
+    private readonly string $database;
 
     /**
      * Constructor
@@ -29,6 +31,8 @@ class RouteStatisticsViewer extends RouteStatistics
     public function __construct(ServerRequestInterface $request, string $database)
     {
         $this->request = $request;
+        $this->database = $database;
+
         parent::__construct($database);
     }
 
@@ -71,6 +75,7 @@ class RouteStatisticsViewer extends RouteStatistics
         $timezone = sprintf('+%02d:%02d', $offsetHours, $offsetMinutes);
 
         $timer = new NanoTimer();
+
         $timer->logMemoryPeakUse();
 
         $queries = [
@@ -96,28 +101,7 @@ class RouteStatisticsViewer extends RouteStatistics
                 `count` DESC
             LIMIT 200
             SQL,
-            'page views' => <<<'SQL'
-            SELECT
-                COUNT(*) AS 'count',
-                SUBSTR(`uri`, 1, 150) AS 'path',
-                `method`,
-                `status`,
-                ROUND(AVG(`time`), 0) AS 'AVG time',
-                MIN(`time`) AS 'min',
-                MAX(`time`) AS 'max'
-            FROM
-                stats
-            WHERE
-                `status` BETWEEN 200 AND 399 AND
-                `date` >= DATETIME('now', '-7 day')
-            GROUP BY
-                `uri`,
-                `method`,
-                `status`
-            ORDER BY
-                `count` DESC
-            LIMIT 200
-            SQL,
+
             '4xx' => <<<'SQL'
             SELECT
                 COUNT(*) AS 'count',
@@ -138,8 +122,32 @@ class RouteStatisticsViewer extends RouteStatistics
                 `status`
             ORDER BY
                 `count` DESC
+            LIMIT 20
+            SQL,
+
+            'most popular' => <<<'SQL'
+            SELECT
+                COUNT(*) AS 'count',
+                SUBSTR(`uri`, 1, 150) AS 'path',
+                `method`,
+                `status`,
+                ROUND(AVG(`time`), 0) AS 'AVG time',
+                MIN(`time`) AS 'min',
+                MAX(`time`) AS 'max'
+            FROM
+                `stats`
+            WHERE
+                `status` BETWEEN 200 AND 399 AND
+                `date` >= DATETIME('now', '-7 day')
+            GROUP BY
+                `uri`,
+                `method`,
+                `status`
+            ORDER BY
+                `count` DESC
             LIMIT 200
             SQL,
+
             'latest' => <<<SQL
             SELECT
                 DATETIME(`date`, '{$timezone}') AS 'date',
@@ -165,66 +173,6 @@ class RouteStatisticsViewer extends RouteStatistics
             $timer->measure($title);
         }
 
-        // uptime request date and total requests count
-        // cast(JulianDay(DATETIME('now', '{$timezone}')) - JulianDay(MIN(DATETIME(date, '{$timezone}'))) * 24 AS int) AS 'diff'
-        $sql = <<<'SQL'
-        SELECT
-            MIN(DATETIME(`date`)) AS 'uptime',
-            COUNT(*) AS 'total',
-            SUM(CASE WHEN `date` >= DATETIME('now', '-1 day') THEN 1 ELSE 0 END) AS 'last day',
-            SUM(CASE WHEN `date` >= DATETIME('now', '-1 day') THEN 1 ELSE 0 END) / 24 AS 'hourly average',
-            SUM(CASE WHEN DATETIME(`date`) >= DATETIME('now', '-1 hour') THEN 1 ELSE 0 END) AS 'last hour'
-        FROM
-            `stats`
-        SQL;
-
-        $tablesSmall = [];
-
-        $query = $this->db->prepare($sql);
-        $query->execute();
-        $table = $query->fetchAll();
-        $timer->measure('stats');
-
-        // transpose?
-        $result = [];
-
-        foreach ($table[0] as $key => $value) {
-            if ($key === 'uptime') {
-                $uptime = DateTime::createFromFormat('Y-m-d H:i:s', $value);
-
-                $value = (new DateTime('now'))
-                    ->diff($uptime)
-                    ->format('%a days, %H:%I:%S ago');
-            }
-
-            $result[] = [
-                'type' => $key,
-                'value' => $value,
-            ];
-        }
-
-        $tablesSmall['stats'] = $result;
-
-        $sql = <<<'SQL'
-        SELECT
-            COUNT(*) AS 'count',
-            `ip`
-        FROM
-            `stats`
-        WHERE
-            `date` >= DATETIME('now', '-1 day')
-        GROUP BY
-            `ip`
-        ORDER BY
-            `count` DESC
-        LIMIT 10
-        SQL;
-
-        $query = $this->db->prepare($sql);
-        $query->execute();
-        $tablesSmall['ips'] = $query->fetchAll();
-        $timer->measure('ips');
-
         $host = $this->request->getUri()->getHost();
         $uri = (string) $this->request->getUri();
 
@@ -238,6 +186,9 @@ class RouteStatisticsViewer extends RouteStatistics
 
         $env = Env::instance();
 
+        $tablesSmall = $this->stats(null);
+        $timer->measure('stats');
+
         $stream = $this->renderToStream('Dashboard/RouteStatisticsViewer.twig', [
             'host' => $host,
             'truncate' => $this->request->getUri()->getPath() . 'truncate',
@@ -247,7 +198,7 @@ class RouteStatisticsViewer extends RouteStatistics
             'tablesSmall' => $tablesSmall,
             'performance' => $timer->table(),
             'timerThreshold' => $env['router.timerThreshold'],
-            'whitelist' => "'" . implode("','", $env['router.whitelist']) . "'",
+            'whitelist' => json_encode($env['router.whitelist']),
         ]);
 
         $headers = [
@@ -322,9 +273,11 @@ class RouteStatisticsViewer extends RouteStatistics
             'serverName' => $serverName,
             'serverUri' => $serverUri,
             'tables' => $tables,
+            'tablesSmall' => $this->stats($ip),
             'performance' => $timer->table(),
             'timerThreshold' => $env['router.timerThreshold'],
-            'whitelist' => "'" . implode("','", $env['router.whitelist']) . "'",
+            'whitelist' => json_encode($env['router.whitelist']),
+            'ip' => $ip,
         ]);
 
         $headers = [
@@ -333,5 +286,82 @@ class RouteStatisticsViewer extends RouteStatistics
         ];
 
         return new Response(200, $headers, $stream);
+    }
+
+    private function stats(?string $ip = null) : array
+    {
+        $tables = [];
+
+        if (!$ip) {
+            $size = filesize($this->database);
+            $size /= 1024 * 1024;
+            $size = sprintf('%0.1f Mb', $size);
+
+            // uptime request date and total requests count
+            // cast(JulianDay(DATETIME('now', '{$timezone}')) - JulianDay(MIN(DATETIME(date, '{$timezone}'))) * 24 AS int) AS 'diff'
+            $sql = <<<SQL
+            SELECT
+                MIN(DATETIME(`date`)) AS 'uptime',
+                COUNT(*) AS 'total',
+                SUM(CASE WHEN `date` >= DATETIME('now', '-1 day') THEN 1 ELSE 0 END) AS 'last day',
+                SUM(CASE WHEN `date` >= DATETIME('now', '-1 day') THEN 1 ELSE 0 END) / 24 AS 'hourly average',
+                SUM(CASE WHEN DATETIME(`date`) >= DATETIME('now', '-1 hour') THEN 1 ELSE 0 END) AS 'last hour',
+                '{$size}' AS 'database size'
+            FROM
+                `stats`
+            SQL;
+
+            $query = $this->db->prepare($sql);
+            $query->execute();
+            $table = $query->fetchAll();
+
+            // transpose?
+            $transposed = [];
+
+            foreach ($table[0] as $key => $value) {
+                if ($key === 'uptime') {
+                    $uptime = DateTime::createFromFormat('Y-m-d H:i:s', $value);
+
+                    $value = (new DateTime('now'))
+                        ->diff($uptime)
+                        ->format('%a days, %H:%I:%S ago');
+                }
+
+                $transposed[] = [
+                    'type' => $key,
+                    'value' => $value,
+                ];
+            }
+
+            $tables['stats'] = $transposed;
+        }
+
+        $sql = <<<'SQL'
+        SELECT
+            COUNT(*) AS 'count',
+            `ip`
+        FROM
+            `stats`
+        WHERE
+            `date` >= DATETIME('now', '-1 day')
+        GROUP BY
+            `ip`
+        ORDER BY
+            `count` DESC
+        LIMIT 10
+        SQL;
+
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $table = $query->fetchAll();
+
+        if ($ip) {
+            $table[0]['country'] = (new Location())
+                ->country($ip);
+        }
+
+        $tables['ips'] = $table;
+
+        return $tables;
     }
 }

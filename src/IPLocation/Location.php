@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Legend\IPLocation;
 
 use Exception;
-use League\ISO3166\ISO3166;
+use Symfony\Component\Intl\Countries;
 
 class Location
 {
@@ -58,8 +58,8 @@ class Location
     /**
      * Get ip country
      *
-     * @param  string      $ip
-     * @param  string|null $driver
+     * @param string      $ip
+     * @param null|string $driver
      *
      * @return string
      */
@@ -71,10 +71,7 @@ class Location
             return 'unknown';
         }
 
-        $iso = (new ISO3166())
-            ->alpha2($countryCode);
-
-        return $iso['name'];
+        return Countries::getName($countryCode);
     }
 
     /**

@@ -14,7 +14,7 @@
 
 import {getCookie, setCookie} from '/js/cookie.js';
 
-const cookieName = 'refresh';
+const cookie = 'refresh';
 let timerId;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
       clearTimeout(timerId);
     }
 
-    setCookie(cookieName, event.target.checked, {secure: true});
+    setCookie(cookie, event.target.checked, {secure: true});
   });
 
-  const refresh = getCookie(cookieName);
+  const refresh = getCookie(cookie);
 
-  console.log('cookie state ' + refresh);
+  //console.log(`cookie state ${refresh}`);
 
   if (refresh === "true") {
     checkbox.click();

@@ -37,6 +37,16 @@ class Helper
     }
 
     /**
+     * Common storage dir
+     *
+     * @return string
+     */
+    public static function commonStorageDir() : string
+    {
+        return self::rootDir() . '/../../storage';
+    }
+
+    /**
      * Get views directory
      *
      * @return string

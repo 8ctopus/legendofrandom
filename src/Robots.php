@@ -28,7 +28,7 @@ class Robots
         return new Response(200, ['Content-Type' => 'text/plain'], $stream);
     }
 
-    protected function content() : string
+    private function content() : string
     {
         $host = Helper::protocolHost(true);
 

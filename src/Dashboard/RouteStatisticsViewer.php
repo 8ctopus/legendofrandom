@@ -159,7 +159,7 @@ class RouteStatisticsViewer extends RouteStatistics
             FROM
                 `stats`
             ORDER BY
-                `date` DESC
+                `rowid` DESC
             LIMIT 1000
             SQL,
         ];
@@ -237,7 +237,7 @@ class RouteStatisticsViewer extends RouteStatistics
             WHERE
                 `ip` = :ip
             ORDER BY
-                `date` DESC
+                `rowid` DESC
             LIMIT 1000
             SQL,
         ];

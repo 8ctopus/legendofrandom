@@ -119,135 +119,63 @@ class RouteStatistics
     {
         $score = 0;
 
+        $extensions = [
+            '.backup',
+            '.bak',
+            '.env',
+            '.ini',
+            '.js',
+            '.json',
+            '.local',
+            '.log',
+            '.old',
+            '.php',
+            '.py',
+            '.txt',
+            '.yaml',
+            '.yml',
+        ];
+
         $endsWith = [
             '/.aws/credentials',
-            '/.env',
-            '/.env.backup',
-            '/.env.bak',
             '/.env.example',
-            '/.env.js',
-            '/.env.local',
-            '/.env.old',
-            '/.env.php',
             '/.env.production',
             '/.env.save',
             '/.env.stage',
             '/.env.staging',
-            '/.env_example',
-            '/.env_sample',
             '/.git',
             '/.git/config',
             '/.gitlab',
-            '/about.php',
-            '/access.php',
             '/admin',
-            '/admin.php',
-            '/application.properties',
-            '/autoload_classmap.php',
-            '/aws-secret.yaml',
-            '/aws.yml',
             '/backup',
-            '/backup.php',
             '/backup/',
-            '/bak.php',
-            '/bypass.php',
-            '/cmd.php',
-            '/conf.js',
-            '/conf.json',
             '/config',
-            '/config.bak',
-            '/config.env',
-            '/config.js',
-            '/config.json',
-            '/config.old',
-            '/config.php',
-            '/config.php~',
-            '/constants.js',
-            '/database.js',
-            '/db.php',
-            '/default.php',
-            '/defaults.php',
-            '/email_service.py',
-            '/eval-stdin.php',
-            '/evil.php',
-            '/file.php',
-            '/filemanager.php',
+            '/env',
             '/forgot_password',
-            '/function.php',
             '/getConfig',
-            '/hehe.php',
-            '/home.php',
-            '/include.php',
-            '/includes.php',
             '/index.html',
-            '/index.php',
-            '/info.php',
-            '/init.php',
-            '/install.php',
             '/ismustmobile',
-            '/laravel.log',
-            '/license.txt',
-            '/load.php',
             '/login',
+            '/login.action',
             '/login.html',
-            '/main.js',
-            '/manager.php',
-            '/menu.php',
-            '/minishell.php',
-            '/network.php',
             '/new',
             '/new/',
-            '/nodemailer.js',
             '/old',
             '/old/',
             '/owncloud',
             '/phpinfo',
-            '/phpinfo.php',
             '/platform',
-            '/plugin.php',
-            '/r00t.php',
             '/register',
-            '/root.php',
-            '/s3cmd.ini',
-            '/search.php',
-            '/security.php',
             '/server-info',
-            '/server-info.php',
             '/server-status',
-            '/server.js',
-            '/session.php',
-            '/settings.py',
-            '/shell.php',
             '/signup',
-            '/status.php',
-            '/sys.php',
             '/temp/',
-            '/test.php',
             '/test/',
-            '/tinyfilemanager.php',
-            '/update.php',
-            '/upfile.php',
-            '/upgrade.php',
-            '/upload.php',
-            '/uploader.php',
-            '/user.php',
-            '/var.php',
-            '/version.php',
-            '/vuln.php',
-            '/web.php',
-            '/webadmin.php',
             '/wordpress',
-            '/wp-activate.php',
-            '/wp-config-sample.php',
-            '/wp-config.bak',
-            '/wp-config.local.php',
-            '/wp-config.php.bak',
-            '/wp-config.txt',
-            '/wp-info.php',
             '/wp-json',
-            '/wp-login.php',
-            '/xleet-shell.php',
         ];
+
+        $endsWith = array_merge($extensions, $endsWith);
 
         // catch exceptions to avoid route to fail
         try {
@@ -260,6 +188,10 @@ class RouteStatistics
                 `stats`
             WHERE
                 `ip` = :ip
+            GROUP BY
+                `uri`,
+                `method`,
+                `status`
             ORDER BY
                 `rowid` DESC
             LIMIT 50
@@ -275,7 +207,7 @@ class RouteStatistics
             $count = count($rows);
 
             foreach ($rows as $row) {
-                if ($row['status'] === 200) {
+                if ($row['status'] < 400) {
                     $score -= 3;
 
                     // none of the suspicious patterns should exist on the server, so we can continue
@@ -287,7 +219,7 @@ class RouteStatistics
                 }
 
                 foreach ($endsWith as $needle) {
-                    if (str_ends_with($needle, $row['uri'])) {
+                    if (str_ends_with($row['uri'], $needle)) {
                         $score += 8;
                         break;
                     }

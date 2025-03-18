@@ -9,12 +9,13 @@ use Exception;
 
 class Env implements ArrayAccess
 {
-    protected array $env;
     private static ?self $instance = null;
+
+    private array $env;
 
     private function __construct()
     {
-        $this->env = require Helper::rootDir() . '/.env.php';
+        $this->env = require_once Helper::rootDir() . '/.env.php';
     }
 
     /**

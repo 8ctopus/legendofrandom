@@ -58,5 +58,11 @@
     },
     "scripts": {
         "test": "phpunit --coverage-html=coverage"
+    },
+    "extra": {
+        "soak-time-hours": 96,
+        "soak-time-whitelist": [
+            "roave/security-advisories"
+        ]
     }
 }

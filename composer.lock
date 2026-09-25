@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36f59d6ab7ee49aaefcd7eca482c181a",
+    "content-hash": "8d2c125bd6ce939e5485b27f0d1c65bf",
     "packages": [
         {
             "name": "8ctopus/nano-ip",
@@ -674,6 +674,41 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "cotonet/soak-time",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cotonet-resiliencia-digital/composer-soak-time.git",
+                "reference": "dce36212d79eddae52a26367b4480b6849d36e15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cotonet-resiliencia-digital/composer-soak-time/zipball/dce36212d79eddae52a26367b4480b6849d36e15",
+                "reference": "dce36212d79eddae52a26367b4480b6849d36e15",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php": "^7.4 || ^8.0 || ^8.1 || ^8.2 || ^8.3 || ^8.4 || ^8.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Cotonet\\SoakTime\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cotonet\\SoakTime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Protects against supply chain attacks by filtering recently published packages.",
+            "support": {
+                "issues": "https://github.com/cotonet-resiliencia-digital/composer-soak-time/issues",
+                "source": "https://github.com/cotonet-resiliencia-digital/composer-soak-time/tree/v1.1.0"
+            },
+            "time": "2026-04-07T20:54:22+00:00"
+        },
         {
             "name": "myclabs/deep-copy",
             "version": "1.13.0",
@@ -3255,5 +3290,5 @@
     "platform-overrides": {
         "php": "8.3"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

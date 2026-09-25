@@ -16,6 +16,7 @@
         "8ctopus/nano-ip": "^0.1.1"
     },
     "require-dev": {
+        "cotonet/soak-time": "^1.1",
         "phpunit/phpunit": "^11.0",
         "roave/security-advisories": "dev-latest"
     },
@@ -40,6 +41,9 @@
         "sort-packages": true,
         "platform": {
             "php": "8.3"
+        },
+        "allow-plugins": {
+            "cotonet/soak-time": true
         }
     },
     "autoload": {

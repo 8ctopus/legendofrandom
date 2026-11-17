@@ -192,9 +192,9 @@ the app). Remember, when we first searched for strings we saw the string
  a Windows callback for when the WM_INITDIALOG message comes through:<a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/126.png"><img class="aligncenter size-full wp-image-1821" title="Initdialog routine" src="1603_fichiers/126.png" alt="" height="386" width="768"></a> <p></p>
 <p>The first thing it does is load a handle to a Windows control with an
  ID of 0x41D (1053) to be passed to the GetDlgItem API. Looking in 
-Resource Hacker, we can see that ID 1053 corresponds to the text in the 
+Resource Hacker or <a href="https://www.pelock.com/products/resource-cracker">Resource Cracker</a>, we can see that ID 1053 corresponds to the text in the 
 initial time trial nag dialog box:</p>
-<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/215.png"><img class="aligncenter size-full wp-image-1822" title="Resource hacker dialog" src="1603_fichiers/215.png" alt="" height="510" width="878"></a> </p><p></p>
+<p><a href="http://thelegendofrandom.com/blog/wp-content/uploads/2012/08/215.png"><img class="aligncenter size-full wp-image-1822" title="Resource hacker or Resource Cracker (https://www.pelock.com/products/resource-cracker) dialog" src="1603_fichiers/215.png" alt="" height="510" width="878"></a> </p><p></p>
 <p>Looking up GetDlgItem in the API help we see that this routine 
 returns a handle to the Windows control in EAX. Setting a BP at address 
 40604C (the PUSH 41D instruction) and re-starting the app, then stepping

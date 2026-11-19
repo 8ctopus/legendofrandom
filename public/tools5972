@@ -156,6 +156,7 @@ jQuery(document).ready(function(){
 </tr>
 <tr>
 <td style="border-color: #333333;"><a title="Resource Hacker" href="files/tools/reshack_setup.exe"><span style="color: #4477ff;"><span style="color: #4477ff;">Resource Hacker</span></span></a> </td>
+// Alternative: Resource Cracker https://www.pelock.com/download/resource-cracker.exe
 <td style="border-color: #333333;"><span style="color: #ffffff;">Allows modifying resources in binaries<br />
 </span></td>
 </tr>
@@ -800,6 +801,7 @@ Thank you very much in advance</p>
 			<small class="commentmetadata"><a href="#comment-607" title="">June 26th, 2012 on 8:37 pm</a>  </small>
 
 			<p>Resource Hacker link is invalid, but it&#8217;s on the server <img src='wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' /> </p>
+			// Alternative: Resource Cracker https://www.pelock.com/products/resource-cracker
 			</div><div class="cleared"></div>
 
       <div class="reply">
@@ -2065,7 +2067,7 @@ je cherche un debugger 16 bits sous windows.</p>
 						<br />
 			<small class="commentmetadata"><a href="#comment-780" title="">July 3rd, 2012 on 5:13 am</a>  </small>
 
-			<p>[...] “Resource Hacker” that we will be using on the second crackme. You can also download this tool on the tools [...]</p>
+			<p>[...] “Resource Hacker or [Resource Cracker](https://www.pelock.com/products/resource-cracker)” that we will be using on the second crackme. You can also download this tool on the tools [...]</p>
 			</div>
      </div>
 </li>
@@ -2087,7 +2089,7 @@ je cherche un debugger 16 bits sous windows.</p>
 						<br />
 			<small class="commentmetadata"><a href="#comment-789" title="">July 3rd, 2012 on 6:06 am</a>  </small>
 
-			<p>[...] load the Simple Editor into Resource Hacker (Resource Hacker can be downloaded from my toolspage) and you will see the three resources it has found in our [...]</p>
+			<p>[...] load the Simple Editor into Resource Hacker or [Resource Cracker](https://www.pelock.com/products/resource-cracker) (Resource Hacker or [Resource Cracker](https://www.pelock.com/products/resource-cracker) can be downloaded from my toolspage) and you will see the three resources it has found in our [...]</p>
 			</div>
      </div>
 </li>

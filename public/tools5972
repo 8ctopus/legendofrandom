@@ -156,7 +156,6 @@ jQuery(document).ready(function(){
 </tr>
 <tr>
 <td style="border-color: #333333;"><a title="Resource Hacker" href="files/tools/reshack_setup.exe"><span style="color: #4477ff;"><span style="color: #4477ff;">Resource Hacker</span></span></a> </td>
-// Alternative: Resource Cracker https://www.pelock.com/download/resource-cracker.exe
 <td style="border-color: #333333;"><span style="color: #ffffff;">Allows modifying resources in binaries<br />
 </span></td>
 </tr>
